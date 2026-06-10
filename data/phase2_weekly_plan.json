@@ -454,6 +454,10 @@
             {
               "key": "w3-21",
               "text": "Test: PATCH with only price changed — confirm name untouched in DB"
+            },
+            {
+              "key": "w3-27",
+              "text": "Learn: @EnableCaching, @Cacheable(\"products\") on getAllProducts() — add @CacheEvict on create/update/delete so the cache stays fresh"
             }
           ],
           "resource": "Pattern: For PATCH, fetch entity from DB, check each DTO field for null, update only non-null fields, save. Never blindly overwrite."
@@ -638,6 +642,10 @@
             {
               "key": "w4-28",
               "text": "Test full flow in Postman: register → login → get token → use token on protected endpoint"
+            },
+            {
+              "key": "w4-29",
+              "text": "Build: GET /api/v1/auth/me — use @AuthenticationPrincipal UserDetails to return the current user as a UserResponse DTO (never the password)"
             }
           ],
           "resource": null
@@ -764,6 +772,10 @@
             {
               "key": "w5-22",
               "text": "Write: test authenticated endpoint returns 401 without JWT"
+            },
+            {
+              "key": "w5-28",
+              "text": "Add H2 (test scope) + application-test.properties (ddl-auto=create-drop) — write a @SpringBootTest integration test for the full register → login → use-token flow"
             }
           ],
           "resource": null
@@ -940,6 +952,10 @@
             {
               "key": "w6-26",
               "text": "Push everything to GitHub — backend repo should be clean and well-documented"
+            },
+            {
+              "key": "w6-27",
+              "text": "Self-assessment: without notes, draw the layered architecture (Controller → Service → Repository → DB), explain how JWT auth flows through the filter chain, and write a JPA entity with a @ManyToOne relationship from memory"
             }
           ],
           "resource": null
@@ -976,6 +992,10 @@
             {
               "key": "pj-2",
               "text": "POST /api/v1/auth/login — returns JWT token"
+            },
+            {
+              "key": "pj-13",
+              "text": "GET /api/v1/auth/me — returns current user from token"
             },
             {
               "key": "pj-3",
@@ -1016,6 +1036,14 @@
             {
               "key": "pj-12",
               "text": "Deployed and accessible on Railway public URL"
+            },
+            {
+              "key": "pj-14",
+              "text": "GET /api/v1/products cached with @Cacheable, evicted on create/update/delete"
+            },
+            {
+              "key": "pj-15",
+              "text": "Integration test (H2 + @SpringBootTest) covering register → login → use-token flow"
             }
           ]
         }

@@ -90,6 +90,10 @@
             {
               "key": "w1-12",
               "text": "Write: ProductService tests — mock ProductRepository, test getById, create, delete"
+            },
+            {
+              "key": "w1-31",
+              "text": "Write: JwtService tests — pure Java, no mocks needed. Test generateToken(), extractUsername(), and isTokenValid() for both a fresh token and a token with a different username"
             }
           ],
           "resource": null
@@ -344,6 +348,10 @@
             {
               "key": "w2-29",
               "text": "Test error scenario: override handler for one test to return 500, assert error UI shows"
+            },
+            {
+              "key": "w2-30",
+              "text": "Write: full login flow integration test — MSW handlers for POST /auth/login and GET /auth/me, render App with MemoryRouter at /login, fill and submit the form, assert redirect to / and Navbar shows the user's name from /auth/me"
             }
           ],
           "resource": "Why MSW: vi.mock() mocks the module — but MSW intercepts the actual HTTP request. It tests more of your real code (Axios config, interceptors, error handling) without a real server."
@@ -612,6 +620,10 @@
             {
               "key": "w4-18",
               "text": "Test: hammer the login endpoint 15 times rapidly — confirm 429 after 10"
+            },
+            {
+              "key": "w4-31",
+              "text": "Add @Email to all email fields and @Positive to price/stock fields across DTOs — catches malformed emails and negative numbers before they hit the DB"
             }
           ],
           "resource": null
@@ -746,6 +758,10 @@
             {
               "key": "w5-12",
               "text": "Test: hit localhost:8080/actuator/health — confirm app inside container is healthy"
+            },
+            {
+              "key": "w5-31",
+              "text": "Add a .dockerignore file — exclude target/, .env, .git, *.md so the build context stays small and fast"
             }
           ],
           "resource": "Multi-stage benefit: Build stage can be 500MB+ (Maven + JDK). Runtime stage with just JRE + JAR is typically 150–200MB. Smaller image = faster deploys, less attack surface."
@@ -777,6 +793,10 @@
             {
               "key": "w5-18",
               "text": "Run: docker compose down -v — stop and clean up. Rerun up — confirm clean start from scratch"
+            },
+            {
+              "key": "w5-32",
+              "text": "Add a healthcheck to the mysql service (test: mysqladmin ping) and set backend's depends_on to condition: service_healthy — backend now waits until MySQL is actually ready"
             }
           ],
           "resource": null
@@ -839,6 +859,10 @@
             {
               "key": "w5-30",
               "text": "Add a README badge: ![CI](https://github.com/yourname/repo/actions/workflows/ci.yml/badge.svg)"
+            },
+            {
+              "key": "w5-33",
+              "text": "Add dependency caching to both CI workflows — actions/cache for ~/.m2 (backend) and ~/.npm (frontend) — compare build times before and after"
             }
           ],
           "resource": null
@@ -922,6 +946,10 @@
             {
               "key": "cap-15",
               "text": "Both repos have professional READMEs with architecture notes, setup guide, live URL"
+            },
+            {
+              "key": "cap-16",
+              "text": "Self-assessment: without notes, explain Flyway migrations, the multi-stage Docker build, how GitHub Actions CI runs your tests, and how you found and fixed an N+1 query"
             }
           ]
         }

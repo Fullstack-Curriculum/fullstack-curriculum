@@ -547,6 +547,10 @@
               "text": "Build: logout() — clear token and user from state and localStorage"
             },
             {
+              "key": "w4-27",
+              "text": "On app load, call GET /auth/me with the restored token to verify the session is still valid server-side — logout() if it fails"
+            },
+            {
               "key": "w4-11",
               "text": "Update Navbar — show \"Login\" when logged out, \"Hi Manoj · Logout\" when logged in"
             }
@@ -783,6 +787,10 @@
             {
               "key": "w5-27",
               "text": "Run: npm run build — inspect chunk sizes in the output to confirm splitting"
+            },
+            {
+              "key": "w5-28",
+              "text": "Learn: useMemo — memoize an expensive computed value (e.g. filtered + sorted product list) so it only recalculates when its inputs change"
             }
           ],
           "resource": null
@@ -909,6 +917,10 @@
             {
               "key": "w6-22",
               "text": "Write README.md — project description, screenshots, setup steps, live URL"
+            },
+            {
+              "key": "w6-28",
+              "text": "Install Vitest + React Testing Library (npm install -D vitest @testing-library/react @testing-library/user-event jsdom) and write one test that renders ProductCard and checks its name/price"
             }
           ],
           "resource": null
@@ -936,6 +948,10 @@
             {
               "key": "w6-27",
               "text": "Push clean final version to GitHub — frontend repo ready to showcase"
+            },
+            {
+              "key": "w6-29",
+              "text": "Self-assessment: without notes, build a component with useState + a useQuery hook, set up a nested route with a layout, and write an AuthContext with login/logout/persistence"
             }
           ],
           "resource": null
@@ -975,7 +991,7 @@
             },
             {
               "key": "pj-3",
-              "text": "AuthContext — login/logout/persist session"
+              "text": "AuthContext — login/logout/persist session, verified with /auth/me on load"
             },
             {
               "key": "pj-4",
@@ -1012,6 +1028,10 @@
             {
               "key": "pj-12",
               "text": "Axios instance with interceptors ready for Phase 4"
+            },
+            {
+              "key": "pj-13",
+              "text": "At least one component test with Vitest + React Testing Library"
             }
           ]
         }

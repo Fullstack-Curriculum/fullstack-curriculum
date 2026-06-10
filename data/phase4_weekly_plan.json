@@ -117,6 +117,10 @@
             {
               "key": "w1-18",
               "text": "Wire search: GET /api/v1/products/search?name= — update useProducts to accept a search param"
+            },
+            {
+              "key": "w1-29",
+              "text": "Add placeholderData: keepPreviousData to useProducts — switching pages no longer flashes a blank/loading state"
             }
           ],
           "resource": null
@@ -274,6 +278,10 @@
             {
               "key": "w2-18",
               "text": "Test: login, refresh page — confirm user stays logged in"
+            },
+            {
+              "key": "w2-30",
+              "text": "Add isAuthLoading state to AuthContext — true while /auth/me is in flight; ProtectedRoute shows a spinner instead of redirecting during this time (prevents a redirect-to-login flash on refresh)"
             }
           ],
           "resource": "Add to Spring Boot: @GetMapping(\"/me\") with @AuthenticationPrincipal UserDetails user — returns user details extracted from the JWT by your filter."
@@ -305,6 +313,10 @@
             {
               "key": "w2-24",
               "text": "Test: login as USER — confirm /admin redirects. Login as ADMIN — confirm access granted"
+            },
+            {
+              "key": "w2-31",
+              "text": "Update ProductCard / ProductDetailPage: show \"Login to add to cart\" when AuthContext.user is null, \"Add to Cart\" when logged in"
             }
           ],
           "resource": null
@@ -530,6 +542,10 @@
             {
               "key": "w4-6",
               "text": "Push to main branch — confirm Railway auto-deploys and app starts cleanly"
+            },
+            {
+              "key": "w4-30",
+              "text": "Add Spring Boot Actuator (spring-boot-starter-actuator) and expose /actuator/health — set it as Railway's health check URL"
             }
           ],
           "resource": "Spring profiles: Create application-prod.properties with production overrides. Set SPRING_PROFILES_ACTIVE=prod in Railway environment variables to activate it."
@@ -619,6 +635,14 @@
             {
               "key": "w4-23",
               "text": "Run npm run build locally — confirm bundle size is reasonable (aim under 500kb gzipped)"
+            },
+            {
+              "key": "w4-31",
+              "text": "Enable show-sql=true locally, call GET /api/v1/products — if you see N+1 queries (one per product), fix with JOIN FETCH or @EntityGraph in the repository"
+            },
+            {
+              "key": "w4-32",
+              "text": "Add @Cacheable to getAllCategories() in the service — categories rarely change; add @CacheEvict on category create/update/delete"
             }
           ],
           "resource": null
@@ -650,6 +674,14 @@
             {
               "key": "w4-29",
               "text": "Write a short LinkedIn post describing what you built — name the tech stack and link the live app"
+            },
+            {
+              "key": "w4-33",
+              "text": "Export your Postman collection and commit it to the backend repo's /postman folder"
+            },
+            {
+              "key": "w4-34",
+              "text": "Self-assessment: without notes, explain how a request flows from a React button click to MySQL and back, what happens when a JWT expires, and where CORS is configured"
             }
           ],
           "resource": null
@@ -726,6 +758,10 @@
             {
               "key": "pj-12",
               "text": "Live URL tested on mobile, Chrome, Firefox, Safari"
+            },
+            {
+              "key": "pj-13",
+              "text": "/actuator/health wired as Railway health check, Postman collection committed to repo"
             }
           ]
         }

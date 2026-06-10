@@ -254,6 +254,10 @@
             {
               "key": "2-15",
               "text": "Practice: phone book using HashMap (name → phone number)"
+            },
+            {
+              "key": "2-26",
+              "text": "Practice: add validation to your Student class — throw new IllegalArgumentException(\"message\") if age < 0, catch it in main() and print the message without crashing"
             }
           ],
           "resource": null
@@ -509,6 +513,10 @@
             {
               "key": "4-8",
               "text": "Practice: create an OrderStatus enum (PENDING, PROCESSING, SHIPPED, DELIVERED)"
+            },
+            {
+              "key": "4-23",
+              "text": "Practice: create a GradeStatus enum (PASS for score >= 50, FAIL for score < 50) for use in your Phase 1 project"
             }
           ],
           "resource": null
@@ -586,6 +594,10 @@
             {
               "key": "4-22",
               "text": "Review your biggest weak spot from Weeks 1–3 and re-practice it"
+            },
+            {
+              "key": "4-24",
+              "text": "Self-assessment: without looking at notes, write a Java class with inheritance and an interface, a SQL query with a JOIN and GROUP BY, and a JS async function that fetches data and handles errors"
             }
           ],
           "resource": null
@@ -628,7 +640,7 @@
             },
             {
               "key": "p-5",
-              "text": "View one student's grades with average calculated"
+              "text": "View one student's grades with average calculated and PASS/FAIL status per subject (using a GradeStatus enum)"
             },
             {
               "key": "p-6",
@@ -646,7 +658,7 @@
         },
         {
           "heading": "Suggested class structure",
-          "text": "Student.java · Subject.java · Grade.java · DatabaseConnection.java · StudentRepository.java · GradeRepository.java · Main.java",
+          "text": "Student.java · Subject.java · Grade.java · GradeStatus.java (enum) · DatabaseConnection.java · StudentRepository.java · GradeRepository.java · Main.java",
           "tasks": []
         }
       ],
