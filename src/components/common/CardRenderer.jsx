@@ -59,8 +59,11 @@ export default function CardRenderer({ card }) {
             {card.timeBlocks.map((tb, i) => (
               <div
                 key={i}
-                className="border rounded p-2 ps-3"
-                style={{ borderLeft: `4px solid ${TYPE_COLORS[tb.type] || '#999'}` }}
+                className="rounded p-2 ps-3"
+                style={{
+                  border: '1px solid #dee2e6',
+                  borderLeft: `4px solid ${TYPE_COLORS[tb.type] || '#999'}`,
+                }}
               >
                 <div className="d-flex justify-content-between flex-wrap">
                   <strong>{tb.title}</strong>
