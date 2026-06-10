@@ -1,0 +1,657 @@
+{
+  "phase": "phase1",
+  "nav": [
+    {
+      "id": "w1",
+      "label": "Week 1"
+    },
+    {
+      "id": "w2",
+      "label": "Week 2"
+    },
+    {
+      "id": "w3",
+      "label": "Week 3"
+    },
+    {
+      "id": "w4",
+      "label": "Week 4"
+    },
+    {
+      "id": "proj",
+      "label": "Project"
+    }
+  ],
+  "weeks": [
+    {
+      "id": "w1",
+      "title": "Week 1 — Java fundamentals + dev tools setup",
+      "description": "Get your environment ready, then write your first real Java programs.",
+      "days": [
+        {
+          "label": "Day 1 · Monday",
+          "title": "Install everything",
+          "tasks": [
+            {
+              "key": "1-1",
+              "text": "Install JDK 21 (LTS) from adoptium.net"
+            },
+            {
+              "key": "1-2",
+              "text": "Install IntelliJ IDEA Community Edition"
+            },
+            {
+              "key": "1-3",
+              "text": "Install MySQL Community Server + MySQL Workbench"
+            },
+            {
+              "key": "1-4",
+              "text": "Install VS Code with extensions: ESLint, Prettier, Live Server"
+            },
+            {
+              "key": "1-5",
+              "text": "Install Git and create a GitHub account"
+            },
+            {
+              "key": "1-6",
+              "text": "Create a GitHub repo called \"phase1-practice\" and clone it"
+            }
+          ],
+          "resource": "Resource: adoptium.net for JDK · jetbrains.com/idea for IntelliJ · dev.mysql.com/downloads for MySQL"
+        },
+        {
+          "label": "Day 2 · Tuesday",
+          "title": "Java: variables, types, operators",
+          "tasks": [
+            {
+              "key": "1-7",
+              "text": "Learn: int, double, String, boolean data types"
+            },
+            {
+              "key": "1-8",
+              "text": "Learn: arithmetic operators (+, -, *, /, %)"
+            },
+            {
+              "key": "1-9",
+              "text": "Learn: String concatenation and System.out.println()"
+            },
+            {
+              "key": "1-10",
+              "text": "Practice: write a program that calculates area of a rectangle"
+            },
+            {
+              "key": "1-11",
+              "text": "Practice: write a simple temperature converter (C to F)"
+            }
+          ],
+          "resource": "Resource: W3Schools Java tutorial (free) · Bro Code Java on YouTube — Episode 1–5"
+        },
+        {
+          "label": "Day 3 · Wednesday",
+          "title": "Java: conditionals and loops",
+          "tasks": [
+            {
+              "key": "1-12",
+              "text": "Learn: if / else if / else statements"
+            },
+            {
+              "key": "1-13",
+              "text": "Learn: switch statements"
+            },
+            {
+              "key": "1-14",
+              "text": "Learn: for loop and while loop"
+            },
+            {
+              "key": "1-15",
+              "text": "Practice: FizzBuzz (print 1–100, but Fizz for multiples of 3, Buzz for 5)"
+            },
+            {
+              "key": "1-16",
+              "text": "Practice: Simple number guessing game using Scanner for user input"
+            }
+          ],
+          "resource": "Resource: Bro Code Java — Episode 6–12 · Try exercises on exercism.org (Java track)"
+        },
+        {
+          "label": "Day 4 · Thursday",
+          "title": "Java: methods and arrays",
+          "tasks": [
+            {
+              "key": "1-17",
+              "text": "Learn: defining and calling methods with parameters and return types"
+            },
+            {
+              "key": "1-18",
+              "text": "Learn: method overloading"
+            },
+            {
+              "key": "1-19",
+              "text": "Learn: arrays — declaring, initializing, iterating"
+            },
+            {
+              "key": "1-20",
+              "text": "Practice: write a method that finds the max value in an array"
+            },
+            {
+              "key": "1-21",
+              "text": "Practice: write a method that reverses a String"
+            }
+          ],
+          "resource": null
+        },
+        {
+          "label": "Day 5 · Friday",
+          "title": "Git workflow + week review",
+          "tasks": [
+            {
+              "key": "1-22",
+              "text": "Learn Git: git add, git commit -m, git push, git pull"
+            },
+            {
+              "key": "1-23",
+              "text": "Learn Git: git status, git log, creating branches"
+            },
+            {
+              "key": "1-24",
+              "text": "Push all this week's practice files to GitHub"
+            },
+            {
+              "key": "1-25",
+              "text": "Review: re-read any code you wrote that felt confusing"
+            },
+            {
+              "key": "1-26",
+              "text": "Challenge: build a simple BMI calculator using methods"
+            }
+          ],
+          "resource": "Resource: learngitbranching.js.org — interactive Git tutorial (free, browser-based)"
+        }
+      ],
+      "projectCards": [],
+      "tip": null,
+      "askPrompt": "Can you give me a Java exercise for a complete beginner — something practical that uses variables, conditionals, loops, and methods together?"
+    },
+    {
+      "id": "w2",
+      "title": "Week 2 — Java OOP + MySQL basics",
+      "description": "Learn object-oriented programming, the heart of Spring Boot, then start SQL.",
+      "days": [
+        {
+          "label": "Day 1 · Monday",
+          "title": "Java: classes and objects",
+          "tasks": [
+            {
+              "key": "2-1",
+              "text": "Learn: what a class is vs what an object is"
+            },
+            {
+              "key": "2-2",
+              "text": "Learn: fields (instance variables), constructors"
+            },
+            {
+              "key": "2-3",
+              "text": "Learn: getters and setters (encapsulation)"
+            },
+            {
+              "key": "2-4",
+              "text": "Practice: create a Student class with name, age, grade fields"
+            },
+            {
+              "key": "2-5",
+              "text": "Practice: create multiple Student objects and print their data"
+            }
+          ],
+          "resource": "Why it matters: In Spring Boot, every entity (Product, User, Order) is a Java class. This is the foundation."
+        },
+        {
+          "label": "Day 2 · Tuesday",
+          "title": "Java: inheritance and interfaces",
+          "tasks": [
+            {
+              "key": "2-6",
+              "text": "Learn: extends keyword — child class inherits parent"
+            },
+            {
+              "key": "2-7",
+              "text": "Learn: @Override and polymorphism"
+            },
+            {
+              "key": "2-8",
+              "text": "Learn: interface — defining a contract a class must follow"
+            },
+            {
+              "key": "2-9",
+              "text": "Practice: create Animal → Dog → Cat hierarchy with a speak() method"
+            },
+            {
+              "key": "2-10",
+              "text": "Practice: create a Printable interface, implement it in two classes"
+            }
+          ],
+          "resource": "Why it matters: Spring Boot uses interfaces extensively — JpaRepository is an interface. You extend it, Spring implements it for you."
+        },
+        {
+          "label": "Day 3 · Wednesday",
+          "title": "Java: ArrayList, HashMap, exceptions",
+          "tasks": [
+            {
+              "key": "2-11",
+              "text": "Learn: ArrayList — add, remove, get, iterate with for-each"
+            },
+            {
+              "key": "2-12",
+              "text": "Learn: HashMap — put, get, containsKey, iterate entrySet"
+            },
+            {
+              "key": "2-13",
+              "text": "Learn: try-catch-finally for handling exceptions"
+            },
+            {
+              "key": "2-14",
+              "text": "Practice: student registry using ArrayList of Student objects"
+            },
+            {
+              "key": "2-15",
+              "text": "Practice: phone book using HashMap (name → phone number)"
+            }
+          ],
+          "resource": null
+        },
+        {
+          "label": "Day 4 · Thursday",
+          "title": "MySQL: first queries",
+          "tasks": [
+            {
+              "key": "2-16",
+              "text": "Open MySQL Workbench, connect to local MySQL server"
+            },
+            {
+              "key": "2-17",
+              "text": "Learn: CREATE DATABASE, USE, CREATE TABLE with column types"
+            },
+            {
+              "key": "2-18",
+              "text": "Learn: INSERT INTO, SELECT * FROM, WHERE clause"
+            },
+            {
+              "key": "2-19",
+              "text": "Learn: UPDATE and DELETE with WHERE (never without!)"
+            },
+            {
+              "key": "2-20",
+              "text": "Practice: create a students table, insert 5 rows, query them"
+            }
+          ],
+          "resource": "Resource: sqlbolt.com — interactive SQL lessons in browser, completely free"
+        },
+        {
+          "label": "Day 5 · Friday",
+          "title": "MySQL: JOINs and relationships",
+          "tasks": [
+            {
+              "key": "2-21",
+              "text": "Learn: PRIMARY KEY, FOREIGN KEY — what they do and why"
+            },
+            {
+              "key": "2-22",
+              "text": "Learn: INNER JOIN — combine rows from two related tables"
+            },
+            {
+              "key": "2-23",
+              "text": "Learn: LEFT JOIN — include rows even if no match on right"
+            },
+            {
+              "key": "2-24",
+              "text": "Learn: ORDER BY, LIMIT, GROUP BY, COUNT()"
+            },
+            {
+              "key": "2-25",
+              "text": "Practice: create a courses table, link to students via enrollment table, write JOIN query"
+            }
+          ],
+          "resource": "Resource: Complete sqlbolt.com lessons 1–12 · Try sqlfiddle.com to experiment"
+        }
+      ],
+      "projectCards": [],
+      "tip": null,
+      "askPrompt": "Explain Java interfaces to me like I have no programming experience — with a simple real-world analogy and a short code example"
+    },
+    {
+      "id": "w3",
+      "title": "Week 3 — JavaScript fundamentals",
+      "description": "Learn the language of the browser — you'll need this for React in Phase 3.",
+      "days": [
+        {
+          "label": "Day 1 · Monday",
+          "title": "JS: variables, functions, scope",
+          "tasks": [
+            {
+              "key": "3-1",
+              "text": "Learn: var vs let vs const — always use const/let"
+            },
+            {
+              "key": "3-2",
+              "text": "Learn: function declarations vs arrow functions (=>)"
+            },
+            {
+              "key": "3-3",
+              "text": "Learn: scope — what variables are accessible where"
+            },
+            {
+              "key": "3-4",
+              "text": "Learn: template literals — `Hello ${name}!`"
+            },
+            {
+              "key": "3-5",
+              "text": "Practice: rewrite your Java temperature converter in JavaScript"
+            }
+          ],
+          "resource": "Resource: javascript.info — the best free JS reference. Start at \"JavaScript Fundamentals\"."
+        },
+        {
+          "label": "Day 2 · Tuesday",
+          "title": "JS: arrays and objects",
+          "tasks": [
+            {
+              "key": "3-6",
+              "text": "Learn: array methods — map(), filter(), find(), forEach()"
+            },
+            {
+              "key": "3-7",
+              "text": "Learn: objects — key-value pairs, dot notation, destructuring"
+            },
+            {
+              "key": "3-8",
+              "text": "Learn: spread operator (...) for arrays and objects"
+            },
+            {
+              "key": "3-9",
+              "text": "Practice: array of product objects, filter by price, map to display names"
+            },
+            {
+              "key": "3-10",
+              "text": "Practice: use destructuring to extract fields from an object"
+            }
+          ],
+          "resource": "Why it matters: In React, you will use map() to render lists and filter() constantly. This is not optional knowledge."
+        },
+        {
+          "label": "Day 3 · Wednesday",
+          "title": "JS: DOM manipulation",
+          "tasks": [
+            {
+              "key": "3-11",
+              "text": "Learn: document.getElementById(), querySelector()"
+            },
+            {
+              "key": "3-12",
+              "text": "Learn: changing text with .textContent and HTML with .innerHTML"
+            },
+            {
+              "key": "3-13",
+              "text": "Learn: addEventListener() for click and input events"
+            },
+            {
+              "key": "3-14",
+              "text": "Practice: build a simple to-do list — add items, mark done, delete"
+            },
+            {
+              "key": "3-15",
+              "text": "Practice: build a live character counter for a text input"
+            }
+          ],
+          "resource": null
+        },
+        {
+          "label": "Day 4 · Thursday",
+          "title": "JS: Promises and async/await",
+          "tasks": [
+            {
+              "key": "3-16",
+              "text": "Learn: what a Promise is — pending, fulfilled, rejected"
+            },
+            {
+              "key": "3-17",
+              "text": "Learn: .then().catch() chaining"
+            },
+            {
+              "key": "3-18",
+              "text": "Learn: async function and await keyword"
+            },
+            {
+              "key": "3-19",
+              "text": "Learn: try-catch inside async functions"
+            },
+            {
+              "key": "3-20",
+              "text": "Practice: fetch data from a public API (jsonplaceholder.typicode.com) and display it"
+            }
+          ],
+          "resource": "Resource: javascript.info — \"Promises, async/await\" chapter. This is the most important JS concept for API work."
+        },
+        {
+          "label": "Day 5 · Friday",
+          "title": "JS: modules and review",
+          "tasks": [
+            {
+              "key": "3-21",
+              "text": "Learn: ES modules — export and import between files"
+            },
+            {
+              "key": "3-22",
+              "text": "Learn: npm basics — what it is, npm init, installing packages"
+            },
+            {
+              "key": "3-23",
+              "text": "Practice: refactor to-do list into multiple files using modules"
+            },
+            {
+              "key": "3-24",
+              "text": "Push all JS work to GitHub"
+            },
+            {
+              "key": "3-25",
+              "text": "Review: what felt confusing this week? Write down 3 questions."
+            }
+          ],
+          "resource": null
+        }
+      ],
+      "projectCards": [],
+      "tip": null,
+      "askPrompt": "Explain JavaScript Promises and async/await with a simple real-world analogy — no jargon, beginner-friendly"
+    },
+    {
+      "id": "w4",
+      "title": "Week 4 — Advanced Java + SQL + consolidation",
+      "description": "Fill gaps, deepen understanding, and prepare for the Phase 1 project.",
+      "days": [
+        {
+          "label": "Day 1 · Monday",
+          "title": "Java: generics and Optional",
+          "tasks": [
+            {
+              "key": "4-1",
+              "text": "Learn: what generics are — List<String> vs raw List"
+            },
+            {
+              "key": "4-2",
+              "text": "Learn: Optional<T> — avoid NullPointerException"
+            },
+            {
+              "key": "4-3",
+              "text": "Learn: Java Streams — filter(), map(), collect() on collections"
+            },
+            {
+              "key": "4-4",
+              "text": "Practice: rewrite your student registry using Stream operations"
+            }
+          ],
+          "resource": "Why it matters: Spring Boot's JpaRepository returns Optional — you'll see this every day."
+        },
+        {
+          "label": "Day 2 · Tuesday",
+          "title": "Java: enums and basic annotations",
+          "tasks": [
+            {
+              "key": "4-5",
+              "text": "Learn: enum type — fixed set of named constants"
+            },
+            {
+              "key": "4-6",
+              "text": "Learn: what annotations are (e.g. @Override) — metadata on code"
+            },
+            {
+              "key": "4-7",
+              "text": "Learn: static keyword and when to use it"
+            },
+            {
+              "key": "4-8",
+              "text": "Practice: create an OrderStatus enum (PENDING, PROCESSING, SHIPPED, DELIVERED)"
+            }
+          ],
+          "resource": null
+        },
+        {
+          "label": "Day 3 · Wednesday",
+          "title": "MySQL: advanced queries",
+          "tasks": [
+            {
+              "key": "4-9",
+              "text": "Learn: aggregate functions — COUNT(), SUM(), AVG(), MAX(), MIN()"
+            },
+            {
+              "key": "4-10",
+              "text": "Learn: GROUP BY with HAVING clause"
+            },
+            {
+              "key": "4-11",
+              "text": "Learn: subqueries (SELECT inside SELECT)"
+            },
+            {
+              "key": "4-12",
+              "text": "Learn: indexes — why they speed up queries, how to create one"
+            },
+            {
+              "key": "4-13",
+              "text": "Practice: write 10 queries on your students/courses schema from Week 2"
+            }
+          ],
+          "resource": "Resource: Complete sqlbolt.com lessons 13–18 (aggregation and subqueries)"
+        },
+        {
+          "label": "Day 4 · Thursday",
+          "title": "Connect Java to MySQL (JDBC)",
+          "tasks": [
+            {
+              "key": "4-14",
+              "text": "Add MySQL JDBC driver dependency to a Maven project"
+            },
+            {
+              "key": "4-15",
+              "text": "Learn: DriverManager.getConnection() with URL, user, password"
+            },
+            {
+              "key": "4-16",
+              "text": "Learn: PreparedStatement for INSERT and SELECT (avoid SQL injection)"
+            },
+            {
+              "key": "4-17",
+              "text": "Learn: ResultSet — loop through query results in Java"
+            },
+            {
+              "key": "4-18",
+              "text": "Practice: Java program that reads students from MySQL and prints them"
+            }
+          ],
+          "resource": null
+        },
+        {
+          "label": "Day 5 · Friday",
+          "title": "Project prep + full review",
+          "tasks": [
+            {
+              "key": "4-19",
+              "text": "Design your Phase 1 project schema on paper (tables, columns, relationships)"
+            },
+            {
+              "key": "4-20",
+              "text": "Create the MySQL database and tables for the project"
+            },
+            {
+              "key": "4-21",
+              "text": "Plan the Java classes you'll need (Student, Course, etc.)"
+            },
+            {
+              "key": "4-22",
+              "text": "Review your biggest weak spot from Weeks 1–3 and re-practice it"
+            }
+          ],
+          "resource": null
+        }
+      ],
+      "projectCards": [],
+      "tip": null,
+      "askPrompt": "Show me how to connect Java to MySQL using JDBC with a simple working code example — PreparedStatement for INSERT and SELECT"
+    },
+    {
+      "id": "proj",
+      "title": "Phase 1 project — student grade tracker",
+      "description": "A real CLI app that uses everything you learned. Takes about 3–5 days to build.",
+      "days": [],
+      "projectCards": [
+        {
+          "heading": "What you'll build",
+          "text": "A Java command-line application where a user can add students, record their grades for subjects, and view a grade report — all stored in MySQL using JDBC.",
+          "tasks": []
+        },
+        {
+          "heading": "Features to implement",
+          "text": null,
+          "tasks": [
+            {
+              "key": "p-1",
+              "text": "Add a new student (name, age, email)"
+            },
+            {
+              "key": "p-2",
+              "text": "Add a subject (Math, Science, English)"
+            },
+            {
+              "key": "p-3",
+              "text": "Record a grade for a student in a subject (0–100)"
+            },
+            {
+              "key": "p-4",
+              "text": "View all students"
+            },
+            {
+              "key": "p-5",
+              "text": "View one student's grades with average calculated"
+            },
+            {
+              "key": "p-6",
+              "text": "Find highest and lowest scorer per subject using SQL"
+            },
+            {
+              "key": "p-7",
+              "text": "Handle invalid input gracefully (try-catch)"
+            },
+            {
+              "key": "p-8",
+              "text": "Push finished project to GitHub with a README explaining it"
+            }
+          ]
+        },
+        {
+          "heading": "Suggested class structure",
+          "text": "Student.java · Subject.java · Grade.java · DatabaseConnection.java · StudentRepository.java · GradeRepository.java · Main.java",
+          "tasks": []
+        }
+      ],
+      "tip": "When this project works end-to-end, you're genuinely ready for Phase 2. A working Java + MySQL project is also something you can show in your GitHub portfolio.",
+      "askPrompt": "Help me build the Phase 1 project — a student grade tracker CLI app in Java with MySQL. Start with the database schema and the DatabaseConnection class."
+    }
+  ]
+}

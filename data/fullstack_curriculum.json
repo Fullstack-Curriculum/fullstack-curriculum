@@ -1,0 +1,358 @@
+{
+  "title": "Full-stack fast-track curriculum",
+  "subtitle": "Spring Boot 4 · React · MySQL — beginner to job-ready",
+  "tabs": [
+    {
+      "id": "overview",
+      "label": "Overview"
+    },
+    {
+      "id": "p1",
+      "label": "1 · Foundations"
+    },
+    {
+      "id": "p2",
+      "label": "2 · Backend"
+    },
+    {
+      "id": "p3",
+      "label": "3 · Frontend"
+    },
+    {
+      "id": "p4",
+      "label": "4 · Integration"
+    },
+    {
+      "id": "p5",
+      "label": "5 · Advanced"
+    }
+  ],
+  "overview": {
+    "cards": [
+      {
+        "target": "p1",
+        "num": "①",
+        "title": "Foundations",
+        "duration": "3–4 weeks",
+        "progress": 100,
+        "color": "#534AB7"
+      },
+      {
+        "target": "p2",
+        "num": "②",
+        "title": "Backend",
+        "duration": "5–6 weeks",
+        "progress": 80,
+        "color": "#0F6E56"
+      },
+      {
+        "target": "p3",
+        "num": "③",
+        "title": "Frontend",
+        "duration": "5–6 weeks",
+        "progress": 80,
+        "color": "#185FA5"
+      },
+      {
+        "target": "p4",
+        "num": "④",
+        "title": "Integration",
+        "duration": "3–4 weeks",
+        "progress": 60,
+        "color": "#BA7517"
+      },
+      {
+        "target": "p5",
+        "num": "⑤",
+        "title": "Advanced",
+        "duration": "4–5 weeks",
+        "progress": 40,
+        "color": "#993C1D"
+      }
+    ],
+    "infoBoxes": [
+      {
+        "heading": "Total duration",
+        "text": "20–25 weeks of self-paced learning · ~2 hrs/day · 5 days/week"
+      },
+      {
+        "heading": "What you'll build",
+        "text": "A full e-commerce platform with React storefront, Spring Boot REST API, MySQL database, JWT authentication, and cloud deployment — usable as a real portfolio project."
+      }
+    ],
+    "tip": "Click any phase card above to see the detailed curriculum. Each phase ends with a mini-project so you always have something to show."
+  },
+  "phases": [
+    {
+      "id": "p1",
+      "badge": "Phase 1",
+      "title": "Foundations",
+      "meta": "3–4 weeks · Before touching frameworks",
+      "topics": [
+        {
+          "heading": "Java basics",
+          "items": [
+            "Variables, data types, operators",
+            "Conditionals and loops",
+            "Methods and scope",
+            "Arrays and ArrayLists",
+            "OOP: classes, objects, inheritance",
+            "Interfaces and abstract classes"
+          ]
+        },
+        {
+          "heading": "SQL basics",
+          "items": [
+            "CREATE TABLE, INSERT, SELECT",
+            "WHERE, ORDER BY, LIMIT",
+            "JOIN (INNER, LEFT)",
+            "Primary keys and foreign keys",
+            "Basic normalization"
+          ]
+        },
+        {
+          "heading": "JavaScript basics",
+          "items": [
+            "Variables, functions, scope",
+            "Arrays and objects",
+            "DOM manipulation",
+            "Fetch API and Promises",
+            "async/await"
+          ]
+        },
+        {
+          "heading": "Dev tools",
+          "items": [
+            "Install IntelliJ IDEA (Community)",
+            "Install VS Code",
+            "Install MySQL + DBeaver/Workbench",
+            "Git basics: commit, push, pull",
+            "Command line fundamentals"
+          ]
+        }
+      ],
+      "project": {
+        "heading": "Phase 1 project",
+        "text": "Build a simple student grade calculator: Java CLI app that saves/reads records to MySQL using raw JDBC."
+      },
+      "tip": "Don't skip Java basics — Spring Boot's magic makes no sense without understanding classes and interfaces first. Spend at least 2 weeks here.",
+      "askPrompt": "Give me a detailed week-by-week study plan for Phase 1 of my full-stack curriculum — Java, SQL, JavaScript, and dev tools setup"
+    },
+    {
+      "id": "p2",
+      "badge": "Phase 2",
+      "title": "Backend with Spring Boot 4",
+      "meta": "5–6 weeks · Build your API",
+      "topics": [
+        {
+          "heading": "Spring Boot basics",
+          "items": [
+            "Spring Boot project setup (Spring Initializr)",
+            "Application properties / YAML config",
+            "Beans and Dependency Injection",
+            "@Component, @Service, @Repository",
+            "Layered architecture pattern"
+          ]
+        },
+        {
+          "heading": "REST API",
+          "items": [
+            "@RestController, @GetMapping etc.",
+            "HTTP methods: GET POST PUT DELETE",
+            "Request body, path variables, params",
+            "ResponseEntity and status codes",
+            "Exception handling with @ControllerAdvice"
+          ]
+        },
+        {
+          "heading": "Spring Data JPA",
+          "items": [
+            "@Entity, @Table, @Column",
+            "JpaRepository methods",
+            "Custom JPQL queries",
+            "One-to-many, many-to-many relations",
+            "Pagination and sorting"
+          ]
+        },
+        {
+          "heading": "Security",
+          "items": [
+            "Spring Security basics",
+            "JWT authentication",
+            "Role-based access control",
+            "Password hashing with BCrypt",
+            "CORS configuration"
+          ]
+        }
+      ],
+      "project": {
+        "heading": "Phase 2 project",
+        "text": "Build a Product Catalog REST API: CRUD for products and categories, JWT auth, pagination — testable in Postman."
+      },
+      "tip": "Test every endpoint in Postman as you build it. Don't wait until the end — broken APIs are much harder to debug later.",
+      "askPrompt": "Give me a detailed week-by-week study plan for Phase 2 — Spring Boot 4 REST API development with MySQL and Spring Security"
+    },
+    {
+      "id": "p3",
+      "badge": "Phase 3",
+      "title": "Frontend with React",
+      "meta": "5–6 weeks · Build your UI",
+      "topics": [
+        {
+          "heading": "React core",
+          "items": [
+            "JSX and component structure",
+            "Props and state (useState)",
+            "useEffect for side effects",
+            "Conditional rendering",
+            "Lists and keys",
+            "Forms and controlled inputs"
+          ]
+        },
+        {
+          "heading": "React Router",
+          "items": [
+            "Setting up routes with React Router v7",
+            "Dynamic routes with params",
+            "Nested layouts",
+            "Protected/private routes",
+            "useNavigate and Link"
+          ]
+        },
+        {
+          "heading": "State & data",
+          "items": [
+            "useContext for global state",
+            "TanStack Query (React Query) for API calls",
+            "Loading and error states",
+            "Optimistic updates",
+            "Local storage persistence"
+          ]
+        },
+        {
+          "heading": "Styling & tooling",
+          "items": [
+            "Tailwind CSS utility classes",
+            "Responsive design (mobile-first)",
+            "Component libraries (shadcn/ui)",
+            "Vite project setup",
+            "Environment variables in Vite"
+          ]
+        }
+      ],
+      "project": {
+        "heading": "Phase 3 project",
+        "text": "Build a product browsing UI: list view, detail page, search filter, cart state — all with mock JSON data (no backend yet)."
+      },
+      "tip": "Use TanStack Query from the start — it replaces 80% of the useEffect + fetch boilerplate you'd otherwise write manually.",
+      "askPrompt": "Give me a detailed week-by-week study plan for Phase 3 — React latest with React Router, TanStack Query, and Tailwind CSS"
+    },
+    {
+      "id": "p4",
+      "badge": "Phase 4",
+      "title": "Full-stack integration",
+      "meta": "3–4 weeks · Connect everything",
+      "topics": [
+        {
+          "heading": "API integration",
+          "items": [
+            "Connect React to Spring Boot API",
+            "Handle CORS properly",
+            "Axios vs fetch — when to use each",
+            "Auth token storage and headers",
+            "Refresh token flow"
+          ]
+        },
+        {
+          "heading": "Auth flow",
+          "items": [
+            "Login and registration forms",
+            "Storing JWT in memory / httpOnly cookie",
+            "Auth context in React",
+            "Redirecting unauthenticated users",
+            "Logout and token cleanup"
+          ]
+        },
+        {
+          "heading": "File uploads",
+          "items": [
+            "Multipart file upload in Spring Boot",
+            "File input in React",
+            "Store images on disk or cloud (S3/R2)",
+            "Return image URL in API response"
+          ]
+        },
+        {
+          "heading": "Deployment",
+          "items": [
+            "Deploy Spring Boot to Railway / Render",
+            "Deploy React to Vercel",
+            "Configure environment variables",
+            "Set up MySQL on Railway",
+            "Custom domain basics"
+          ]
+        }
+      ],
+      "project": {
+        "heading": "Phase 4 project",
+        "text": "Launch your full e-commerce app live: React frontend + Spring Boot API + MySQL, with user auth, product CRUD, and a working cart — deployed and accessible via URL."
+      },
+      "tip": "Deploy early — even a half-finished app. Deployment surprises (env vars, CORS, DB connections) are easier to fix incrementally.",
+      "askPrompt": "Give me a detailed week-by-week plan for Phase 4 — connecting React to Spring Boot, JWT auth flow, and deploying to Railway + Vercel"
+    },
+    {
+      "id": "p5",
+      "badge": "Phase 5",
+      "title": "Advanced topics",
+      "meta": "4–5 weeks · Production-grade skills",
+      "topics": [
+        {
+          "heading": "Testing",
+          "items": [
+            "JUnit 5 unit tests",
+            "Mockito for mocking dependencies",
+            "Spring Boot @WebMvcTest for controllers",
+            "React Testing Library basics",
+            "Integration test strategy"
+          ]
+        },
+        {
+          "heading": "Performance",
+          "items": [
+            "Spring Boot caching with @Cacheable",
+            "N+1 query problem and fix",
+            "MySQL indexing basics",
+            "React.memo and useMemo",
+            "Lazy loading routes and components"
+          ]
+        },
+        {
+          "heading": "Dev practices",
+          "items": [
+            "Git branching strategy (main/develop/feature)",
+            "Database migrations with Flyway",
+            "API versioning (/api/v1/...)",
+            "DTOs and request validation",
+            "Logging with SLF4J"
+          ]
+        },
+        {
+          "heading": "Extras to explore",
+          "items": [
+            "Docker basics (containerize the app)",
+            "WebSockets for real-time features",
+            "Spring Boot Actuator for monitoring",
+            "Rate limiting your API",
+            "CI/CD with GitHub Actions"
+          ]
+        }
+      ],
+      "project": {
+        "heading": "Phase 5 capstone",
+        "text": "Polish your e-commerce app: add tests, fix N+1 queries, add Flyway migrations, set up GitHub Actions CI — then put it on your portfolio/resume."
+      },
+      "tip": "Testing and migrations are what separate hobbyist code from professional code. Clients and employers notice the difference immediately.",
+      "askPrompt": "Give me a detailed week-by-week plan for Phase 5 — testing, performance, dev practices, and Docker for my Spring Boot + React app"
+    }
+  ]
+}

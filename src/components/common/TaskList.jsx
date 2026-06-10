@@ -1,0 +1,28 @@
+import Form from 'react-bootstrap/Form'
+import { useProgress } from '../../context/useProgress'
+
+// tasks: [{ key, text }], rendered as checkboxes namespaced by phaseId
+export default function TaskList({ tasks, phaseId }) {
+  const { isChecked, toggleTask } = useProgress()
+  if (!tasks || tasks.length === 0) return null
+
+  return (
+    <div className="mb-2">
+      {tasks.map((task) => {
+        const fullKey = `${phaseId}:${task.key}`
+        const checked = isChecked(fullKey)
+        return (
+          <Form.Check
+            key={fullKey}
+            id={fullKey}
+            type="checkbox"
+            checked={checked}
+            onChange={() => toggleTask(fullKey)}
+            label={<span className={checked ? 'text-decoration-line-through text-muted' : ''}>{task.text}</span>}
+            className="mb-1"
+          />
+        )
+      })}
+    </div>
+  )
+}

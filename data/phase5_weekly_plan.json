@@ -1,0 +1,933 @@
+{
+  "phase": "phase5",
+  "nav": [
+    {
+      "id": "w1",
+      "label": "Week 1"
+    },
+    {
+      "id": "w2",
+      "label": "Week 2"
+    },
+    {
+      "id": "w3",
+      "label": "Week 3"
+    },
+    {
+      "id": "w4",
+      "label": "Week 4"
+    },
+    {
+      "id": "w5",
+      "label": "Week 5"
+    },
+    {
+      "id": "cap",
+      "label": "Capstone"
+    }
+  ],
+  "weeks": [
+    {
+      "id": "w1",
+      "title": "Week 1 — Backend testing: JUnit 5, Mockito, Spring slices",
+      "description": "Make your Spring Boot code verifiably correct. Tests are what let you refactor fearlessly.",
+      "days": [
+        {
+          "label": "Day 1 · Monday",
+          "title": "JUnit 5 fundamentals",
+          "tasks": [
+            {
+              "key": "w1-1",
+              "text": "Learn: test lifecycle — @BeforeEach, @AfterEach, @BeforeAll, @AfterAll"
+            },
+            {
+              "key": "w1-2",
+              "text": "Learn: assertions — assertEquals, assertTrue, assertThrows, assertNotNull"
+            },
+            {
+              "key": "w1-3",
+              "text": "Learn: @DisplayName for readable test names in the IDE"
+            },
+            {
+              "key": "w1-4",
+              "text": "Learn: @Nested — group related tests inside inner classes"
+            },
+            {
+              "key": "w1-5",
+              "text": "Learn: @ParameterizedTest with @ValueSource — run one test with multiple inputs"
+            },
+            {
+              "key": "w1-6",
+              "text": "Write: first tests for a pure utility class (e.g. price calculation logic)"
+            }
+          ],
+          "resource": "Rule: A good test has one reason to fail. If a test checks three things, split it into three tests. Short, focused, named clearly."
+        },
+        {
+          "label": "Day 2 · Tuesday",
+          "title": "Mockito — isolate and test service logic",
+          "tasks": [
+            {
+              "key": "w1-7",
+              "text": "Learn: @Mock creates a fake — replaces real dependency (repository, email service)"
+            },
+            {
+              "key": "w1-8",
+              "text": "Learn: @InjectMocks — creates the class under test, injects @Mock fields into it"
+            },
+            {
+              "key": "w1-9",
+              "text": "Learn: when(mock.method(arg)).thenReturn(value) — stub behaviour"
+            },
+            {
+              "key": "w1-10",
+              "text": "Learn: verify(mock).method(arg) — assert a method was called with expected args"
+            },
+            {
+              "key": "w1-11",
+              "text": "Learn: assertThrows() — test that your service throws the right exception for bad input"
+            },
+            {
+              "key": "w1-12",
+              "text": "Write: ProductService tests — mock ProductRepository, test getById, create, delete"
+            }
+          ],
+          "resource": null
+        },
+        {
+          "label": "Day 3 · Wednesday",
+          "title": "Test coverage — what to test and what to skip",
+          "tasks": [
+            {
+              "key": "w1-13",
+              "text": "Learn: test business logic, not framework code — Spring's save() doesn't need testing"
+            },
+            {
+              "key": "w1-14",
+              "text": "Learn: test every branch — if/else, null checks, exception paths"
+            },
+            {
+              "key": "w1-15",
+              "text": "Learn: JaCoCo coverage report — add plugin to pom.xml, run mvn test, open target/site/jacoco"
+            },
+            {
+              "key": "w1-16",
+              "text": "Write: AuthService tests — test register (success, duplicate email), login (success, wrong password)"
+            },
+            {
+              "key": "w1-17",
+              "text": "Write: OrderService tests — test placeOrder (success, empty cart, product out of stock)"
+            },
+            {
+              "key": "w1-18",
+              "text": "Aim for 70%+ coverage on service layer — check JaCoCo report"
+            }
+          ],
+          "resource": "JaCoCo setup: Add jacoco-maven-plugin to pom.xml with prepare-agent and report goals. Run mvn verify, open target/site/jacoco/index.html in browser."
+        },
+        {
+          "label": "Day 4 · Thursday",
+          "title": "Controller tests with @WebMvcTest",
+          "tasks": [
+            {
+              "key": "w1-19",
+              "text": "Learn: @WebMvcTest loads only the web layer — no DB, no full Spring context"
+            },
+            {
+              "key": "w1-20",
+              "text": "Learn: MockMvc — perform(\"GET /api/v1/products\").andExpect(status().isOk())"
+            },
+            {
+              "key": "w1-21",
+              "text": "Learn: @MockBean — creates a Mockito mock and registers it as a Spring bean"
+            },
+            {
+              "key": "w1-22",
+              "text": "Learn: jsonPath(\"$.content[0].name\") — assert specific fields in JSON response"
+            },
+            {
+              "key": "w1-23",
+              "text": "Write: ProductController tests — GET all (200), GET by invalid id (404), POST without auth (401)"
+            },
+            {
+              "key": "w1-24",
+              "text": "Write: test validation — POST with blank name returns 400 with field error message"
+            }
+          ],
+          "resource": null
+        },
+        {
+          "label": "Day 5 · Friday",
+          "title": "Integration tests with @SpringBootTest",
+          "tasks": [
+            {
+              "key": "w1-25",
+              "text": "Learn: @SpringBootTest loads full application context — slower but tests real wiring"
+            },
+            {
+              "key": "w1-26",
+              "text": "Learn: @AutoConfigureMockMvc — get a real MockMvc that goes through full security filter chain"
+            },
+            {
+              "key": "w1-27",
+              "text": "Learn: use H2 in-memory DB for tests — add H2 dependency with test scope"
+            },
+            {
+              "key": "w1-28",
+              "text": "Configure: application-test.properties with H2 datasource, ddl-auto=create-drop"
+            },
+            {
+              "key": "w1-29",
+              "text": "Write: full auth integration test — POST /register → POST /login → assert JWT in response"
+            },
+            {
+              "key": "w1-30",
+              "text": "Write: product CRUD integration test — register, login, use token, create product, verify in DB"
+            }
+          ],
+          "resource": "Test pyramid: Many unit tests (fast, cheap) → fewer integration tests (slower, more realistic) → very few end-to-end tests. Don't invert this — it makes test suites painfully slow."
+        }
+      ],
+      "projectCards": [],
+      "tip": null,
+      "askPrompt": "Show me how to write a Spring Boot integration test with @SpringBootTest, H2 in-memory database, and MockMvc — testing the full register → login → create product flow"
+    },
+    {
+      "id": "w2",
+      "title": "Week 2 — Frontend testing: React Testing Library + Vitest",
+      "description": "Test your React components the way users interact with them — not implementation details.",
+      "days": [
+        {
+          "label": "Day 1 · Monday",
+          "title": "Setup Vitest + React Testing Library",
+          "tasks": [
+            {
+              "key": "w2-1",
+              "text": "Install: npm install -D vitest @testing-library/react @testing-library/user-event @testing-library/jest-dom jsdom"
+            },
+            {
+              "key": "w2-2",
+              "text": "Configure vite.config.js — add test: { environment: 'jsdom', globals: true, setupFiles: './src/test/setup.js' }"
+            },
+            {
+              "key": "w2-3",
+              "text": "Create src/test/setup.js — import '@testing-library/jest-dom' for custom matchers"
+            },
+            {
+              "key": "w2-4",
+              "text": "Add test script to package.json: \"test\": \"vitest\", \"test:ui\": \"vitest --ui\""
+            },
+            {
+              "key": "w2-5",
+              "text": "Write a trivial first test — render a Button, assert it's in the document"
+            },
+            {
+              "key": "w2-6",
+              "text": "Run npm test — confirm it passes and the test runner is working"
+            }
+          ],
+          "resource": "Why Vitest over Jest: Vitest is native to Vite — no extra config, shared vite.config.js, much faster. Same API as Jest so tutorials transfer directly."
+        },
+        {
+          "label": "Day 2 · Tuesday",
+          "title": "Testing Library core concepts",
+          "tasks": [
+            {
+              "key": "w2-7",
+              "text": "Learn: render() — mounts a component into the test DOM"
+            },
+            {
+              "key": "w2-8",
+              "text": "Learn: screen.getByRole, getByText, getByLabelText — prefer role queries (accessibility-first)"
+            },
+            {
+              "key": "w2-9",
+              "text": "Learn: userEvent.click(), userEvent.type() — simulates real user input (better than fireEvent)"
+            },
+            {
+              "key": "w2-10",
+              "text": "Learn: expect(element).toBeInTheDocument(), toHaveTextContent(), toBeDisabled()"
+            },
+            {
+              "key": "w2-11",
+              "text": "Write: ProductCard tests — renders name, price, image alt text correctly"
+            },
+            {
+              "key": "w2-12",
+              "text": "Write: test clicking \"Add to Cart\" button calls the handler with correct product"
+            }
+          ],
+          "resource": "Golden rule: Test what the user sees and does, not implementation details. Never test state variables directly — test the visible result of state changing."
+        },
+        {
+          "label": "Day 3 · Wednesday",
+          "title": "Testing async components + mocking API calls",
+          "tasks": [
+            {
+              "key": "w2-13",
+              "text": "Learn: waitFor() — wait for async DOM updates after data loads"
+            },
+            {
+              "key": "w2-14",
+              "text": "Learn: findByText() — like getByText but waits automatically (async-aware)"
+            },
+            {
+              "key": "w2-15",
+              "text": "Learn: vi.mock('../api/products') — replace real API module with a mock"
+            },
+            {
+              "key": "w2-16",
+              "text": "Learn: wrap components in QueryClientProvider wrapper for TanStack Query tests"
+            },
+            {
+              "key": "w2-17",
+              "text": "Write: ProductsPage test — mock useProducts to return fake data, assert cards render"
+            },
+            {
+              "key": "w2-18",
+              "text": "Write: test loading skeleton shows while isLoading is true"
+            },
+            {
+              "key": "w2-19",
+              "text": "Write: test error message shows when query returns isError"
+            }
+          ],
+          "resource": null
+        },
+        {
+          "label": "Day 4 · Thursday",
+          "title": "Testing forms and user flows",
+          "tasks": [
+            {
+              "key": "w2-20",
+              "text": "Write: LoginPage test — type email and password, click submit, assert mutation called"
+            },
+            {
+              "key": "w2-21",
+              "text": "Write: test form validation — submit empty form, assert error messages appear"
+            },
+            {
+              "key": "w2-22",
+              "text": "Write: test password mismatch on RegisterPage shows correct error"
+            },
+            {
+              "key": "w2-23",
+              "text": "Write: CartContext test — add item, assert count increments, remove item, assert gone"
+            },
+            {
+              "key": "w2-24",
+              "text": "Write: test ProtectedRoute redirects to /login when user is not in AuthContext"
+            }
+          ],
+          "resource": null
+        },
+        {
+          "label": "Day 5 · Friday",
+          "title": "MSW — mock the real API at network level",
+          "tasks": [
+            {
+              "key": "w2-25",
+              "text": "Install: npm install -D msw — Mock Service Worker intercepts fetch/Axios at the network layer"
+            },
+            {
+              "key": "w2-26",
+              "text": "Create src/mocks/handlers.js — define handlers for GET /products, POST /auth/login etc."
+            },
+            {
+              "key": "w2-27",
+              "text": "Setup MSW server in test/setup.js — beforeAll(server.listen), afterEach(server.resetHandlers), afterAll(server.close)"
+            },
+            {
+              "key": "w2-28",
+              "text": "Rewrite ProductsPage test to use real Axios instance — MSW intercepts and returns mock data"
+            },
+            {
+              "key": "w2-29",
+              "text": "Test error scenario: override handler for one test to return 500, assert error UI shows"
+            }
+          ],
+          "resource": "Why MSW: vi.mock() mocks the module — but MSW intercepts the actual HTTP request. It tests more of your real code (Axios config, interceptors, error handling) without a real server."
+        }
+      ],
+      "projectCards": [],
+      "tip": null,
+      "askPrompt": "Show me how to set up MSW (Mock Service Worker) with Vitest and React Testing Library — including the handlers file and the test setup file, with one complete test example"
+    },
+    {
+      "id": "w3",
+      "title": "Week 3 — Performance: backend and frontend",
+      "description": "Find and fix real bottlenecks. Fast apps win users and clients.",
+      "days": [
+        {
+          "label": "Day 1 · Monday",
+          "title": "Backend: the N+1 query problem",
+          "tasks": [
+            {
+              "key": "w3-1",
+              "text": "Learn: N+1 — fetching a list of 20 products triggers 21 queries (1 list + 1 per category join)"
+            },
+            {
+              "key": "w3-2",
+              "text": "Enable SQL logging: spring.jpa.show-sql=true, spring.jpa.properties.hibernate.format_sql=true"
+            },
+            {
+              "key": "w3-3",
+              "text": "Call GET /products — count the SQL queries in logs. More than 2? You have N+1."
+            },
+            {
+              "key": "w3-4",
+              "text": "Fix with JOIN FETCH: @Query(\"SELECT p FROM Product p JOIN FETCH p.category\")"
+            },
+            {
+              "key": "w3-5",
+              "text": "Fix with @EntityGraph: @EntityGraph(attributePaths = {\"category\"}) on repository method"
+            },
+            {
+              "key": "w3-6",
+              "text": "Re-run the endpoint — confirm query count dropped to 1"
+            }
+          ],
+          "resource": "Warning: Disable show-sql in production — it floods logs and marginally impacts performance. Use it only during development investigation."
+        },
+        {
+          "label": "Day 2 · Tuesday",
+          "title": "Backend: MySQL indexing + query optimisation",
+          "tasks": [
+            {
+              "key": "w3-7",
+              "text": "Learn: an index is a sorted lookup structure — makes WHERE and JOIN fast on large tables"
+            },
+            {
+              "key": "w3-8",
+              "text": "Add indexes on columns used in WHERE/JOIN: category_id, created_at, name (if searched)"
+            },
+            {
+              "key": "w3-9",
+              "text": "Learn: EXPLAIN SELECT ... in MySQL Workbench — reads the query execution plan"
+            },
+            {
+              "key": "w3-10",
+              "text": "Insert 10,000 product rows with a SQL script — test query speed before and after indexing"
+            },
+            {
+              "key": "w3-11",
+              "text": "Learn: never SELECT * in production queries — fetch only columns you need in projections"
+            },
+            {
+              "key": "w3-12",
+              "text": "Use Spring Data JPA Projections — interface with only the fields needed for list views"
+            }
+          ],
+          "resource": null
+        },
+        {
+          "label": "Day 3 · Wednesday",
+          "title": "Backend: Spring caching with @Cacheable",
+          "tasks": [
+            {
+              "key": "w3-13",
+              "text": "Add dependency: spring-boot-starter-cache"
+            },
+            {
+              "key": "w3-14",
+              "text": "Add @EnableCaching to your main class or a config class"
+            },
+            {
+              "key": "w3-15",
+              "text": "Learn: @Cacheable(\"products\") on service method — result cached on first call, served from memory after"
+            },
+            {
+              "key": "w3-16",
+              "text": "Learn: @CacheEvict(\"products\") on create/update/delete — clears stale cache after mutation"
+            },
+            {
+              "key": "w3-17",
+              "text": "Apply to: getAll categories (rarely changes), getProductById (frequently read)"
+            },
+            {
+              "key": "w3-18",
+              "text": "Test: call same endpoint twice, watch SQL logs — second call should produce zero DB queries"
+            }
+          ],
+          "resource": "Default cache: Spring uses a simple ConcurrentHashMap by default. For production with multiple instances, swap to Redis. For now the default is fine."
+        },
+        {
+          "label": "Day 4 · Thursday",
+          "title": "Frontend: React performance profiling",
+          "tasks": [
+            {
+              "key": "w3-19",
+              "text": "Install React DevTools browser extension — open the Profiler tab"
+            },
+            {
+              "key": "w3-20",
+              "text": "Record a session on the ProductsPage — identify components that re-render unnecessarily"
+            },
+            {
+              "key": "w3-21",
+              "text": "Wrap pure child components in React.memo — prevents re-render when parent re-renders with same props"
+            },
+            {
+              "key": "w3-22",
+              "text": "Wrap callback props in useCallback — stable function reference prevents child re-renders"
+            },
+            {
+              "key": "w3-23",
+              "text": "Wrap expensive computations in useMemo — e.g. filtered/sorted product list derived from state"
+            },
+            {
+              "key": "w3-24",
+              "text": "Re-run profiler — confirm the targeted components no longer re-render on unrelated state changes"
+            }
+          ],
+          "resource": null
+        },
+        {
+          "label": "Day 5 · Friday",
+          "title": "Frontend: bundle analysis + image optimisation",
+          "tasks": [
+            {
+              "key": "w3-25",
+              "text": "Install: npm install -D rollup-plugin-visualizer — analyse what's in your bundle"
+            },
+            {
+              "key": "w3-26",
+              "text": "Run npm run build, open stats.html — find any surprisingly large dependencies"
+            },
+            {
+              "key": "w3-27",
+              "text": "Confirm all pages are lazy-loaded — each route is a separate chunk in the output"
+            },
+            {
+              "key": "w3-28",
+              "text": "Convert large product images to WebP format — typically 30-50% smaller than JPEG"
+            },
+            {
+              "key": "w3-29",
+              "text": "Add loading=\"lazy\" attribute to all below-the-fold img tags"
+            },
+            {
+              "key": "w3-30",
+              "text": "Run Lighthouse again — target 90+ Performance score on the live Vercel URL"
+            }
+          ],
+          "resource": null
+        }
+      ],
+      "projectCards": [],
+      "tip": null,
+      "askPrompt": "Explain the N+1 query problem in Spring Boot JPA with a concrete example and show me three ways to fix it: JOIN FETCH, @EntityGraph, and a DTO projection query"
+    },
+    {
+      "id": "w4",
+      "title": "Week 4 — Professional dev practices",
+      "description": "Database migrations, API rate limiting, structured logging — things that separate junior from mid-level.",
+      "days": [
+        {
+          "label": "Day 1 · Monday",
+          "title": "Flyway — database migrations",
+          "tasks": [
+            {
+              "key": "w4-1",
+              "text": "Add dependency: flyway-core — and remove ddl-auto=update from application.properties"
+            },
+            {
+              "key": "w4-2",
+              "text": "Create src/main/resources/db/migration/ folder"
+            },
+            {
+              "key": "w4-3",
+              "text": "Learn: naming convention — V1__create_users_table.sql, V2__create_products_table.sql"
+            },
+            {
+              "key": "w4-4",
+              "text": "Write V1 through V5 migration files matching your current schema from scratch"
+            },
+            {
+              "key": "w4-5",
+              "text": "Drop and recreate your dev DB — let Flyway rebuild it from migrations, confirm it matches"
+            },
+            {
+              "key": "w4-6",
+              "text": "Write V6__add_product_slug_column.sql — add a new column to products, restart, verify applied"
+            }
+          ],
+          "resource": "Why this matters: ddl-auto=update is a dev convenience that silently breaks production. Flyway gives you versioned, repeatable, reviewable schema changes — the way every real team manages databases."
+        },
+        {
+          "label": "Day 2 · Tuesday",
+          "title": "Structured logging with SLF4J + MDC",
+          "tasks": [
+            {
+              "key": "w4-7",
+              "text": "Audit all System.out.println() — replace every one with log.info() or log.debug()"
+            },
+            {
+              "key": "w4-8",
+              "text": "Learn: log levels — ERROR (broken), WARN (suspicious), INFO (key events), DEBUG (verbose detail)"
+            },
+            {
+              "key": "w4-9",
+              "text": "Learn: MDC (Mapped Diagnostic Context) — attach request-scoped data (userId, requestId) to every log line"
+            },
+            {
+              "key": "w4-10",
+              "text": "Build: a logging filter that generates a requestId per request, puts it in MDC"
+            },
+            {
+              "key": "w4-11",
+              "text": "Configure logback-spring.xml to output JSON format logs for production (easier to query)"
+            },
+            {
+              "key": "w4-12",
+              "text": "Test: make a request, find the requestId in logs, trace the full request flow"
+            }
+          ],
+          "resource": null
+        },
+        {
+          "label": "Day 3 · Wednesday",
+          "title": "API rate limiting + request validation hardening",
+          "tasks": [
+            {
+              "key": "w4-13",
+              "text": "Add dependency: bucket4j-spring-boot-starter — token bucket rate limiting"
+            },
+            {
+              "key": "w4-14",
+              "text": "Build: RateLimitFilter — limit auth endpoints to 10 requests per minute per IP"
+            },
+            {
+              "key": "w4-15",
+              "text": "Return 429 Too Many Requests with Retry-After header when limit exceeded"
+            },
+            {
+              "key": "w4-16",
+              "text": "Review all DTO validations — add @Pattern for fields like phone, slug, URL"
+            },
+            {
+              "key": "w4-17",
+              "text": "Add @Size(max=255) on all String fields that map to VARCHAR columns — prevent DB truncation errors"
+            },
+            {
+              "key": "w4-18",
+              "text": "Test: hammer the login endpoint 15 times rapidly — confirm 429 after 10"
+            }
+          ],
+          "resource": null
+        },
+        {
+          "label": "Day 4 · Thursday",
+          "title": "Spring Boot Actuator + health monitoring",
+          "tasks": [
+            {
+              "key": "w4-19",
+              "text": "Add dependency: spring-boot-starter-actuator"
+            },
+            {
+              "key": "w4-20",
+              "text": "Expose: management.endpoints.web.exposure.include=health,info,metrics"
+            },
+            {
+              "key": "w4-21",
+              "text": "Visit /actuator/health — confirms DB connection, disk space, and app status"
+            },
+            {
+              "key": "w4-22",
+              "text": "Visit /actuator/metrics — explore JVM memory, HTTP request counts, response times"
+            },
+            {
+              "key": "w4-23",
+              "text": "Secure actuator endpoints: only expose health publicly, require ADMIN role for others"
+            },
+            {
+              "key": "w4-24",
+              "text": "Configure Railway to use /actuator/health as the health check URL for the service"
+            }
+          ],
+          "resource": "Production tip: Railway and most PaaS platforms ping a health endpoint to decide if your app is ready to receive traffic. Actuator's /health is perfect for this."
+        },
+        {
+          "label": "Day 5 · Friday",
+          "title": "Git workflow — branching strategy",
+          "tasks": [
+            {
+              "key": "w4-25",
+              "text": "Learn: main branch = production only. Never commit directly to main."
+            },
+            {
+              "key": "w4-26",
+              "text": "Learn: develop branch = integration branch where features merge before going to main"
+            },
+            {
+              "key": "w4-27",
+              "text": "Learn: feature/* branches — create one per feature, merge to develop via PR when done"
+            },
+            {
+              "key": "w4-28",
+              "text": "Set up branch protection on GitHub: require PR review before merging to main"
+            },
+            {
+              "key": "w4-29",
+              "text": "Practice: create feature/add-product-slug branch, add the slug feature, open a PR, merge it"
+            },
+            {
+              "key": "w4-30",
+              "text": "Learn: git rebase vs merge — use rebase to keep feature branch up to date cleanly"
+            }
+          ],
+          "resource": null
+        }
+      ],
+      "projectCards": [],
+      "tip": null,
+      "askPrompt": "Show me how to set up Flyway database migrations in Spring Boot 3 — the Maven dependency, the migration file naming convention, and V1 through V3 migration SQL files for a users, products, and categories schema"
+    },
+    {
+      "id": "w5",
+      "title": "Week 5 — Docker + GitHub Actions CI/CD",
+      "description": "Containerise your app and automate testing and deployment on every push.",
+      "days": [
+        {
+          "label": "Day 1 · Monday",
+          "title": "Docker fundamentals",
+          "tasks": [
+            {
+              "key": "w5-1",
+              "text": "Install Docker Desktop — confirm docker --version in terminal"
+            },
+            {
+              "key": "w5-2",
+              "text": "Learn: image vs container — image is the blueprint, container is the running instance"
+            },
+            {
+              "key": "w5-3",
+              "text": "Learn: Dockerfile — FROM, WORKDIR, COPY, RUN, EXPOSE, CMD instructions"
+            },
+            {
+              "key": "w5-4",
+              "text": "Learn: docker build -t myapp . and docker run -p 8080:8080 myapp"
+            },
+            {
+              "key": "w5-5",
+              "text": "Learn: docker ps, docker logs, docker stop, docker rm"
+            },
+            {
+              "key": "w5-6",
+              "text": "Pull and run: docker run -p 3306:3306 -e MYSQL_ROOT_PASSWORD=root mysql:8 — your own local MySQL in a container"
+            }
+          ],
+          "resource": "Resource: docs.docker.com/get-started — the official tutorial is genuinely good and takes about 2 hours to complete."
+        },
+        {
+          "label": "Day 2 · Tuesday",
+          "title": "Dockerise the Spring Boot backend",
+          "tasks": [
+            {
+              "key": "w5-7",
+              "text": "Build the JAR first: mvn clean package -DskipTests"
+            },
+            {
+              "key": "w5-8",
+              "text": "Write a multi-stage Dockerfile: Stage 1 — Maven build. Stage 2 — slim JRE runtime only."
+            },
+            {
+              "key": "w5-9",
+              "text": "Use eclipse-temurin:21-jre-alpine as the runtime base — much smaller than full JDK"
+            },
+            {
+              "key": "w5-10",
+              "text": "Build and tag: docker build -t shop-backend:latest ."
+            },
+            {
+              "key": "w5-11",
+              "text": "Run: docker run -p 8080:8080 --env-file .env shop-backend:latest"
+            },
+            {
+              "key": "w5-12",
+              "text": "Test: hit localhost:8080/actuator/health — confirm app inside container is healthy"
+            }
+          ],
+          "resource": "Multi-stage benefit: Build stage can be 500MB+ (Maven + JDK). Runtime stage with just JRE + JAR is typically 150–200MB. Smaller image = faster deploys, less attack surface."
+        },
+        {
+          "label": "Day 3 · Wednesday",
+          "title": "Docker Compose — run the full stack locally",
+          "tasks": [
+            {
+              "key": "w5-13",
+              "text": "Learn: docker-compose.yml — defines multiple services (backend, db) as one unit"
+            },
+            {
+              "key": "w5-14",
+              "text": "Write docker-compose.yml: services for mysql (image: mysql:8) and backend (build: .)"
+            },
+            {
+              "key": "w5-15",
+              "text": "Configure depends_on: backend waits for mysql to be healthy before starting"
+            },
+            {
+              "key": "w5-16",
+              "text": "Configure volumes: persist MySQL data so it survives container restarts"
+            },
+            {
+              "key": "w5-17",
+              "text": "Run: docker compose up — both services start, Flyway runs migrations, app is ready"
+            },
+            {
+              "key": "w5-18",
+              "text": "Run: docker compose down -v — stop and clean up. Rerun up — confirm clean start from scratch"
+            }
+          ],
+          "resource": null
+        },
+        {
+          "label": "Day 4 · Thursday",
+          "title": "GitHub Actions — CI pipeline",
+          "tasks": [
+            {
+              "key": "w5-19",
+              "text": "Learn: GitHub Actions — automated workflows triggered by git events (push, pull_request)"
+            },
+            {
+              "key": "w5-20",
+              "text": "Create .github/workflows/ci.yml in the backend repo"
+            },
+            {
+              "key": "w5-21",
+              "text": "Write: on push to any branch — run mvn test with Java 21 and an H2 test profile"
+            },
+            {
+              "key": "w5-22",
+              "text": "Write: on push to main — also build Docker image and push to Docker Hub or GitHub Container Registry"
+            },
+            {
+              "key": "w5-23",
+              "text": "Add GitHub Secrets: DOCKERHUB_USERNAME, DOCKERHUB_TOKEN (never hardcode credentials in yml)"
+            },
+            {
+              "key": "w5-24",
+              "text": "Push a commit — watch the Actions tab in GitHub — green means all tests pass"
+            }
+          ],
+          "resource": null
+        },
+        {
+          "label": "Day 5 · Friday",
+          "title": "GitHub Actions — frontend CI + full CD pipeline",
+          "tasks": [
+            {
+              "key": "w5-25",
+              "text": "Create .github/workflows/ci.yml in the React repo"
+            },
+            {
+              "key": "w5-26",
+              "text": "Write: on pull request — run npm ci, npm test -- --run, npm run build"
+            },
+            {
+              "key": "w5-27",
+              "text": "Write: on push to main — run tests, then trigger Vercel deploy via Vercel CLI or webhook"
+            },
+            {
+              "key": "w5-28",
+              "text": "Backend CD: on push to main (after tests pass) — Railway auto-deploys from GitHub (already configured)"
+            },
+            {
+              "key": "w5-29",
+              "text": "Test the full pipeline: push a small change → CI runs → tests green → both apps auto-deploy"
+            },
+            {
+              "key": "w5-30",
+              "text": "Add a README badge: ![CI](https://github.com/yourname/repo/actions/workflows/ci.yml/badge.svg)"
+            }
+          ],
+          "resource": null
+        }
+      ],
+      "projectCards": [],
+      "tip": null,
+      "askPrompt": "Show me a complete multi-stage Dockerfile for Spring Boot 3 with eclipse-temurin:21, and a docker-compose.yml that runs the backend and MySQL together with Flyway migrations"
+    },
+    {
+      "id": "cap",
+      "title": "Phase 5 capstone — production-grade full-stack app",
+      "description": "You've gone from zero to a professionally engineered, tested, containerised, CI/CD-deployed system.",
+      "days": [],
+      "projectCards": [
+        {
+          "heading": "What \"production-grade\" means now",
+          "text": "Your app is tested at unit, integration, and component level. The database schema is versioned with Flyway. Every secret lives in an environment variable. The codebase has no N+1 queries, rate limiting on auth endpoints, structured logs with request IDs, and a CI pipeline that runs tests on every push. Docker Compose lets any developer run the entire stack with one command.",
+          "tasks": []
+        },
+        {
+          "heading": "Final polish checklist",
+          "text": null,
+          "tasks": [
+            {
+              "key": "cap-1",
+              "text": "All service classes have unit tests — JaCoCo shows 70%+ coverage"
+            },
+            {
+              "key": "cap-2",
+              "text": "At least one integration test covers the full auth + product flow"
+            },
+            {
+              "key": "cap-3",
+              "text": "React components have RTL tests — at least ProductCard, LoginPage, CartContext"
+            },
+            {
+              "key": "cap-4",
+              "text": "N+1 queries eliminated — confirmed by SQL log inspection"
+            },
+            {
+              "key": "cap-5",
+              "text": "MySQL indexes on category_id, name (or any searchable column)"
+            },
+            {
+              "key": "cap-6",
+              "text": "@Cacheable on category list and individual product reads"
+            },
+            {
+              "key": "cap-7",
+              "text": "Flyway migrations replace ddl-auto — schema is fully version-controlled"
+            },
+            {
+              "key": "cap-8",
+              "text": "Rate limiting on /auth/** endpoints — 429 returned after threshold"
+            },
+            {
+              "key": "cap-9",
+              "text": "Structured logging with requestId in every log line"
+            },
+            {
+              "key": "cap-10",
+              "text": "Actuator /health configured as Railway health check URL"
+            },
+            {
+              "key": "cap-11",
+              "text": "Git branching: main/develop/feature/* — branch protection on main"
+            },
+            {
+              "key": "cap-12",
+              "text": "Docker Compose runs full stack locally in one command"
+            },
+            {
+              "key": "cap-13",
+              "text": "GitHub Actions CI runs tests on every push — green badge on README"
+            },
+            {
+              "key": "cap-14",
+              "text": "Lighthouse 90+ on Performance and Accessibility on live Vercel URL"
+            },
+            {
+              "key": "cap-15",
+              "text": "Both repos have professional READMEs with architecture notes, setup guide, live URL"
+            }
+          ]
+        }
+      ],
+      "tip": null,
+      "askPrompt": "Show me a complete GitHub Actions CI/CD workflow file for a Spring Boot 3 backend — running JUnit tests on every push, and building and pushing a Docker image to Docker Hub on merge to main"
+    }
+  ]
+}

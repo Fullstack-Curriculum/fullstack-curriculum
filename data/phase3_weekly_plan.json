@@ -1,0 +1,1023 @@
+{
+  "phase": "phase3",
+  "nav": [
+    {
+      "id": "w1",
+      "label": "Week 1"
+    },
+    {
+      "id": "w2",
+      "label": "Week 2"
+    },
+    {
+      "id": "w3",
+      "label": "Week 3"
+    },
+    {
+      "id": "w4",
+      "label": "Week 4"
+    },
+    {
+      "id": "w5",
+      "label": "Week 5"
+    },
+    {
+      "id": "w6",
+      "label": "Week 6"
+    },
+    {
+      "id": "proj",
+      "label": "Project"
+    }
+  ],
+  "weeks": [
+    {
+      "id": "w1",
+      "title": "Week 1 — Vite setup + React core concepts",
+      "description": "Understand how React thinks. Components, JSX, props, and state are everything.",
+      "days": [
+        {
+          "label": "Day 1 · Monday",
+          "title": "Scaffold your project with Vite",
+          "tasks": [
+            {
+              "key": "w1-1",
+              "text": "Run: npm create vite@latest my-shop -- --template react"
+            },
+            {
+              "key": "w1-2",
+              "text": "Run: npm install, then npm run dev — confirm app opens in browser"
+            },
+            {
+              "key": "w1-3",
+              "text": "Explore the folder structure: src/, public/, index.html, vite.config.js"
+            },
+            {
+              "key": "w1-4",
+              "text": "Understand: what index.html does, what main.jsx does, what App.jsx does"
+            },
+            {
+              "key": "w1-5",
+              "text": "Install Tailwind CSS: follow tailwindcss.com/docs/guides/vite exactly"
+            },
+            {
+              "key": "w1-6",
+              "text": "Confirm Tailwind works: add className=\"text-blue-500\" to a heading and check color"
+            }
+          ],
+          "resource": "Resource: vitejs.dev for Vite docs · tailwindcss.com/docs for Tailwind installation"
+        },
+        {
+          "label": "Day 2 · Tuesday",
+          "title": "JSX and components",
+          "tasks": [
+            {
+              "key": "w1-7",
+              "text": "Learn: JSX is not HTML — className not class, htmlFor not for, self-closing tags"
+            },
+            {
+              "key": "w1-8",
+              "text": "Learn: a component is just a function that returns JSX"
+            },
+            {
+              "key": "w1-9",
+              "text": "Learn: component names must start with uppercase (Button not button)"
+            },
+            {
+              "key": "w1-10",
+              "text": "Build: Button, Card, Badge components in a src/components/ folder"
+            },
+            {
+              "key": "w1-11",
+              "text": "Use them in App.jsx — compose them together like HTML elements"
+            },
+            {
+              "key": "w1-12",
+              "text": "Style with Tailwind utility classes — no separate CSS file needed"
+            }
+          ],
+          "resource": "Resource: react.dev/learn — the new official React docs. Far better than any course. Start at \"Your First Component\"."
+        },
+        {
+          "label": "Day 3 · Wednesday",
+          "title": "Props — passing data into components",
+          "tasks": [
+            {
+              "key": "w1-13",
+              "text": "Learn: props are how a parent passes data down to a child component"
+            },
+            {
+              "key": "w1-14",
+              "text": "Learn: destructure props in the function signature — ({title, price}) not (props)"
+            },
+            {
+              "key": "w1-15",
+              "text": "Learn: the children prop — what renders between opening and closing component tags"
+            },
+            {
+              "key": "w1-16",
+              "text": "Build: ProductCard component that receives name, price, imageUrl, category as props"
+            },
+            {
+              "key": "w1-17",
+              "text": "Render a static list of 3 ProductCards in App.jsx with different props each"
+            }
+          ],
+          "resource": null
+        },
+        {
+          "label": "Day 4 · Thursday",
+          "title": "State with useState",
+          "tasks": [
+            {
+              "key": "w1-18",
+              "text": "Learn: what state is — data that changes, and when it changes the UI re-renders"
+            },
+            {
+              "key": "w1-19",
+              "text": "Learn: const [value, setValue] = useState(initialValue)"
+            },
+            {
+              "key": "w1-20",
+              "text": "Learn: never mutate state directly — always call the setter function"
+            },
+            {
+              "key": "w1-21",
+              "text": "Build: a counter component with increment/decrement buttons"
+            },
+            {
+              "key": "w1-22",
+              "text": "Build: a controlled text input — state mirrors input value in real-time"
+            },
+            {
+              "key": "w1-23",
+              "text": "Build: a simple toggle (show/hide a div) using boolean state"
+            }
+          ],
+          "resource": "Mental model: Every time you call a setter, React re-runs your component function and redraws the UI. State is the memory between renders."
+        },
+        {
+          "label": "Day 5 · Friday",
+          "title": "Lists, conditional rendering, events",
+          "tasks": [
+            {
+              "key": "w1-24",
+              "text": "Learn: render a list with .map() — every item needs a unique key prop"
+            },
+            {
+              "key": "w1-25",
+              "text": "Learn: conditional rendering — {condition && } and ternary operator"
+            },
+            {
+              "key": "w1-26",
+              "text": "Learn: event handlers — onClick, onChange, onSubmit — always camelCase"
+            },
+            {
+              "key": "w1-27",
+              "text": "Build: product list rendered with .map() from an array of objects"
+            },
+            {
+              "key": "w1-28",
+              "text": "Build: a search input that filters the displayed products in real time"
+            },
+            {
+              "key": "w1-29",
+              "text": "Push project to GitHub — commit after every feature you build"
+            }
+          ],
+          "resource": null
+        }
+      ],
+      "projectCards": [],
+      "tip": null,
+      "askPrompt": "Explain React state (useState) to me like I am a complete beginner — with a simple analogy and a short practical code example"
+    },
+    {
+      "id": "w2",
+      "title": "Week 2 — useEffect + React Router v6",
+      "description": "Add side effects and multi-page navigation. Your app starts feeling real.",
+      "days": [
+        {
+          "label": "Day 1 · Monday",
+          "title": "useEffect — side effects in React",
+          "tasks": [
+            {
+              "key": "w2-1",
+              "text": "Learn: useEffect runs after render — for fetching, subscriptions, timers"
+            },
+            {
+              "key": "w2-2",
+              "text": "Learn: the dependency array — [] runs once, [value] runs when value changes"
+            },
+            {
+              "key": "w2-3",
+              "text": "Learn: cleanup function — returned from useEffect, runs before next effect or unmount"
+            },
+            {
+              "key": "w2-4",
+              "text": "Build: fetch products from jsonplaceholder.typicode.com/posts inside useEffect"
+            },
+            {
+              "key": "w2-5",
+              "text": "Build: loading state (show spinner) and error state (show error message)"
+            }
+          ],
+          "resource": "Note: In Week 3 you'll replace useEffect fetching with TanStack Query — which handles loading/error/caching far better. This week is just to understand the underlying mechanism."
+        },
+        {
+          "label": "Day 2 · Tuesday",
+          "title": "React Router — basic routing",
+          "tasks": [
+            {
+              "key": "w2-6",
+              "text": "Install: npm install react-router-dom"
+            },
+            {
+              "key": "w2-7",
+              "text": "Learn: wrap app in BrowserRouter in main.jsx"
+            },
+            {
+              "key": "w2-8",
+              "text": "Learn: Routes and Route components — path=\"/products\" element={<ProductsPage />}"
+            },
+            {
+              "key": "w2-9",
+              "text": "Learn: Link component — replaces <a> tags for client-side navigation (no page reload)"
+            },
+            {
+              "key": "w2-10",
+              "text": "Build: pages folder — HomePage, ProductsPage, AboutPage"
+            },
+            {
+              "key": "w2-11",
+              "text": "Build: Navbar with Link components to each page"
+            }
+          ],
+          "resource": null
+        },
+        {
+          "label": "Day 3 · Wednesday",
+          "title": "Dynamic routes + useParams",
+          "tasks": [
+            {
+              "key": "w2-12",
+              "text": "Learn: dynamic route — path=\"/products/:id\""
+            },
+            {
+              "key": "w2-13",
+              "text": "Learn: useParams() hook — extract :id from the URL inside a component"
+            },
+            {
+              "key": "w2-14",
+              "text": "Learn: useNavigate() hook — programmatic navigation (e.g. after form submit)"
+            },
+            {
+              "key": "w2-15",
+              "text": "Build: ProductDetailPage — reads id from URL, fetches that product, displays it"
+            },
+            {
+              "key": "w2-16",
+              "text": "Make each ProductCard's title clickable — navigate to /products/:id"
+            }
+          ],
+          "resource": null
+        },
+        {
+          "label": "Day 4 · Thursday",
+          "title": "Nested routes + layouts",
+          "tasks": [
+            {
+              "key": "w2-17",
+              "text": "Learn: nested Route — child routes share parent layout"
+            },
+            {
+              "key": "w2-18",
+              "text": "Learn: Outlet component — where child routes render inside a layout"
+            },
+            {
+              "key": "w2-19",
+              "text": "Build: RootLayout with Navbar + Footer — wraps all pages via Outlet"
+            },
+            {
+              "key": "w2-20",
+              "text": "Build: a 404 NotFoundPage — render it with path=\"*\""
+            },
+            {
+              "key": "w2-21",
+              "text": "Learn: NavLink vs Link — NavLink adds active class styling automatically"
+            }
+          ],
+          "resource": "Resource: reactrouter.com/en/main/start/tutorial — official React Router tutorial, very well written"
+        },
+        {
+          "label": "Day 5 · Friday",
+          "title": "Forms + controlled inputs",
+          "tasks": [
+            {
+              "key": "w2-22",
+              "text": "Learn: controlled input — value tied to state, onChange updates state"
+            },
+            {
+              "key": "w2-23",
+              "text": "Learn: form onSubmit — always call e.preventDefault() first"
+            },
+            {
+              "key": "w2-24",
+              "text": "Learn: managing multiple form fields with one object state"
+            },
+            {
+              "key": "w2-25",
+              "text": "Build: a contact form — name, email, message fields with validation feedback"
+            },
+            {
+              "key": "w2-26",
+              "text": "Build: client-side validation — show error messages if fields are empty on submit"
+            }
+          ],
+          "resource": null
+        }
+      ],
+      "projectCards": [],
+      "tip": null,
+      "askPrompt": "Show me how to set up React Router v6 with nested routes and a shared layout component using Outlet — with a complete working code example"
+    },
+    {
+      "id": "w3",
+      "title": "Week 3 — TanStack Query (React Query)",
+      "description": "Replace all your manual fetch + useEffect code with the industry-standard data fetching library.",
+      "days": [
+        {
+          "label": "Day 1 · Monday",
+          "title": "Why TanStack Query and setup",
+          "tasks": [
+            {
+              "key": "w3-1",
+              "text": "Install: npm install @tanstack/react-query @tanstack/react-query-devtools"
+            },
+            {
+              "key": "w3-2",
+              "text": "Learn: what TanStack Query solves — caching, background refetch, loading/error states, deduplication"
+            },
+            {
+              "key": "w3-3",
+              "text": "Wrap app in QueryClientProvider with a new QueryClient() in main.jsx"
+            },
+            {
+              "key": "w3-4",
+              "text": "Add ReactQueryDevtools to App.jsx — open the devtools panel in browser"
+            },
+            {
+              "key": "w3-5",
+              "text": "Create src/api/products.js — a plain fetch function that returns products array"
+            }
+          ],
+          "resource": "Resource: tanstack.com/query/latest/docs — \"Quick Start\" and \"Queries\" sections. This is the best docs page in the React ecosystem."
+        },
+        {
+          "label": "Day 2 · Tuesday",
+          "title": "useQuery — fetch and cache data",
+          "tasks": [
+            {
+              "key": "w3-6",
+              "text": "Learn: useQuery({ queryKey: ['products'], queryFn: fetchProducts })"
+            },
+            {
+              "key": "w3-7",
+              "text": "Learn: destructure { data, isLoading, isError, error } from useQuery"
+            },
+            {
+              "key": "w3-8",
+              "text": "Learn: queryKey is the cache key — ['products', id] for a single product"
+            },
+            {
+              "key": "w3-9",
+              "text": "Rewrite ProductsPage to use useQuery instead of useEffect + fetch"
+            },
+            {
+              "key": "w3-10",
+              "text": "Rewrite ProductDetailPage to use useQuery(['products', id], fetchProductById)"
+            },
+            {
+              "key": "w3-11",
+              "text": "Watch devtools — navigate between pages, observe cache hits (no refetch)"
+            }
+          ],
+          "resource": null
+        },
+        {
+          "label": "Day 3 · Wednesday",
+          "title": "useMutation — create, update, delete",
+          "tasks": [
+            {
+              "key": "w3-12",
+              "text": "Learn: useMutation for POST/PUT/DELETE — different from useQuery (not automatic)"
+            },
+            {
+              "key": "w3-13",
+              "text": "Learn: mutate() and mutateAsync() — how to trigger the mutation"
+            },
+            {
+              "key": "w3-14",
+              "text": "Learn: onSuccess callback — invalidate queries to refetch fresh data after mutation"
+            },
+            {
+              "key": "w3-15",
+              "text": "Build: add product form with useMutation — POST and then invalidate ['products']"
+            },
+            {
+              "key": "w3-16",
+              "text": "Build: delete button on ProductCard — useMutation DELETE, invalidate on success"
+            }
+          ],
+          "resource": "Key pattern: After any mutation that changes the list, call queryClient.invalidateQueries(['products']) in onSuccess. This triggers a background refetch so the UI stays in sync."
+        },
+        {
+          "label": "Day 4 · Thursday",
+          "title": "Query options — staleTime, enabled, pagination",
+          "tasks": [
+            {
+              "key": "w3-17",
+              "text": "Learn: staleTime — how long cached data is considered fresh (default 0ms)"
+            },
+            {
+              "key": "w3-18",
+              "text": "Learn: enabled option — only run query when a condition is true (e.g. user is logged in)"
+            },
+            {
+              "key": "w3-19",
+              "text": "Learn: keepPreviousData (placeholderData) for smooth pagination — no flicker"
+            },
+            {
+              "key": "w3-20",
+              "text": "Build: paginated product list — page state drives queryKey, prev/next buttons"
+            },
+            {
+              "key": "w3-21",
+              "text": "Set staleTime: 1000 * 60 * 5 on product queries — avoid unnecessary refetches"
+            }
+          ],
+          "resource": null
+        },
+        {
+          "label": "Day 5 · Friday",
+          "title": "Custom hooks — organise your query logic",
+          "tasks": [
+            {
+              "key": "w3-22",
+              "text": "Learn: a custom hook is just a function that starts with \"use\" and calls other hooks"
+            },
+            {
+              "key": "w3-23",
+              "text": "Build: useProducts() custom hook — encapsulates useQuery for the products list"
+            },
+            {
+              "key": "w3-24",
+              "text": "Build: useProduct(id) custom hook — single product query"
+            },
+            {
+              "key": "w3-25",
+              "text": "Build: useCreateProduct() and useDeleteProduct() mutation hooks"
+            },
+            {
+              "key": "w3-26",
+              "text": "Refactor all pages to use these custom hooks — components become much cleaner"
+            }
+          ],
+          "resource": "Why it matters: Custom hooks are how senior React devs organise code. Your components should only worry about rendering — not about how data is fetched or cached."
+        }
+      ],
+      "projectCards": [],
+      "tip": null,
+      "askPrompt": "Show me how to build custom React hooks for TanStack Query — useProducts, useProduct(id), useCreateProduct — with complete working code"
+    },
+    {
+      "id": "w4",
+      "title": "Week 4 — Global state + auth context",
+      "description": "Share data across components without prop drilling, and build a real auth system.",
+      "days": [
+        {
+          "label": "Day 1 · Monday",
+          "title": "The prop drilling problem + useContext",
+          "tasks": [
+            {
+              "key": "w4-1",
+              "text": "Learn: prop drilling — passing props through many layers just to reach a deep child"
+            },
+            {
+              "key": "w4-2",
+              "text": "Learn: React Context — a way to share data globally without passing props manually"
+            },
+            {
+              "key": "w4-3",
+              "text": "Learn: createContext(), Context.Provider, useContext() hook"
+            },
+            {
+              "key": "w4-4",
+              "text": "Build: a ThemeContext — dark/light mode toggle accessible anywhere in the app"
+            },
+            {
+              "key": "w4-5",
+              "text": "Apply theme class to root div based on context value — Tailwind dark: classes"
+            }
+          ],
+          "resource": "Rule: Use Context for truly global state — auth user, theme, language. For server data (products, categories), keep using TanStack Query — don't put API responses in Context."
+        },
+        {
+          "label": "Day 2 · Tuesday",
+          "title": "Auth context — current user + JWT storage",
+          "tasks": [
+            {
+              "key": "w4-6",
+              "text": "Build: AuthContext — holds user object, token, login(), logout() functions"
+            },
+            {
+              "key": "w4-7",
+              "text": "Learn: store JWT in memory (useState) — safer than localStorage for auth tokens"
+            },
+            {
+              "key": "w4-8",
+              "text": "Learn: on app load, check localStorage for persisted user info to restore session"
+            },
+            {
+              "key": "w4-9",
+              "text": "Build: login() — call the auth API (mock for now), store token, set user in context"
+            },
+            {
+              "key": "w4-10",
+              "text": "Build: logout() — clear token and user from state and localStorage"
+            },
+            {
+              "key": "w4-11",
+              "text": "Update Navbar — show \"Login\" when logged out, \"Hi Manoj · Logout\" when logged in"
+            }
+          ],
+          "resource": null
+        },
+        {
+          "label": "Day 3 · Wednesday",
+          "title": "Protected routes",
+          "tasks": [
+            {
+              "key": "w4-12",
+              "text": "Build: ProtectedRoute component — reads auth from context"
+            },
+            {
+              "key": "w4-13",
+              "text": "If not logged in: redirect to /login using Navigate component"
+            },
+            {
+              "key": "w4-14",
+              "text": "If logged in: render the protected child component via Outlet"
+            },
+            {
+              "key": "w4-15",
+              "text": "Wrap admin-only routes (add product, manage orders) inside ProtectedRoute"
+            },
+            {
+              "key": "w4-16",
+              "text": "Test: try navigating to /admin/products — confirm redirect to /login"
+            }
+          ],
+          "resource": null
+        },
+        {
+          "label": "Day 4 · Thursday",
+          "title": "Cart state with useReducer",
+          "tasks": [
+            {
+              "key": "w4-17",
+              "text": "Learn: useReducer — for complex state with multiple actions (better than many useStates)"
+            },
+            {
+              "key": "w4-18",
+              "text": "Learn: dispatch({ type: 'ADD_ITEM', payload: product })"
+            },
+            {
+              "key": "w4-19",
+              "text": "Build: CartContext with useReducer — actions: ADD_ITEM, REMOVE_ITEM, UPDATE_QTY, CLEAR_CART"
+            },
+            {
+              "key": "w4-20",
+              "text": "Build: CartPage — list cart items, show total price, remove button per item"
+            },
+            {
+              "key": "w4-21",
+              "text": "Show cart item count badge in Navbar from CartContext"
+            }
+          ],
+          "resource": "When to use useReducer vs useState: If state has more than 2-3 related pieces that change together, or if next state depends on previous, use useReducer."
+        },
+        {
+          "label": "Day 5 · Friday",
+          "title": "Login + register pages with useMutation",
+          "tasks": [
+            {
+              "key": "w4-22",
+              "text": "Build: LoginPage — email/password form, submit calls login mutation"
+            },
+            {
+              "key": "w4-23",
+              "text": "On login success: store token in AuthContext, navigate to /"
+            },
+            {
+              "key": "w4-24",
+              "text": "On login error: show error message from API response"
+            },
+            {
+              "key": "w4-25",
+              "text": "Build: RegisterPage — name, email, password, confirm password fields"
+            },
+            {
+              "key": "w4-26",
+              "text": "Client-side: confirm passwords match before submitting"
+            }
+          ],
+          "resource": null
+        }
+      ],
+      "projectCards": [],
+      "tip": null,
+      "askPrompt": "Show me how to build an AuthContext in React with useContext — storing the JWT token, a user object, login and logout functions, and session persistence with localStorage"
+    },
+    {
+      "id": "w5",
+      "title": "Week 5 — UI polish + Tailwind design system",
+      "description": "Make your app look professional. Design consistency, responsiveness, and reusable components.",
+      "days": [
+        {
+          "label": "Day 1 · Monday",
+          "title": "Tailwind deep dive — layout and spacing",
+          "tasks": [
+            {
+              "key": "w5-1",
+              "text": "Learn: Flexbox in Tailwind — flex, items-center, justify-between, gap-4"
+            },
+            {
+              "key": "w5-2",
+              "text": "Learn: Grid in Tailwind — grid, grid-cols-3, col-span-2"
+            },
+            {
+              "key": "w5-3",
+              "text": "Learn: spacing scale — p-4 = 1rem, m-8 = 2rem, gap-6 = 1.5rem"
+            },
+            {
+              "key": "w5-4",
+              "text": "Learn: responsive prefixes — sm: md: lg: xl: — mobile-first approach"
+            },
+            {
+              "key": "w5-5",
+              "text": "Redesign ProductsPage — 1 column on mobile, 2 on tablet, 3 on desktop"
+            },
+            {
+              "key": "w5-6",
+              "text": "Make Navbar collapse to hamburger menu on mobile"
+            }
+          ],
+          "resource": "Resource: tailwindcss.com/docs — keep this open while you code. Use Ctrl+F to find any utility instantly."
+        },
+        {
+          "label": "Day 2 · Tuesday",
+          "title": "Component library with shadcn/ui",
+          "tasks": [
+            {
+              "key": "w5-7",
+              "text": "Learn: what shadcn/ui is — copy-paste components built on Radix UI + Tailwind"
+            },
+            {
+              "key": "w5-8",
+              "text": "Initialize: npx shadcn@latest init in your project"
+            },
+            {
+              "key": "w5-9",
+              "text": "Add components: npx shadcn@latest add button card input badge dialog"
+            },
+            {
+              "key": "w5-10",
+              "text": "Replace your custom Button/Card with shadcn versions — inspect the generated code"
+            },
+            {
+              "key": "w5-11",
+              "text": "Build: a product detail modal using the Dialog component"
+            }
+          ],
+          "resource": "Resource: ui.shadcn.com — click any component to see the install command and copy-paste code"
+        },
+        {
+          "label": "Day 3 · Wednesday",
+          "title": "Loading skeletons + error boundaries",
+          "tasks": [
+            {
+              "key": "w5-12",
+              "text": "Learn: skeleton loading — show placeholder shapes while data loads (not a spinner)"
+            },
+            {
+              "key": "w5-13",
+              "text": "Add: npx shadcn@latest add skeleton"
+            },
+            {
+              "key": "w5-14",
+              "text": "Build: ProductCardSkeleton — mirrors shape of ProductCard, shows during isLoading"
+            },
+            {
+              "key": "w5-15",
+              "text": "Build: an ErrorFallback component for when queries fail — with a retry button"
+            },
+            {
+              "key": "w5-16",
+              "text": "Test: throttle network in DevTools to Slow 3G — confirm skeletons appear"
+            }
+          ],
+          "resource": null
+        },
+        {
+          "label": "Day 4 · Thursday",
+          "title": "Toast notifications + form with React Hook Form",
+          "tasks": [
+            {
+              "key": "w5-17",
+              "text": "Add: npx shadcn@latest add toast sonner"
+            },
+            {
+              "key": "w5-18",
+              "text": "Show success toast after adding product, error toast on API failure"
+            },
+            {
+              "key": "w5-19",
+              "text": "Install: npm install react-hook-form"
+            },
+            {
+              "key": "w5-20",
+              "text": "Learn: useForm(), register(), handleSubmit(), formState.errors"
+            },
+            {
+              "key": "w5-21",
+              "text": "Rewrite add-product form with React Hook Form — cleaner, less boilerplate"
+            },
+            {
+              "key": "w5-22",
+              "text": "Add validation rules inside register() — required, minLength, pattern"
+            }
+          ],
+          "resource": "Resource: react-hook-form.com — \"Get Started\" page. It replaces all the manual onChange state management for forms."
+        },
+        {
+          "label": "Day 5 · Friday",
+          "title": "Performance — memo, lazy, Suspense",
+          "tasks": [
+            {
+              "key": "w5-23",
+              "text": "Learn: React.memo — prevents re-render of child if props haven't changed"
+            },
+            {
+              "key": "w5-24",
+              "text": "Learn: useCallback — memoize a function reference to pass as stable prop"
+            },
+            {
+              "key": "w5-25",
+              "text": "Learn: lazy() + Suspense — code-split pages so they load on demand"
+            },
+            {
+              "key": "w5-26",
+              "text": "Apply lazy() to all page components in your router — each becomes a separate chunk"
+            },
+            {
+              "key": "w5-27",
+              "text": "Run: npm run build — inspect chunk sizes in the output to confirm splitting"
+            }
+          ],
+          "resource": null
+        }
+      ],
+      "projectCards": [],
+      "tip": null,
+      "askPrompt": "Show me how to implement React.lazy and Suspense for code-splitting all my page components in React Router — with a loading fallback"
+    },
+    {
+      "id": "w6",
+      "title": "Week 6 — Deploy to Vercel + project polish",
+      "description": "Ship your frontend. Get it live, fast, and connected to your Phase 2 backend.",
+      "days": [
+        {
+          "label": "Day 1 · Monday",
+          "title": "Environment variables + API config",
+          "tasks": [
+            {
+              "key": "w6-1",
+              "text": "Learn: Vite env vars must start with VITE_ to be exposed to the browser"
+            },
+            {
+              "key": "w6-2",
+              "text": "Create .env.local — VITE_API_URL=http://localhost:8080/api/v1"
+            },
+            {
+              "key": "w6-3",
+              "text": "Create src/api/axios.js — Axios instance with baseURL from import.meta.env.VITE_API_URL"
+            },
+            {
+              "key": "w6-4",
+              "text": "Add request interceptor — automatically attach Authorization: Bearer {token} header"
+            },
+            {
+              "key": "w6-5",
+              "text": "Add response interceptor — redirect to /login on 401 response"
+            },
+            {
+              "key": "w6-6",
+              "text": "Add .env.local to .gitignore — never commit it"
+            }
+          ],
+          "resource": "This Axios setup (interceptors) is what Phase 4 is built on — your mock data will just be swapped for real API calls to your Railway backend."
+        },
+        {
+          "label": "Day 2 · Tuesday",
+          "title": "Deploy to Vercel",
+          "tasks": [
+            {
+              "key": "w6-7",
+              "text": "Push your React project to a GitHub repo"
+            },
+            {
+              "key": "w6-8",
+              "text": "Create Vercel account at vercel.com — import your GitHub repo"
+            },
+            {
+              "key": "w6-9",
+              "text": "Set environment variable in Vercel dashboard: VITE_API_URL = your Railway backend URL"
+            },
+            {
+              "key": "w6-10",
+              "text": "Deploy — Vercel auto-detects Vite, builds, and gives you a live URL"
+            },
+            {
+              "key": "w6-11",
+              "text": "Fix: add vercel.json with rewrites for SPA routing (client-side routes return 404 without it)"
+            },
+            {
+              "key": "w6-12",
+              "text": "Test live URL in browser — confirm pages load and navigation works"
+            }
+          ],
+          "resource": "vercel.json fix: {\"rewrites\": [{\"source\": \"/(.*)\", \"destination\": \"/\"}]} — add this to project root to fix direct URL access on React Router routes."
+        },
+        {
+          "label": "Day 3 · Wednesday",
+          "title": "Accessibility basics",
+          "tasks": [
+            {
+              "key": "w6-13",
+              "text": "Learn: semantic HTML — use button for actions, a for links, nav, main, section"
+            },
+            {
+              "key": "w6-14",
+              "text": "Learn: alt text on all img tags — describe the image, not just \"image\""
+            },
+            {
+              "key": "w6-15",
+              "text": "Learn: aria-label for icon-only buttons — screen readers read this text"
+            },
+            {
+              "key": "w6-16",
+              "text": "Learn: keyboard navigation — Tab through your app, every interactive element reachable?"
+            },
+            {
+              "key": "w6-17",
+              "text": "Install axe DevTools Chrome extension — run it on your app, fix flagged issues"
+            }
+          ],
+          "resource": null
+        },
+        {
+          "label": "Day 4 · Thursday",
+          "title": "Code quality + refactor",
+          "tasks": [
+            {
+              "key": "w6-18",
+              "text": "Install ESLint + Prettier — configure them if not already set up by Vite"
+            },
+            {
+              "key": "w6-19",
+              "text": "Run ESLint — fix any warnings (unused variables, missing keys, etc.)"
+            },
+            {
+              "key": "w6-20",
+              "text": "Review: each component does one job — split any that feel too large"
+            },
+            {
+              "key": "w6-21",
+              "text": "Review: no hardcoded strings or magic numbers — use constants"
+            },
+            {
+              "key": "w6-22",
+              "text": "Write README.md — project description, screenshots, setup steps, live URL"
+            }
+          ],
+          "resource": null
+        },
+        {
+          "label": "Day 5 · Friday",
+          "title": "Phase 3 wrap-up + Phase 4 preview",
+          "tasks": [
+            {
+              "key": "w6-23",
+              "text": "Final check: run through all pages on mobile, tablet, desktop viewports"
+            },
+            {
+              "key": "w6-24",
+              "text": "Run Lighthouse audit (Chrome DevTools) — aim for 90+ on Performance and Accessibility"
+            },
+            {
+              "key": "w6-25",
+              "text": "Note the Vercel URL — in Phase 4 you'll add it to Spring Boot CORS allowed origins"
+            },
+            {
+              "key": "w6-26",
+              "text": "Preview Phase 4: read about how Axios interceptors attach JWT to requests"
+            },
+            {
+              "key": "w6-27",
+              "text": "Push clean final version to GitHub — frontend repo ready to showcase"
+            }
+          ],
+          "resource": null
+        }
+      ],
+      "projectCards": [],
+      "tip": null,
+      "askPrompt": "Show me the Axios instance setup in React with request and response interceptors — attaching JWT token to every request and redirecting to login on 401"
+    },
+    {
+      "id": "proj",
+      "title": "Phase 3 project — product storefront UI",
+      "description": "A complete, live React frontend — ready to wire to your Spring Boot API in Phase 4.",
+      "days": [],
+      "projectCards": [
+        {
+          "heading": "What you'll build",
+          "text": "A responsive e-commerce storefront with product browsing, search, filters, a working cart, login/register pages, protected admin area, and skeleton loading — all powered by mock data (JSON) ready to swap for the real API.",
+          "tasks": []
+        },
+        {
+          "heading": "Pages",
+          "text": "HomePage (hero + featured products) · ProductsPage (grid + search + filter + pagination) · ProductDetailPage (image, description, add to cart) · CartPage (items, qty controls, total) · LoginPage · RegisterPage · AdminProductsPage (protected, list + add + delete)",
+          "tasks": []
+        },
+        {
+          "heading": "Feature checklist",
+          "text": null,
+          "tasks": [
+            {
+              "key": "pj-1",
+              "text": "React Router with nested layout (Navbar + Footer on all pages)"
+            },
+            {
+              "key": "pj-2",
+              "text": "TanStack Query for all data fetching — custom hooks for each resource"
+            },
+            {
+              "key": "pj-3",
+              "text": "AuthContext — login/logout/persist session"
+            },
+            {
+              "key": "pj-4",
+              "text": "CartContext with useReducer — add, remove, update quantity"
+            },
+            {
+              "key": "pj-5",
+              "text": "Protected route — /admin redirects to /login if not authenticated"
+            },
+            {
+              "key": "pj-6",
+              "text": "Skeleton loading on all data-fetching pages"
+            },
+            {
+              "key": "pj-7",
+              "text": "shadcn/ui components — Button, Card, Dialog, Badge, Toast"
+            },
+            {
+              "key": "pj-8",
+              "text": "Fully responsive — mobile, tablet, desktop with Tailwind"
+            },
+            {
+              "key": "pj-9",
+              "text": "React Hook Form on all forms"
+            },
+            {
+              "key": "pj-10",
+              "text": "Lazy-loaded pages with Suspense fallback"
+            },
+            {
+              "key": "pj-11",
+              "text": "Live on Vercel with correct SPA routing"
+            },
+            {
+              "key": "pj-12",
+              "text": "Axios instance with interceptors ready for Phase 4"
+            }
+          ]
+        }
+      ],
+      "tip": "A live, responsive React storefront with auth, cart, and admin — deployed on Vercel — is a serious portfolio piece. In Phase 4 you swap the mock data for your real Spring Boot API and the whole thing becomes one complete app.",
+      "askPrompt": "Help me start building the Phase 3 project — a React e-commerce storefront. Start with the folder structure, React Router setup with nested layout, and the first two pages."
+    }
+  ]
+}

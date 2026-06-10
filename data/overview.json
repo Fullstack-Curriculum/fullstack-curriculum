@@ -1,0 +1,730 @@
+{
+  "title": "Personalised learning strategy for Manoj — full-stack curriculum with toddler, freelancing, and family constraints",
+  "tabs": [
+    {
+      "id": "schedule",
+      "label": "Daily schedule"
+    },
+    {
+      "id": "notes",
+      "label": "Note-taking"
+    },
+    {
+      "id": "practice",
+      "label": "How to practice"
+    },
+    {
+      "id": "discipline",
+      "label": "Staying disciplined"
+    },
+    {
+      "id": "freelance",
+      "label": "Freelance balance"
+    },
+    {
+      "id": "mindset",
+      "label": "Mindset"
+    },
+    {
+      "id": "templates",
+      "label": "Templates"
+    }
+  ],
+  "sections": [
+    {
+      "id": "schedule",
+      "title": "Your real daily schedule",
+      "subtitle": "Built around your wife's teaching hours, your toddler's rhythm, and your freelance obligations.",
+      "metrics": [
+        {
+          "num": "90",
+          "label": "min of learning/day weekdays"
+        },
+        {
+          "num": "2.5",
+          "label": "hrs learning Sat + Sun each"
+        },
+        {
+          "num": "~9.5",
+          "label": "hrs of learning per week"
+        },
+        {
+          "num": "7–8",
+          "label": "months realistic timeline"
+        }
+      ],
+      "callouts": [
+        {
+          "type": "warn",
+          "text": "The original plan assumed 2 hrs/day 5 days a week. With a 10-month-old solo from 6am–3pm, that is not your reality. 90 minutes on weekdays is honest and achievable. Don't plan for 2 hours and consistently hit 40 minutes — that kills motivation. Plan for 90 minutes and hit 90 minutes every day."
+        },
+        {
+          "type": "tip",
+          "text": "The 5am early block is the game changer. It requires sleeping by 10pm. This is the single habit adjustment that makes everything else possible. Non-negotiable."
+        }
+      ],
+      "cards": [
+        {
+          "heading": "Your current focus",
+          "legend": [],
+          "dynamic": "currentFocus",
+          "timeBlocks": [],
+          "steps": [],
+          "items": [],
+          "resource": null,
+          "milestones": [],
+          "paragraphs": []
+        },
+        {
+          "heading": "Weekday schedule (Mon–Fri)",
+          "legend": [
+            {
+              "label": "Baby time",
+              "color": "#BA7517"
+            },
+            {
+              "label": "Freelance work",
+              "color": "#534AB7"
+            },
+            {
+              "label": "Learning",
+              "color": "#0F6E56"
+            },
+            {
+              "label": "Review / light",
+              "color": "#185FA5"
+            },
+            {
+              "label": "Rest / family",
+              "color": "#888780"
+            }
+          ],
+          "timeBlocks": [
+            {
+              "time": "5:00 – 5:30",
+              "type": "slot-learn",
+              "title": "Early morning learning block",
+              "text": "Wake before everyone. 30 min: read yesterday's notes, code one small thing. This is your quietest, sharpest time."
+            },
+            {
+              "time": "5:30 – 6:00",
+              "type": "slot-rest",
+              "title": "Get ready, wife leaves at 6am",
+              "text": "Breakfast, handover, settle the baby."
+            },
+            {
+              "time": "6:00 – 9:30",
+              "type": "slot-baby",
+              "title": "Solo baby time",
+              "text": "Full attention on the toddler. Feed, play, nap routine. No laptop open — it doesn't work and you'll frustrate yourself."
+            },
+            {
+              "time": "9:30 – 11:30",
+              "type": "slot-work",
+              "title": "Freelance work block",
+              "text": "Baby's first nap window. This is your income-producing time — protect it for client work."
+            },
+            {
+              "time": "11:30 – 12:30",
+              "type": "slot-baby",
+              "title": "Baby awake: lunch + play",
+              "text": "Full attention again. Use this mentally: replay what you're learning in your head while playing."
+            },
+            {
+              "time": "12:30 – 2:30",
+              "type": "slot-learn",
+              "title": "Main learning block — 60 min",
+              "text": "Baby's afternoon nap. This is your deep work window. Code, build, write — not just read. No distractions."
+            },
+            {
+              "time": "2:30 – 3:00",
+              "type": "slot-review",
+              "title": "Review / notes — 30 min",
+              "text": "Still in nap window. Write notes on what you just built. Commit code to GitHub."
+            },
+            {
+              "time": "3:00 – 5:00",
+              "type": "slot-baby",
+              "title": "Wife home — shared baby time",
+              "text": "Decompress together. Don't study during this time — your wife needs support too after a full day teaching."
+            },
+            {
+              "time": "5:00 – 7:00",
+              "type": "slot-work",
+              "title": "Freelance work block 2",
+              "text": "Evening client work, emails, deliverables. Baby usually settles by now."
+            },
+            {
+              "time": "9:00 – 9:30",
+              "type": "slot-review",
+              "title": "Evening review — 30 min",
+              "text": "After baby is asleep. Re-read notes, watch a short concept video. Never code at night — errors from tired coding waste morning time fixing them."
+            }
+          ],
+          "steps": [],
+          "items": [],
+          "resource": null,
+          "milestones": [],
+          "paragraphs": []
+        },
+        {
+          "heading": "Weekend schedule (Sat–Sun) — your power days",
+          "legend": [],
+          "timeBlocks": [
+            {
+              "time": "5:00 – 7:30",
+              "type": "slot-learn",
+              "title": "Deep learning block — 2.5 hrs",
+              "text": "Wife is home. This is your uninterrupted time. Build the week's mini-project. This single block is worth 3 weekday sessions."
+            },
+            {
+              "time": "7:30 – 10:00",
+              "type": "slot-baby",
+              "title": "Family morning time",
+              "text": "Breakfast together. Your wife has been working all week — this matters."
+            },
+            {
+              "time": "Afternoon",
+              "type": "slot-rest",
+              "title": "Freelance or rest",
+              "text": "Client work if deadline-driven, otherwise rest. Don't study in the afternoon — use fresh morning hours only."
+            }
+          ],
+          "steps": [],
+          "items": [],
+          "resource": null,
+          "milestones": [],
+          "paragraphs": []
+        }
+      ],
+      "askPrompt": "My toddler sometimes skips afternoon naps or wakes up early. What should I do on days when my learning window disappears completely?"
+    },
+    {
+      "id": "notes",
+      "title": "Note-taking system",
+      "subtitle": "Designed for a busy parent who needs to recall things fast and pick up where they left off.",
+      "metrics": [],
+      "callouts": [
+        {
+          "type": "warn",
+          "text": "Don't write notes while learning. First understand, then build, then write notes. Notes written while confused just capture the confusion. Notes written after it clicks capture the insight."
+        }
+      ],
+      "cards": [
+        {
+          "heading": "The system you'll use: Notion",
+          "legend": [],
+          "timeBlocks": [],
+          "steps": [],
+          "items": [
+            "Use Notion — one workspace called \"Fullstack Learning\" with a \"Concepts\" database (table or gallery view)",
+            "One page per concept, not one page per day — \"JPA Relationships\" not \"Monday notes\"",
+            "Add properties to the Concepts database: Phase, Status, and Review date — so you can filter and sort",
+            "When you return after baby duty, open your last-edited page and read the last 3 lines — instant context restore"
+          ],
+          "resource": "Notion is free for personal use, syncs automatically across desktop and mobile, and works offline in the apps — no separate backup step needed.",
+          "milestones": [],
+          "paragraphs": []
+        },
+        {
+          "heading": "Note template — use this for every concept",
+          "legend": [],
+          "timeBlocks": [],
+          "steps": [],
+          "items": [],
+          "resource": null,
+          "milestones": [],
+          "paragraphs": [
+            "# Concept name",
+            "**Phase:** (link to phase)",
+            "**Status:** Learning / Practiced / Reviewed",
+            "**What it is:** One sentence in plain English.",
+            "**Why it matters:** One sentence on when you'd use it.",
+            "**The thing that confused me:** What tripped you up.",
+            "**Code snippet:** Minimal working example.",
+            "**Where I used it:** Which project file and line.",
+            "**Review date:** Set 3 days from today."
+          ]
+        },
+        {
+          "heading": "The \"resume in 30 seconds\" rule",
+          "legend": [],
+          "timeBlocks": [],
+          "steps": [],
+          "items": [
+            "Before every break (baby woke up, freelance call, etc.) — write ONE sentence: \"I was about to...\"",
+            "This sentence lets you resume in 30 seconds instead of spending 15 minutes reconstructing context",
+            "Keep a sticky note on your monitor with the current task written on it in plain language",
+            "Leave your IDE open to the exact file and line you were working on — never close it mid-task"
+          ],
+          "resource": null,
+          "milestones": [],
+          "paragraphs": []
+        },
+        {
+          "heading": "Spaced repetition — review schedule",
+          "legend": [],
+          "timeBlocks": [],
+          "steps": [],
+          "items": [
+            "After learning a concept: review after 1 day, then 3 days, then 7 days, then 21 days",
+            "In Notion: set the \"Review date\" property on each Concepts page, then create a filtered/sorted view called \"Due for review\"",
+            "The 9:30pm review block is ONLY for re-reading old concept notes on their review date",
+            "Never re-read notes from today at night — that wastes the spaced repetition benefit"
+          ],
+          "resource": "Alternative: Anki (free flashcard app) for short definitions like HTTP status codes, JPA annotations, Git commands. 10 cards/day takes 5 minutes and is mobile-friendly for baby-holding moments.",
+          "milestones": [],
+          "paragraphs": []
+        }
+      ],
+      "askPrompt": null
+    },
+    {
+      "id": "practice",
+      "title": "How to practice effectively",
+      "subtitle": "The method that turns reading into real skill — designed for fragmented time blocks.",
+      "metrics": [],
+      "callouts": [
+        {
+          "type": "tip",
+          "text": "Struggling for 20 minutes before asking for help is not wasted time — it is the actual learning. The moment you figure it out after that struggle, it sticks permanently. Copy-pasting solutions you don't understand just delays the same confusion to a later session."
+        }
+      ],
+      "cards": [
+        {
+          "heading": "The build-break-rebuild loop",
+          "legend": [],
+          "timeBlocks": [],
+          "steps": [
+            {
+              "num": "1",
+              "title": "Watch or read (15 min)",
+              "text": "Understand the concept at a surface level. Don't take notes yet. Just get a feel for it."
+            },
+            {
+              "num": "2",
+              "title": "Build it yourself from scratch (40 min)",
+              "text": "Close the tutorial. Recreate what you just saw from memory. Struggle here — that's the learning happening."
+            },
+            {
+              "num": "3",
+              "title": "Break it deliberately (15 min)",
+              "text": "Remove a line of code. Change a value. Introduce an error. See what happens. Read the error message carefully."
+            },
+            {
+              "num": "4",
+              "title": "Fix it without looking (15 min)",
+              "text": "Debug from memory. If truly stuck after 10 minutes, then look. But try first."
+            },
+            {
+              "num": "5",
+              "title": "Write your note (5 min)",
+              "text": "Only now, when you understand it, write the concept note. One short note per session."
+            }
+          ],
+          "items": [],
+          "resource": null,
+          "milestones": [],
+          "paragraphs": []
+        },
+        {
+          "heading": "The one-session, one-outcome rule",
+          "legend": [],
+          "timeBlocks": [],
+          "steps": [],
+          "items": [
+            "Each 60-minute block must produce exactly ONE concrete output — not \"I studied JPA\"",
+            "\"I built the Product entity with category relationship and saw the table in MySQL Workbench\" — that's a session outcome",
+            "Write the outcome in your Obsidian daily note before you start. Forces clarity.",
+            "If you can't name the outcome before starting, you're not ready to start — clarify the goal first"
+          ],
+          "resource": null,
+          "milestones": [],
+          "paragraphs": []
+        },
+        {
+          "heading": "Commit after every session — no exceptions",
+          "legend": [],
+          "timeBlocks": [],
+          "steps": [],
+          "items": [
+            "Every single session ends with: git add . && git commit -m \"what you built\" && git push",
+            "Even if it's broken — commit with message \"WIP: stuck on X\"",
+            "This creates a timeline of progress and lets you roll back when things go wrong",
+            "After 6 months your GitHub contribution graph tells the story of your discipline — that's a portfolio in itself"
+          ],
+          "resource": null,
+          "milestones": [],
+          "paragraphs": []
+        },
+        {
+          "heading": "Mobile learning — use baby time smartly",
+          "legend": [],
+          "timeBlocks": [],
+          "steps": [],
+          "items": [
+            "While feeding, rocking, or holding the baby: YouTube on phone — watch Spring Boot / React concept videos (no coding, just absorb)",
+            "Amigoscode, Dan Vega, Theo (t3.gg) — short, focused videos that work with one ear on the baby",
+            "Anki flashcards on phone — review HTTP status codes, Java annotations, SQL keywords during nap transfer",
+            "Read react.dev or spring.io/guides on phone — bookmark pages, read in 5-minute bursts",
+            "This passive absorption makes the coding sessions land faster — concepts feel familiar when you sit down to code"
+          ],
+          "resource": null,
+          "milestones": [],
+          "paragraphs": []
+        }
+      ],
+      "askPrompt": null
+    },
+    {
+      "id": "discipline",
+      "title": "Staying disciplined over 7–8 months",
+      "subtitle": "Motivation comes and goes. Systems keep you going when motivation disappears.",
+      "metrics": [],
+      "callouts": [
+        {
+          "type": "warn",
+          "text": "The biggest threat to your curriculum is not laziness — it is guilt spiralling. Missing 3 days, feeling behind, trying to cram 6 hours in one day, burning out, stopping for a month. Prevent this: one missed day is just one missed day. Resume normally the next morning."
+        }
+      ],
+      "cards": [
+        {
+          "heading": "The weekly planning ritual — Sunday 8pm, 15 minutes",
+          "legend": [],
+          "timeBlocks": [],
+          "steps": [],
+          "items": [
+            "Every Sunday evening: open the Phase plan, pick exactly which 5 daily tasks you will complete this week",
+            "Write them in a physical notebook — one per day, Mon–Fri. One sentence each.",
+            "Don't plan more than 5. Under-planning and over-delivering beats over-planning and failing.",
+            "Saturday: review the week — what did you complete? What blocked you? Adjust next week."
+          ],
+          "resource": null,
+          "milestones": [],
+          "paragraphs": []
+        },
+        {
+          "heading": "The streak system — your toddler-proof habit tracker",
+          "legend": [],
+          "timeBlocks": [],
+          "steps": [],
+          "items": [
+            "Track one simple binary metric: \"Did I open my code editor today and write at least one line?\" — yes or no",
+            "Use a physical calendar on the wall. Cross off each day with a red marker. Don't break the chain.",
+            "A 5-minute commit on an exhausted day counts. Showing up is the habit — not the output.",
+            "Missed days are allowed — but never two in a row. Two in a row becomes a week off."
+          ],
+          "resource": null,
+          "milestones": [],
+          "paragraphs": []
+        },
+        {
+          "heading": "Phase milestones — know where you are",
+          "legend": [],
+          "dynamic": "phaseMilestones",
+          "timeBlocks": [],
+          "steps": [],
+          "items": [],
+          "resource": null,
+          "milestones": [],
+          "paragraphs": []
+        },
+        {
+          "heading": "When to take a full week off — no guilt",
+          "legend": [],
+          "timeBlocks": [],
+          "steps": [],
+          "items": [
+            "Baby is sick — full stop. A sick toddler needs 100% of you. Learning can wait 5 days.",
+            "Major freelance deadline — protect income first. Learning is the long game.",
+            "You haven't slept properly in 4+ days — chronic sleep deprivation makes learning 60% less effective anyway",
+            "After any full week off: don't try to catch up. Just resume from where you stopped."
+          ],
+          "resource": null,
+          "milestones": [],
+          "paragraphs": []
+        }
+      ],
+      "askPrompt": null
+    },
+    {
+      "id": "freelance",
+      "title": "Balancing learning with earning",
+      "subtitle": "You cannot stop earning. Here is how to keep both moving forward.",
+      "metrics": [],
+      "callouts": [
+        {
+          "type": "success",
+          "text": "You already have real project experience — Senevo, Verge3D plugins, WooCommerce configurator. That is a stronger starting point than most people on this curriculum. You are adding structured theory to existing practice, not starting from zero."
+        }
+      ],
+      "cards": [
+        {
+          "heading": "The income-first rule",
+          "legend": [],
+          "timeBlocks": [],
+          "steps": [],
+          "items": [
+            "Freelance work always wins over learning when there is a deadline or a client waiting",
+            "Learning is an investment in future earnings — but right now, current earnings pay for your family",
+            "Never miss a client deadline to study. That damages your reputation, which is your livelihood.",
+            "When a big project comes in: suspend learning for that sprint, deliver, then resume"
+          ],
+          "resource": null,
+          "milestones": [],
+          "paragraphs": []
+        },
+        {
+          "heading": "Apply learning to real freelance work immediately",
+          "legend": [],
+          "timeBlocks": [],
+          "steps": [],
+          "items": [
+            "Month 2 onwards: if a Fiverr client needs a basic Spring Boot API — take it. Build it. You're learning anyway.",
+            "Month 4 onwards: if a client needs a React frontend — take it. Your curriculum work IS the deliverable.",
+            "This is not dishonest — you are building the skill while delivering. Just scope conservatively.",
+            "Each real client project consolidates your learning 10x faster than tutorial exercises"
+          ],
+          "resource": null,
+          "milestones": [],
+          "paragraphs": []
+        },
+        {
+          "heading": "Gradually raise your rates as skills grow",
+          "legend": [],
+          "timeBlocks": [],
+          "steps": [],
+          "items": [
+            "After Month 4 (React + Spring Boot deployed): update Fiverr/Upwork — add full-stack to your offering",
+            "After Month 6 (tested, dockerised, CI/CD): you can legitimately charge mid-level full-stack rates",
+            "Don't wait until you \"feel ready\" to raise rates — update the profile after each phase completes",
+            "Your Senevo experience + this curriculum = a strong story. Frame it as a portfolio, not just skills."
+          ],
+          "resource": null,
+          "milestones": [],
+          "paragraphs": []
+        },
+        {
+          "heading": "What to avoid taking on during the curriculum",
+          "legend": [],
+          "timeBlocks": [],
+          "steps": [],
+          "items": [
+            "Avoid projects that require a technology you haven't reached yet in the curriculum",
+            "Avoid scope-creep projects with no clear end date — they consume all your nap-time blocks",
+            "Avoid clients who require same-day responses — you can't guarantee that with a toddler",
+            "Set your Fiverr response time expectation to 24 hours — be honest about it upfront"
+          ],
+          "resource": null,
+          "milestones": [],
+          "paragraphs": []
+        }
+      ],
+      "askPrompt": "How do I update my Fiverr and Upwork profile to reflect full-stack Spring Boot + React skills as I progress through the curriculum — what should I add after each phase?"
+    },
+    {
+      "id": "mindset",
+      "title": "Mindset for the long road",
+      "subtitle": "What to believe, what to ignore, and how to keep going when it's hard.",
+      "metrics": [],
+      "callouts": [
+        {
+          "type": "success",
+          "text": "34, freelancer, father of a 10-month-old, learning full-stack development in 90-minute windows while keeping a business running. If you finish this — and you can — it will be one of the most disciplined things you have ever done."
+        }
+      ],
+      "cards": [
+        {
+          "heading": "You are doing this in hard mode — acknowledge it",
+          "legend": [],
+          "timeBlocks": [],
+          "steps": [],
+          "items": [
+            "Most people learning to code have 4+ free hours a day. You have 90 interrupted minutes.",
+            "Most people don't have a 10-month-old who needs them solo for 9 hours a day on weekdays.",
+            "Finishing this curriculum in these conditions is genuinely harder than finishing a bootcamp.",
+            "Don't compare your pace to someone without a toddler and a freelance income to protect."
+          ],
+          "resource": null,
+          "milestones": [],
+          "paragraphs": []
+        },
+        {
+          "heading": "Slow progress is still progress",
+          "legend": [],
+          "timeBlocks": [],
+          "steps": [],
+          "items": [
+            "7 months of consistent 90-min sessions beats 3 months of intense study followed by burnout",
+            "Your toddler will get more independent every month — by Month 4, your learning windows will expand naturally",
+            "Sleep deprivation is real. On days you feel stupid, it's usually sleep, not ability.",
+            "Write one sentence in your Obsidian daily note each evening: \"Today I learned ___.\" Read these when you doubt yourself."
+          ],
+          "resource": null,
+          "milestones": [],
+          "paragraphs": []
+        },
+        {
+          "heading": "Your wife is part of this plan",
+          "legend": [],
+          "timeBlocks": [],
+          "steps": [],
+          "items": [
+            "Have an honest conversation: \"I'm learning full-stack development. On weekends I need 2.5 hours early morning. I will be fully present the rest of the day.\"",
+            "Her understanding and buy-in makes the 5am sessions possible without resentment building",
+            "When you get your first full-stack client project because of this skill — celebrate with her. She made it possible.",
+            "If a week is hard for her, pause the early sessions that week. Family first, curriculum second."
+          ],
+          "resource": null,
+          "milestones": [],
+          "paragraphs": []
+        },
+        {
+          "heading": "The moment it becomes worth it",
+          "legend": [],
+          "timeBlocks": [],
+          "steps": [],
+          "items": [
+            "Month 4: you will deploy a full React app live and feel something shift in your confidence",
+            "Month 6: a client will ask for something you couldn't do before, and you'll say yes without anxiety",
+            "Month 8: your rates will go up and your daughter will be nearly 18 months old — walking, curious, watching you work",
+            "The skill you're building is permanent. The toddler phase is temporary. Both are worth it."
+          ],
+          "resource": null,
+          "milestones": [],
+          "paragraphs": []
+        }
+      ],
+      "askPrompt": "I had a week where the baby was sick and I missed all my learning sessions. How do I get back on track without trying to catch up all at once?"
+    },
+    {
+      "id": "templates",
+      "title": "Templates to follow",
+      "subtitle": "Reusable templates for Notion and your daily routine — copy these once, then reuse them all the way through the curriculum.",
+      "metrics": [],
+      "callouts": [
+        {
+          "type": "tip",
+          "text": "Set these up once in Notion during Week 1 of Phase 1. After that, using them takes seconds and keeps every session consistent."
+        }
+      ],
+      "cards": [
+        {
+          "heading": "Notion concept-note template",
+          "legend": [],
+          "timeBlocks": [],
+          "steps": [],
+          "items": [],
+          "resource": "Create this as a Notion template inside your \"Concepts\" database so every new page starts pre-filled.",
+          "milestones": [],
+          "paragraphs": [
+            "# Concept name",
+            "**Phase:** (link to phase)",
+            "**Status:** Learning / Practiced / Reviewed",
+            "**What it is:** One sentence in plain English.",
+            "**Why it matters:** One sentence on when you'd use it.",
+            "**The thing that confused me:** What tripped you up.",
+            "**Code snippet:** Minimal working example.",
+            "**Where I used it:** Which project file and line.",
+            "**Review date:** Set 3 days from today."
+          ]
+        },
+        {
+          "heading": "Daily \"resume in 30 seconds\" note",
+          "legend": [],
+          "timeBlocks": [],
+          "steps": [],
+          "items": [
+            "Keep one Notion page called \"Right now\" pinned to your sidebar",
+            "Before every interruption, overwrite it with one sentence: \"I was about to...\"",
+            "Include the file name and line number you were editing",
+            "First thing when you sit back down: open this page before anything else"
+          ],
+          "resource": null,
+          "milestones": [],
+          "paragraphs": []
+        },
+        {
+          "heading": "Sunday weekly planning template",
+          "legend": [],
+          "timeBlocks": [],
+          "steps": [],
+          "items": [],
+          "resource": "Use this every Sunday at 8pm — fill it in, then check off each line through the week.",
+          "milestones": [],
+          "paragraphs": [
+            "## Week of [date]",
+            "**Current phase / week:** (e.g. Phase 2, Week 3)",
+            "- [ ] Mon: ",
+            "- [ ] Tue: ",
+            "- [ ] Wed: ",
+            "- [ ] Thu: ",
+            "- [ ] Fri: ",
+            "**Saturday review:** What did I complete? What blocked me? What changes next week?"
+          ]
+        },
+        {
+          "heading": "Daily session-outcome template",
+          "legend": [],
+          "timeBlocks": [],
+          "steps": [],
+          "items": [
+            "Write this BEFORE you start your main learning block",
+            "\"By the end of this session I will have: ___\" — one concrete, checkable outcome",
+            "Bad: \"I studied JPA\". Good: \"I built the Product entity with category relationship and saw the table in MySQL Workbench\"",
+            "After the session, mark it done or write one line on what blocked you"
+          ],
+          "resource": null,
+          "milestones": [],
+          "paragraphs": []
+        },
+        {
+          "heading": "Commit message template",
+          "legend": [],
+          "timeBlocks": [],
+          "steps": [],
+          "items": [],
+          "resource": "Run this at the end of every session — even a broken one.",
+          "milestones": [],
+          "paragraphs": [
+            "git add .",
+            "git commit -m \"<phase>: <what you built/changed>\"",
+            "git push",
+            "If unfinished: git commit -m \"WIP: stuck on <thing> — next: <what to try next>\""
+          ]
+        },
+        {
+          "heading": "\"Today I learned\" mindset journal",
+          "legend": [],
+          "timeBlocks": [],
+          "steps": [],
+          "items": [
+            "One Notion page per month, one line per day",
+            "Format: \"[date] — Today I learned ___\"",
+            "Read the whole month back on days you feel stuck or behind",
+            "This is your evidence that slow progress is still progress"
+          ],
+          "resource": null,
+          "milestones": [],
+          "paragraphs": []
+        },
+        {
+          "heading": "Freelance profile update template",
+          "legend": [],
+          "timeBlocks": [],
+          "steps": [],
+          "items": [
+            "Use this after completing each phase's project (see Phase milestones in Staying disciplined)",
+            "Add the phase's mini-project to your portfolio with a one-line description and a GitHub link",
+            "Update your Fiverr/Upwork skills list with the technologies from that phase",
+            "Re-read \"Balancing learning with earning\" for when to raise your rates"
+          ],
+          "resource": null,
+          "milestones": [],
+          "paragraphs": []
+        }
+      ],
+      "askPrompt": "Help me set up a Notion workspace with a Concepts database, a Right now page, and templates for weekly planning and session outcomes — what's the best structure?"
+    }
+  ]
+}

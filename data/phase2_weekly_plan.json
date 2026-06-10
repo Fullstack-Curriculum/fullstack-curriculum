@@ -1,0 +1,1027 @@
+{
+  "phase": "phase2",
+  "nav": [
+    {
+      "id": "w1",
+      "label": "Week 1"
+    },
+    {
+      "id": "w2",
+      "label": "Week 2"
+    },
+    {
+      "id": "w3",
+      "label": "Week 3"
+    },
+    {
+      "id": "w4",
+      "label": "Week 4"
+    },
+    {
+      "id": "w5",
+      "label": "Week 5"
+    },
+    {
+      "id": "w6",
+      "label": "Week 6"
+    },
+    {
+      "id": "proj",
+      "label": "Project"
+    }
+  ],
+  "weeks": [
+    {
+      "id": "w1",
+      "title": "Week 1 — Spring Boot setup + first REST endpoints",
+      "description": "Get your first Spring Boot app running and understand how the framework is structured.",
+      "days": [
+        {
+          "label": "Day 1 · Monday",
+          "title": "Create your first Spring Boot project",
+          "tasks": [
+            {
+              "key": "w1-1",
+              "text": "Go to start.spring.io — choose Maven, Java 21, Spring Boot 3.x (latest stable)"
+            },
+            {
+              "key": "w1-2",
+              "text": "Add dependencies: Spring Web, Spring Data JPA, MySQL Driver, Lombok"
+            },
+            {
+              "key": "w1-3",
+              "text": "Open the project in IntelliJ — explore the folder structure"
+            },
+            {
+              "key": "w1-4",
+              "text": "Understand: what is @SpringBootApplication and the main() method"
+            },
+            {
+              "key": "w1-5",
+              "text": "Configure application.properties: datasource URL, username, password, ddl-auto=update"
+            },
+            {
+              "key": "w1-6",
+              "text": "Run the app — confirm it starts without errors in the console"
+            }
+          ],
+          "resource": "Note: Spring Boot 3.x uses Jakarta EE (not javax). When you see import errors, use jakarta.* not javax.*"
+        },
+        {
+          "label": "Day 2 · Tuesday",
+          "title": "First REST controller",
+          "tasks": [
+            {
+              "key": "w1-7",
+              "text": "Learn: @RestController vs @Controller — what's the difference"
+            },
+            {
+              "key": "w1-8",
+              "text": "Learn: @GetMapping, @PostMapping, @PutMapping, @DeleteMapping"
+            },
+            {
+              "key": "w1-9",
+              "text": "Learn: @RequestMapping for base path on a controller class"
+            },
+            {
+              "key": "w1-10",
+              "text": "Build: HelloController with GET /api/hello returning a String"
+            },
+            {
+              "key": "w1-11",
+              "text": "Test: open browser or Postman, hit http://localhost:8080/api/hello"
+            },
+            {
+              "key": "w1-12",
+              "text": "Install Postman and create a collection called \"Product API\""
+            }
+          ],
+          "resource": "Resource: Dan Vega on YouTube — \"Building REST APIs with Spring Boot\" (free, 2024 version)"
+        },
+        {
+          "label": "Day 3 · Wednesday",
+          "title": "Request handling — params, path vars, body",
+          "tasks": [
+            {
+              "key": "w1-13",
+              "text": "Learn: @PathVariable — GET /api/products/{id}"
+            },
+            {
+              "key": "w1-14",
+              "text": "Learn: @RequestParam — GET /api/products?page=0&size=10"
+            },
+            {
+              "key": "w1-15",
+              "text": "Learn: @RequestBody — receive JSON in POST/PUT requests"
+            },
+            {
+              "key": "w1-16",
+              "text": "Learn: ResponseEntity — control HTTP status codes in your response"
+            },
+            {
+              "key": "w1-17",
+              "text": "Build: ProductController with in-memory List (no DB yet) — GET all, GET by id, POST, DELETE"
+            }
+          ],
+          "resource": null
+        },
+        {
+          "label": "Day 4 · Thursday",
+          "title": "Layered architecture — Service layer",
+          "tasks": [
+            {
+              "key": "w1-18",
+              "text": "Learn: why separate Controller, Service, Repository layers"
+            },
+            {
+              "key": "w1-19",
+              "text": "Learn: @Service annotation and Dependency Injection via constructor"
+            },
+            {
+              "key": "w1-20",
+              "text": "Learn: how Spring's IoC container manages beans automatically"
+            },
+            {
+              "key": "w1-21",
+              "text": "Refactor: move business logic out of controller into ProductService"
+            },
+            {
+              "key": "w1-22",
+              "text": "Inject ProductService into ProductController using constructor injection"
+            }
+          ],
+          "resource": "Rule to remember: Controller talks to Service. Service talks to Repository. Repository talks to DB. Never skip a layer."
+        },
+        {
+          "label": "Day 5 · Friday",
+          "title": "Exception handling",
+          "tasks": [
+            {
+              "key": "w1-23",
+              "text": "Learn: what happens when your controller throws an unhandled exception"
+            },
+            {
+              "key": "w1-24",
+              "text": "Learn: @ControllerAdvice and @ExceptionHandler"
+            },
+            {
+              "key": "w1-25",
+              "text": "Build: a custom ResourceNotFoundException class"
+            },
+            {
+              "key": "w1-26",
+              "text": "Build: a GlobalExceptionHandler that returns JSON error responses"
+            },
+            {
+              "key": "w1-27",
+              "text": "Test: request a product by a non-existent ID — confirm clean 404 JSON response"
+            }
+          ],
+          "resource": "Resource: Amigoscode \"Spring Boot Exception Handling\" on YouTube"
+        }
+      ],
+      "projectCards": [],
+      "tip": null,
+      "askPrompt": "Show me the exact folder structure and code for a Spring Boot 3 project with Controller, Service, and a GlobalExceptionHandler — beginner-friendly with comments"
+    },
+    {
+      "id": "w2",
+      "title": "Week 2 — Spring Data JPA + MySQL",
+      "description": "Replace your in-memory list with a real database. This is where it gets exciting.",
+      "days": [
+        {
+          "label": "Day 1 · Monday",
+          "title": "JPA entities and the database layer",
+          "tasks": [
+            {
+              "key": "w2-1",
+              "text": "Learn: what JPA is — a standard for mapping Java objects to DB tables"
+            },
+            {
+              "key": "w2-2",
+              "text": "Learn: @Entity, @Table, @Id, @GeneratedValue(strategy=IDENTITY)"
+            },
+            {
+              "key": "w2-3",
+              "text": "Learn: @Column — nullable, unique, length constraints"
+            },
+            {
+              "key": "w2-4",
+              "text": "Learn: Lombok @Data, @NoArgsConstructor, @AllArgsConstructor to cut boilerplate"
+            },
+            {
+              "key": "w2-5",
+              "text": "Build: Product entity (id, name, description, price, stock, createdAt)"
+            },
+            {
+              "key": "w2-6",
+              "text": "Run app — verify MySQL Workbench shows the products table was auto-created"
+            }
+          ],
+          "resource": "Note: Use ddl-auto=update in dev only. Never in production — use Flyway (covered in Phase 5)."
+        },
+        {
+          "label": "Day 2 · Tuesday",
+          "title": "JpaRepository — CRUD for free",
+          "tasks": [
+            {
+              "key": "w2-7",
+              "text": "Learn: JpaRepository<Entity, IdType> — what methods you get for free"
+            },
+            {
+              "key": "w2-8",
+              "text": "Build: ProductRepository interface that extends JpaRepository"
+            },
+            {
+              "key": "w2-9",
+              "text": "Update ProductService to use ProductRepository (inject it via constructor)"
+            },
+            {
+              "key": "w2-10",
+              "text": "Test: POST a product in Postman — confirm it saves to MySQL"
+            },
+            {
+              "key": "w2-11",
+              "text": "Test: GET /api/products — confirm it returns from DB"
+            },
+            {
+              "key": "w2-12",
+              "text": "Test: DELETE by id — confirm row removed in MySQL Workbench"
+            }
+          ],
+          "resource": null
+        },
+        {
+          "label": "Day 3 · Wednesday",
+          "title": "Custom queries + pagination",
+          "tasks": [
+            {
+              "key": "w2-13",
+              "text": "Learn: derived query methods — findByName(), findByPriceLessThan()"
+            },
+            {
+              "key": "w2-14",
+              "text": "Learn: @Query annotation with JPQL for custom queries"
+            },
+            {
+              "key": "w2-15",
+              "text": "Learn: Pageable and Page<T> for paginated results"
+            },
+            {
+              "key": "w2-16",
+              "text": "Build: GET /api/products?page=0&size=5&sort=price,asc — paginated endpoint"
+            },
+            {
+              "key": "w2-17",
+              "text": "Build: GET /api/products/search?name=laptop — search by name"
+            }
+          ],
+          "resource": "Resource: Spring Data JPA docs — \"Query Methods\" section at docs.spring.io"
+        },
+        {
+          "label": "Day 4 · Thursday",
+          "title": "Entity relationships — @OneToMany",
+          "tasks": [
+            {
+              "key": "w2-18",
+              "text": "Learn: @ManyToOne and @OneToMany — a Category has many Products"
+            },
+            {
+              "key": "w2-19",
+              "text": "Learn: @JoinColumn — specifies the foreign key column"
+            },
+            {
+              "key": "w2-20",
+              "text": "Learn: FetchType.LAZY vs EAGER — always use LAZY, fetch explicitly when needed"
+            },
+            {
+              "key": "w2-21",
+              "text": "Learn: cascade types — when saving parent also saves children"
+            },
+            {
+              "key": "w2-22",
+              "text": "Build: Category entity with @OneToMany to Product"
+            },
+            {
+              "key": "w2-23",
+              "text": "Test: create a category, assign products to it, query products by category"
+            }
+          ],
+          "resource": "Warning: Never use FetchType.EAGER on collections — it causes the N+1 problem and silently destroys performance."
+        },
+        {
+          "label": "Day 5 · Friday",
+          "title": "DTOs — separate your API from your entities",
+          "tasks": [
+            {
+              "key": "w2-24",
+              "text": "Learn: why you should never return JPA entities directly from controllers"
+            },
+            {
+              "key": "w2-25",
+              "text": "Learn: DTO (Data Transfer Object) pattern — a plain class for API input/output"
+            },
+            {
+              "key": "w2-26",
+              "text": "Build: ProductRequest DTO (for incoming POST/PUT body)"
+            },
+            {
+              "key": "w2-27",
+              "text": "Build: ProductResponse DTO (for outgoing JSON — only expose safe fields)"
+            },
+            {
+              "key": "w2-28",
+              "text": "Update service to map entity ↔ DTO manually (or use MapStruct)"
+            }
+          ],
+          "resource": "Why it matters: Returning raw entities leaks internal fields (like passwords), causes JSON infinite loops on bidirectional relations, and tightly couples your DB schema to your API."
+        }
+      ],
+      "projectCards": [],
+      "tip": null,
+      "askPrompt": "Explain the JPA N+1 problem to me with a simple example and show me how to fix it using @EntityGraph or JOIN FETCH in Spring Boot"
+    },
+    {
+      "id": "w3",
+      "title": "Week 3 — Validation + advanced JPA",
+      "description": "Make your API bulletproof — reject bad data before it touches the database.",
+      "days": [
+        {
+          "label": "Day 1 · Monday",
+          "title": "Bean Validation with @Valid",
+          "tasks": [
+            {
+              "key": "w3-1",
+              "text": "Add dependency: spring-boot-starter-validation"
+            },
+            {
+              "key": "w3-2",
+              "text": "Learn: @NotNull, @NotBlank, @Size, @Min, @Max, @Email on DTO fields"
+            },
+            {
+              "key": "w3-3",
+              "text": "Learn: add @Valid to @RequestBody parameter in controller"
+            },
+            {
+              "key": "w3-4",
+              "text": "Learn: handle MethodArgumentNotValidException in GlobalExceptionHandler"
+            },
+            {
+              "key": "w3-5",
+              "text": "Test: POST a product with a blank name — confirm 400 with helpful error message"
+            },
+            {
+              "key": "w3-6",
+              "text": "Build: return a map of field → error message in validation failure response"
+            }
+          ],
+          "resource": null
+        },
+        {
+          "label": "Day 2 · Tuesday",
+          "title": "@ManyToMany relationships",
+          "tasks": [
+            {
+              "key": "w3-7",
+              "text": "Learn: @ManyToMany — a Product can have many Tags, a Tag can have many Products"
+            },
+            {
+              "key": "w3-8",
+              "text": "Learn: @JoinTable — defines the join table (product_tags) with both foreign keys"
+            },
+            {
+              "key": "w3-9",
+              "text": "Learn: owning side vs inverse side of the relationship"
+            },
+            {
+              "key": "w3-10",
+              "text": "Build: Tag entity + @ManyToMany on Product"
+            },
+            {
+              "key": "w3-11",
+              "text": "Test: create tags, assign to products, query products by tag"
+            }
+          ],
+          "resource": null
+        },
+        {
+          "label": "Day 3 · Wednesday",
+          "title": "Auditing — createdAt, updatedAt",
+          "tasks": [
+            {
+              "key": "w3-12",
+              "text": "Learn: @EntityListeners(AuditingEntityListener.class)"
+            },
+            {
+              "key": "w3-13",
+              "text": "Learn: @CreatedDate, @LastModifiedDate on timestamp fields"
+            },
+            {
+              "key": "w3-14",
+              "text": "Learn: @EnableJpaAuditing on your main class or a config class"
+            },
+            {
+              "key": "w3-15",
+              "text": "Build: an abstract BaseEntity class with audit fields — all entities extend it"
+            },
+            {
+              "key": "w3-16",
+              "text": "Test: create a product, confirm createdAt and updatedAt auto-populate"
+            }
+          ],
+          "resource": null
+        },
+        {
+          "label": "Day 4 · Thursday",
+          "title": "Service layer patterns",
+          "tasks": [
+            {
+              "key": "w3-17",
+              "text": "Learn: @Transactional — when and why to add it to service methods"
+            },
+            {
+              "key": "w3-18",
+              "text": "Learn: readOnly=true for GET service methods — performance hint to JPA"
+            },
+            {
+              "key": "w3-19",
+              "text": "Learn: how to do a partial update (PATCH) — only update non-null fields"
+            },
+            {
+              "key": "w3-20",
+              "text": "Build: PATCH /api/products/{id} endpoint with partial update logic"
+            },
+            {
+              "key": "w3-21",
+              "text": "Test: PATCH with only price changed — confirm name untouched in DB"
+            }
+          ],
+          "resource": "Pattern: For PATCH, fetch entity from DB, check each DTO field for null, update only non-null fields, save. Never blindly overwrite."
+        },
+        {
+          "label": "Day 5 · Friday",
+          "title": "API design best practices",
+          "tasks": [
+            {
+              "key": "w3-22",
+              "text": "Learn: RESTful URL conventions — nouns not verbs (/products not /getProducts)"
+            },
+            {
+              "key": "w3-23",
+              "text": "Learn: correct HTTP status codes — 200, 201, 204, 400, 401, 403, 404, 409, 500"
+            },
+            {
+              "key": "w3-24",
+              "text": "Learn: consistent error response format — include status, message, timestamp, path"
+            },
+            {
+              "key": "w3-25",
+              "text": "Learn: API versioning with URL prefix — /api/v1/products"
+            },
+            {
+              "key": "w3-26",
+              "text": "Refactor: update all your endpoints to follow these conventions"
+            }
+          ],
+          "resource": null
+        }
+      ],
+      "projectCards": [],
+      "tip": null,
+      "askPrompt": "Show me how to implement @Transactional correctly in a Spring Boot service layer — with a real example of when it matters and what happens without it"
+    },
+    {
+      "id": "w4",
+      "title": "Week 4 — Spring Security + JWT authentication",
+      "description": "The hardest week. Take it slow — Security trips up every beginner. Understand each step before moving on.",
+      "days": [
+        {
+          "label": "Day 1 · Monday",
+          "title": "Spring Security basics",
+          "tasks": [
+            {
+              "key": "w4-1",
+              "text": "Add dependency: spring-boot-starter-security"
+            },
+            {
+              "key": "w4-2",
+              "text": "Observe: all your endpoints are now locked behind HTTP Basic auth"
+            },
+            {
+              "key": "w4-3",
+              "text": "Learn: the Security Filter Chain concept — requests go through filters before hitting controllers"
+            },
+            {
+              "key": "w4-4",
+              "text": "Learn: @EnableWebSecurity and writing a SecurityFilterChain @Bean"
+            },
+            {
+              "key": "w4-5",
+              "text": "Learn: how to permit certain URLs (e.g. /api/v1/auth/**) and require auth on others"
+            },
+            {
+              "key": "w4-6",
+              "text": "Build: User entity with email, password, role fields"
+            }
+          ],
+          "resource": "Resource: Amigoscode \"Spring Boot 3 + Spring Security 6 + JWT\" on YouTube — watch Day 1 portion only today"
+        },
+        {
+          "label": "Day 2 · Tuesday",
+          "title": "UserDetails and password hashing",
+          "tasks": [
+            {
+              "key": "w4-7",
+              "text": "Learn: UserDetails interface — what Spring Security expects from a user object"
+            },
+            {
+              "key": "w4-8",
+              "text": "Make your User entity implement UserDetails (or wrap it in a separate class)"
+            },
+            {
+              "key": "w4-9",
+              "text": "Learn: UserDetailsService — loadUserByUsername() method Spring calls during login"
+            },
+            {
+              "key": "w4-10",
+              "text": "Build: UserDetailsServiceImpl that loads user from DB by email"
+            },
+            {
+              "key": "w4-11",
+              "text": "Learn: BCryptPasswordEncoder — never store plain text passwords"
+            },
+            {
+              "key": "w4-12",
+              "text": "Register PasswordEncoder @Bean — hash password on registration, verify on login"
+            }
+          ],
+          "resource": null
+        },
+        {
+          "label": "Day 3 · Wednesday",
+          "title": "JWT token generation",
+          "tasks": [
+            {
+              "key": "w4-13",
+              "text": "Add dependency: io.jsonwebtoken:jjwt-api, jjwt-impl, jjwt-jackson"
+            },
+            {
+              "key": "w4-14",
+              "text": "Learn: JWT structure — header.payload.signature"
+            },
+            {
+              "key": "w4-15",
+              "text": "Learn: what goes in the claims — subject (email), issued at, expiration"
+            },
+            {
+              "key": "w4-16",
+              "text": "Build: JwtService with generateToken() and extractUsername() methods"
+            },
+            {
+              "key": "w4-17",
+              "text": "Store JWT secret and expiration in application.properties (externalized)"
+            },
+            {
+              "key": "w4-18",
+              "text": "Test: generate a token, paste into jwt.io to inspect the claims"
+            }
+          ],
+          "resource": "Resource: jwt.io — paste any JWT token here to decode and inspect it visually"
+        },
+        {
+          "label": "Day 4 · Thursday",
+          "title": "JWT filter + auth endpoints",
+          "tasks": [
+            {
+              "key": "w4-19",
+              "text": "Build: JwtAuthenticationFilter extends OncePerRequestFilter"
+            },
+            {
+              "key": "w4-20",
+              "text": "In filter: read Authorization header, extract Bearer token, validate, set SecurityContext"
+            },
+            {
+              "key": "w4-21",
+              "text": "Register the filter before UsernamePasswordAuthenticationFilter in SecurityFilterChain"
+            },
+            {
+              "key": "w4-22",
+              "text": "Build: AuthController with POST /api/v1/auth/register and /login"
+            },
+            {
+              "key": "w4-23",
+              "text": "Build: AuthService — register saves hashed password, login verifies and returns JWT"
+            }
+          ],
+          "resource": null
+        },
+        {
+          "label": "Day 5 · Friday",
+          "title": "Role-based access control + CORS",
+          "tasks": [
+            {
+              "key": "w4-24",
+              "text": "Learn: roles — USER vs ADMIN — store as enum in User entity"
+            },
+            {
+              "key": "w4-25",
+              "text": "Learn: .hasRole() and .hasAuthority() in SecurityFilterChain"
+            },
+            {
+              "key": "w4-26",
+              "text": "Learn: @PreAuthorize(\"hasRole('ADMIN')\") on controller methods"
+            },
+            {
+              "key": "w4-27",
+              "text": "Configure CORS in SecurityFilterChain to allow your frontend origin"
+            },
+            {
+              "key": "w4-28",
+              "text": "Test full flow in Postman: register → login → get token → use token on protected endpoint"
+            }
+          ],
+          "resource": null
+        }
+      ],
+      "projectCards": [],
+      "tip": null,
+      "askPrompt": "Walk me through building a complete JWT authentication system in Spring Boot 3 step by step — from User entity to JwtAuthenticationFilter — with code for each class"
+    },
+    {
+      "id": "w5",
+      "title": "Week 5 — File uploads + email + testing",
+      "description": "Round out your API with real-world features and make sure it works correctly.",
+      "days": [
+        {
+          "label": "Day 1 · Monday",
+          "title": "Multipart file upload",
+          "tasks": [
+            {
+              "key": "w5-1",
+              "text": "Learn: @RequestParam MultipartFile file in controller"
+            },
+            {
+              "key": "w5-2",
+              "text": "Learn: file.getOriginalFilename(), file.getBytes(), file.getInputStream()"
+            },
+            {
+              "key": "w5-3",
+              "text": "Configure: spring.servlet.multipart.max-file-size in application.properties"
+            },
+            {
+              "key": "w5-4",
+              "text": "Build: POST /api/v1/products/{id}/image — saves file to local /uploads/ folder"
+            },
+            {
+              "key": "w5-5",
+              "text": "Build: GET endpoint to serve the uploaded image back"
+            },
+            {
+              "key": "w5-6",
+              "text": "Test: upload a product image via Postman form-data"
+            }
+          ],
+          "resource": "Next step: In Phase 4 you'll swap local storage for Cloudflare R2 or AWS S3 — same API, different storage backend."
+        },
+        {
+          "label": "Day 2 · Tuesday",
+          "title": "Sending emails with JavaMailSender",
+          "tasks": [
+            {
+              "key": "w5-7",
+              "text": "Add dependency: spring-boot-starter-mail"
+            },
+            {
+              "key": "w5-8",
+              "text": "Configure: SMTP settings in application.properties (use Mailtrap.io for testing)"
+            },
+            {
+              "key": "w5-9",
+              "text": "Build: EmailService with sendSimpleEmail() method using JavaMailSender"
+            },
+            {
+              "key": "w5-10",
+              "text": "Trigger: send welcome email on user registration"
+            },
+            {
+              "key": "w5-11",
+              "text": "Test: register a user, check Mailtrap inbox for the email"
+            }
+          ],
+          "resource": "Resource: mailtrap.io — free fake SMTP inbox for dev/testing. No real emails sent."
+        },
+        {
+          "label": "Day 3 · Wednesday",
+          "title": "Unit testing with JUnit 5 + Mockito",
+          "tasks": [
+            {
+              "key": "w5-12",
+              "text": "Learn: what a unit test is — test one class in isolation"
+            },
+            {
+              "key": "w5-13",
+              "text": "Learn: @Test, @BeforeEach, Assertions.assertEquals(), assertThrows()"
+            },
+            {
+              "key": "w5-14",
+              "text": "Learn: Mockito — @Mock, @InjectMocks, when().thenReturn(), verify()"
+            },
+            {
+              "key": "w5-15",
+              "text": "Write: unit tests for ProductService — mock the repository, test business logic"
+            },
+            {
+              "key": "w5-16",
+              "text": "Write: test the \"product not found\" exception is thrown correctly"
+            },
+            {
+              "key": "w5-17",
+              "text": "Run tests — aim for green on all service tests"
+            }
+          ],
+          "resource": null
+        },
+        {
+          "label": "Day 4 · Thursday",
+          "title": "Controller testing with @WebMvcTest",
+          "tasks": [
+            {
+              "key": "w5-18",
+              "text": "Learn: @WebMvcTest — loads only web layer, mocks everything else"
+            },
+            {
+              "key": "w5-19",
+              "text": "Learn: MockMvc — perform HTTP requests in tests without a running server"
+            },
+            {
+              "key": "w5-20",
+              "text": "Write: test GET /api/v1/products returns 200 with correct JSON body"
+            },
+            {
+              "key": "w5-21",
+              "text": "Write: test POST with invalid body returns 400 with validation errors"
+            },
+            {
+              "key": "w5-22",
+              "text": "Write: test authenticated endpoint returns 401 without JWT"
+            }
+          ],
+          "resource": null
+        },
+        {
+          "label": "Day 5 · Friday",
+          "title": "Logging + environment config",
+          "tasks": [
+            {
+              "key": "w5-23",
+              "text": "Learn: SLF4J with Logback — @Slf4j (Lombok) and log.info(), log.error(), log.debug()"
+            },
+            {
+              "key": "w5-24",
+              "text": "Add meaningful log statements to service methods (not System.out.println!)"
+            },
+            {
+              "key": "w5-25",
+              "text": "Learn: Spring profiles — application-dev.properties vs application-prod.properties"
+            },
+            {
+              "key": "w5-26",
+              "text": "Move DB credentials and JWT secret to environment variables"
+            },
+            {
+              "key": "w5-27",
+              "text": "Never commit secrets to Git — add application-prod.properties to .gitignore"
+            }
+          ],
+          "resource": "Rule: If it's a secret (password, API key, JWT secret), it lives in an environment variable — never in code or committed properties files."
+        }
+      ],
+      "projectCards": [],
+      "tip": null,
+      "askPrompt": "Show me how to write a JUnit 5 unit test for a Spring Boot service class using Mockito — with @Mock, @InjectMocks, and testing an exception scenario"
+    },
+    {
+      "id": "w6",
+      "title": "Week 6 — Polish, Postman docs + deployment prep",
+      "description": "Make your API production-ready and deploy it so the world can see it.",
+      "days": [
+        {
+          "label": "Day 1 · Monday",
+          "title": "Springdoc OpenAPI (Swagger UI)",
+          "tasks": [
+            {
+              "key": "w6-1",
+              "text": "Add dependency: springdoc-openapi-starter-webmvc-ui"
+            },
+            {
+              "key": "w6-2",
+              "text": "Visit http://localhost:8080/swagger-ui.html — your API is auto-documented"
+            },
+            {
+              "key": "w6-3",
+              "text": "Learn: @Operation, @Parameter, @ApiResponse annotations for richer docs"
+            },
+            {
+              "key": "w6-4",
+              "text": "Configure Swagger to support JWT — add Authorize button for Bearer token"
+            },
+            {
+              "key": "w6-5",
+              "text": "Test: use Swagger UI to call your endpoints — confirm auth works through UI"
+            }
+          ],
+          "resource": null
+        },
+        {
+          "label": "Day 2 · Tuesday",
+          "title": "Deploy to Railway",
+          "tasks": [
+            {
+              "key": "w6-6",
+              "text": "Create Railway account at railway.app"
+            },
+            {
+              "key": "w6-7",
+              "text": "Add a MySQL service to your Railway project"
+            },
+            {
+              "key": "w6-8",
+              "text": "Connect your GitHub repo to Railway — enable auto-deploy on push to main"
+            },
+            {
+              "key": "w6-9",
+              "text": "Set environment variables in Railway dashboard (DB_URL, DB_USER, DB_PASS, JWT_SECRET)"
+            },
+            {
+              "key": "w6-10",
+              "text": "Deploy — watch the Railway build logs, fix any startup errors"
+            },
+            {
+              "key": "w6-11",
+              "text": "Test your live API URL in Postman — full register/login/CRUD flow"
+            }
+          ],
+          "resource": "Tip: Railway gives you a public URL like yourapp.up.railway.app — save this, you'll connect your React frontend to it in Phase 4."
+        },
+        {
+          "label": "Day 3 · Wednesday",
+          "title": "Postman collection + environment",
+          "tasks": [
+            {
+              "key": "w6-12",
+              "text": "Organise all your requests into folders in Postman (Auth, Products, Categories)"
+            },
+            {
+              "key": "w6-13",
+              "text": "Create a Postman environment with {{baseUrl}} and {{token}} variables"
+            },
+            {
+              "key": "w6-14",
+              "text": "Add a Postman test script on the login request to auto-save token to environment"
+            },
+            {
+              "key": "w6-15",
+              "text": "Add request examples (sample bodies) to every endpoint in the collection"
+            },
+            {
+              "key": "w6-16",
+              "text": "Export collection and commit it to GitHub in a /postman folder"
+            }
+          ],
+          "resource": null
+        },
+        {
+          "label": "Day 4 · Thursday",
+          "title": "Code review + refactor",
+          "tasks": [
+            {
+              "key": "w6-17",
+              "text": "Review each class — does every method do exactly one thing?"
+            },
+            {
+              "key": "w6-18",
+              "text": "Remove all System.out.println() — replace with proper log statements"
+            },
+            {
+              "key": "w6-19",
+              "text": "Check all endpoints return the right HTTP status code (POST returns 201, DELETE returns 204)"
+            },
+            {
+              "key": "w6-20",
+              "text": "Ensure no entity is ever returned directly — only DTOs"
+            },
+            {
+              "key": "w6-21",
+              "text": "Write a README.md with project setup steps, env vars needed, and API endpoint list"
+            }
+          ],
+          "resource": null
+        },
+        {
+          "label": "Day 5 · Friday",
+          "title": "Phase 2 wrap-up + Phase 3 preview",
+          "tasks": [
+            {
+              "key": "w6-22",
+              "text": "Run your full Postman collection against the live Railway URL — everything green?"
+            },
+            {
+              "key": "w6-23",
+              "text": "Note your live API base URL — you'll need it in Phase 3"
+            },
+            {
+              "key": "w6-24",
+              "text": "Install Node.js and npm — required to start Phase 3 (React)"
+            },
+            {
+              "key": "w6-25",
+              "text": "Scaffold a Vite React project: npm create vite@latest — just to preview what's coming"
+            },
+            {
+              "key": "w6-26",
+              "text": "Push everything to GitHub — backend repo should be clean and well-documented"
+            }
+          ],
+          "resource": null
+        }
+      ],
+      "projectCards": [],
+      "tip": null,
+      "askPrompt": "How do I set up Springdoc OpenAPI Swagger UI in Spring Boot 3 with JWT authorization support — show me the config and dependency"
+    },
+    {
+      "id": "proj",
+      "title": "Phase 2 project — Product Catalog REST API",
+      "description": "Your complete backend, tested in Postman and deployed live on Railway.",
+      "days": [],
+      "projectCards": [
+        {
+          "heading": "What you'll build",
+          "text": "A production-ready REST API for an e-commerce product catalog with user registration, JWT login, role-based access, full product and category CRUD, image uploads, search, pagination, and live deployment.",
+          "tasks": []
+        },
+        {
+          "heading": "Entities",
+          "text": "User (id, name, email, password, role) · Category (id, name, slug) · Product (id, name, description, price, stock, imageUrl, category, createdAt, updatedAt) · Tag (id, name) · Product_Tags join table",
+          "tasks": []
+        },
+        {
+          "heading": "Endpoints checklist",
+          "text": null,
+          "tasks": [
+            {
+              "key": "pj-1",
+              "text": "POST /api/v1/auth/register — create user account"
+            },
+            {
+              "key": "pj-2",
+              "text": "POST /api/v1/auth/login — returns JWT token"
+            },
+            {
+              "key": "pj-3",
+              "text": "GET /api/v1/products — paginated, public"
+            },
+            {
+              "key": "pj-4",
+              "text": "GET /api/v1/products/{id} — public"
+            },
+            {
+              "key": "pj-5",
+              "text": "GET /api/v1/products/search?name= — public"
+            },
+            {
+              "key": "pj-6",
+              "text": "POST /api/v1/products — ADMIN only"
+            },
+            {
+              "key": "pj-7",
+              "text": "PUT /api/v1/products/{id} — ADMIN only"
+            },
+            {
+              "key": "pj-8",
+              "text": "DELETE /api/v1/products/{id} — ADMIN only"
+            },
+            {
+              "key": "pj-9",
+              "text": "POST /api/v1/products/{id}/image — upload product image"
+            },
+            {
+              "key": "pj-10",
+              "text": "CRUD for /api/v1/categories"
+            },
+            {
+              "key": "pj-11",
+              "text": "Swagger UI live at /swagger-ui.html"
+            },
+            {
+              "key": "pj-12",
+              "text": "Deployed and accessible on Railway public URL"
+            }
+          ]
+        }
+      ],
+      "tip": "A live, documented REST API with JWT auth is a strong portfolio piece on its own. When this is done, you have the backend every React frontend in Phase 3 will connect to.",
+      "askPrompt": "Help me start building the Phase 2 project — a Product Catalog REST API. Begin with the User entity, AuthController, and JWT setup in Spring Boot 3."
+    }
+  ]
+}
