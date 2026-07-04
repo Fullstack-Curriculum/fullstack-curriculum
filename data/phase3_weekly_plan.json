@@ -42,27 +42,39 @@
           "tasks": [
             {
               "key": "w1-1",
-              "text": "Run: npm create vite@latest my-shop -- --template react"
+              "text": "Run: npm create vite@latest my-shop -- --template react",
+              "description": "Vite is the modern, fast build tool for React — the standard choice for new projects.",
+              "concept": "Vite Setup"
             },
             {
               "key": "w1-2",
-              "text": "Run: npm install, then npm run dev — confirm app opens in browser"
+              "text": "Run: npm install, then npm run dev — confirm app opens in browser",
+              "description": "Confirming the dev server runs proves your toolchain (Node, npm, Vite) is set up correctly.",
+              "concept": "Vite Setup"
             },
             {
               "key": "w1-3",
-              "text": "Explore the folder structure: src/, public/, index.html, vite.config.js"
+              "text": "Explore the folder structure: src/, public/, index.html, vite.config.js",
+              "description": "Knowing where files live (src/, public/, config) is essential before you start adding your own code.",
+              "concept": "Project Structure"
             },
             {
               "key": "w1-4",
-              "text": "Understand: what index.html does, what main.jsx does, what App.jsx does"
+              "text": "Understand: what index.html does, what main.jsx does, what App.jsx does",
+              "description": "These three files are the entry point of every React app — index.html loads main.jsx, which mounts App.jsx.",
+              "concept": "React Entry Point"
             },
             {
               "key": "w1-5",
-              "text": "Install Tailwind CSS: follow tailwindcss.com/docs/guides/vite exactly"
+              "text": "Install Tailwind CSS: follow tailwindcss.com/docs/guides/vite exactly",
+              "description": "Tailwind lets you style components with utility classes directly in JSX — no separate CSS files to manage.",
+              "concept": "Tailwind CSS Setup"
             },
             {
               "key": "w1-6",
-              "text": "Confirm Tailwind works: add className=\"text-blue-500\" to a heading and check color"
+              "text": "Confirm Tailwind works: add className=\"text-blue-500\" to a heading and check color",
+              "description": "Confirming a utility class renders correctly verifies Tailwind is properly configured before you build anything.",
+              "concept": "Tailwind CSS Setup"
             }
           ],
           "resource": "Resource: vitejs.dev for Vite docs · tailwindcss.com/docs for Tailwind installation"
@@ -73,27 +85,39 @@
           "tasks": [
             {
               "key": "w1-7",
-              "text": "Learn: JSX is not HTML — className not class, htmlFor not for, self-closing tags"
+              "text": "Learn: JSX is not HTML — className not class, htmlFor not for, self-closing tags",
+              "description": "JSX looks like HTML but compiles to JavaScript — these naming differences trip up every beginner at first.",
+              "concept": "JSX Syntax"
             },
             {
               "key": "w1-8",
-              "text": "Learn: a component is just a function that returns JSX"
+              "text": "Learn: a component is just a function that returns JSX",
+              "description": "Understanding components as functions demystifies React — there's no magic, just functions returning JSX.",
+              "concept": "Components"
             },
             {
               "key": "w1-9",
-              "text": "Learn: component names must start with uppercase (Button not button)"
+              "text": "Learn: component names must start with uppercase (Button not button)",
+              "description": "React treats lowercase tags as HTML elements and uppercase as components — this naming rule is how React tells them apart.",
+              "concept": "Component Naming"
             },
             {
               "key": "w1-10",
-              "text": "Build: Button, Card, Badge components in a src/components/ folder"
+              "text": "Build: Button, Card, Badge components in a src/components/ folder",
+              "description": "Building small reusable components is the core React skill — every UI is composed from pieces like these.",
+              "concept": "Reusable Components"
             },
             {
               "key": "w1-11",
-              "text": "Use them in App.jsx — compose them together like HTML elements"
+              "text": "Use them in App.jsx — compose them together like HTML elements",
+              "description": "Composing components together is how complex UIs are built from simple building blocks.",
+              "concept": "Component Composition"
             },
             {
               "key": "w1-12",
-              "text": "Style with Tailwind utility classes — no separate CSS file needed"
+              "text": "Style with Tailwind utility classes — no separate CSS file needed",
+              "description": "Styling with Tailwind directly in components keeps styles colocated with the markup they affect.",
+              "concept": "Tailwind Styling"
             }
           ],
           "resource": "Resource: react.dev/learn — the new official React docs. Far better than any course. Start at \"Your First Component\"."
@@ -104,23 +128,33 @@
           "tasks": [
             {
               "key": "w1-13",
-              "text": "Learn: props are how a parent passes data down to a child component"
+              "text": "Learn: props are how a parent passes data down to a child component",
+              "description": "Props are how data flows down the component tree — the foundation of React's one-way data flow.",
+              "concept": "Props"
             },
             {
               "key": "w1-14",
-              "text": "Learn: destructure props in the function signature — ({title, price}) not (props)"
+              "text": "Learn: destructure props in the function signature — ({title, price}) not (props)",
+              "description": "Destructuring props makes components easier to read and shows exactly what data they expect.",
+              "concept": "Props Destructuring"
             },
             {
               "key": "w1-15",
-              "text": "Learn: the children prop — what renders between opening and closing component tags"
+              "text": "Learn: the children prop — what renders between opening and closing component tags",
+              "description": "The children prop lets components wrap arbitrary content — used heavily by layout and modal components.",
+              "concept": "children Prop"
             },
             {
               "key": "w1-16",
-              "text": "Build: ProductCard component that receives name, price, imageUrl, category as props"
+              "text": "Build: ProductCard component that receives name, price, imageUrl, category as props",
+              "description": "ProductCard is the central component of your storefront — every product listing will reuse it.",
+              "concept": "ProductCard Component"
             },
             {
               "key": "w1-17",
-              "text": "Render a static list of 3 ProductCards in App.jsx with different props each"
+              "text": "Render a static list of 3 ProductCards in App.jsx with different props each",
+              "description": "Rendering multiple cards with different props proves the component is properly reusable.",
+              "concept": "Component Composition"
             }
           ],
           "resource": null
@@ -131,27 +165,39 @@
           "tasks": [
             {
               "key": "w1-18",
-              "text": "Learn: what state is — data that changes, and when it changes the UI re-renders"
+              "text": "Learn: what state is — data that changes, and when it changes the UI re-renders",
+              "description": "Understanding the render cycle is essential — React re-renders whenever state changes, and that's how UI updates happen.",
+              "concept": "React State"
             },
             {
               "key": "w1-19",
-              "text": "Learn: const [value, setValue] = useState(initialValue)"
+              "text": "Learn: const [value, setValue] = useState(initialValue)",
+              "description": "useState is the most-used hook in React — nearly every interactive component needs it.",
+              "concept": "useState"
             },
             {
               "key": "w1-20",
-              "text": "Learn: never mutate state directly — always call the setter function"
+              "text": "Learn: never mutate state directly — always call the setter function",
+              "description": "Mutating state directly doesn't trigger a re-render and can cause subtle bugs — always use the setter.",
+              "concept": "State Immutability"
             },
             {
               "key": "w1-21",
-              "text": "Build: a counter component with increment/decrement buttons"
+              "text": "Build: a counter component with increment/decrement buttons",
+              "description": "A counter is the classic first useState exercise — small enough to focus purely on the state update pattern.",
+              "concept": "useState"
             },
             {
               "key": "w1-22",
-              "text": "Build: a controlled text input — state mirrors input value in real-time"
+              "text": "Build: a controlled text input — state mirrors input value in real-time",
+              "description": "Controlled inputs are the standard way to handle form fields in React — you'll use this pattern constantly.",
+              "concept": "Controlled Inputs"
             },
             {
               "key": "w1-23",
-              "text": "Build: a simple toggle (show/hide a div) using boolean state"
+              "text": "Build: a simple toggle (show/hide a div) using boolean state",
+              "description": "A toggle is a simple but common UI pattern — modals, dropdowns, and accordions all build on this.",
+              "concept": "Conditional Rendering"
             }
           ],
           "resource": "Mental model: Every time you call a setter, React re-runs your component function and redraws the UI. State is the memory between renders."
@@ -162,27 +208,39 @@
           "tasks": [
             {
               "key": "w1-24",
-              "text": "Learn: render a list with .map() — every item needs a unique key prop"
+              "text": "Learn: render a list with .map() — every item needs a unique key prop",
+              "description": ".map() with keys is how every list of data (products, comments, orders) gets rendered in React.",
+              "concept": "List Rendering (.map)"
             },
             {
               "key": "w1-25",
-              "text": "Learn: conditional rendering — {condition && } and ternary operator"
+              "text": "Learn: conditional rendering — {condition && } and ternary operator",
+              "description": "Conditional rendering is how UI responds to state — showing/hiding elements based on data or user actions.",
+              "concept": "Conditional Rendering"
             },
             {
               "key": "w1-26",
-              "text": "Learn: event handlers — onClick, onChange, onSubmit — always camelCase"
+              "text": "Learn: event handlers — onClick, onChange, onSubmit — always camelCase",
+              "description": "Event handlers are how your components respond to user interaction — clicks, typing, submissions.",
+              "concept": "Event Handlers"
             },
             {
               "key": "w1-27",
-              "text": "Build: product list rendered with .map() from an array of objects"
+              "text": "Build: product list rendered with .map() from an array of objects",
+              "description": "Rendering a product list from data is the exact pattern your storefront's product grid will use.",
+              "concept": "List Rendering (.map)"
             },
             {
               "key": "w1-28",
-              "text": "Build: a search input that filters the displayed products in real time"
+              "text": "Build: a search input that filters the displayed products in real time",
+              "description": "A live search filter combines state, events, and list rendering — a realistic feature you'll see in real apps.",
+              "concept": "Search Filter"
             },
             {
               "key": "w1-29",
-              "text": "Push project to GitHub — commit after every feature you build"
+              "text": "Push project to GitHub — commit after every feature you build",
+              "description": "Committing after each feature creates a clean history that's easy to review and roll back if needed.",
+              "concept": "GitHub"
             }
           ],
           "resource": null
@@ -203,23 +261,33 @@
           "tasks": [
             {
               "key": "w2-1",
-              "text": "Learn: useEffect runs after render — for fetching, subscriptions, timers"
+              "text": "Learn: useEffect runs after render — for fetching, subscriptions, timers",
+              "description": "useEffect is how React handles anything outside of rendering — fetching data, timers, subscriptions.",
+              "concept": "useEffect"
             },
             {
               "key": "w2-2",
-              "text": "Learn: the dependency array — [] runs once, [value] runs when value changes"
+              "text": "Learn: the dependency array — [] runs once, [value] runs when value changes",
+              "description": "The dependency array controls when an effect re-runs — getting it wrong is one of the most common React bugs.",
+              "concept": "useEffect Dependencies"
             },
             {
               "key": "w2-3",
-              "text": "Learn: cleanup function — returned from useEffect, runs before next effect or unmount"
+              "text": "Learn: cleanup function — returned from useEffect, runs before next effect or unmount",
+              "description": "Cleanup functions prevent memory leaks and stale subscriptions when a component unmounts or re-runs.",
+              "concept": "useEffect Cleanup"
             },
             {
               "key": "w2-4",
-              "text": "Build: fetch products from jsonplaceholder.typicode.com/posts inside useEffect"
+              "text": "Build: fetch products from jsonplaceholder.typicode.com/posts inside useEffect",
+              "description": "Fetching data with useEffect is the manual approach you'll later replace with TanStack Query — understanding it first makes the upgrade meaningful.",
+              "concept": "Fetch with useEffect"
             },
             {
               "key": "w2-5",
-              "text": "Build: loading state (show spinner) and error state (show error message)"
+              "text": "Build: loading state (show spinner) and error state (show error message)",
+              "description": "Loading and error states are required for any real data-fetching UI — users need feedback while waiting or when something fails.",
+              "concept": "Loading & Error States"
             }
           ],
           "resource": "Note: In Week 3 you'll replace useEffect fetching with TanStack Query — which handles loading/error/caching far better. This week is just to understand the underlying mechanism."
@@ -230,27 +298,39 @@
           "tasks": [
             {
               "key": "w2-6",
-              "text": "Install: npm install react-router-dom"
+              "text": "Install: npm install react-router-dom",
+              "description": "react-router-dom is the standard routing library for React — required for any multi-page app.",
+              "concept": "React Router Setup"
             },
             {
               "key": "w2-7",
-              "text": "Learn: wrap app in BrowserRouter in main.jsx"
+              "text": "Learn: wrap app in BrowserRouter in main.jsx",
+              "description": "BrowserRouter enables client-side routing — navigating without full page reloads.",
+              "concept": "BrowserRouter"
             },
             {
               "key": "w2-8",
-              "text": "Learn: Routes and Route components — path=\"/products\" element={<ProductsPage />}"
+              "text": "Learn: Routes and Route components — path=\"/products\" element={<ProductsPage />}",
+              "description": "Routes and Route map URL paths to the components that should render for them.",
+              "concept": "Routes & Route"
             },
             {
               "key": "w2-9",
-              "text": "Learn: Link component — replaces <a> tags for client-side navigation (no page reload)"
+              "text": "Learn: Link component — replaces <a> tags for client-side navigation (no page reload)",
+              "description": "Link enables instant navigation without a full page reload — a core benefit of single-page apps.",
+              "concept": "Link Component"
             },
             {
               "key": "w2-10",
-              "text": "Build: pages folder — HomePage, ProductsPage, AboutPage"
+              "text": "Build: pages folder — HomePage, ProductsPage, AboutPage",
+              "description": "Organizing pages into a folder mirrors how real React apps structure their routes.",
+              "concept": "Pages Structure"
             },
             {
               "key": "w2-11",
-              "text": "Build: Navbar with Link components to each page"
+              "text": "Build: Navbar with Link components to each page",
+              "description": "A Navbar with links is how users move between the different sections of your app.",
+              "concept": "Navbar"
             }
           ],
           "resource": null
@@ -261,23 +341,33 @@
           "tasks": [
             {
               "key": "w2-12",
-              "text": "Learn: dynamic route — path=\"/products/:id\""
+              "text": "Learn: dynamic route — path=\"/products/:id\"",
+              "description": "Dynamic routes let one route definition handle many URLs — e.g. one page for every product ID.",
+              "concept": "Dynamic Routes"
             },
             {
               "key": "w2-13",
-              "text": "Learn: useParams() hook — extract :id from the URL inside a component"
+              "text": "Learn: useParams() hook — extract :id from the URL inside a component",
+              "description": "useParams() reads the dynamic segment from the URL so your component knows which item to display.",
+              "concept": "useParams"
             },
             {
               "key": "w2-14",
-              "text": "Learn: useNavigate() hook — programmatic navigation (e.g. after form submit)"
+              "text": "Learn: useNavigate() hook — programmatic navigation (e.g. after form submit)",
+              "description": "useNavigate() lets you redirect users programmatically — e.g. after a successful form submission.",
+              "concept": "useNavigate"
             },
             {
               "key": "w2-15",
-              "text": "Build: ProductDetailPage — reads id from URL, fetches that product, displays it"
+              "text": "Build: ProductDetailPage — reads id from URL, fetches that product, displays it",
+              "description": "ProductDetailPage demonstrates the full pattern: read the URL, fetch the matching data, render it.",
+              "concept": "ProductDetailPage"
             },
             {
               "key": "w2-16",
-              "text": "Make each ProductCard's title clickable — navigate to /products/:id"
+              "text": "Make each ProductCard's title clickable — navigate to /products/:id",
+              "description": "Making cards clickable connects your product list to the detail page — a core navigation flow.",
+              "concept": "Dynamic Routes"
             }
           ],
           "resource": null
@@ -288,23 +378,33 @@
           "tasks": [
             {
               "key": "w2-17",
-              "text": "Learn: nested Route — child routes share parent layout"
+              "text": "Learn: nested Route — child routes share parent layout",
+              "description": "Nested routes let multiple pages share a common layout (like Navbar/Footer) without duplicating code.",
+              "concept": "Nested Routes"
             },
             {
               "key": "w2-18",
-              "text": "Learn: Outlet component — where child routes render inside a layout"
+              "text": "Learn: Outlet component — where child routes render inside a layout",
+              "description": "Outlet is where React Router renders the matched child route inside a parent layout.",
+              "concept": "Outlet"
             },
             {
               "key": "w2-19",
-              "text": "Build: RootLayout with Navbar + Footer — wraps all pages via Outlet"
+              "text": "Build: RootLayout with Navbar + Footer — wraps all pages via Outlet",
+              "description": "A RootLayout with Outlet avoids repeating the Navbar and Footer on every page.",
+              "concept": "RootLayout"
             },
             {
               "key": "w2-20",
-              "text": "Build: a 404 NotFoundPage — render it with path=\"*\""
+              "text": "Build: a 404 NotFoundPage — render it with path=\"*\"",
+              "description": "A 404 page handles any URL that doesn't match a defined route — a polish detail every real app needs.",
+              "concept": "404 Page"
             },
             {
               "key": "w2-21",
-              "text": "Learn: NavLink vs Link — NavLink adds active class styling automatically"
+              "text": "Learn: NavLink vs Link — NavLink adds active class styling automatically",
+              "description": "NavLink's automatic active styling makes it easy to highlight the current page in navigation.",
+              "concept": "NavLink"
             }
           ],
           "resource": "Resource: reactrouter.com/en/main/start/tutorial — official React Router tutorial, very well written"
@@ -315,23 +415,33 @@
           "tasks": [
             {
               "key": "w2-22",
-              "text": "Learn: controlled input — value tied to state, onChange updates state"
+              "text": "Learn: controlled input — value tied to state, onChange updates state",
+              "description": "Controlled inputs keep form state in sync with React state — the standard way to read and validate input.",
+              "concept": "Controlled Inputs"
             },
             {
               "key": "w2-23",
-              "text": "Learn: form onSubmit — always call e.preventDefault() first"
+              "text": "Learn: form onSubmit — always call e.preventDefault() first",
+              "description": "preventDefault() stops the browser's default full-page form submission so React can handle it instead.",
+              "concept": "Form onSubmit"
             },
             {
               "key": "w2-24",
-              "text": "Learn: managing multiple form fields with one object state"
+              "text": "Learn: managing multiple form fields with one object state",
+              "description": "A single object for form state avoids one useState per field and keeps form logic manageable.",
+              "concept": "Form State"
             },
             {
               "key": "w2-25",
-              "text": "Build: a contact form — name, email, message fields with validation feedback"
+              "text": "Build: a contact form — name, email, message fields with validation feedback",
+              "description": "A contact form with validation feedback is a realistic form pattern you'll reuse for login, register, and product forms.",
+              "concept": "Contact Form"
             },
             {
               "key": "w2-26",
-              "text": "Build: client-side validation — show error messages if fields are empty on submit"
+              "text": "Build: client-side validation — show error messages if fields are empty on submit",
+              "description": "Client-side validation gives users immediate feedback before a request is even sent to the server.",
+              "concept": "Form Validation"
             }
           ],
           "resource": null
@@ -352,23 +462,33 @@
           "tasks": [
             {
               "key": "w3-1",
-              "text": "Install: npm install @tanstack/react-query @tanstack/react-query-devtools"
+              "text": "Install: npm install @tanstack/react-query @tanstack/react-query-devtools",
+              "description": "TanStack Query is the industry-standard library for fetching, caching, and syncing server data in React.",
+              "concept": "TanStack Query Setup"
             },
             {
               "key": "w3-2",
-              "text": "Learn: what TanStack Query solves — caching, background refetch, loading/error states, deduplication"
+              "text": "Learn: what TanStack Query solves — caching, background refetch, loading/error states, deduplication",
+              "description": "Understanding what problems it solves explains why it's preferred over manual useEffect fetching.",
+              "concept": "TanStack Query"
             },
             {
               "key": "w3-3",
-              "text": "Wrap app in QueryClientProvider with a new QueryClient() in main.jsx"
+              "text": "Wrap app in QueryClientProvider with a new QueryClient() in main.jsx",
+              "description": "QueryClientProvider makes the query cache available to every component in your app.",
+              "concept": "QueryClientProvider"
             },
             {
               "key": "w3-4",
-              "text": "Add ReactQueryDevtools to App.jsx — open the devtools panel in browser"
+              "text": "Add ReactQueryDevtools to App.jsx — open the devtools panel in browser",
+              "description": "The devtools panel lets you visually inspect cached queries, their status, and refetch behavior.",
+              "concept": "React Query Devtools"
             },
             {
               "key": "w3-5",
-              "text": "Create src/api/products.js — a plain fetch function that returns products array"
+              "text": "Create src/api/products.js — a plain fetch function that returns products array",
+              "description": "A plain fetch function separates the 'how to get data' logic from the 'how to use data' logic in components.",
+              "concept": "API Layer"
             }
           ],
           "resource": "Resource: tanstack.com/query/latest/docs — \"Quick Start\" and \"Queries\" sections. This is the best docs page in the React ecosystem."
@@ -379,27 +499,39 @@
           "tasks": [
             {
               "key": "w3-6",
-              "text": "Learn: useQuery({ queryKey: ['products'], queryFn: fetchProducts })"
+              "text": "Learn: useQuery({ queryKey: ['products'], queryFn: fetchProducts })",
+              "description": "useQuery is the core hook for fetching and caching data — replaces useEffect + fetch + manual state.",
+              "concept": "useQuery"
             },
             {
               "key": "w3-7",
-              "text": "Learn: destructure { data, isLoading, isError, error } from useQuery"
+              "text": "Learn: destructure { data, isLoading, isError, error } from useQuery",
+              "description": "These returned values give you everything needed to handle loading, error, and success states declaratively.",
+              "concept": "useQuery"
             },
             {
               "key": "w3-8",
-              "text": "Learn: queryKey is the cache key — ['products', id] for a single product"
+              "text": "Learn: queryKey is the cache key — ['products', id] for a single product",
+              "description": "The queryKey uniquely identifies cached data — including variables like id keeps each item cached separately.",
+              "concept": "Query Keys"
             },
             {
               "key": "w3-9",
-              "text": "Rewrite ProductsPage to use useQuery instead of useEffect + fetch"
+              "text": "Rewrite ProductsPage to use useQuery instead of useEffect + fetch",
+              "description": "Rewriting ProductsPage with useQuery removes manual loading/error state management entirely.",
+              "concept": "useQuery"
             },
             {
               "key": "w3-10",
-              "text": "Rewrite ProductDetailPage to use useQuery(['products', id], fetchProductById)"
+              "text": "Rewrite ProductDetailPage to use useQuery(['products', id], fetchProductById)",
+              "description": "A parameterized query key lets TanStack Query cache each product detail page separately.",
+              "concept": "useQuery"
             },
             {
               "key": "w3-11",
-              "text": "Watch devtools — navigate between pages, observe cache hits (no refetch)"
+              "text": "Watch devtools — navigate between pages, observe cache hits (no refetch)",
+              "description": "Watching cache hits in devtools shows the performance benefit of TanStack Query's caching firsthand.",
+              "concept": "Query Caching"
             }
           ],
           "resource": null
@@ -410,23 +542,33 @@
           "tasks": [
             {
               "key": "w3-12",
-              "text": "Learn: useMutation for POST/PUT/DELETE — different from useQuery (not automatic)"
+              "text": "Learn: useMutation for POST/PUT/DELETE — different from useQuery (not automatic)",
+              "description": "useMutation handles one-off operations like creating or deleting data, unlike useQuery's automatic refetching.",
+              "concept": "useMutation"
             },
             {
               "key": "w3-13",
-              "text": "Learn: mutate() and mutateAsync() — how to trigger the mutation"
+              "text": "Learn: mutate() and mutateAsync() — how to trigger the mutation",
+              "description": "mutate() and mutateAsync() are how you trigger a mutation, optionally awaiting its result.",
+              "concept": "useMutation"
             },
             {
               "key": "w3-14",
-              "text": "Learn: onSuccess callback — invalidate queries to refetch fresh data after mutation"
+              "text": "Learn: onSuccess callback — invalidate queries to refetch fresh data after mutation",
+              "description": "Invalidating queries after a mutation keeps your UI in sync with the server without manual refetch logic.",
+              "concept": "Query Invalidation"
             },
             {
               "key": "w3-15",
-              "text": "Build: add product form with useMutation — POST and then invalidate ['products']"
+              "text": "Build: add product form with useMutation — POST and then invalidate ['products']",
+              "description": "An add-product form with useMutation is the pattern you'll use for every create operation in your app.",
+              "concept": "useMutation"
             },
             {
               "key": "w3-16",
-              "text": "Build: delete button on ProductCard — useMutation DELETE, invalidate on success"
+              "text": "Build: delete button on ProductCard — useMutation DELETE, invalidate on success",
+              "description": "A delete button with cache invalidation ensures the UI updates immediately after a successful delete.",
+              "concept": "useMutation"
             }
           ],
           "resource": "Key pattern: After any mutation that changes the list, call queryClient.invalidateQueries(['products']) in onSuccess. This triggers a background refetch so the UI stays in sync."
@@ -437,23 +579,33 @@
           "tasks": [
             {
               "key": "w3-17",
-              "text": "Learn: staleTime — how long cached data is considered fresh (default 0ms)"
+              "text": "Learn: staleTime — how long cached data is considered fresh (default 0ms)",
+              "description": "staleTime controls how often TanStack Query refetches — tuning it avoids unnecessary network requests.",
+              "concept": "staleTime"
             },
             {
               "key": "w3-18",
-              "text": "Learn: enabled option — only run query when a condition is true (e.g. user is logged in)"
+              "text": "Learn: enabled option — only run query when a condition is true (e.g. user is logged in)",
+              "description": "The enabled option lets you delay a query until its prerequisites (like an ID or auth token) are ready.",
+              "concept": "enabled Option"
             },
             {
               "key": "w3-19",
-              "text": "Learn: keepPreviousData (placeholderData) for smooth pagination — no flicker"
+              "text": "Learn: keepPreviousData (placeholderData) for smooth pagination — no flicker",
+              "description": "keepPreviousData prevents the UI from flashing to a loading state when paginating.",
+              "concept": "Pagination (keepPreviousData)"
             },
             {
               "key": "w3-20",
-              "text": "Build: paginated product list — page state drives queryKey, prev/next buttons"
+              "text": "Build: paginated product list — page state drives queryKey, prev/next buttons",
+              "description": "A paginated product list with TanStack Query is the standard pattern for browsing large datasets.",
+              "concept": "Pagination"
             },
             {
               "key": "w3-21",
-              "text": "Set staleTime: 1000 * 60 * 5 on product queries — avoid unnecessary refetches"
+              "text": "Set staleTime: 1000 * 60 * 5 on product queries — avoid unnecessary refetches",
+              "description": "Setting a sensible staleTime for product data avoids refetching data that rarely changes.",
+              "concept": "staleTime"
             }
           ],
           "resource": null
@@ -464,23 +616,33 @@
           "tasks": [
             {
               "key": "w3-22",
-              "text": "Learn: a custom hook is just a function that starts with \"use\" and calls other hooks"
+              "text": "Learn: a custom hook is just a function that starts with \"use\" and calls other hooks",
+              "description": "Custom hooks let you extract and reuse stateful logic across components — the React way to avoid duplication.",
+              "concept": "Custom Hooks"
             },
             {
               "key": "w3-23",
-              "text": "Build: useProducts() custom hook — encapsulates useQuery for the products list"
+              "text": "Build: useProducts() custom hook — encapsulates useQuery for the products list",
+              "description": "useProducts() hides the query details so components just call a hook and get data.",
+              "concept": "Custom Hooks"
             },
             {
               "key": "w3-24",
-              "text": "Build: useProduct(id) custom hook — single product query"
+              "text": "Build: useProduct(id) custom hook — single product query",
+              "description": "useProduct(id) follows the same pattern for a single resource — consistent and reusable.",
+              "concept": "Custom Hooks"
             },
             {
               "key": "w3-25",
-              "text": "Build: useCreateProduct() and useDeleteProduct() mutation hooks"
+              "text": "Build: useCreateProduct() and useDeleteProduct() mutation hooks",
+              "description": "Mutation hooks bundle the mutation and its cache invalidation logic into one reusable unit.",
+              "concept": "Custom Hooks (Mutations)"
             },
             {
               "key": "w3-26",
-              "text": "Refactor all pages to use these custom hooks — components become much cleaner"
+              "text": "Refactor all pages to use these custom hooks — components become much cleaner",
+              "description": "Refactoring to custom hooks is how production React codebases stay clean as they grow.",
+              "concept": "Custom Hooks Refactor"
             }
           ],
           "resource": "Why it matters: Custom hooks are how senior React devs organise code. Your components should only worry about rendering — not about how data is fetched or cached."
@@ -501,23 +663,33 @@
           "tasks": [
             {
               "key": "w4-1",
-              "text": "Learn: prop drilling — passing props through many layers just to reach a deep child"
+              "text": "Learn: prop drilling — passing props through many layers just to reach a deep child",
+              "description": "Prop drilling makes code hard to maintain — recognizing it is the first step to knowing when Context helps.",
+              "concept": "Prop Drilling"
             },
             {
               "key": "w4-2",
-              "text": "Learn: React Context — a way to share data globally without passing props manually"
+              "text": "Learn: React Context — a way to share data globally without passing props manually",
+              "description": "Context lets deeply nested components access shared data without passing it through every layer.",
+              "concept": "React Context"
             },
             {
               "key": "w4-3",
-              "text": "Learn: createContext(), Context.Provider, useContext() hook"
+              "text": "Learn: createContext(), Context.Provider, useContext() hook",
+              "description": "These three pieces are all you need to create and consume a Context — the full API is small.",
+              "concept": "Context API"
             },
             {
               "key": "w4-4",
-              "text": "Build: a ThemeContext — dark/light mode toggle accessible anywhere in the app"
+              "text": "Build: a ThemeContext — dark/light mode toggle accessible anywhere in the app",
+              "description": "A theme toggle is a simple, classic use case that makes Context concrete before tackling auth.",
+              "concept": "ThemeContext"
             },
             {
               "key": "w4-5",
-              "text": "Apply theme class to root div based on context value — Tailwind dark: classes"
+              "text": "Apply theme class to root div based on context value — Tailwind dark: classes",
+              "description": "Applying a theme class based on context shows Context driving real UI changes across the app.",
+              "concept": "Tailwind Dark Mode"
             }
           ],
           "resource": "Rule: Use Context for truly global state — auth user, theme, language. For server data (products, categories), keep using TanStack Query — don't put API responses in Context."
@@ -528,31 +700,45 @@
           "tasks": [
             {
               "key": "w4-6",
-              "text": "Build: AuthContext — holds user object, token, login(), logout() functions"
+              "text": "Build: AuthContext — holds user object, token, login(), logout() functions",
+              "description": "AuthContext is the central place every component will check to know who's logged in.",
+              "concept": "AuthContext"
             },
             {
               "key": "w4-7",
-              "text": "Learn: store JWT in memory (useState) — safer than localStorage for auth tokens"
+              "text": "Learn: store JWT in memory (useState) — safer than localStorage for auth tokens",
+              "description": "Keeping the token in memory avoids exposing it to XSS attacks that can read localStorage.",
+              "concept": "JWT Storage"
             },
             {
               "key": "w4-8",
-              "text": "Learn: on app load, check localStorage for persisted user info to restore session"
+              "text": "Learn: on app load, check localStorage for persisted user info to restore session",
+              "description": "Restoring session info on load means users stay logged in across page refreshes.",
+              "concept": "Session Persistence"
             },
             {
               "key": "w4-9",
-              "text": "Build: login() — call the auth API (mock for now), store token, set user in context"
+              "text": "Build: login() — call the auth API (mock for now), store token, set user in context",
+              "description": "login() is the function every login form will call — centralizing it keeps auth logic consistent.",
+              "concept": "login() Function"
             },
             {
               "key": "w4-10",
-              "text": "Build: logout() — clear token and user from state and localStorage"
+              "text": "Build: logout() — clear token and user from state and localStorage",
+              "description": "logout() must clear all traces of the session so a logged-out user can't access protected data.",
+              "concept": "logout() Function"
             },
             {
               "key": "w4-27",
-              "text": "On app load, call GET /auth/me with the restored token to verify the session is still valid server-side — logout() if it fails"
+              "text": "On app load, call GET /auth/me with the restored token to verify the session is still valid server-side — logout() if it fails",
+              "description": "Verifying the session with /auth/me catches expired or invalid tokens that localStorage alone can't detect.",
+              "concept": "/auth/me Verification"
             },
             {
               "key": "w4-11",
-              "text": "Update Navbar — show \"Login\" when logged out, \"Hi Manoj · Logout\" when logged in"
+              "text": "Update Navbar — show \"Login\" when logged out, \"Hi Manoj · Logout\" when logged in",
+              "description": "A Navbar that reflects auth state is the most visible sign that your auth system is working.",
+              "concept": "Navbar Auth State"
             }
           ],
           "resource": null
@@ -563,23 +749,33 @@
           "tasks": [
             {
               "key": "w4-12",
-              "text": "Build: ProtectedRoute component — reads auth from context"
+              "text": "Build: ProtectedRoute component — reads auth from context",
+              "description": "ProtectedRoute is the gatekeeper that decides whether a route's content should render at all.",
+              "concept": "ProtectedRoute"
             },
             {
               "key": "w4-13",
-              "text": "If not logged in: redirect to /login using Navigate component"
+              "text": "If not logged in: redirect to /login using Navigate component",
+              "description": "Redirecting unauthenticated users to /login enforces access control at the routing level.",
+              "concept": "Navigate Redirect"
             },
             {
               "key": "w4-14",
-              "text": "If logged in: render the protected child component via Outlet"
+              "text": "If logged in: render the protected child component via Outlet",
+              "description": "Outlet lets ProtectedRoute wrap any number of nested routes with a single auth check.",
+              "concept": "Outlet"
             },
             {
               "key": "w4-15",
-              "text": "Wrap admin-only routes (add product, manage orders) inside ProtectedRoute"
+              "text": "Wrap admin-only routes (add product, manage orders) inside ProtectedRoute",
+              "description": "Wrapping admin routes in ProtectedRoute is how you restrict the admin area to logged-in users.",
+              "concept": "ProtectedRoute"
             },
             {
               "key": "w4-16",
-              "text": "Test: try navigating to /admin/products — confirm redirect to /login"
+              "text": "Test: try navigating to /admin/products — confirm redirect to /login",
+              "description": "Testing the redirect confirms unauthorized users genuinely can't reach protected pages.",
+              "concept": "ProtectedRoute Testing"
             }
           ],
           "resource": null
@@ -590,23 +786,33 @@
           "tasks": [
             {
               "key": "w4-17",
-              "text": "Learn: useReducer — for complex state with multiple actions (better than many useStates)"
+              "text": "Learn: useReducer — for complex state with multiple actions (better than many useStates)",
+              "description": "useReducer is better than multiple useStates when state changes involve multiple related actions.",
+              "concept": "useReducer"
             },
             {
               "key": "w4-18",
-              "text": "Learn: dispatch({ type: 'ADD_ITEM', payload: product })"
+              "text": "Learn: dispatch({ type: 'ADD_ITEM', payload: product })",
+              "description": "Dispatching typed actions makes state changes predictable and easier to debug than scattered setState calls.",
+              "concept": "useReducer Actions"
             },
             {
               "key": "w4-19",
-              "text": "Build: CartContext with useReducer — actions: ADD_ITEM, REMOVE_ITEM, UPDATE_QTY, CLEAR_CART"
+              "text": "Build: CartContext with useReducer — actions: ADD_ITEM, REMOVE_ITEM, UPDATE_QTY, CLEAR_CART",
+              "description": "CartContext with useReducer is the standard pattern for shopping cart state in React e-commerce apps.",
+              "concept": "CartContext"
             },
             {
               "key": "w4-20",
-              "text": "Build: CartPage — list cart items, show total price, remove button per item"
+              "text": "Build: CartPage — list cart items, show total price, remove button per item",
+              "description": "CartPage is where users review and manage what they're about to buy — a core e-commerce page.",
+              "concept": "CartPage"
             },
             {
               "key": "w4-21",
-              "text": "Show cart item count badge in Navbar from CartContext"
+              "text": "Show cart item count badge in Navbar from CartContext",
+              "description": "A cart badge in the Navbar gives users constant visual feedback about their cart contents.",
+              "concept": "Cart Badge"
             }
           ],
           "resource": "When to use useReducer vs useState: If state has more than 2-3 related pieces that change together, or if next state depends on previous, use useReducer."
@@ -617,23 +823,33 @@
           "tasks": [
             {
               "key": "w4-22",
-              "text": "Build: LoginPage — email/password form, submit calls login mutation"
+              "text": "Build: LoginPage — email/password form, submit calls login mutation",
+              "description": "LoginPage is the entry point that connects your AuthContext to a real user-facing form.",
+              "concept": "LoginPage"
             },
             {
               "key": "w4-23",
-              "text": "On login success: store token in AuthContext, navigate to /"
+              "text": "On login success: store token in AuthContext, navigate to /",
+              "description": "Storing the token and redirecting on success completes the login flow from the user's perspective.",
+              "concept": "Login Flow"
             },
             {
               "key": "w4-24",
-              "text": "On login error: show error message from API response"
+              "text": "On login error: show error message from API response",
+              "description": "Showing API error messages (like 'invalid credentials') gives users actionable feedback.",
+              "concept": "Login Error Handling"
             },
             {
               "key": "w4-25",
-              "text": "Build: RegisterPage — name, email, password, confirm password fields"
+              "text": "Build: RegisterPage — name, email, password, confirm password fields",
+              "description": "RegisterPage is the second half of your auth flow — letting new users create accounts.",
+              "concept": "RegisterPage"
             },
             {
               "key": "w4-26",
-              "text": "Client-side: confirm passwords match before submitting"
+              "text": "Client-side: confirm passwords match before submitting",
+              "description": "Confirming password match client-side catches a common typo before hitting the server.",
+              "concept": "Form Validation"
             }
           ],
           "resource": null
@@ -654,27 +870,39 @@
           "tasks": [
             {
               "key": "w5-1",
-              "text": "Learn: Flexbox in Tailwind — flex, items-center, justify-between, gap-4"
+              "text": "Learn: Flexbox in Tailwind — flex, items-center, justify-between, gap-4",
+              "description": "Flexbox utilities are how you'll align and space most UI elements — navbars, cards, button groups.",
+              "concept": "Tailwind Flexbox"
             },
             {
               "key": "w5-2",
-              "text": "Learn: Grid in Tailwind — grid, grid-cols-3, col-span-2"
+              "text": "Learn: Grid in Tailwind — grid, grid-cols-3, col-span-2",
+              "description": "Grid utilities are ideal for product listings and dashboard layouts with multiple columns.",
+              "concept": "Tailwind Grid"
             },
             {
               "key": "w5-3",
-              "text": "Learn: spacing scale — p-4 = 1rem, m-8 = 2rem, gap-6 = 1.5rem"
+              "text": "Learn: spacing scale — p-4 = 1rem, m-8 = 2rem, gap-6 = 1.5rem",
+              "description": "Knowing the spacing scale helps you keep consistent spacing throughout your app without guesswork.",
+              "concept": "Tailwind Spacing"
             },
             {
               "key": "w5-4",
-              "text": "Learn: responsive prefixes — sm: md: lg: xl: — mobile-first approach"
+              "text": "Learn: responsive prefixes — sm: md: lg: xl: — mobile-first approach",
+              "description": "Responsive prefixes let one set of classes adapt your layout across screen sizes.",
+              "concept": "Responsive Design"
             },
             {
               "key": "w5-5",
-              "text": "Redesign ProductsPage — 1 column on mobile, 2 on tablet, 3 on desktop"
+              "text": "Redesign ProductsPage — 1 column on mobile, 2 on tablet, 3 on desktop",
+              "description": "A responsive product grid is one of the most visible improvements you can make to the storefront.",
+              "concept": "Responsive Grid"
             },
             {
               "key": "w5-6",
-              "text": "Make Navbar collapse to hamburger menu on mobile"
+              "text": "Make Navbar collapse to hamburger menu on mobile",
+              "description": "A collapsible mobile nav is expected in any modern responsive site.",
+              "concept": "Responsive Navbar"
             }
           ],
           "resource": "Resource: tailwindcss.com/docs — keep this open while you code. Use Ctrl+F to find any utility instantly."
@@ -685,23 +913,33 @@
           "tasks": [
             {
               "key": "w5-7",
-              "text": "Learn: what shadcn/ui is — copy-paste components built on Radix UI + Tailwind"
+              "text": "Learn: what shadcn/ui is — copy-paste components built on Radix UI + Tailwind",
+              "description": "shadcn/ui gives you accessible, customizable components without the bloat of a full UI library dependency.",
+              "concept": "shadcn/ui"
             },
             {
               "key": "w5-8",
-              "text": "Initialize: npx shadcn@latest init in your project"
+              "text": "Initialize: npx shadcn@latest init in your project",
+              "description": "Initializing shadcn sets up the configuration and utilities the components depend on.",
+              "concept": "shadcn/ui Setup"
             },
             {
               "key": "w5-9",
-              "text": "Add components: npx shadcn@latest add button card input badge dialog"
+              "text": "Add components: npx shadcn@latest add button card input badge dialog",
+              "description": "Adding components generates the source code directly into your project, ready to customize.",
+              "concept": "shadcn/ui Components"
             },
             {
               "key": "w5-10",
-              "text": "Replace your custom Button/Card with shadcn versions — inspect the generated code"
+              "text": "Replace your custom Button/Card with shadcn versions — inspect the generated code",
+              "description": "Swapping in shadcn components upgrades your UI's accessibility and polish with minimal effort.",
+              "concept": "shadcn/ui Components"
             },
             {
               "key": "w5-11",
-              "text": "Build: a product detail modal using the Dialog component"
+              "text": "Build: a product detail modal using the Dialog component",
+              "description": "A modal dialog is a common UI pattern for showing details without navigating away.",
+              "concept": "Dialog Component"
             }
           ],
           "resource": "Resource: ui.shadcn.com — click any component to see the install command and copy-paste code"
@@ -712,23 +950,33 @@
           "tasks": [
             {
               "key": "w5-12",
-              "text": "Learn: skeleton loading — show placeholder shapes while data loads (not a spinner)"
+              "text": "Learn: skeleton loading — show placeholder shapes while data loads (not a spinner)",
+              "description": "Skeleton loaders feel faster to users than spinners because they hint at the content's shape.",
+              "concept": "Skeleton Loading"
             },
             {
               "key": "w5-13",
-              "text": "Add: npx shadcn@latest add skeleton"
+              "text": "Add: npx shadcn@latest add skeleton",
+              "description": "The skeleton component gives you a ready-made building block for loading placeholders.",
+              "concept": "shadcn/ui Skeleton"
             },
             {
               "key": "w5-14",
-              "text": "Build: ProductCardSkeleton — mirrors shape of ProductCard, shows during isLoading"
+              "text": "Build: ProductCardSkeleton — mirrors shape of ProductCard, shows during isLoading",
+              "description": "A skeleton matching ProductCard's shape makes the loading state feel seamless.",
+              "concept": "Skeleton Loading"
             },
             {
               "key": "w5-15",
-              "text": "Build: an ErrorFallback component for when queries fail — with a retry button"
+              "text": "Build: an ErrorFallback component for when queries fail — with a retry button",
+              "description": "An ErrorFallback with retry gives users a way to recover from failed requests without reloading the page.",
+              "concept": "Error Fallback"
             },
             {
               "key": "w5-16",
-              "text": "Test: throttle network in DevTools to Slow 3G — confirm skeletons appear"
+              "text": "Test: throttle network in DevTools to Slow 3G — confirm skeletons appear",
+              "description": "Throttling the network is the only reliable way to actually see loading states during development.",
+              "concept": "Network Throttling"
             }
           ],
           "resource": null
@@ -739,27 +987,39 @@
           "tasks": [
             {
               "key": "w5-17",
-              "text": "Add: npx shadcn@latest add toast sonner"
+              "text": "Add: npx shadcn@latest add toast sonner",
+              "description": "Toast notifications are the standard way to give non-intrusive feedback after an action.",
+              "concept": "Toast Notifications"
             },
             {
               "key": "w5-18",
-              "text": "Show success toast after adding product, error toast on API failure"
+              "text": "Show success toast after adding product, error toast on API failure",
+              "description": "Success/error toasts confirm to users whether their action (like adding a product) actually worked.",
+              "concept": "Toast Notifications"
             },
             {
               "key": "w5-19",
-              "text": "Install: npm install react-hook-form"
+              "text": "Install: npm install react-hook-form",
+              "description": "React Hook Form reduces re-renders and boilerplate compared to manually managing form state with useState.",
+              "concept": "React Hook Form"
             },
             {
               "key": "w5-20",
-              "text": "Learn: useForm(), register(), handleSubmit(), formState.errors"
+              "text": "Learn: useForm(), register(), handleSubmit(), formState.errors",
+              "description": "These are the core building blocks of React Hook Form — register fields, handle submission, read errors.",
+              "concept": "React Hook Form"
             },
             {
               "key": "w5-21",
-              "text": "Rewrite add-product form with React Hook Form — cleaner, less boilerplate"
+              "text": "Rewrite add-product form with React Hook Form — cleaner, less boilerplate",
+              "description": "Rewriting your form with React Hook Form shows the reduction in code compared to manual state management.",
+              "concept": "React Hook Form"
             },
             {
               "key": "w5-22",
-              "text": "Add validation rules inside register() — required, minLength, pattern"
+              "text": "Add validation rules inside register() — required, minLength, pattern",
+              "description": "Built-in validation rules let you enforce required fields and patterns without writing custom logic.",
+              "concept": "Form Validation"
             }
           ],
           "resource": "Resource: react-hook-form.com — \"Get Started\" page. It replaces all the manual onChange state management for forms."
@@ -770,27 +1030,39 @@
           "tasks": [
             {
               "key": "w5-23",
-              "text": "Learn: React.memo — prevents re-render of child if props haven't changed"
+              "text": "Learn: React.memo — prevents re-render of child if props haven't changed",
+              "description": "React.memo avoids wasted re-renders of components whose props haven't changed — useful for large lists.",
+              "concept": "React.memo"
             },
             {
               "key": "w5-24",
-              "text": "Learn: useCallback — memoize a function reference to pass as stable prop"
+              "text": "Learn: useCallback — memoize a function reference to pass as stable prop",
+              "description": "useCallback prevents a function prop from changing every render, which would otherwise defeat React.memo.",
+              "concept": "useCallback"
             },
             {
               "key": "w5-25",
-              "text": "Learn: lazy() + Suspense — code-split pages so they load on demand"
+              "text": "Learn: lazy() + Suspense — code-split pages so they load on demand",
+              "description": "Code-splitting with lazy/Suspense means users only download the code for the page they're viewing.",
+              "concept": "lazy & Suspense"
             },
             {
               "key": "w5-26",
-              "text": "Apply lazy() to all page components in your router — each becomes a separate chunk"
+              "text": "Apply lazy() to all page components in your router — each becomes a separate chunk",
+              "description": "Lazy-loading every page reduces your initial bundle size, improving first-load performance.",
+              "concept": "Code Splitting"
             },
             {
               "key": "w5-27",
-              "text": "Run: npm run build — inspect chunk sizes in the output to confirm splitting"
+              "text": "Run: npm run build — inspect chunk sizes in the output to confirm splitting",
+              "description": "Inspecting chunk sizes after a build confirms your code-splitting is actually working.",
+              "concept": "Bundle Analysis"
             },
             {
               "key": "w5-28",
-              "text": "Learn: useMemo — memoize an expensive computed value (e.g. filtered + sorted product list) so it only recalculates when its inputs change"
+              "text": "Learn: useMemo — memoize an expensive computed value (e.g. filtered + sorted product list) so it only recalculates when its inputs change",
+              "description": "useMemo avoids recalculating expensive derived data (like filtered/sorted lists) on every render.",
+              "concept": "useMemo"
             }
           ],
           "resource": null
@@ -811,27 +1083,39 @@
           "tasks": [
             {
               "key": "w6-1",
-              "text": "Learn: Vite env vars must start with VITE_ to be exposed to the browser"
+              "text": "Learn: Vite env vars must start with VITE_ to be exposed to the browser",
+              "description": "Vite only exposes env vars prefixed with VITE_ to client code — a security measure to avoid leaking secrets.",
+              "concept": "Vite Env Vars"
             },
             {
               "key": "w6-2",
-              "text": "Create .env.local — VITE_API_URL=http://localhost:8080/api/v1"
+              "text": "Create .env.local — VITE_API_URL=http://localhost:8080/api/v1",
+              "description": "Environment variables let you point your app at different API URLs for local dev vs production.",
+              "concept": "Environment Variables"
             },
             {
               "key": "w6-3",
-              "text": "Create src/api/axios.js — Axios instance with baseURL from import.meta.env.VITE_API_URL"
+              "text": "Create src/api/axios.js — Axios instance with baseURL from import.meta.env.VITE_API_URL",
+              "description": "A centralized Axios instance means every API call shares the same base URL and configuration.",
+              "concept": "Axios Instance"
             },
             {
               "key": "w6-4",
-              "text": "Add request interceptor — automatically attach Authorization: Bearer {token} header"
+              "text": "Add request interceptor — automatically attach Authorization: Bearer {token} header",
+              "description": "An interceptor automatically attaches the auth token, so you don't repeat that logic in every request.",
+              "concept": "Axios Interceptors"
             },
             {
               "key": "w6-5",
-              "text": "Add response interceptor — redirect to /login on 401 response"
+              "text": "Add response interceptor — redirect to /login on 401 response",
+              "description": "A response interceptor that redirects on 401 handles expired sessions consistently across the whole app.",
+              "concept": "Axios Interceptors"
             },
             {
               "key": "w6-6",
-              "text": "Add .env.local to .gitignore — never commit it"
+              "text": "Add .env.local to .gitignore — never commit it",
+              "description": "Committing .env.local would expose your local configuration — always keep it out of version control.",
+              "concept": "Environment Variables"
             }
           ],
           "resource": "This Axios setup (interceptors) is what Phase 4 is built on — your mock data will just be swapped for real API calls to your Railway backend."
@@ -842,27 +1126,39 @@
           "tasks": [
             {
               "key": "w6-7",
-              "text": "Push your React project to a GitHub repo"
+              "text": "Push your React project to a GitHub repo",
+              "description": "Vercel deploys directly from a GitHub repo — pushing your code is the first step to deployment.",
+              "concept": "GitHub"
             },
             {
               "key": "w6-8",
-              "text": "Create Vercel account at vercel.com — import your GitHub repo"
+              "text": "Create Vercel account at vercel.com — import your GitHub repo",
+              "description": "Vercel's GitHub integration automatically builds and deploys your app on every push.",
+              "concept": "Vercel Setup"
             },
             {
               "key": "w6-9",
-              "text": "Set environment variable in Vercel dashboard: VITE_API_URL = your Railway backend URL"
+              "text": "Set environment variable in Vercel dashboard: VITE_API_URL = your Railway backend URL",
+              "description": "Setting the API URL in Vercel points your deployed frontend at your live Railway backend.",
+              "concept": "Vercel Env Vars"
             },
             {
               "key": "w6-10",
-              "text": "Deploy — Vercel auto-detects Vite, builds, and gives you a live URL"
+              "text": "Deploy — Vercel auto-detects Vite, builds, and gives you a live URL",
+              "description": "Vercel's zero-config Vite support means your first deploy can work with almost no setup.",
+              "concept": "Vercel Deployment"
             },
             {
               "key": "w6-11",
-              "text": "Fix: add vercel.json with rewrites for SPA routing (client-side routes return 404 without it)"
+              "text": "Fix: add vercel.json with rewrites for SPA routing (client-side routes return 404 without it)",
+              "description": "Without this rewrite rule, refreshing on a client-side route (like /products/5) returns a 404 from the server.",
+              "concept": "SPA Routing Fix"
             },
             {
               "key": "w6-12",
-              "text": "Test live URL in browser — confirm pages load and navigation works"
+              "text": "Test live URL in browser — confirm pages load and navigation works",
+              "description": "Testing the live URL confirms your deployed app actually works for real users, not just localhost.",
+              "concept": "Live Site Testing"
             }
           ],
           "resource": "vercel.json fix: {\"rewrites\": [{\"source\": \"/(.*)\", \"destination\": \"/\"}]} — add this to project root to fix direct URL access on React Router routes."
@@ -873,23 +1169,33 @@
           "tasks": [
             {
               "key": "w6-13",
-              "text": "Learn: semantic HTML — use button for actions, a for links, nav, main, section"
+              "text": "Learn: semantic HTML — use button for actions, a for links, nav, main, section",
+              "description": "Semantic HTML elements communicate meaning to browsers and assistive technology, improving accessibility for free.",
+              "concept": "Semantic HTML"
             },
             {
               "key": "w6-14",
-              "text": "Learn: alt text on all img tags — describe the image, not just \"image\""
+              "text": "Learn: alt text on all img tags — describe the image, not just \"image\"",
+              "description": "Alt text lets screen reader users understand images they can't see.",
+              "concept": "Alt Text"
             },
             {
               "key": "w6-15",
-              "text": "Learn: aria-label for icon-only buttons — screen readers read this text"
+              "text": "Learn: aria-label for icon-only buttons — screen readers read this text",
+              "description": "aria-label gives screen readers a description for buttons that only contain icons.",
+              "concept": "aria-label"
             },
             {
               "key": "w6-16",
-              "text": "Learn: keyboard navigation — Tab through your app, every interactive element reachable?"
+              "text": "Learn: keyboard navigation — Tab through your app, every interactive element reachable?",
+              "description": "Keyboard navigation is essential for users who can't use a mouse — and required for accessibility compliance.",
+              "concept": "Keyboard Navigation"
             },
             {
               "key": "w6-17",
-              "text": "Install axe DevTools Chrome extension — run it on your app, fix flagged issues"
+              "text": "Install axe DevTools Chrome extension — run it on your app, fix flagged issues",
+              "description": "Automated accessibility tools catch common issues quickly before manual testing.",
+              "concept": "Accessibility Audit"
             }
           ],
           "resource": null
@@ -900,27 +1206,39 @@
           "tasks": [
             {
               "key": "w6-18",
-              "text": "Install ESLint + Prettier — configure them if not already set up by Vite"
+              "text": "Install ESLint + Prettier — configure them if not already set up by Vite",
+              "description": "ESLint and Prettier catch bugs and enforce consistent formatting automatically.",
+              "concept": "ESLint & Prettier"
             },
             {
               "key": "w6-19",
-              "text": "Run ESLint — fix any warnings (unused variables, missing keys, etc.)"
+              "text": "Run ESLint — fix any warnings (unused variables, missing keys, etc.)",
+              "description": "Fixing lint warnings now prevents small bugs (like missing keys) from becoming real issues.",
+              "concept": "ESLint"
             },
             {
               "key": "w6-20",
-              "text": "Review: each component does one job — split any that feel too large"
+              "text": "Review: each component does one job — split any that feel too large",
+              "description": "Splitting large components keeps your codebase maintainable as the app grows.",
+              "concept": "Component Refactoring"
             },
             {
               "key": "w6-21",
-              "text": "Review: no hardcoded strings or magic numbers — use constants"
+              "text": "Review: no hardcoded strings or magic numbers — use constants",
+              "description": "Named constants make your code self-documenting and easier to update in one place.",
+              "concept": "Constants"
             },
             {
               "key": "w6-22",
-              "text": "Write README.md — project description, screenshots, setup steps, live URL"
+              "text": "Write README.md — project description, screenshots, setup steps, live URL",
+              "description": "A polished README with screenshots is often the first impression of your project for recruiters.",
+              "concept": "README Documentation"
             },
             {
               "key": "w6-28",
-              "text": "Install Vitest + React Testing Library (npm install -D vitest @testing-library/react @testing-library/user-event jsdom) and write one test that renders ProductCard and checks its name/price"
+              "text": "Install Vitest + React Testing Library (npm install -D vitest @testing-library/react @testing-library/user-event jsdom) and write one test that renders ProductCard and checks its name/price",
+              "description": "A basic component test gives you a safety net and demonstrates testing knowledge in your portfolio.",
+              "concept": "Vitest & React Testing Library"
             }
           ],
           "resource": null
@@ -931,27 +1249,39 @@
           "tasks": [
             {
               "key": "w6-23",
-              "text": "Final check: run through all pages on mobile, tablet, desktop viewports"
+              "text": "Final check: run through all pages on mobile, tablet, desktop viewports",
+              "description": "Testing across viewports catches responsive layout bugs before real users encounter them.",
+              "concept": "Responsive Testing"
             },
             {
               "key": "w6-24",
-              "text": "Run Lighthouse audit (Chrome DevTools) — aim for 90+ on Performance and Accessibility"
+              "text": "Run Lighthouse audit (Chrome DevTools) — aim for 90+ on Performance and Accessibility",
+              "description": "Lighthouse gives you an objective score and actionable suggestions for performance and accessibility.",
+              "concept": "Lighthouse Audit"
             },
             {
               "key": "w6-25",
-              "text": "Note the Vercel URL — in Phase 4 you'll add it to Spring Boot CORS allowed origins"
+              "text": "Note the Vercel URL — in Phase 4 you'll add it to Spring Boot CORS allowed origins",
+              "description": "You'll need this URL in Phase 4 to allow your frontend's origin in the backend's CORS configuration.",
+              "concept": "CORS Notes"
             },
             {
               "key": "w6-26",
-              "text": "Preview Phase 4: read about how Axios interceptors attach JWT to requests"
+              "text": "Preview Phase 4: read about how Axios interceptors attach JWT to requests",
+              "description": "Previewing the interceptor pattern now means Phase 4's integration will feel familiar, not new.",
+              "concept": "Axios Interceptors Preview"
             },
             {
               "key": "w6-27",
-              "text": "Push clean final version to GitHub — frontend repo ready to showcase"
+              "text": "Push clean final version to GitHub — frontend repo ready to showcase",
+              "description": "A clean, final push leaves your frontend repo ready to show off or build on in Phase 4.",
+              "concept": "GitHub"
             },
             {
               "key": "w6-29",
-              "text": "Self-assessment: without notes, build a component with useState + a useQuery hook, set up a nested route with a layout, and write an AuthContext with login/logout/persistence"
+              "text": "Self-assessment: without notes, build a component with useState + a useQuery hook, set up a nested route with a layout, and write an AuthContext with login/logout/persistence",
+              "description": "This self-assessment confirms you can combine state, data fetching, routing, and auth — the core skills for Phase 4 integration.",
+              "concept": "Self-Assessment"
             }
           ],
           "resource": null
@@ -983,55 +1313,81 @@
           "tasks": [
             {
               "key": "pj-1",
-              "text": "React Router with nested layout (Navbar + Footer on all pages)"
+              "text": "React Router with nested layout (Navbar + Footer on all pages)",
+              "description": "A shared layout with Navbar/Footer via nested routes keeps every page visually consistent.",
+              "concept": "Nested Routes Layout"
             },
             {
               "key": "pj-2",
-              "text": "TanStack Query for all data fetching — custom hooks for each resource"
+              "text": "TanStack Query for all data fetching — custom hooks for each resource",
+              "description": "Custom TanStack Query hooks centralize all your data-fetching logic for easy reuse and maintenance.",
+              "concept": "TanStack Query Hooks"
             },
             {
               "key": "pj-3",
-              "text": "AuthContext — login/logout/persist session, verified with /auth/me on load"
+              "text": "AuthContext — login/logout/persist session, verified with /auth/me on load",
+              "description": "AuthContext with session verification is what makes login state persist and stay valid across reloads.",
+              "concept": "AuthContext"
             },
             {
               "key": "pj-4",
-              "text": "CartContext with useReducer — add, remove, update quantity"
+              "text": "CartContext with useReducer — add, remove, update quantity",
+              "description": "useReducer-based cart state handles the multiple related actions (add/remove/update) a cart needs.",
+              "concept": "CartContext"
             },
             {
               "key": "pj-5",
-              "text": "Protected route — /admin redirects to /login if not authenticated"
+              "text": "Protected route — /admin redirects to /login if not authenticated",
+              "description": "A protected admin route demonstrates real access control in your frontend.",
+              "concept": "ProtectedRoute"
             },
             {
               "key": "pj-6",
-              "text": "Skeleton loading on all data-fetching pages"
+              "text": "Skeleton loading on all data-fetching pages",
+              "description": "Skeleton loading across the app gives it a polished, production feel while data loads.",
+              "concept": "Skeleton Loading"
             },
             {
               "key": "pj-7",
-              "text": "shadcn/ui components — Button, Card, Dialog, Badge, Toast"
+              "text": "shadcn/ui components — Button, Card, Dialog, Badge, Toast",
+              "description": "shadcn/ui components give your storefront a consistent, accessible design system.",
+              "concept": "shadcn/ui Components"
             },
             {
               "key": "pj-8",
-              "text": "Fully responsive — mobile, tablet, desktop with Tailwind"
+              "text": "Fully responsive — mobile, tablet, desktop with Tailwind",
+              "description": "Full responsiveness ensures the storefront works well on any device — a baseline expectation for any live site.",
+              "concept": "Responsive Design"
             },
             {
               "key": "pj-9",
-              "text": "React Hook Form on all forms"
+              "text": "React Hook Form on all forms",
+              "description": "React Hook Form on every form keeps validation and submission handling consistent throughout the app.",
+              "concept": "React Hook Form"
             },
             {
               "key": "pj-10",
-              "text": "Lazy-loaded pages with Suspense fallback"
+              "text": "Lazy-loaded pages with Suspense fallback",
+              "description": "Lazy-loaded pages keep the initial bundle small as your app grows.",
+              "concept": "Code Splitting"
             },
             {
               "key": "pj-11",
-              "text": "Live on Vercel with correct SPA routing"
+              "text": "Live on Vercel with correct SPA routing",
+              "description": "A live, correctly-routed deployment is what makes this project demonstrable to others.",
+              "concept": "Vercel Deployment"
             },
             {
               "key": "pj-12",
-              "text": "Axios instance with interceptors ready for Phase 4"
+              "text": "Axios instance with interceptors ready for Phase 4",
+              "description": "The Axios interceptor setup is the bridge that Phase 4 will use to connect to your real backend.",
+              "concept": "Axios Interceptors"
             },
             {
               "key": "pj-13",
-              "text": "At least one component test with Vitest + React Testing Library"
+              "text": "At least one component test with Vitest + React Testing Library",
+              "description": "At least one test shows you can verify component behavior, not just write it.",
+              "concept": "Component Testing"
             }
           ]
         }

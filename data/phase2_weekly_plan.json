@@ -42,27 +42,39 @@
           "tasks": [
             {
               "key": "w1-1",
-              "text": "Go to start.spring.io — choose Maven, Java 21, Spring Boot 3.x (latest stable)"
+              "text": "Go to start.spring.io — choose Maven, Java 21, Spring Boot 3.x (latest stable)",
+              "description": "Spring Initializr generates the project skeleton so you don't have to configure Maven and the folder structure by hand.",
+              "concept": "Spring Initializr"
             },
             {
               "key": "w1-2",
-              "text": "Add dependencies: Spring Web, Spring Data JPA, MySQL Driver, Lombok"
+              "text": "Add dependencies: Spring Web, Spring Data JPA, MySQL Driver, Lombok",
+              "description": "These four dependencies are the minimum needed to build a database-backed REST API.",
+              "concept": "Maven Dependencies"
             },
             {
               "key": "w1-3",
-              "text": "Open the project in IntelliJ — explore the folder structure"
+              "text": "Open the project in IntelliJ — explore the folder structure",
+              "description": "Knowing where controllers, config, and resources live makes the project much easier to navigate as it grows.",
+              "concept": "Project Structure"
             },
             {
               "key": "w1-4",
-              "text": "Understand: what is @SpringBootApplication and the main() method"
+              "text": "Understand: what is @SpringBootApplication and the main() method",
+              "description": "@SpringBootApplication bootstraps auto-configuration, component scanning, and the embedded server in one annotation.",
+              "concept": "@SpringBootApplication"
             },
             {
               "key": "w1-5",
-              "text": "Configure application.properties: datasource URL, username, password, ddl-auto=update"
+              "text": "Configure application.properties: datasource URL, username, password, ddl-auto=update",
+              "description": "These properties tell Spring how to connect to your MySQL database and whether to auto-create tables.",
+              "concept": "application.properties"
             },
             {
               "key": "w1-6",
-              "text": "Run the app — confirm it starts without errors in the console"
+              "text": "Run the app — confirm it starts without errors in the console",
+              "description": "A clean startup confirms your dependencies, database connection, and configuration are all wired correctly before you write any code.",
+              "concept": "Run Spring Boot App"
             }
           ],
           "resource": "Note: Spring Boot 3.x uses Jakarta EE (not javax). When you see import errors, use jakarta.* not javax.*"
@@ -73,27 +85,39 @@
           "tasks": [
             {
               "key": "w1-7",
-              "text": "Learn: @RestController vs @Controller — what's the difference"
+              "text": "Learn: @RestController vs @Controller — what's the difference",
+              "description": "@RestController combines @Controller and @ResponseBody — it tells Spring to return data (JSON) instead of view templates.",
+              "concept": "@RestController"
             },
             {
               "key": "w1-8",
-              "text": "Learn: @GetMapping, @PostMapping, @PutMapping, @DeleteMapping"
+              "text": "Learn: @GetMapping, @PostMapping, @PutMapping, @DeleteMapping",
+              "description": "These mapping annotations tie HTTP verbs to Java methods — the core of how REST endpoints are defined.",
+              "concept": "HTTP Mapping Annotations"
             },
             {
               "key": "w1-9",
-              "text": "Learn: @RequestMapping for base path on a controller class"
+              "text": "Learn: @RequestMapping for base path on a controller class",
+              "description": "@RequestMapping on the class lets you avoid repeating the same path prefix on every method.",
+              "concept": "@RequestMapping"
             },
             {
               "key": "w1-10",
-              "text": "Build: HelloController with GET /api/hello returning a String"
+              "text": "Build: HelloController with GET /api/hello returning a String",
+              "description": "Your first endpoint — proves the controller, mapping, and embedded server all work together.",
+              "concept": "REST Controller"
             },
             {
               "key": "w1-11",
-              "text": "Test: open browser or Postman, hit http://localhost:8080/api/hello"
+              "text": "Test: open browser or Postman, hit http://localhost:8080/api/hello",
+              "description": "Testing in the browser/Postman confirms your endpoint is reachable and returns what you expect.",
+              "concept": "API Testing"
             },
             {
               "key": "w1-12",
-              "text": "Install Postman and create a collection called \"Product API\""
+              "text": "Install Postman and create a collection called \"Product API\"",
+              "description": "Postman is how you'll test every endpoint you build — a collection keeps your requests organized as the API grows.",
+              "concept": "Postman Setup"
             }
           ],
           "resource": "Resource: Dan Vega on YouTube — \"Building REST APIs with Spring Boot\" (free, 2024 version)"
@@ -104,23 +128,33 @@
           "tasks": [
             {
               "key": "w1-13",
-              "text": "Learn: @PathVariable — GET /api/products/{id}"
+              "text": "Learn: @PathVariable — GET /api/products/{id}",
+              "description": "@PathVariable lets a URL segment become a method parameter — used for fetching a specific resource by ID.",
+              "concept": "@PathVariable"
             },
             {
               "key": "w1-14",
-              "text": "Learn: @RequestParam — GET /api/products?page=0&size=10"
+              "text": "Learn: @RequestParam — GET /api/products?page=0&size=10",
+              "description": "@RequestParam reads query string values — used for filtering, paging, and search.",
+              "concept": "@RequestParam"
             },
             {
               "key": "w1-15",
-              "text": "Learn: @RequestBody — receive JSON in POST/PUT requests"
+              "text": "Learn: @RequestBody — receive JSON in POST/PUT requests",
+              "description": "@RequestBody deserializes incoming JSON into a Java object — how clients send data to create or update resources.",
+              "concept": "@RequestBody"
             },
             {
               "key": "w1-16",
-              "text": "Learn: ResponseEntity — control HTTP status codes in your response"
+              "text": "Learn: ResponseEntity — control HTTP status codes in your response",
+              "description": "ResponseEntity lets you control the status code and headers, not just the body — needed for proper REST responses.",
+              "concept": "ResponseEntity"
             },
             {
               "key": "w1-17",
-              "text": "Build: ProductController with in-memory List (no DB yet) — GET all, GET by id, POST, DELETE"
+              "text": "Build: ProductController with in-memory List (no DB yet) — GET all, GET by id, POST, DELETE",
+              "description": "Building a full CRUD controller with an in-memory list practices all four request-handling annotations together before adding a database.",
+              "concept": "CRUD Controller"
             }
           ],
           "resource": null
@@ -131,23 +165,33 @@
           "tasks": [
             {
               "key": "w1-18",
-              "text": "Learn: why separate Controller, Service, Repository layers"
+              "text": "Learn: why separate Controller, Service, Repository layers",
+              "description": "Separating layers keeps each class focused on one concern, making the codebase easier to test and change.",
+              "concept": "Layered Architecture"
             },
             {
               "key": "w1-19",
-              "text": "Learn: @Service annotation and Dependency Injection via constructor"
+              "text": "Learn: @Service annotation and Dependency Injection via constructor",
+              "description": "@Service marks a class as business logic, and constructor injection is how Spring wires dependencies together.",
+              "concept": "@Service & DI"
             },
             {
               "key": "w1-20",
-              "text": "Learn: how Spring's IoC container manages beans automatically"
+              "text": "Learn: how Spring's IoC container manages beans automatically",
+              "description": "Understanding the IoC container demystifies how @Service and @Repository beans get created and injected automatically.",
+              "concept": "IoC Container"
             },
             {
               "key": "w1-21",
-              "text": "Refactor: move business logic out of controller into ProductService"
+              "text": "Refactor: move business logic out of controller into ProductService",
+              "description": "Moving logic out of the controller is the first step toward the Controller → Service → Repository structure used throughout the curriculum.",
+              "concept": "Service Layer"
             },
             {
               "key": "w1-22",
-              "text": "Inject ProductService into ProductController using constructor injection"
+              "text": "Inject ProductService into ProductController using constructor injection",
+              "description": "Constructor injection makes dependencies explicit and testable — the standard way to wire a Service into a Controller.",
+              "concept": "Constructor Injection"
             }
           ],
           "resource": "Rule to remember: Controller talks to Service. Service talks to Repository. Repository talks to DB. Never skip a layer."
@@ -158,23 +202,33 @@
           "tasks": [
             {
               "key": "w1-23",
-              "text": "Learn: what happens when your controller throws an unhandled exception"
+              "text": "Learn: what happens when your controller throws an unhandled exception",
+              "description": "Seeing the default error response (a stack trace dump) shows why custom exception handling is necessary.",
+              "concept": "Exception Handling"
             },
             {
               "key": "w1-24",
-              "text": "Learn: @ControllerAdvice and @ExceptionHandler"
+              "text": "Learn: @ControllerAdvice and @ExceptionHandler",
+              "description": "@ControllerAdvice + @ExceptionHandler centralizes error handling so you don't repeat try-catch in every controller.",
+              "concept": "@ControllerAdvice"
             },
             {
               "key": "w1-25",
-              "text": "Build: a custom ResourceNotFoundException class"
+              "text": "Build: a custom ResourceNotFoundException class",
+              "description": "A custom exception lets you signal a specific error condition (like 'not found') that the global handler can catch and format.",
+              "concept": "Custom Exceptions"
             },
             {
               "key": "w1-26",
-              "text": "Build: a GlobalExceptionHandler that returns JSON error responses"
+              "text": "Build: a GlobalExceptionHandler that returns JSON error responses",
+              "description": "The GlobalExceptionHandler turns exceptions into consistent JSON error responses your frontend can rely on.",
+              "concept": "GlobalExceptionHandler"
             },
             {
               "key": "w1-27",
-              "text": "Test: request a product by a non-existent ID — confirm clean 404 JSON response"
+              "text": "Test: request a product by a non-existent ID — confirm clean 404 JSON response",
+              "description": "Confirming a clean 404 JSON response (instead of a stack trace) proves your exception handling pipeline works end-to-end.",
+              "concept": "Exception Handling"
             }
           ],
           "resource": "Resource: Amigoscode \"Spring Boot Exception Handling\" on YouTube"
@@ -195,27 +249,39 @@
           "tasks": [
             {
               "key": "w2-1",
-              "text": "Learn: what JPA is — a standard for mapping Java objects to DB tables"
+              "text": "Learn: what JPA is — a standard for mapping Java objects to DB tables",
+              "description": "JPA is what lets you work with Java objects instead of writing raw SQL for every operation.",
+              "concept": "JPA Basics"
             },
             {
               "key": "w2-2",
-              "text": "Learn: @Entity, @Table, @Id, @GeneratedValue(strategy=IDENTITY)"
+              "text": "Learn: @Entity, @Table, @Id, @GeneratedValue(strategy=IDENTITY)",
+              "description": "These annotations map a Java class to a database table and define its primary key generation strategy.",
+              "concept": "@Entity & @Id"
             },
             {
               "key": "w2-3",
-              "text": "Learn: @Column — nullable, unique, length constraints"
+              "text": "Learn: @Column — nullable, unique, length constraints",
+              "description": "@Column lets you enforce constraints like NOT NULL and length limits directly from your entity definition.",
+              "concept": "@Column Constraints"
             },
             {
               "key": "w2-4",
-              "text": "Learn: Lombok @Data, @NoArgsConstructor, @AllArgsConstructor to cut boilerplate"
+              "text": "Learn: Lombok @Data, @NoArgsConstructor, @AllArgsConstructor to cut boilerplate",
+              "description": "Lombok generates getters, setters, and constructors for you — removing repetitive boilerplate from every entity.",
+              "concept": "Lombok"
             },
             {
               "key": "w2-5",
-              "text": "Build: Product entity (id, name, description, price, stock, createdAt)"
+              "text": "Build: Product entity (id, name, description, price, stock, createdAt)",
+              "description": "This is your first real entity — every field maps directly to a column in the products table.",
+              "concept": "JPA Entity"
             },
             {
               "key": "w2-6",
-              "text": "Run app — verify MySQL Workbench shows the products table was auto-created"
+              "text": "Run app — verify MySQL Workbench shows the products table was auto-created",
+              "description": "Seeing the table auto-created in MySQL confirms JPA successfully translated your entity into a schema.",
+              "concept": "JPA Schema Generation"
             }
           ],
           "resource": "Note: Use ddl-auto=update in dev only. Never in production — use Flyway (covered in Phase 5)."
@@ -226,27 +292,39 @@
           "tasks": [
             {
               "key": "w2-7",
-              "text": "Learn: JpaRepository<Entity, IdType> — what methods you get for free"
+              "text": "Learn: JpaRepository<Entity, IdType> — what methods you get for free",
+              "description": "JpaRepository gives you save, findById, findAll, deleteById, and more — without writing any SQL.",
+              "concept": "JpaRepository"
             },
             {
               "key": "w2-8",
-              "text": "Build: ProductRepository interface that extends JpaRepository"
+              "text": "Build: ProductRepository interface that extends JpaRepository",
+              "description": "Extending JpaRepository is all it takes to get a fully working data access layer for an entity.",
+              "concept": "JpaRepository"
             },
             {
               "key": "w2-9",
-              "text": "Update ProductService to use ProductRepository (inject it via constructor)"
+              "text": "Update ProductService to use ProductRepository (inject it via constructor)",
+              "description": "Swapping the in-memory list for a repository connects your service layer to the real database.",
+              "concept": "Repository Injection"
             },
             {
               "key": "w2-10",
-              "text": "Test: POST a product in Postman — confirm it saves to MySQL"
+              "text": "Test: POST a product in Postman — confirm it saves to MySQL",
+              "description": "Confirming a POST request persists to MySQL proves the full Controller → Service → Repository → DB chain works.",
+              "concept": "API Testing"
             },
             {
               "key": "w2-11",
-              "text": "Test: GET /api/products — confirm it returns from DB"
+              "text": "Test: GET /api/products — confirm it returns from DB",
+              "description": "Confirming GET reads from the database (not memory) verifies your repository wiring is correct.",
+              "concept": "API Testing"
             },
             {
               "key": "w2-12",
-              "text": "Test: DELETE by id — confirm row removed in MySQL Workbench"
+              "text": "Test: DELETE by id — confirm row removed in MySQL Workbench",
+              "description": "Confirming DELETE removes the row in MySQL closes the loop on basic CRUD.",
+              "concept": "API Testing"
             }
           ],
           "resource": null
@@ -257,23 +335,33 @@
           "tasks": [
             {
               "key": "w2-13",
-              "text": "Learn: derived query methods — findByName(), findByPriceLessThan()"
+              "text": "Learn: derived query methods — findByName(), findByPriceLessThan()",
+              "description": "Derived query methods let Spring generate SQL from a method name — no @Query needed for simple lookups.",
+              "concept": "Derived Query Methods"
             },
             {
               "key": "w2-14",
-              "text": "Learn: @Query annotation with JPQL for custom queries"
+              "text": "Learn: @Query annotation with JPQL for custom queries",
+              "description": "@Query with JPQL gives you full control for queries that derived methods can't express.",
+              "concept": "@Query / JPQL"
             },
             {
               "key": "w2-15",
-              "text": "Learn: Pageable and Page<T> for paginated results"
+              "text": "Learn: Pageable and Page<T> for paginated results",
+              "description": "Pageable and Page<T> let your API return data in pages instead of dumping the entire table at once.",
+              "concept": "Pagination"
             },
             {
               "key": "w2-16",
-              "text": "Build: GET /api/products?page=0&size=5&sort=price,asc — paginated endpoint"
+              "text": "Build: GET /api/products?page=0&size=5&sort=price,asc — paginated endpoint",
+              "description": "Pagination and sorting on a list endpoint is a must-have for any API with more than a handful of rows.",
+              "concept": "Pagination"
             },
             {
               "key": "w2-17",
-              "text": "Build: GET /api/products/search?name=laptop — search by name"
+              "text": "Build: GET /api/products/search?name=laptop — search by name",
+              "description": "A search endpoint demonstrates a derived query method (or @Query) used in a real feature.",
+              "concept": "Search Endpoint"
             }
           ],
           "resource": "Resource: Spring Data JPA docs — \"Query Methods\" section at docs.spring.io"
@@ -284,27 +372,39 @@
           "tasks": [
             {
               "key": "w2-18",
-              "text": "Learn: @ManyToOne and @OneToMany — a Category has many Products"
+              "text": "Learn: @ManyToOne and @OneToMany — a Category has many Products",
+              "description": "@ManyToOne/@OneToMany model real-world relationships — the basis of almost every database schema.",
+              "concept": "@OneToMany / @ManyToOne"
             },
             {
               "key": "w2-19",
-              "text": "Learn: @JoinColumn — specifies the foreign key column"
+              "text": "Learn: @JoinColumn — specifies the foreign key column",
+              "description": "@JoinColumn tells JPA exactly which column holds the foreign key.",
+              "concept": "@JoinColumn"
             },
             {
               "key": "w2-20",
-              "text": "Learn: FetchType.LAZY vs EAGER — always use LAZY, fetch explicitly when needed"
+              "text": "Learn: FetchType.LAZY vs EAGER — always use LAZY, fetch explicitly when needed",
+              "description": "LAZY loading avoids fetching related data you don't need — EAGER can silently load huge amounts of data.",
+              "concept": "FetchType LAZY/EAGER"
             },
             {
               "key": "w2-21",
-              "text": "Learn: cascade types — when saving parent also saves children"
+              "text": "Learn: cascade types — when saving parent also saves children",
+              "description": "Cascade types control whether saving/deleting a parent automatically affects its children.",
+              "concept": "Cascade Types"
             },
             {
               "key": "w2-22",
-              "text": "Build: Category entity with @OneToMany to Product"
+              "text": "Build: Category entity with @OneToMany to Product",
+              "description": "Building Category with @OneToMany to Product is your first real one-to-many relationship.",
+              "concept": "Entity Relationships"
             },
             {
               "key": "w2-23",
-              "text": "Test: create a category, assign products to it, query products by category"
+              "text": "Test: create a category, assign products to it, query products by category",
+              "description": "Querying products by category proves the relationship is correctly mapped and navigable.",
+              "concept": "Entity Relationships"
             }
           ],
           "resource": "Warning: Never use FetchType.EAGER on collections — it causes the N+1 problem and silently destroys performance."
@@ -315,23 +415,33 @@
           "tasks": [
             {
               "key": "w2-24",
-              "text": "Learn: why you should never return JPA entities directly from controllers"
+              "text": "Learn: why you should never return JPA entities directly from controllers",
+              "description": "Returning entities directly exposes internal fields and can cause infinite JSON loops on bidirectional relationships.",
+              "concept": "DTO Pattern"
             },
             {
               "key": "w2-25",
-              "text": "Learn: DTO (Data Transfer Object) pattern — a plain class for API input/output"
+              "text": "Learn: DTO (Data Transfer Object) pattern — a plain class for API input/output",
+              "description": "DTOs decouple your API contract from your database schema — you can change one without breaking the other.",
+              "concept": "DTO Pattern"
             },
             {
               "key": "w2-26",
-              "text": "Build: ProductRequest DTO (for incoming POST/PUT body)"
+              "text": "Build: ProductRequest DTO (for incoming POST/PUT body)",
+              "description": "A request DTO defines exactly what a client is allowed to send when creating/updating a resource.",
+              "concept": "DTO Pattern"
             },
             {
               "key": "w2-27",
-              "text": "Build: ProductResponse DTO (for outgoing JSON — only expose safe fields)"
+              "text": "Build: ProductResponse DTO (for outgoing JSON — only expose safe fields)",
+              "description": "A response DTO controls exactly what fields are exposed to clients — hiding internal or sensitive data.",
+              "concept": "DTO Pattern"
             },
             {
               "key": "w2-28",
-              "text": "Update service to map entity ↔ DTO manually (or use MapStruct)"
+              "text": "Update service to map entity ↔ DTO manually (or use MapStruct)",
+              "description": "Mapping between entity and DTO is what actually enforces the separation — manual mapping builds understanding before reaching for MapStruct.",
+              "concept": "Entity-DTO Mapping"
             }
           ],
           "resource": "Why it matters: Returning raw entities leaks internal fields (like passwords), causes JSON infinite loops on bidirectional relations, and tightly couples your DB schema to your API."
@@ -352,27 +462,39 @@
           "tasks": [
             {
               "key": "w3-1",
-              "text": "Add dependency: spring-boot-starter-validation"
+              "text": "Add dependency: spring-boot-starter-validation",
+              "description": "This starter brings in the Jakarta Bean Validation annotations used to validate DTO fields.",
+              "concept": "Bean Validation"
             },
             {
               "key": "w3-2",
-              "text": "Learn: @NotNull, @NotBlank, @Size, @Min, @Max, @Email on DTO fields"
+              "text": "Learn: @NotNull, @NotBlank, @Size, @Min, @Max, @Email on DTO fields",
+              "description": "These annotations declaratively enforce rules like required fields, length limits, and valid email format.",
+              "concept": "Validation Annotations"
             },
             {
               "key": "w3-3",
-              "text": "Learn: add @Valid to @RequestBody parameter in controller"
+              "text": "Learn: add @Valid to @RequestBody parameter in controller",
+              "description": "@Valid tells Spring to run validation on the incoming body before your controller method executes.",
+              "concept": "@Valid"
             },
             {
               "key": "w3-4",
-              "text": "Learn: handle MethodArgumentNotValidException in GlobalExceptionHandler"
+              "text": "Learn: handle MethodArgumentNotValidException in GlobalExceptionHandler",
+              "description": "Handling MethodArgumentNotValidException lets you turn validation failures into a clean 400 response instead of a 500.",
+              "concept": "Validation Error Handling"
             },
             {
               "key": "w3-5",
-              "text": "Test: POST a product with a blank name — confirm 400 with helpful error message"
+              "text": "Test: POST a product with a blank name — confirm 400 with helpful error message",
+              "description": "Testing with invalid input confirms your validation rules and error handling actually work.",
+              "concept": "Validation Testing"
             },
             {
               "key": "w3-6",
-              "text": "Build: return a map of field → error message in validation failure response"
+              "text": "Build: return a map of field → error message in validation failure response",
+              "description": "A field-to-message map gives the frontend exactly what it needs to show inline form errors.",
+              "concept": "Validation Error Response"
             }
           ],
           "resource": null
@@ -383,23 +505,33 @@
           "tasks": [
             {
               "key": "w3-7",
-              "text": "Learn: @ManyToMany — a Product can have many Tags, a Tag can have many Products"
+              "text": "Learn: @ManyToMany — a Product can have many Tags, a Tag can have many Products",
+              "description": "@ManyToMany models relationships where both sides can have multiple matches — like products and tags.",
+              "concept": "@ManyToMany"
             },
             {
               "key": "w3-8",
-              "text": "Learn: @JoinTable — defines the join table (product_tags) with both foreign keys"
+              "text": "Learn: @JoinTable — defines the join table (product_tags) with both foreign keys",
+              "description": "@JoinTable defines the hidden join table that stores the many-to-many links.",
+              "concept": "@JoinTable"
             },
             {
               "key": "w3-9",
-              "text": "Learn: owning side vs inverse side of the relationship"
+              "text": "Learn: owning side vs inverse side of the relationship",
+              "description": "Knowing which side owns the relationship determines which entity controls saving the join table rows.",
+              "concept": "Relationship Ownership"
             },
             {
               "key": "w3-10",
-              "text": "Build: Tag entity + @ManyToMany on Product"
+              "text": "Build: Tag entity + @ManyToMany on Product",
+              "description": "Building Tag with @ManyToMany to Product gives you hands-on experience with the trickiest relationship type.",
+              "concept": "@ManyToMany"
             },
             {
               "key": "w3-11",
-              "text": "Test: create tags, assign to products, query products by tag"
+              "text": "Test: create tags, assign to products, query products by tag",
+              "description": "Querying products by tag confirms the many-to-many mapping and join table are working correctly.",
+              "concept": "@ManyToMany"
             }
           ],
           "resource": null
@@ -410,23 +542,33 @@
           "tasks": [
             {
               "key": "w3-12",
-              "text": "Learn: @EntityListeners(AuditingEntityListener.class)"
+              "text": "Learn: @EntityListeners(AuditingEntityListener.class)",
+              "description": "@EntityListeners hooks JPA lifecycle events so audit fields update automatically without manual code.",
+              "concept": "JPA Auditing"
             },
             {
               "key": "w3-13",
-              "text": "Learn: @CreatedDate, @LastModifiedDate on timestamp fields"
+              "text": "Learn: @CreatedDate, @LastModifiedDate on timestamp fields",
+              "description": "@CreatedDate and @LastModifiedDate are populated automatically by Spring Data JPA auditing.",
+              "concept": "@CreatedDate/@LastModifiedDate"
             },
             {
               "key": "w3-14",
-              "text": "Learn: @EnableJpaAuditing on your main class or a config class"
+              "text": "Learn: @EnableJpaAuditing on your main class or a config class",
+              "description": "@EnableJpaAuditing turns on the auditing infrastructure for your whole application.",
+              "concept": "@EnableJpaAuditing"
             },
             {
               "key": "w3-15",
-              "text": "Build: an abstract BaseEntity class with audit fields — all entities extend it"
+              "text": "Build: an abstract BaseEntity class with audit fields — all entities extend it",
+              "description": "A shared BaseEntity avoids repeating audit fields on every entity class.",
+              "concept": "BaseEntity"
             },
             {
               "key": "w3-16",
-              "text": "Test: create a product, confirm createdAt and updatedAt auto-populate"
+              "text": "Test: create a product, confirm createdAt and updatedAt auto-populate",
+              "description": "Confirming timestamps auto-populate verifies your auditing setup is wired correctly.",
+              "concept": "JPA Auditing"
             }
           ],
           "resource": null
@@ -437,27 +579,39 @@
           "tasks": [
             {
               "key": "w3-17",
-              "text": "Learn: @Transactional — when and why to add it to service methods"
+              "text": "Learn: @Transactional — when and why to add it to service methods",
+              "description": "@Transactional ensures multi-step database operations either all succeed or all roll back together.",
+              "concept": "@Transactional"
             },
             {
               "key": "w3-18",
-              "text": "Learn: readOnly=true for GET service methods — performance hint to JPA"
+              "text": "Learn: readOnly=true for GET service methods — performance hint to JPA",
+              "description": "readOnly=true lets JPA skip dirty-checking overhead for queries that don't modify data.",
+              "concept": "@Transactional(readOnly)"
             },
             {
               "key": "w3-19",
-              "text": "Learn: how to do a partial update (PATCH) — only update non-null fields"
+              "text": "Learn: how to do a partial update (PATCH) — only update non-null fields",
+              "description": "Partial updates let clients change just one field without resending the entire resource.",
+              "concept": "Partial Update (PATCH)"
             },
             {
               "key": "w3-20",
-              "text": "Build: PATCH /api/products/{id} endpoint with partial update logic"
+              "text": "Build: PATCH /api/products/{id} endpoint with partial update logic",
+              "description": "PATCH is the correct HTTP verb for partial updates — building it teaches the null-check update pattern.",
+              "concept": "PATCH Endpoint"
             },
             {
               "key": "w3-21",
-              "text": "Test: PATCH with only price changed — confirm name untouched in DB"
+              "text": "Test: PATCH with only price changed — confirm name untouched in DB",
+              "description": "Confirming untouched fields stay the same proves your partial update logic doesn't overwrite with nulls.",
+              "concept": "Partial Update (PATCH)"
             },
             {
               "key": "w3-27",
-              "text": "Learn: @EnableCaching, @Cacheable(\"products\") on getAllProducts() — add @CacheEvict on create/update/delete so the cache stays fresh"
+              "text": "Learn: @EnableCaching, @Cacheable(\"products\") on getAllProducts() — add @CacheEvict on create/update/delete so the cache stays fresh",
+              "description": "Caching avoids hitting the database for data that rarely changes, while cache eviction keeps it from going stale after writes.",
+              "concept": "Spring Caching"
             }
           ],
           "resource": "Pattern: For PATCH, fetch entity from DB, check each DTO field for null, update only non-null fields, save. Never blindly overwrite."
@@ -468,23 +622,33 @@
           "tasks": [
             {
               "key": "w3-22",
-              "text": "Learn: RESTful URL conventions — nouns not verbs (/products not /getProducts)"
+              "text": "Learn: RESTful URL conventions — nouns not verbs (/products not /getProducts)",
+              "description": "Consistent, noun-based URLs make your API predictable and easier for frontend developers to use.",
+              "concept": "RESTful URL Design"
             },
             {
               "key": "w3-23",
-              "text": "Learn: correct HTTP status codes — 200, 201, 204, 400, 401, 403, 404, 409, 500"
+              "text": "Learn: correct HTTP status codes — 200, 201, 204, 400, 401, 403, 404, 409, 500",
+              "description": "Correct status codes communicate the outcome of a request precisely — clients rely on them to handle responses correctly.",
+              "concept": "HTTP Status Codes"
             },
             {
               "key": "w3-24",
-              "text": "Learn: consistent error response format — include status, message, timestamp, path"
+              "text": "Learn: consistent error response format — include status, message, timestamp, path",
+              "description": "A consistent error shape means the frontend can handle all errors with one piece of code.",
+              "concept": "Error Response Format"
             },
             {
               "key": "w3-25",
-              "text": "Learn: API versioning with URL prefix — /api/v1/products"
+              "text": "Learn: API versioning with URL prefix — /api/v1/products",
+              "description": "Versioning your API lets you make breaking changes later without breaking existing clients.",
+              "concept": "API Versioning"
             },
             {
               "key": "w3-26",
-              "text": "Refactor: update all your endpoints to follow these conventions"
+              "text": "Refactor: update all your endpoints to follow these conventions",
+              "description": "Refactoring existing endpoints to follow these conventions makes your whole API consistent before moving to security.",
+              "concept": "API Refactoring"
             }
           ],
           "resource": null
@@ -505,27 +669,39 @@
           "tasks": [
             {
               "key": "w4-1",
-              "text": "Add dependency: spring-boot-starter-security"
+              "text": "Add dependency: spring-boot-starter-security",
+              "description": "This starter adds Spring Security to your project and locks down all endpoints by default.",
+              "concept": "Spring Security Setup"
             },
             {
               "key": "w4-2",
-              "text": "Observe: all your endpoints are now locked behind HTTP Basic auth"
+              "text": "Observe: all your endpoints are now locked behind HTTP Basic auth",
+              "description": "Seeing every endpoint suddenly require a login shows Spring Security's secure-by-default behavior.",
+              "concept": "Spring Security Defaults"
             },
             {
               "key": "w4-3",
-              "text": "Learn: the Security Filter Chain concept — requests go through filters before hitting controllers"
+              "text": "Learn: the Security Filter Chain concept — requests go through filters before hitting controllers",
+              "description": "Understanding the filter chain explains how every request is checked for authentication before reaching your controller.",
+              "concept": "Security Filter Chain"
             },
             {
               "key": "w4-4",
-              "text": "Learn: @EnableWebSecurity and writing a SecurityFilterChain @Bean"
+              "text": "Learn: @EnableWebSecurity and writing a SecurityFilterChain @Bean",
+              "description": "A custom SecurityFilterChain bean is how you configure which routes require authentication and how.",
+              "concept": "SecurityFilterChain Bean"
             },
             {
               "key": "w4-5",
-              "text": "Learn: how to permit certain URLs (e.g. /api/v1/auth/**) and require auth on others"
+              "text": "Learn: how to permit certain URLs (e.g. /api/v1/auth/**) and require auth on others",
+              "description": "Permitting auth endpoints while securing the rest is the basic shape of every secured API.",
+              "concept": "Endpoint Authorization"
             },
             {
               "key": "w4-6",
-              "text": "Build: User entity with email, password, role fields"
+              "text": "Build: User entity with email, password, role fields",
+              "description": "The User entity is the foundation everything else this week builds on — registration, login, and roles all depend on it.",
+              "concept": "User Entity"
             }
           ],
           "resource": "Resource: Amigoscode \"Spring Boot 3 + Spring Security 6 + JWT\" on YouTube — watch Day 1 portion only today"
@@ -536,27 +712,39 @@
           "tasks": [
             {
               "key": "w4-7",
-              "text": "Learn: UserDetails interface — what Spring Security expects from a user object"
+              "text": "Learn: UserDetails interface — what Spring Security expects from a user object",
+              "description": "UserDetails is the contract Spring Security uses to represent an authenticated user.",
+              "concept": "UserDetails"
             },
             {
               "key": "w4-8",
-              "text": "Make your User entity implement UserDetails (or wrap it in a separate class)"
+              "text": "Make your User entity implement UserDetails (or wrap it in a separate class)",
+              "description": "Implementing UserDetails lets your User entity plug directly into Spring Security's authentication process.",
+              "concept": "UserDetails"
             },
             {
               "key": "w4-9",
-              "text": "Learn: UserDetailsService — loadUserByUsername() method Spring calls during login"
+              "text": "Learn: UserDetailsService — loadUserByUsername() method Spring calls during login",
+              "description": "loadUserByUsername() is the hook Spring Security calls to find a user during login.",
+              "concept": "UserDetailsService"
             },
             {
               "key": "w4-10",
-              "text": "Build: UserDetailsServiceImpl that loads user from DB by email"
+              "text": "Build: UserDetailsServiceImpl that loads user from DB by email",
+              "description": "This service connects your database to Spring Security's authentication mechanism.",
+              "concept": "UserDetailsService"
             },
             {
               "key": "w4-11",
-              "text": "Learn: BCryptPasswordEncoder — never store plain text passwords"
+              "text": "Learn: BCryptPasswordEncoder — never store plain text passwords",
+              "description": "BCrypt hashes passwords one-way so even a database breach doesn't expose plain-text passwords.",
+              "concept": "Password Hashing"
             },
             {
               "key": "w4-12",
-              "text": "Register PasswordEncoder @Bean — hash password on registration, verify on login"
+              "text": "Register PasswordEncoder @Bean — hash password on registration, verify on login",
+              "description": "Hashing on registration and verifying on login is the only safe way to handle passwords.",
+              "concept": "PasswordEncoder"
             }
           ],
           "resource": null
@@ -567,27 +755,39 @@
           "tasks": [
             {
               "key": "w4-13",
-              "text": "Add dependency: io.jsonwebtoken:jjwt-api, jjwt-impl, jjwt-jackson"
+              "text": "Add dependency: io.jsonwebtoken:jjwt-api, jjwt-impl, jjwt-jackson",
+              "description": "These libraries provide the tools to create and verify JWT tokens in Java.",
+              "concept": "JWT Dependencies"
             },
             {
               "key": "w4-14",
-              "text": "Learn: JWT structure — header.payload.signature"
+              "text": "Learn: JWT structure — header.payload.signature",
+              "description": "Understanding JWT structure helps you debug auth issues by inspecting tokens directly.",
+              "concept": "JWT Structure"
             },
             {
               "key": "w4-15",
-              "text": "Learn: what goes in the claims — subject (email), issued at, expiration"
+              "text": "Learn: what goes in the claims — subject (email), issued at, expiration",
+              "description": "Claims carry the user identity and expiration inside the token itself — no server-side session needed.",
+              "concept": "JWT Claims"
             },
             {
               "key": "w4-16",
-              "text": "Build: JwtService with generateToken() and extractUsername() methods"
+              "text": "Build: JwtService with generateToken() and extractUsername() methods",
+              "description": "JwtService centralizes all token creation and parsing logic in one place.",
+              "concept": "JwtService"
             },
             {
               "key": "w4-17",
-              "text": "Store JWT secret and expiration in application.properties (externalized)"
+              "text": "Store JWT secret and expiration in application.properties (externalized)",
+              "description": "Externalizing the secret and expiration keeps sensitive config out of your source code.",
+              "concept": "JWT Config"
             },
             {
               "key": "w4-18",
-              "text": "Test: generate a token, paste into jwt.io to inspect the claims"
+              "text": "Test: generate a token, paste into jwt.io to inspect the claims",
+              "description": "Inspecting a generated token on jwt.io confirms the claims and structure are correct.",
+              "concept": "JWT Debugging"
             }
           ],
           "resource": "Resource: jwt.io — paste any JWT token here to decode and inspect it visually"
@@ -598,23 +798,33 @@
           "tasks": [
             {
               "key": "w4-19",
-              "text": "Build: JwtAuthenticationFilter extends OncePerRequestFilter"
+              "text": "Build: JwtAuthenticationFilter extends OncePerRequestFilter",
+              "description": "A custom filter is how every incoming request gets checked for a valid JWT before reaching your controllers.",
+              "concept": "JwtAuthenticationFilter"
             },
             {
               "key": "w4-20",
-              "text": "In filter: read Authorization header, extract Bearer token, validate, set SecurityContext"
+              "text": "In filter: read Authorization header, extract Bearer token, validate, set SecurityContext",
+              "description": "This is the core logic that turns a Bearer token into an authenticated SecurityContext for the request.",
+              "concept": "JWT Validation"
             },
             {
               "key": "w4-21",
-              "text": "Register the filter before UsernamePasswordAuthenticationFilter in SecurityFilterChain"
+              "text": "Register the filter before UsernamePasswordAuthenticationFilter in SecurityFilterChain",
+              "description": "Registering the filter in the right order ensures JWT validation happens before Spring's default authentication.",
+              "concept": "Security Filter Chain"
             },
             {
               "key": "w4-22",
-              "text": "Build: AuthController with POST /api/v1/auth/register and /login"
+              "text": "Build: AuthController with POST /api/v1/auth/register and /login",
+              "description": "Register and login endpoints are the entry points users interact with to obtain a token.",
+              "concept": "AuthController"
             },
             {
               "key": "w4-23",
-              "text": "Build: AuthService — register saves hashed password, login verifies and returns JWT"
+              "text": "Build: AuthService — register saves hashed password, login verifies and returns JWT",
+              "description": "AuthService ties together password hashing, user lookup, and token generation into the registration/login flow.",
+              "concept": "AuthService"
             }
           ],
           "resource": null
@@ -625,27 +835,39 @@
           "tasks": [
             {
               "key": "w4-24",
-              "text": "Learn: roles — USER vs ADMIN — store as enum in User entity"
+              "text": "Learn: roles — USER vs ADMIN — store as enum in User entity",
+              "description": "Roles let you distinguish what different users are allowed to do — e.g. only admins can manage products.",
+              "concept": "Role-Based Access Control"
             },
             {
               "key": "w4-25",
-              "text": "Learn: .hasRole() and .hasAuthority() in SecurityFilterChain"
+              "text": "Learn: .hasRole() and .hasAuthority() in SecurityFilterChain",
+              "description": "These methods restrict access to endpoints based on a user's role or authority.",
+              "concept": "hasRole/hasAuthority"
             },
             {
               "key": "w4-26",
-              "text": "Learn: @PreAuthorize(\"hasRole('ADMIN')\") on controller methods"
+              "text": "Learn: @PreAuthorize(\"hasRole('ADMIN')\") on controller methods",
+              "description": "@PreAuthorize lets you enforce role checks at the method level, closer to the business logic.",
+              "concept": "@PreAuthorize"
             },
             {
               "key": "w4-27",
-              "text": "Configure CORS in SecurityFilterChain to allow your frontend origin"
+              "text": "Configure CORS in SecurityFilterChain to allow your frontend origin",
+              "description": "CORS configuration is required for your React frontend (running on a different origin) to call this API.",
+              "concept": "CORS Configuration"
             },
             {
               "key": "w4-28",
-              "text": "Test full flow in Postman: register → login → get token → use token on protected endpoint"
+              "text": "Test full flow in Postman: register → login → get token → use token on protected endpoint",
+              "description": "This end-to-end test proves the entire authentication flow works from the client's perspective.",
+              "concept": "Auth Flow Testing"
             },
             {
               "key": "w4-29",
-              "text": "Build: GET /api/v1/auth/me — use @AuthenticationPrincipal UserDetails to return the current user as a UserResponse DTO (never the password)"
+              "text": "Build: GET /api/v1/auth/me — use @AuthenticationPrincipal UserDetails to return the current user as a UserResponse DTO (never the password)",
+              "description": "/auth/me is how the frontend finds out who's currently logged in — a common requirement for any authenticated app.",
+              "concept": "/auth/me Endpoint"
             }
           ],
           "resource": null
@@ -666,27 +888,39 @@
           "tasks": [
             {
               "key": "w5-1",
-              "text": "Learn: @RequestParam MultipartFile file in controller"
+              "text": "Learn: @RequestParam MultipartFile file in controller",
+              "description": "MultipartFile is how Spring represents an uploaded file in a controller method.",
+              "concept": "MultipartFile"
             },
             {
               "key": "w5-2",
-              "text": "Learn: file.getOriginalFilename(), file.getBytes(), file.getInputStream()"
+              "text": "Learn: file.getOriginalFilename(), file.getBytes(), file.getInputStream()",
+              "description": "These methods give you access to the file's name and contents so you can save or process it.",
+              "concept": "File Upload"
             },
             {
               "key": "w5-3",
-              "text": "Configure: spring.servlet.multipart.max-file-size in application.properties"
+              "text": "Configure: spring.servlet.multipart.max-file-size in application.properties",
+              "description": "Setting a max file size prevents users from uploading files that could overwhelm your server.",
+              "concept": "File Upload Config"
             },
             {
               "key": "w5-4",
-              "text": "Build: POST /api/v1/products/{id}/image — saves file to local /uploads/ folder"
+              "text": "Build: POST /api/v1/products/{id}/image — saves file to local /uploads/ folder",
+              "description": "A real upload endpoint is needed for features like product images — a common e-commerce requirement.",
+              "concept": "Image Upload Endpoint"
             },
             {
               "key": "w5-5",
-              "text": "Build: GET endpoint to serve the uploaded image back"
+              "text": "Build: GET endpoint to serve the uploaded image back",
+              "description": "Serving the uploaded file back lets the frontend display the image after upload.",
+              "concept": "Serve Static Files"
             },
             {
               "key": "w5-6",
-              "text": "Test: upload a product image via Postman form-data"
+              "text": "Test: upload a product image via Postman form-data",
+              "description": "Testing with form-data confirms the upload endpoint works the way a real frontend would call it.",
+              "concept": "File Upload Testing"
             }
           ],
           "resource": "Next step: In Phase 4 you'll swap local storage for Cloudflare R2 or AWS S3 — same API, different storage backend."
@@ -697,23 +931,33 @@
           "tasks": [
             {
               "key": "w5-7",
-              "text": "Add dependency: spring-boot-starter-mail"
+              "text": "Add dependency: spring-boot-starter-mail",
+              "description": "This starter provides JavaMailSender for sending emails from your application.",
+              "concept": "JavaMailSender"
             },
             {
               "key": "w5-8",
-              "text": "Configure: SMTP settings in application.properties (use Mailtrap.io for testing)"
+              "text": "Configure: SMTP settings in application.properties (use Mailtrap.io for testing)",
+              "description": "SMTP configuration tells Spring where to send emails — Mailtrap is safe for testing without spamming real inboxes.",
+              "concept": "SMTP Configuration"
             },
             {
               "key": "w5-9",
-              "text": "Build: EmailService with sendSimpleEmail() method using JavaMailSender"
+              "text": "Build: EmailService with sendSimpleEmail() method using JavaMailSender",
+              "description": "EmailService centralizes email-sending logic so it can be reused for welcome emails, password resets, etc.",
+              "concept": "EmailService"
             },
             {
               "key": "w5-10",
-              "text": "Trigger: send welcome email on user registration"
+              "text": "Trigger: send welcome email on user registration",
+              "description": "A welcome email on registration is a common real-world feature that ties together your auth and email systems.",
+              "concept": "Email Notifications"
             },
             {
               "key": "w5-11",
-              "text": "Test: register a user, check Mailtrap inbox for the email"
+              "text": "Test: register a user, check Mailtrap inbox for the email",
+              "description": "Checking Mailtrap confirms the email was actually sent and formatted correctly.",
+              "concept": "Email Testing"
             }
           ],
           "resource": "Resource: mailtrap.io — free fake SMTP inbox for dev/testing. No real emails sent."
@@ -724,27 +968,39 @@
           "tasks": [
             {
               "key": "w5-12",
-              "text": "Learn: what a unit test is — test one class in isolation"
+              "text": "Learn: what a unit test is — test one class in isolation",
+              "description": "Unit tests catch bugs in your business logic without needing a database or running server.",
+              "concept": "Unit Testing"
             },
             {
               "key": "w5-13",
-              "text": "Learn: @Test, @BeforeEach, Assertions.assertEquals(), assertThrows()"
+              "text": "Learn: @Test, @BeforeEach, Assertions.assertEquals(), assertThrows()",
+              "description": "These JUnit annotations and assertions are the basic vocabulary of writing any test.",
+              "concept": "JUnit 5 Assertions"
             },
             {
               "key": "w5-14",
-              "text": "Learn: Mockito — @Mock, @InjectMocks, when().thenReturn(), verify()"
+              "text": "Learn: Mockito — @Mock, @InjectMocks, when().thenReturn(), verify()",
+              "description": "Mockito lets you fake dependencies like repositories so you can test a service in isolation.",
+              "concept": "Mockito"
             },
             {
               "key": "w5-15",
-              "text": "Write: unit tests for ProductService — mock the repository, test business logic"
+              "text": "Write: unit tests for ProductService — mock the repository, test business logic",
+              "description": "Testing ProductService with a mocked repository verifies your business logic independent of the database.",
+              "concept": "Service Unit Tests"
             },
             {
               "key": "w5-16",
-              "text": "Write: test the \"product not found\" exception is thrown correctly"
+              "text": "Write: test the \"product not found\" exception is thrown correctly",
+              "description": "Testing exception scenarios ensures your error handling behaves correctly, not just the happy path.",
+              "concept": "Exception Testing"
             },
             {
               "key": "w5-17",
-              "text": "Run tests — aim for green on all service tests"
+              "text": "Run tests — aim for green on all service tests",
+              "description": "A green test suite gives you confidence to refactor without breaking existing behavior.",
+              "concept": "Test Suite"
             }
           ],
           "resource": null
@@ -755,27 +1011,39 @@
           "tasks": [
             {
               "key": "w5-18",
-              "text": "Learn: @WebMvcTest — loads only web layer, mocks everything else"
+              "text": "Learn: @WebMvcTest — loads only web layer, mocks everything else",
+              "description": "@WebMvcTest is faster than a full integration test because it only loads the web layer.",
+              "concept": "@WebMvcTest"
             },
             {
               "key": "w5-19",
-              "text": "Learn: MockMvc — perform HTTP requests in tests without a running server"
+              "text": "Learn: MockMvc — perform HTTP requests in tests without a running server",
+              "description": "MockMvc simulates HTTP requests so you can test controllers without starting a real server.",
+              "concept": "MockMvc"
             },
             {
               "key": "w5-20",
-              "text": "Write: test GET /api/v1/products returns 200 with correct JSON body"
+              "text": "Write: test GET /api/v1/products returns 200 with correct JSON body",
+              "description": "Testing a successful GET confirms the controller, JSON serialization, and status code all work together.",
+              "concept": "Controller Testing"
             },
             {
               "key": "w5-21",
-              "text": "Write: test POST with invalid body returns 400 with validation errors"
+              "text": "Write: test POST with invalid body returns 400 with validation errors",
+              "description": "Testing invalid input confirms your validation and error handling work at the HTTP layer.",
+              "concept": "Validation Testing"
             },
             {
               "key": "w5-22",
-              "text": "Write: test authenticated endpoint returns 401 without JWT"
+              "text": "Write: test authenticated endpoint returns 401 without JWT",
+              "description": "Testing an unauthenticated request confirms your security configuration actually protects the endpoint.",
+              "concept": "Security Testing"
             },
             {
               "key": "w5-28",
-              "text": "Add H2 (test scope) + application-test.properties (ddl-auto=create-drop) — write a @SpringBootTest integration test for the full register → login → use-token flow"
+              "text": "Add H2 (test scope) + application-test.properties (ddl-auto=create-drop) — write a @SpringBootTest integration test for the full register → login → use-token flow",
+              "description": "An end-to-end integration test with H2 verifies the whole register → login → authenticated request flow works together.",
+              "concept": "Integration Testing"
             }
           ],
           "resource": null
@@ -786,23 +1054,33 @@
           "tasks": [
             {
               "key": "w5-23",
-              "text": "Learn: SLF4J with Logback — @Slf4j (Lombok) and log.info(), log.error(), log.debug()"
+              "text": "Learn: SLF4J with Logback — @Slf4j (Lombok) and log.info(), log.error(), log.debug()",
+              "description": "Proper logging gives you visibility into what your app is doing in production, unlike println which can't be filtered or disabled.",
+              "concept": "SLF4J Logging"
             },
             {
               "key": "w5-24",
-              "text": "Add meaningful log statements to service methods (not System.out.println!)"
+              "text": "Add meaningful log statements to service methods (not System.out.println!)",
+              "description": "Meaningful logs make debugging production issues possible without redeploying with print statements.",
+              "concept": "Logging Best Practices"
             },
             {
               "key": "w5-25",
-              "text": "Learn: Spring profiles — application-dev.properties vs application-prod.properties"
+              "text": "Learn: Spring profiles — application-dev.properties vs application-prod.properties",
+              "description": "Profiles let you use different configuration for local development vs production without code changes.",
+              "concept": "Spring Profiles"
             },
             {
               "key": "w5-26",
-              "text": "Move DB credentials and JWT secret to environment variables"
+              "text": "Move DB credentials and JWT secret to environment variables",
+              "description": "Environment variables keep secrets out of your codebase and let different environments use different credentials.",
+              "concept": "Environment Variables"
             },
             {
               "key": "w5-27",
-              "text": "Never commit secrets to Git — add application-prod.properties to .gitignore"
+              "text": "Never commit secrets to Git — add application-prod.properties to .gitignore",
+              "description": "Committing secrets to Git exposes them permanently in history, even if removed later — .gitignore prevents this mistake.",
+              "concept": "Secrets Management"
             }
           ],
           "resource": "Rule: If it's a secret (password, API key, JWT secret), it lives in an environment variable — never in code or committed properties files."
@@ -823,23 +1101,33 @@
           "tasks": [
             {
               "key": "w6-1",
-              "text": "Add dependency: springdoc-openapi-starter-webmvc-ui"
+              "text": "Add dependency: springdoc-openapi-starter-webmvc-ui",
+              "description": "Springdoc generates interactive API documentation automatically from your existing controllers and DTOs.",
+              "concept": "Springdoc OpenAPI"
             },
             {
               "key": "w6-2",
-              "text": "Visit http://localhost:8080/swagger-ui.html — your API is auto-documented"
+              "text": "Visit http://localhost:8080/swagger-ui.html — your API is auto-documented",
+              "description": "Swagger UI gives you (and anyone else) a browsable, testable view of your entire API.",
+              "concept": "Swagger UI"
             },
             {
               "key": "w6-3",
-              "text": "Learn: @Operation, @Parameter, @ApiResponse annotations for richer docs"
+              "text": "Learn: @Operation, @Parameter, @ApiResponse annotations for richer docs",
+              "description": "These annotations let you add descriptions and examples that make the auto-generated docs more useful.",
+              "concept": "OpenAPI Annotations"
             },
             {
               "key": "w6-4",
-              "text": "Configure Swagger to support JWT — add Authorize button for Bearer token"
+              "text": "Configure Swagger to support JWT — add Authorize button for Bearer token",
+              "description": "Adding JWT support to Swagger lets you test protected endpoints directly from the docs UI.",
+              "concept": "Swagger JWT Auth"
             },
             {
               "key": "w6-5",
-              "text": "Test: use Swagger UI to call your endpoints — confirm auth works through UI"
+              "text": "Test: use Swagger UI to call your endpoints — confirm auth works through UI",
+              "description": "Confirming auth works through Swagger means your docs are a fully functional testing tool, not just a reference.",
+              "concept": "Swagger Testing"
             }
           ],
           "resource": null
@@ -850,27 +1138,39 @@
           "tasks": [
             {
               "key": "w6-6",
-              "text": "Create Railway account at railway.app"
+              "text": "Create Railway account at railway.app",
+              "description": "Railway is a simple, low-cost platform to host both your app and database for this project.",
+              "concept": "Railway Setup"
             },
             {
               "key": "w6-7",
-              "text": "Add a MySQL service to your Railway project"
+              "text": "Add a MySQL service to your Railway project",
+              "description": "A managed MySQL service on Railway gives your deployed app a real database to connect to.",
+              "concept": "Railway MySQL"
             },
             {
               "key": "w6-8",
-              "text": "Connect your GitHub repo to Railway — enable auto-deploy on push to main"
+              "text": "Connect your GitHub repo to Railway — enable auto-deploy on push to main",
+              "description": "Auto-deploy on push means every commit to main automatically updates your live API.",
+              "concept": "Railway Auto-Deploy"
             },
             {
               "key": "w6-9",
-              "text": "Set environment variables in Railway dashboard (DB_URL, DB_USER, DB_PASS, JWT_SECRET)"
+              "text": "Set environment variables in Railway dashboard (DB_URL, DB_USER, DB_PASS, JWT_SECRET)",
+              "description": "Environment variables on Railway keep your production secrets separate from your code, just like locally.",
+              "concept": "Environment Variables"
             },
             {
               "key": "w6-10",
-              "text": "Deploy — watch the Railway build logs, fix any startup errors"
+              "text": "Deploy — watch the Railway build logs, fix any startup errors",
+              "description": "Watching the build logs is how you'll catch and fix deployment-specific issues that don't show up locally.",
+              "concept": "Deployment Debugging"
             },
             {
               "key": "w6-11",
-              "text": "Test your live API URL in Postman — full register/login/CRUD flow"
+              "text": "Test your live API URL in Postman — full register/login/CRUD flow",
+              "description": "Testing the live URL confirms your app actually works in production, not just on your machine.",
+              "concept": "Live API Testing"
             }
           ],
           "resource": "Tip: Railway gives you a public URL like yourapp.up.railway.app — save this, you'll connect your React frontend to it in Phase 4."
@@ -881,23 +1181,33 @@
           "tasks": [
             {
               "key": "w6-12",
-              "text": "Organise all your requests into folders in Postman (Auth, Products, Categories)"
+              "text": "Organise all your requests into folders in Postman (Auth, Products, Categories)",
+              "description": "Organizing requests into folders makes a large API collection navigable for you and anyone reviewing your work.",
+              "concept": "Postman Collections"
             },
             {
               "key": "w6-13",
-              "text": "Create a Postman environment with {{baseUrl}} and {{token}} variables"
+              "text": "Create a Postman environment with {{baseUrl}} and {{token}} variables",
+              "description": "Environment variables in Postman let you switch between local and live URLs without editing every request.",
+              "concept": "Postman Environments"
             },
             {
               "key": "w6-14",
-              "text": "Add a Postman test script on the login request to auto-save token to environment"
+              "text": "Add a Postman test script on the login request to auto-save token to environment",
+              "description": "Auto-saving the token after login means you don't have to manually copy/paste it for every authenticated request.",
+              "concept": "Postman Test Scripts"
             },
             {
               "key": "w6-15",
-              "text": "Add request examples (sample bodies) to every endpoint in the collection"
+              "text": "Add request examples (sample bodies) to every endpoint in the collection",
+              "description": "Example request bodies make the collection self-documenting for anyone who opens it.",
+              "concept": "API Documentation"
             },
             {
               "key": "w6-16",
-              "text": "Export collection and commit it to GitHub in a /postman folder"
+              "text": "Export collection and commit it to GitHub in a /postman folder",
+              "description": "A committed Postman collection lets reviewers (or future you) test the API without writing requests from scratch.",
+              "concept": "Postman Collections"
             }
           ],
           "resource": null
@@ -908,23 +1218,33 @@
           "tasks": [
             {
               "key": "w6-17",
-              "text": "Review each class — does every method do exactly one thing?"
+              "text": "Review each class — does every method do exactly one thing?",
+              "description": "Methods that do one thing are easier to test, debug, and reuse — a core principle of clean code.",
+              "concept": "Code Review"
             },
             {
               "key": "w6-18",
-              "text": "Remove all System.out.println() — replace with proper log statements"
+              "text": "Remove all System.out.println() — replace with proper log statements",
+              "description": "println statements don't appear in production logs and can't be filtered — proper logging is a must before going live.",
+              "concept": "Logging Cleanup"
             },
             {
               "key": "w6-19",
-              "text": "Check all endpoints return the right HTTP status code (POST returns 201, DELETE returns 204)"
+              "text": "Check all endpoints return the right HTTP status code (POST returns 201, DELETE returns 204)",
+              "description": "Correct status codes are part of the REST contract — clients and tools depend on them being accurate.",
+              "concept": "HTTP Status Codes"
             },
             {
               "key": "w6-20",
-              "text": "Ensure no entity is ever returned directly — only DTOs"
+              "text": "Ensure no entity is ever returned directly — only DTOs",
+              "description": "A final check that no entity leaks through an endpoint closes any remaining security/coupling gaps.",
+              "concept": "DTO Pattern"
             },
             {
               "key": "w6-21",
-              "text": "Write a README.md with project setup steps, env vars needed, and API endpoint list"
+              "text": "Write a README.md with project setup steps, env vars needed, and API endpoint list",
+              "description": "A good README is often the first thing anyone (including employers) looks at when evaluating your project.",
+              "concept": "README Documentation"
             }
           ],
           "resource": null
@@ -935,27 +1255,39 @@
           "tasks": [
             {
               "key": "w6-22",
-              "text": "Run your full Postman collection against the live Railway URL — everything green?"
+              "text": "Run your full Postman collection against the live Railway URL — everything green?",
+              "description": "Running the full collection against the live URL is your final proof that the deployed API works end-to-end.",
+              "concept": "Postman Collections"
             },
             {
               "key": "w6-23",
-              "text": "Note your live API base URL — you'll need it in Phase 3"
+              "text": "Note your live API base URL — you'll need it in Phase 3",
+              "description": "You'll need this URL in Phase 3 to connect your React frontend to this backend.",
+              "concept": "Deployment Notes"
             },
             {
               "key": "w6-24",
-              "text": "Install Node.js and npm — required to start Phase 3 (React)"
+              "text": "Install Node.js and npm — required to start Phase 3 (React)",
+              "description": "Node.js and npm are required tooling for every React project starting in Phase 3.",
+              "concept": "Node.js Setup"
             },
             {
               "key": "w6-25",
-              "text": "Scaffold a Vite React project: npm create vite@latest — just to preview what's coming"
+              "text": "Scaffold a Vite React project: npm create vite@latest — just to preview what's coming",
+              "description": "Scaffolding a Vite project now gives you a preview of the tooling and structure you'll be using next.",
+              "concept": "Vite Setup"
             },
             {
               "key": "w6-26",
-              "text": "Push everything to GitHub — backend repo should be clean and well-documented"
+              "text": "Push everything to GitHub — backend repo should be clean and well-documented",
+              "description": "A clean, documented backend repo is the foundation of your portfolio — make sure it's presentable.",
+              "concept": "GitHub"
             },
             {
               "key": "w6-27",
-              "text": "Self-assessment: without notes, draw the layered architecture (Controller → Service → Repository → DB), explain how JWT auth flows through the filter chain, and write a JPA entity with a @ManyToOne relationship from memory"
+              "text": "Self-assessment: without notes, draw the layered architecture (Controller → Service → Repository → DB), explain how JWT auth flows through the filter chain, and write a JPA entity with a @ManyToOne relationship from memory",
+              "description": "This self-assessment confirms you understand the architecture and security flow well enough to build on it in Phase 3.",
+              "concept": "Self-Assessment"
             }
           ],
           "resource": null
@@ -987,63 +1319,93 @@
           "tasks": [
             {
               "key": "pj-1",
-              "text": "POST /api/v1/auth/register — create user account"
+              "text": "POST /api/v1/auth/register — create user account",
+              "description": "Registration is the entry point for every user — without it, nothing else in the auth flow can work.",
+              "concept": "AuthController"
             },
             {
               "key": "pj-2",
-              "text": "POST /api/v1/auth/login — returns JWT token"
+              "text": "POST /api/v1/auth/login — returns JWT token",
+              "description": "Login is what issues the JWT that protects every other endpoint.",
+              "concept": "AuthController"
             },
             {
               "key": "pj-13",
-              "text": "GET /api/v1/auth/me — returns current user from token"
+              "text": "GET /api/v1/auth/me — returns current user from token",
+              "description": "This endpoint lets the frontend display who's logged in and adjust the UI based on their role.",
+              "concept": "/auth/me Endpoint"
             },
             {
               "key": "pj-3",
-              "text": "GET /api/v1/products — paginated, public"
+              "text": "GET /api/v1/products — paginated, public",
+              "description": "Pagination is essential for a product catalog — clients shouldn't have to load every product at once.",
+              "concept": "Pagination"
             },
             {
               "key": "pj-4",
-              "text": "GET /api/v1/products/{id} — public"
+              "text": "GET /api/v1/products/{id} — public",
+              "description": "A single-product endpoint is needed for product detail pages.",
+              "concept": "REST Endpoint"
             },
             {
               "key": "pj-5",
-              "text": "GET /api/v1/products/search?name= — public"
+              "text": "GET /api/v1/products/search?name= — public",
+              "description": "Search is a baseline e-commerce feature users expect.",
+              "concept": "Search Endpoint"
             },
             {
               "key": "pj-6",
-              "text": "POST /api/v1/products — ADMIN only"
+              "text": "POST /api/v1/products — ADMIN only",
+              "description": "Restricting product creation to admins protects your catalog from unauthorized changes.",
+              "concept": "Role-Based Access Control"
             },
             {
               "key": "pj-7",
-              "text": "PUT /api/v1/products/{id} — ADMIN only"
+              "text": "PUT /api/v1/products/{id} — ADMIN only",
+              "description": "Restricting updates to admins keeps product data consistent and trustworthy.",
+              "concept": "Role-Based Access Control"
             },
             {
               "key": "pj-8",
-              "text": "DELETE /api/v1/products/{id} — ADMIN only"
+              "text": "DELETE /api/v1/products/{id} — ADMIN only",
+              "description": "Restricting deletes to admins prevents accidental or malicious data loss.",
+              "concept": "Role-Based Access Control"
             },
             {
               "key": "pj-9",
-              "text": "POST /api/v1/products/{id}/image — upload product image"
+              "text": "POST /api/v1/products/{id}/image — upload product image",
+              "description": "Image uploads make the catalog visually usable — a product without an image is hard to sell.",
+              "concept": "Image Upload Endpoint"
             },
             {
               "key": "pj-10",
-              "text": "CRUD for /api/v1/categories"
+              "text": "CRUD for /api/v1/categories",
+              "description": "Categories let users browse and filter products in a structured way.",
+              "concept": "CRUD Endpoints"
             },
             {
               "key": "pj-11",
-              "text": "Swagger UI live at /swagger-ui.html"
+              "text": "Swagger UI live at /swagger-ui.html",
+              "description": "Live Swagger docs make your API self-explanatory for anyone integrating with it, including your future React frontend.",
+              "concept": "Swagger UI"
             },
             {
               "key": "pj-12",
-              "text": "Deployed and accessible on Railway public URL"
+              "text": "Deployed and accessible on Railway public URL",
+              "description": "A live deployment is what makes this a real, demonstrable project rather than just local code.",
+              "concept": "Railway Deployment"
             },
             {
               "key": "pj-14",
-              "text": "GET /api/v1/products cached with @Cacheable, evicted on create/update/delete"
+              "text": "GET /api/v1/products cached with @Cacheable, evicted on create/update/delete",
+              "description": "Caching the product list reduces database load for your most frequently hit endpoint.",
+              "concept": "Spring Caching"
             },
             {
               "key": "pj-15",
-              "text": "Integration test (H2 + @SpringBootTest) covering register → login → use-token flow"
+              "text": "Integration test (H2 + @SpringBootTest) covering register → login → use-token flow",
+              "description": "An integration test covering the full auth flow gives you confidence the deployed app actually works as a whole.",
+              "concept": "Integration Testing"
             }
           ]
         }

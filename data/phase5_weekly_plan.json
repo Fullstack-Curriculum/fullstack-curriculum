@@ -38,27 +38,39 @@
           "tasks": [
             {
               "key": "w1-1",
-              "text": "Learn: test lifecycle — @BeforeEach, @AfterEach, @BeforeAll, @AfterAll"
+              "text": "Learn: test lifecycle — @BeforeEach, @AfterEach, @BeforeAll, @AfterAll",
+              "description": "Knowing the test lifecycle hooks lets you set up and tear down test data consistently across every test.",
+              "concept": "Test Lifecycle"
             },
             {
               "key": "w1-2",
-              "text": "Learn: assertions — assertEquals, assertTrue, assertThrows, assertNotNull"
+              "text": "Learn: assertions — assertEquals, assertTrue, assertThrows, assertNotNull",
+              "description": "These assertion methods are the core vocabulary of every test you'll write — get comfortable with them now.",
+              "concept": "JUnit 5 Assertions"
             },
             {
               "key": "w1-3",
-              "text": "Learn: @DisplayName for readable test names in the IDE"
+              "text": "Learn: @DisplayName for readable test names in the IDE",
+              "description": "@DisplayName makes test failures readable at a glance, especially in CI logs with hundreds of tests.",
+              "concept": "@DisplayName"
             },
             {
               "key": "w1-4",
-              "text": "Learn: @Nested — group related tests inside inner classes"
+              "text": "Learn: @Nested — group related tests inside inner classes",
+              "description": "@Nested groups related tests visually and lets you share setup within a context.",
+              "concept": "@Nested Tests"
             },
             {
               "key": "w1-5",
-              "text": "Learn: @ParameterizedTest with @ValueSource — run one test with multiple inputs"
+              "text": "Learn: @ParameterizedTest with @ValueSource — run one test with multiple inputs",
+              "description": "@ParameterizedTest avoids copy-pasting the same test for every input value.",
+              "concept": "@ParameterizedTest"
             },
             {
               "key": "w1-6",
-              "text": "Write: first tests for a pure utility class (e.g. price calculation logic)"
+              "text": "Write: first tests for a pure utility class (e.g. price calculation logic)",
+              "description": "Starting with a pure utility class avoids the complexity of mocking — a gentle on-ramp to testing.",
+              "concept": "Unit Testing"
             }
           ],
           "resource": "Rule: A good test has one reason to fail. If a test checks three things, split it into three tests. Short, focused, named clearly."
@@ -69,31 +81,45 @@
           "tasks": [
             {
               "key": "w1-7",
-              "text": "Learn: @Mock creates a fake — replaces real dependency (repository, email service)"
+              "text": "Learn: @Mock creates a fake — replaces real dependency (repository, email service)",
+              "description": "@Mock lets you test a service in isolation without needing a real database.",
+              "concept": "@Mock"
             },
             {
               "key": "w1-8",
-              "text": "Learn: @InjectMocks — creates the class under test, injects @Mock fields into it"
+              "text": "Learn: @InjectMocks — creates the class under test, injects @Mock fields into it",
+              "description": "@InjectMocks wires your mocks into the class under test automatically, saving manual constructor calls.",
+              "concept": "@InjectMocks"
             },
             {
               "key": "w1-9",
-              "text": "Learn: when(mock.method(arg)).thenReturn(value) — stub behaviour"
+              "text": "Learn: when(mock.method(arg)).thenReturn(value) — stub behaviour",
+              "description": "Stubbing return values lets you control exactly what the dependency 'returns' for each test scenario.",
+              "concept": "Mockito Stubbing"
             },
             {
               "key": "w1-10",
-              "text": "Learn: verify(mock).method(arg) — assert a method was called with expected args"
+              "text": "Learn: verify(mock).method(arg) — assert a method was called with expected args",
+              "description": "verify() confirms your service actually called the dependency it was supposed to — not just that it didn't crash.",
+              "concept": "Mockito verify()"
             },
             {
               "key": "w1-11",
-              "text": "Learn: assertThrows() — test that your service throws the right exception for bad input"
+              "text": "Learn: assertThrows() — test that your service throws the right exception for bad input",
+              "description": "assertThrows() is how you test your error-handling code paths, which are just as important as the happy path.",
+              "concept": "assertThrows()"
             },
             {
               "key": "w1-12",
-              "text": "Write: ProductService tests — mock ProductRepository, test getById, create, delete"
+              "text": "Write: ProductService tests — mock ProductRepository, test getById, create, delete",
+              "description": "ProductService is core business logic — testing it with mocks is the foundation of your unit test suite.",
+              "concept": "Service Unit Tests"
             },
             {
               "key": "w1-31",
-              "text": "Write: JwtService tests — pure Java, no mocks needed. Test generateToken(), extractUsername(), and isTokenValid() for both a fresh token and a token with a different username"
+              "text": "Write: JwtService tests — pure Java, no mocks needed. Test generateToken(), extractUsername(), and isTokenValid() for both a fresh token and a token with a different username",
+              "description": "Testing JwtService directly (no mocks) verifies the security-critical logic that the rest of your auth flow depends on.",
+              "concept": "JwtService Testing"
             }
           ],
           "resource": null
@@ -104,27 +130,39 @@
           "tasks": [
             {
               "key": "w1-13",
-              "text": "Learn: test business logic, not framework code — Spring's save() doesn't need testing"
+              "text": "Learn: test business logic, not framework code — Spring's save() doesn't need testing",
+              "description": "Focusing tests on your own logic — not Spring's internals — keeps your test suite fast and meaningful.",
+              "concept": "Test Coverage Strategy"
             },
             {
               "key": "w1-14",
-              "text": "Learn: test every branch — if/else, null checks, exception paths"
+              "text": "Learn: test every branch — if/else, null checks, exception paths",
+              "description": "Untested branches are where bugs hide — covering every path catches edge cases before users do.",
+              "concept": "Branch Coverage"
             },
             {
               "key": "w1-15",
-              "text": "Learn: JaCoCo coverage report — add plugin to pom.xml, run mvn test, open target/site/jacoco"
+              "text": "Learn: JaCoCo coverage report — add plugin to pom.xml, run mvn test, open target/site/jacoco",
+              "description": "JaCoCo gives you a visual map of exactly which lines are untested, so you know where to focus.",
+              "concept": "JaCoCo"
             },
             {
               "key": "w1-16",
-              "text": "Write: AuthService tests — test register (success, duplicate email), login (success, wrong password)"
+              "text": "Write: AuthService tests — test register (success, duplicate email), login (success, wrong password)",
+              "description": "AuthService is security-critical — thorough tests here catch regressions before they become vulnerabilities.",
+              "concept": "AuthService Testing"
             },
             {
               "key": "w1-17",
-              "text": "Write: OrderService tests — test placeOrder (success, empty cart, product out of stock)"
+              "text": "Write: OrderService tests — test placeOrder (success, empty cart, product out of stock)",
+              "description": "OrderService handles money and inventory — edge cases like empty carts or out-of-stock items must be tested.",
+              "concept": "OrderService Testing"
             },
             {
               "key": "w1-18",
-              "text": "Aim for 70%+ coverage on service layer — check JaCoCo report"
+              "text": "Aim for 70%+ coverage on service layer — check JaCoCo report",
+              "description": "70% coverage on services is a realistic, professional target that balances thoroughness with effort.",
+              "concept": "JaCoCo Coverage Target"
             }
           ],
           "resource": "JaCoCo setup: Add jacoco-maven-plugin to pom.xml with prepare-agent and report goals. Run mvn verify, open target/site/jacoco/index.html in browser."
@@ -135,27 +173,39 @@
           "tasks": [
             {
               "key": "w1-19",
-              "text": "Learn: @WebMvcTest loads only the web layer — no DB, no full Spring context"
+              "text": "Learn: @WebMvcTest loads only the web layer — no DB, no full Spring context",
+              "description": "@WebMvcTest is fast because it skips loading the database and full app context — ideal for testing controllers in isolation.",
+              "concept": "@WebMvcTest"
             },
             {
               "key": "w1-20",
-              "text": "Learn: MockMvc — perform(\"GET /api/v1/products\").andExpect(status().isOk())"
+              "text": "Learn: MockMvc — perform(\"GET /api/v1/products\").andExpect(status().isOk())",
+              "description": "MockMvc lets you simulate real HTTP requests and assert on the response without starting a server.",
+              "concept": "MockMvc"
             },
             {
               "key": "w1-21",
-              "text": "Learn: @MockBean — creates a Mockito mock and registers it as a Spring bean"
+              "text": "Learn: @MockBean — creates a Mockito mock and registers it as a Spring bean",
+              "description": "@MockBean replaces a real dependency with a mock inside the Spring context — needed when the controller depends on a service.",
+              "concept": "@MockBean"
             },
             {
               "key": "w1-22",
-              "text": "Learn: jsonPath(\"$.content[0].name\") — assert specific fields in JSON response"
+              "text": "Learn: jsonPath(\"$.content[0].name\") — assert specific fields in JSON response",
+              "description": "jsonPath lets you assert on specific fields deep inside a JSON response, not just the overall structure.",
+              "concept": "jsonPath"
             },
             {
               "key": "w1-23",
-              "text": "Write: ProductController tests — GET all (200), GET by invalid id (404), POST without auth (401)"
+              "text": "Write: ProductController tests — GET all (200), GET by invalid id (404), POST without auth (401)",
+              "description": "Testing status codes for success, not-found, and unauthorized cases covers the most common API contract scenarios.",
+              "concept": "Controller Testing"
             },
             {
               "key": "w1-24",
-              "text": "Write: test validation — POST with blank name returns 400 with field error message"
+              "text": "Write: test validation — POST with blank name returns 400 with field error message",
+              "description": "Testing validation errors confirms your DTO annotations actually produce the 400 responses your frontend expects.",
+              "concept": "Validation Testing"
             }
           ],
           "resource": null
@@ -166,27 +216,39 @@
           "tasks": [
             {
               "key": "w1-25",
-              "text": "Learn: @SpringBootTest loads full application context — slower but tests real wiring"
+              "text": "Learn: @SpringBootTest loads full application context — slower but tests real wiring",
+              "description": "@SpringBootTest catches wiring issues — like misconfigured beans — that mocked tests can't detect.",
+              "concept": "@SpringBootTest"
             },
             {
               "key": "w1-26",
-              "text": "Learn: @AutoConfigureMockMvc — get a real MockMvc that goes through full security filter chain"
+              "text": "Learn: @AutoConfigureMockMvc — get a real MockMvc that goes through full security filter chain",
+              "description": "@AutoConfigureMockMvc tests requests through your real security filters, including JWT validation.",
+              "concept": "@AutoConfigureMockMvc"
             },
             {
               "key": "w1-27",
-              "text": "Learn: use H2 in-memory DB for tests — add H2 dependency with test scope"
+              "text": "Learn: use H2 in-memory DB for tests — add H2 dependency with test scope",
+              "description": "H2 lets integration tests run against a real database without needing MySQL installed or running.",
+              "concept": "H2 Test Database"
             },
             {
               "key": "w1-28",
-              "text": "Configure: application-test.properties with H2 datasource, ddl-auto=create-drop"
+              "text": "Configure: application-test.properties with H2 datasource, ddl-auto=create-drop",
+              "description": "A separate test properties file keeps your test database isolated from development and production data.",
+              "concept": "application-test.properties"
             },
             {
               "key": "w1-29",
-              "text": "Write: full auth integration test — POST /register → POST /login → assert JWT in response"
+              "text": "Write: full auth integration test — POST /register → POST /login → assert JWT in response",
+              "description": "An end-to-end auth test proves register and login work together exactly as a real user would experience them.",
+              "concept": "Auth Integration Test"
             },
             {
               "key": "w1-30",
-              "text": "Write: product CRUD integration test — register, login, use token, create product, verify in DB"
+              "text": "Write: product CRUD integration test — register, login, use token, create product, verify in DB",
+              "description": "A full CRUD integration test verifies the entire request → security → service → database chain works correctly.",
+              "concept": "CRUD Integration Test"
             }
           ],
           "resource": "Test pyramid: Many unit tests (fast, cheap) → fewer integration tests (slower, more realistic) → very few end-to-end tests. Don't invert this — it makes test suites painfully slow."
@@ -207,27 +269,39 @@
           "tasks": [
             {
               "key": "w2-1",
-              "text": "Install: npm install -D vitest @testing-library/react @testing-library/user-event @testing-library/jest-dom jsdom"
+              "text": "Install: npm install -D vitest @testing-library/react @testing-library/user-event @testing-library/jest-dom jsdom",
+              "description": "These packages are the standard testing stack for React + Vite — installing them sets up everything you'll use this week.",
+              "concept": "Vitest Setup"
             },
             {
               "key": "w2-2",
-              "text": "Configure vite.config.js — add test: { environment: 'jsdom', globals: true, setupFiles: './src/test/setup.js' }"
+              "text": "Configure vite.config.js — add test: { environment: 'jsdom', globals: true, setupFiles: './src/test/setup.js' }",
+              "description": "Configuring Vitest in vite.config.js means your tests share the exact same build setup as your app.",
+              "concept": "Vitest Config"
             },
             {
               "key": "w2-3",
-              "text": "Create src/test/setup.js — import '@testing-library/jest-dom' for custom matchers"
+              "text": "Create src/test/setup.js — import '@testing-library/jest-dom' for custom matchers",
+              "description": "jest-dom adds custom matchers like toBeInTheDocument() that make assertions far more readable.",
+              "concept": "jest-dom"
             },
             {
               "key": "w2-4",
-              "text": "Add test script to package.json: \"test\": \"vitest\", \"test:ui\": \"vitest --ui\""
+              "text": "Add test script to package.json: \"test\": \"vitest\", \"test:ui\": \"vitest --ui\"",
+              "description": "Test scripts give you a quick way to run your suite from the terminal during development.",
+              "concept": "Test Scripts"
             },
             {
               "key": "w2-5",
-              "text": "Write a trivial first test — render a Button, assert it's in the document"
+              "text": "Write a trivial first test — render a Button, assert it's in the document",
+              "description": "A trivial first test confirms your entire testing setup works before you write anything complex.",
+              "concept": "First Component Test"
             },
             {
               "key": "w2-6",
-              "text": "Run npm test — confirm it passes and the test runner is working"
+              "text": "Run npm test — confirm it passes and the test runner is working",
+              "description": "Running the test suite for the first time catches configuration issues early, before they block real test-writing.",
+              "concept": "Test Runner"
             }
           ],
           "resource": "Why Vitest over Jest: Vitest is native to Vite — no extra config, shared vite.config.js, much faster. Same API as Jest so tutorials transfer directly."
@@ -238,27 +312,39 @@
           "tasks": [
             {
               "key": "w2-7",
-              "text": "Learn: render() — mounts a component into the test DOM"
+              "text": "Learn: render() — mounts a component into the test DOM",
+              "description": "render() is the entry point for every component test — it's how you get a component into a testable DOM.",
+              "concept": "render()"
             },
             {
               "key": "w2-8",
-              "text": "Learn: screen.getByRole, getByText, getByLabelText — prefer role queries (accessibility-first)"
+              "text": "Learn: screen.getByRole, getByText, getByLabelText — prefer role queries (accessibility-first)",
+              "description": "Role-based queries mirror how screen readers and real users find elements, making your tests more meaningful.",
+              "concept": "Role-Based Queries"
             },
             {
               "key": "w2-9",
-              "text": "Learn: userEvent.click(), userEvent.type() — simulates real user input (better than fireEvent)"
+              "text": "Learn: userEvent.click(), userEvent.type() — simulates real user input (better than fireEvent)",
+              "description": "userEvent simulates real browser interactions more accurately than fireEvent, catching more realistic bugs.",
+              "concept": "userEvent"
             },
             {
               "key": "w2-10",
-              "text": "Learn: expect(element).toBeInTheDocument(), toHaveTextContent(), toBeDisabled()"
+              "text": "Learn: expect(element).toBeInTheDocument(), toHaveTextContent(), toBeDisabled()",
+              "description": "These matchers let you assert on visible UI state — exactly what a user would notice.",
+              "concept": "jest-dom Matchers"
             },
             {
               "key": "w2-11",
-              "text": "Write: ProductCard tests — renders name, price, image alt text correctly"
+              "text": "Write: ProductCard tests — renders name, price, image alt text correctly",
+              "description": "ProductCard is used everywhere in your app — testing it ensures a core building block renders correctly.",
+              "concept": "ProductCard Test"
             },
             {
               "key": "w2-12",
-              "text": "Write: test clicking \"Add to Cart\" button calls the handler with correct product"
+              "text": "Write: test clicking \"Add to Cart\" button calls the handler with correct product",
+              "description": "Testing the click handler confirms the cart interaction actually works, not just that the button exists.",
+              "concept": "Event Handler Testing"
             }
           ],
           "resource": "Golden rule: Test what the user sees and does, not implementation details. Never test state variables directly — test the visible result of state changing."
@@ -269,31 +355,45 @@
           "tasks": [
             {
               "key": "w2-13",
-              "text": "Learn: waitFor() — wait for async DOM updates after data loads"
+              "text": "Learn: waitFor() — wait for async DOM updates after data loads",
+              "description": "waitFor() is essential for testing components that fetch data — the DOM updates only after the async call resolves.",
+              "concept": "waitFor()"
             },
             {
               "key": "w2-14",
-              "text": "Learn: findByText() — like getByText but waits automatically (async-aware)"
+              "text": "Learn: findByText() — like getByText but waits automatically (async-aware)",
+              "description": "findByText combines waiting and querying in one step, simplifying async test code.",
+              "concept": "findByText()"
             },
             {
               "key": "w2-15",
-              "text": "Learn: vi.mock('../api/products') — replace real API module with a mock"
+              "text": "Learn: vi.mock('../api/products') — replace real API module with a mock",
+              "description": "Mocking the API module isolates the component from network calls, making tests fast and deterministic.",
+              "concept": "vi.mock()"
             },
             {
               "key": "w2-16",
-              "text": "Learn: wrap components in QueryClientProvider wrapper for TanStack Query tests"
+              "text": "Learn: wrap components in QueryClientProvider wrapper for TanStack Query tests",
+              "description": "TanStack Query hooks require a QueryClientProvider — your test wrapper must provide one or hooks will throw.",
+              "concept": "QueryClientProvider Wrapper"
             },
             {
               "key": "w2-17",
-              "text": "Write: ProductsPage test — mock useProducts to return fake data, assert cards render"
+              "text": "Write: ProductsPage test — mock useProducts to return fake data, assert cards render",
+              "description": "Testing ProductsPage with mocked data verifies the rendering logic without needing a real backend.",
+              "concept": "ProductsPage Test"
             },
             {
               "key": "w2-18",
-              "text": "Write: test loading skeleton shows while isLoading is true"
+              "text": "Write: test loading skeleton shows while isLoading is true",
+              "description": "Testing the loading state ensures users get visual feedback while data is being fetched.",
+              "concept": "Loading State Test"
             },
             {
               "key": "w2-19",
-              "text": "Write: test error message shows when query returns isError"
+              "text": "Write: test error message shows when query returns isError",
+              "description": "Testing the error state ensures users see a helpful message instead of a blank or broken page.",
+              "concept": "Error State Test"
             }
           ],
           "resource": null
@@ -304,23 +404,33 @@
           "tasks": [
             {
               "key": "w2-20",
-              "text": "Write: LoginPage test — type email and password, click submit, assert mutation called"
+              "text": "Write: LoginPage test — type email and password, click submit, assert mutation called",
+              "description": "Testing LoginPage end-to-end confirms the form correctly triggers the login mutation with the right data.",
+              "concept": "LoginPage Test"
             },
             {
               "key": "w2-21",
-              "text": "Write: test form validation — submit empty form, assert error messages appear"
+              "text": "Write: test form validation — submit empty form, assert error messages appear",
+              "description": "Form validation tests ensure users get immediate feedback on missing required fields.",
+              "concept": "Form Validation Test"
             },
             {
               "key": "w2-22",
-              "text": "Write: test password mismatch on RegisterPage shows correct error"
+              "text": "Write: test password mismatch on RegisterPage shows correct error",
+              "description": "Password mismatch is a common registration error — testing it ensures the UI guides users to fix it.",
+              "concept": "RegisterPage Test"
             },
             {
               "key": "w2-23",
-              "text": "Write: CartContext test — add item, assert count increments, remove item, assert gone"
+              "text": "Write: CartContext test — add item, assert count increments, remove item, assert gone",
+              "description": "CartContext is central state — testing it directly catches bugs before they manifest in the UI.",
+              "concept": "CartContext Test"
             },
             {
               "key": "w2-24",
-              "text": "Write: test ProtectedRoute redirects to /login when user is not in AuthContext"
+              "text": "Write: test ProtectedRoute redirects to /login when user is not in AuthContext",
+              "description": "Testing ProtectedRoute's redirect behavior confirms unauthenticated users can never reach guarded pages.",
+              "concept": "ProtectedRoute Test"
             }
           ],
           "resource": null
@@ -331,27 +441,39 @@
           "tasks": [
             {
               "key": "w2-25",
-              "text": "Install: npm install -D msw — Mock Service Worker intercepts fetch/Axios at the network layer"
+              "text": "Install: npm install -D msw — Mock Service Worker intercepts fetch/Axios at the network layer",
+              "description": "MSW intercepts requests at the network level, letting you test real Axios code paths including interceptors.",
+              "concept": "MSW Setup"
             },
             {
               "key": "w2-26",
-              "text": "Create src/mocks/handlers.js — define handlers for GET /products, POST /auth/login etc."
+              "text": "Create src/mocks/handlers.js — define handlers for GET /products, POST /auth/login etc.",
+              "description": "Handlers define what your mock API returns for each endpoint — the foundation of MSW testing.",
+              "concept": "MSW Handlers"
             },
             {
               "key": "w2-27",
-              "text": "Setup MSW server in test/setup.js — beforeAll(server.listen), afterEach(server.resetHandlers), afterAll(server.close)"
+              "text": "Setup MSW server in test/setup.js — beforeAll(server.listen), afterEach(server.resetHandlers), afterAll(server.close)",
+              "description": "Wiring MSW into test setup ensures every test automatically has a working mock API, with handlers reset between tests.",
+              "concept": "MSW Server Setup"
             },
             {
               "key": "w2-28",
-              "text": "Rewrite ProductsPage test to use real Axios instance — MSW intercepts and returns mock data"
+              "text": "Rewrite ProductsPage test to use real Axios instance — MSW intercepts and returns mock data",
+              "description": "Switching to MSW tests your real Axios instance end-to-end, not just a mocked module.",
+              "concept": "MSW Integration"
             },
             {
               "key": "w2-29",
-              "text": "Test error scenario: override handler for one test to return 500, assert error UI shows"
+              "text": "Test error scenario: override handler for one test to return 500, assert error UI shows",
+              "description": "Overriding a handler to return an error verifies your error-handling UI works under real failure conditions.",
+              "concept": "MSW Error Scenario"
             },
             {
               "key": "w2-30",
-              "text": "Write: full login flow integration test — MSW handlers for POST /auth/login and GET /auth/me, render App with MemoryRouter at /login, fill and submit the form, assert redirect to / and Navbar shows the user's name from /auth/me"
+              "text": "Write: full login flow integration test — MSW handlers for POST /auth/login and GET /auth/me, render App with MemoryRouter at /login, fill and submit the form, assert redirect to / and Navbar shows the user's name from /auth/me",
+              "description": "A full login integration test is the strongest proof that auth, routing, and API integration all work together correctly.",
+              "concept": "Login Flow Integration Test"
             }
           ],
           "resource": "Why MSW: vi.mock() mocks the module — but MSW intercepts the actual HTTP request. It tests more of your real code (Axios config, interceptors, error handling) without a real server."
@@ -372,27 +494,39 @@
           "tasks": [
             {
               "key": "w3-1",
-              "text": "Learn: N+1 — fetching a list of 20 products triggers 21 queries (1 list + 1 per category join)"
+              "text": "Learn: N+1 — fetching a list of 20 products triggers 21 queries (1 list + 1 per category join)",
+              "description": "Understanding N+1 explains a subtle but extremely common performance bug in JPA applications.",
+              "concept": "N+1 Query Problem"
             },
             {
               "key": "w3-2",
-              "text": "Enable SQL logging: spring.jpa.show-sql=true, spring.jpa.properties.hibernate.format_sql=true"
+              "text": "Enable SQL logging: spring.jpa.show-sql=true, spring.jpa.properties.hibernate.format_sql=true",
+              "description": "SQL logging is the diagnostic tool you need to actually see how many queries Hibernate generates.",
+              "concept": "SQL Logging"
             },
             {
               "key": "w3-3",
-              "text": "Call GET /products — count the SQL queries in logs. More than 2? You have N+1."
+              "text": "Call GET /products — count the SQL queries in logs. More than 2? You have N+1.",
+              "description": "Counting queries in the logs is how you confirm whether N+1 is actually happening in your app.",
+              "concept": "N+1 Detection"
             },
             {
               "key": "w3-4",
-              "text": "Fix with JOIN FETCH: @Query(\"SELECT p FROM Product p JOIN FETCH p.category\")"
+              "text": "Fix with JOIN FETCH: @Query(\"SELECT p FROM Product p JOIN FETCH p.category\")",
+              "description": "JOIN FETCH tells Hibernate to load related entities in a single query instead of one per row.",
+              "concept": "JOIN FETCH"
             },
             {
               "key": "w3-5",
-              "text": "Fix with @EntityGraph: @EntityGraph(attributePaths = {\"category\"}) on repository method"
+              "text": "Fix with @EntityGraph: @EntityGraph(attributePaths = {\"category\"}) on repository method",
+              "description": "@EntityGraph is a declarative alternative to JOIN FETCH that keeps your repository methods clean.",
+              "concept": "@EntityGraph"
             },
             {
               "key": "w3-6",
-              "text": "Re-run the endpoint — confirm query count dropped to 1"
+              "text": "Re-run the endpoint — confirm query count dropped to 1",
+              "description": "Confirming the query count dropped proves your fix actually solved the performance problem.",
+              "concept": "N+1 Fix Verification"
             }
           ],
           "resource": "Warning: Disable show-sql in production — it floods logs and marginally impacts performance. Use it only during development investigation."
@@ -403,27 +537,39 @@
           "tasks": [
             {
               "key": "w3-7",
-              "text": "Learn: an index is a sorted lookup structure — makes WHERE and JOIN fast on large tables"
+              "text": "Learn: an index is a sorted lookup structure — makes WHERE and JOIN fast on large tables",
+              "description": "Understanding indexes explains why some queries are instant and others get slower as tables grow.",
+              "concept": "MySQL Indexes"
             },
             {
               "key": "w3-8",
-              "text": "Add indexes on columns used in WHERE/JOIN: category_id, created_at, name (if searched)"
+              "text": "Add indexes on columns used in WHERE/JOIN: category_id, created_at, name (if searched)",
+              "description": "Indexing the columns your queries actually filter and join on is the highest-impact, lowest-effort optimization.",
+              "concept": "MySQL Indexes"
             },
             {
               "key": "w3-9",
-              "text": "Learn: EXPLAIN SELECT ... in MySQL Workbench — reads the query execution plan"
+              "text": "Learn: EXPLAIN SELECT ... in MySQL Workbench — reads the query execution plan",
+              "description": "EXPLAIN shows you whether MySQL is using your indexes or doing a full table scan.",
+              "concept": "EXPLAIN Query Plan"
             },
             {
               "key": "w3-10",
-              "text": "Insert 10,000 product rows with a SQL script — test query speed before and after indexing"
+              "text": "Insert 10,000 product rows with a SQL script — test query speed before and after indexing",
+              "description": "Testing with realistic data volume reveals performance problems that are invisible with only a handful of rows.",
+              "concept": "Index Performance Testing"
             },
             {
               "key": "w3-11",
-              "text": "Learn: never SELECT * in production queries — fetch only columns you need in projections"
+              "text": "Learn: never SELECT * in production queries — fetch only columns you need in projections",
+              "description": "Avoiding SELECT * reduces data transfer and avoids accidentally exposing sensitive columns.",
+              "concept": "SELECT * Anti-Pattern"
             },
             {
               "key": "w3-12",
-              "text": "Use Spring Data JPA Projections — interface with only the fields needed for list views"
+              "text": "Use Spring Data JPA Projections — interface with only the fields needed for list views",
+              "description": "Projections let you fetch only the fields a list view needs, reducing both query cost and payload size.",
+              "concept": "JPA Projections"
             }
           ],
           "resource": null
@@ -434,27 +580,39 @@
           "tasks": [
             {
               "key": "w3-13",
-              "text": "Add dependency: spring-boot-starter-cache"
+              "text": "Add dependency: spring-boot-starter-cache",
+              "description": "The caching starter provides the abstraction Spring needs to enable @Cacheable annotations.",
+              "concept": "Spring Caching"
             },
             {
               "key": "w3-14",
-              "text": "Add @EnableCaching to your main class or a config class"
+              "text": "Add @EnableCaching to your main class or a config class",
+              "description": "@EnableCaching activates Spring's caching infrastructure — without it, @Cacheable does nothing.",
+              "concept": "@EnableCaching"
             },
             {
               "key": "w3-15",
-              "text": "Learn: @Cacheable(\"products\") on service method — result cached on first call, served from memory after"
+              "text": "Learn: @Cacheable(\"products\") on service method — result cached on first call, served from memory after",
+              "description": "@Cacheable avoids hitting the database for data that hasn't changed since the last request.",
+              "concept": "@Cacheable"
             },
             {
               "key": "w3-16",
-              "text": "Learn: @CacheEvict(\"products\") on create/update/delete — clears stale cache after mutation"
+              "text": "Learn: @CacheEvict(\"products\") on create/update/delete — clears stale cache after mutation",
+              "description": "@CacheEvict prevents stale data by clearing the cache whenever the underlying data changes.",
+              "concept": "@CacheEvict"
             },
             {
               "key": "w3-17",
-              "text": "Apply to: getAll categories (rarely changes), getProductById (frequently read)"
+              "text": "Apply to: getAll categories (rarely changes), getProductById (frequently read)",
+              "description": "Caching read-heavy, rarely-changing data like categories gives the biggest performance return for the least risk.",
+              "concept": "Spring Caching"
             },
             {
               "key": "w3-18",
-              "text": "Test: call same endpoint twice, watch SQL logs — second call should produce zero DB queries"
+              "text": "Test: call same endpoint twice, watch SQL logs — second call should produce zero DB queries",
+              "description": "Watching SQL logs disappear on the second call is concrete proof the cache is working.",
+              "concept": "Cache Verification"
             }
           ],
           "resource": "Default cache: Spring uses a simple ConcurrentHashMap by default. For production with multiple instances, swap to Redis. For now the default is fine."
@@ -465,27 +623,39 @@
           "tasks": [
             {
               "key": "w3-19",
-              "text": "Install React DevTools browser extension — open the Profiler tab"
+              "text": "Install React DevTools browser extension — open the Profiler tab",
+              "description": "The Profiler tab visualizes exactly which components render and why — essential for diagnosing slowness.",
+              "concept": "React DevTools Profiler"
             },
             {
               "key": "w3-20",
-              "text": "Record a session on the ProductsPage — identify components that re-render unnecessarily"
+              "text": "Record a session on the ProductsPage — identify components that re-render unnecessarily",
+              "description": "Recording a real session shows you actual re-render patterns, not guesses.",
+              "concept": "Profiler Session"
             },
             {
               "key": "w3-21",
-              "text": "Wrap pure child components in React.memo — prevents re-render when parent re-renders with same props"
+              "text": "Wrap pure child components in React.memo — prevents re-render when parent re-renders with same props",
+              "description": "React.memo skips re-rendering a component when its props haven't changed.",
+              "concept": "React.memo"
             },
             {
               "key": "w3-22",
-              "text": "Wrap callback props in useCallback — stable function reference prevents child re-renders"
+              "text": "Wrap callback props in useCallback — stable function reference prevents child re-renders",
+              "description": "useCallback prevents a new function reference on every render, which would otherwise defeat React.memo.",
+              "concept": "useCallback"
             },
             {
               "key": "w3-23",
-              "text": "Wrap expensive computations in useMemo — e.g. filtered/sorted product list derived from state"
+              "text": "Wrap expensive computations in useMemo — e.g. filtered/sorted product list derived from state",
+              "description": "useMemo avoids recomputing expensive derived values (like filtered lists) on every render.",
+              "concept": "useMemo"
             },
             {
               "key": "w3-24",
-              "text": "Re-run profiler — confirm the targeted components no longer re-render on unrelated state changes"
+              "text": "Re-run profiler — confirm the targeted components no longer re-render on unrelated state changes",
+              "description": "Re-profiling confirms your optimizations actually reduced unnecessary renders, not just changed the code.",
+              "concept": "Profiler Verification"
             }
           ],
           "resource": null
@@ -496,27 +666,39 @@
           "tasks": [
             {
               "key": "w3-25",
-              "text": "Install: npm install -D rollup-plugin-visualizer — analyse what's in your bundle"
+              "text": "Install: npm install -D rollup-plugin-visualizer — analyse what's in your bundle",
+              "description": "A bundle visualizer shows you exactly what's taking up space in your production build.",
+              "concept": "Bundle Visualizer"
             },
             {
               "key": "w3-26",
-              "text": "Run npm run build, open stats.html — find any surprisingly large dependencies"
+              "text": "Run npm run build, open stats.html — find any surprisingly large dependencies",
+              "description": "Reviewing the bundle reveals dependencies that are unexpectedly large or could be replaced/removed.",
+              "concept": "Bundle Analysis"
             },
             {
               "key": "w3-27",
-              "text": "Confirm all pages are lazy-loaded — each route is a separate chunk in the output"
+              "text": "Confirm all pages are lazy-loaded — each route is a separate chunk in the output",
+              "description": "Confirming route-based code splitting ensures users only download the code for the page they're viewing.",
+              "concept": "Code Splitting Verification"
             },
             {
               "key": "w3-28",
-              "text": "Convert large product images to WebP format — typically 30-50% smaller than JPEG"
+              "text": "Convert large product images to WebP format — typically 30-50% smaller than JPEG",
+              "description": "WebP images load faster with no visible quality loss, directly improving page load times.",
+              "concept": "WebP Images"
             },
             {
               "key": "w3-29",
-              "text": "Add loading=\"lazy\" attribute to all below-the-fold img tags"
+              "text": "Add loading=\"lazy\" attribute to all below-the-fold img tags",
+              "description": "Lazy-loading images defers downloading offscreen images until they're needed, speeding up initial load.",
+              "concept": "Lazy-Loaded Images"
             },
             {
               "key": "w3-30",
-              "text": "Run Lighthouse again — target 90+ Performance score on the live Vercel URL"
+              "text": "Run Lighthouse again — target 90+ Performance score on the live Vercel URL",
+              "description": "A final Lighthouse run quantifies the cumulative impact of all your performance work this week.",
+              "concept": "Lighthouse Audit"
             }
           ],
           "resource": null
@@ -537,27 +719,39 @@
           "tasks": [
             {
               "key": "w4-1",
-              "text": "Add dependency: flyway-core — and remove ddl-auto=update from application.properties"
+              "text": "Add dependency: flyway-core — and remove ddl-auto=update from application.properties",
+              "description": "Flyway gives you version-controlled, repeatable schema changes — the production-safe alternative to ddl-auto.",
+              "concept": "Flyway Setup"
             },
             {
               "key": "w4-2",
-              "text": "Create src/main/resources/db/migration/ folder"
+              "text": "Create src/main/resources/db/migration/ folder",
+              "description": "Migration files live in a dedicated folder so Flyway can find and apply them in order.",
+              "concept": "Flyway Migrations Folder"
             },
             {
               "key": "w4-3",
-              "text": "Learn: naming convention — V1__create_users_table.sql, V2__create_products_table.sql"
+              "text": "Learn: naming convention — V1__create_users_table.sql, V2__create_products_table.sql",
+              "description": "Flyway's naming convention determines the order migrations run in — getting it right is essential.",
+              "concept": "Flyway Naming Convention"
             },
             {
               "key": "w4-4",
-              "text": "Write V1 through V5 migration files matching your current schema from scratch"
+              "text": "Write V1 through V5 migration files matching your current schema from scratch",
+              "description": "Recreating your schema from migrations proves they accurately capture your current database structure.",
+              "concept": "Flyway Migration Scripts"
             },
             {
               "key": "w4-5",
-              "text": "Drop and recreate your dev DB — let Flyway rebuild it from migrations, confirm it matches"
+              "text": "Drop and recreate your dev DB — let Flyway rebuild it from migrations, confirm it matches",
+              "description": "Rebuilding the DB from scratch via Flyway is the real test that your migration history is complete and correct.",
+              "concept": "Flyway Rebuild"
             },
             {
               "key": "w4-6",
-              "text": "Write V6__add_product_slug_column.sql — add a new column to products, restart, verify applied"
+              "text": "Write V6__add_product_slug_column.sql — add a new column to products, restart, verify applied",
+              "description": "Adding a new migration for a schema change is exactly how you'll evolve the database going forward.",
+              "concept": "Flyway New Migration"
             }
           ],
           "resource": "Why this matters: ddl-auto=update is a dev convenience that silently breaks production. Flyway gives you versioned, repeatable, reviewable schema changes — the way every real team manages databases."
@@ -568,27 +762,39 @@
           "tasks": [
             {
               "key": "w4-7",
-              "text": "Audit all System.out.println() — replace every one with log.info() or log.debug()"
+              "text": "Audit all System.out.println() — replace every one with log.info() or log.debug()",
+              "description": "println output is lost in production — proper logging is searchable, filterable, and level-aware.",
+              "concept": "Logging Cleanup"
             },
             {
               "key": "w4-8",
-              "text": "Learn: log levels — ERROR (broken), WARN (suspicious), INFO (key events), DEBUG (verbose detail)"
+              "text": "Learn: log levels — ERROR (broken), WARN (suspicious), INFO (key events), DEBUG (verbose detail)",
+              "description": "Log levels let you control verbosity per environment without changing code.",
+              "concept": "Log Levels"
             },
             {
               "key": "w4-9",
-              "text": "Learn: MDC (Mapped Diagnostic Context) — attach request-scoped data (userId, requestId) to every log line"
+              "text": "Learn: MDC (Mapped Diagnostic Context) — attach request-scoped data (userId, requestId) to every log line",
+              "description": "MDC lets you tag every log line from a request with shared context, making it possible to trace a single request across the whole system.",
+              "concept": "MDC"
             },
             {
               "key": "w4-10",
-              "text": "Build: a logging filter that generates a requestId per request, puts it in MDC"
+              "text": "Build: a logging filter that generates a requestId per request, puts it in MDC",
+              "description": "A request ID filter is what makes MDC actually useful — without it, there's nothing to attach to each request.",
+              "concept": "Request ID Filter"
             },
             {
               "key": "w4-11",
-              "text": "Configure logback-spring.xml to output JSON format logs for production (easier to query)"
+              "text": "Configure logback-spring.xml to output JSON format logs for production (easier to query)",
+              "description": "JSON-formatted logs are far easier to search and filter in production log aggregation tools.",
+              "concept": "JSON Logging"
             },
             {
               "key": "w4-12",
-              "text": "Test: make a request, find the requestId in logs, trace the full request flow"
+              "text": "Test: make a request, find the requestId in logs, trace the full request flow",
+              "description": "Tracing a request by its ID end-to-end confirms your structured logging setup actually works.",
+              "concept": "Request Tracing"
             }
           ],
           "resource": null
@@ -599,31 +805,45 @@
           "tasks": [
             {
               "key": "w4-13",
-              "text": "Add dependency: bucket4j-spring-boot-starter — token bucket rate limiting"
+              "text": "Add dependency: bucket4j-spring-boot-starter — token bucket rate limiting",
+              "description": "Bucket4j provides a ready-made token bucket algorithm — no need to implement rate limiting from scratch.",
+              "concept": "Bucket4j"
             },
             {
               "key": "w4-14",
-              "text": "Build: RateLimitFilter — limit auth endpoints to 10 requests per minute per IP"
+              "text": "Build: RateLimitFilter — limit auth endpoints to 10 requests per minute per IP",
+              "description": "Rate limiting auth endpoints is a critical defense against brute-force login attempts.",
+              "concept": "Rate Limiting"
             },
             {
               "key": "w4-15",
-              "text": "Return 429 Too Many Requests with Retry-After header when limit exceeded"
+              "text": "Return 429 Too Many Requests with Retry-After header when limit exceeded",
+              "description": "Returning 429 with Retry-After follows HTTP conventions clients understand for handling rate limits.",
+              "concept": "429 Too Many Requests"
             },
             {
               "key": "w4-16",
-              "text": "Review all DTO validations — add @Pattern for fields like phone, slug, URL"
+              "text": "Review all DTO validations — add @Pattern for fields like phone, slug, URL",
+              "description": "Pattern validation catches malformed input before it ever reaches your business logic or database.",
+              "concept": "@Pattern Validation"
             },
             {
               "key": "w4-17",
-              "text": "Add @Size(max=255) on all String fields that map to VARCHAR columns — prevent DB truncation errors"
+              "text": "Add @Size(max=255) on all String fields that map to VARCHAR columns — prevent DB truncation errors",
+              "description": "Size limits on strings prevent database errors caused by data exceeding column length.",
+              "concept": "@Size Validation"
             },
             {
               "key": "w4-18",
-              "text": "Test: hammer the login endpoint 15 times rapidly — confirm 429 after 10"
+              "text": "Test: hammer the login endpoint 15 times rapidly — confirm 429 after 10",
+              "description": "Hammering the login endpoint is the only way to confirm your rate limiter actually triggers under load.",
+              "concept": "Rate Limit Testing"
             },
             {
               "key": "w4-31",
-              "text": "Add @Email to all email fields and @Positive to price/stock fields across DTOs — catches malformed emails and negative numbers before they hit the DB"
+              "text": "Add @Email to all email fields and @Positive to price/stock fields across DTOs — catches malformed emails and negative numbers before they hit the DB",
+              "description": "Email and positive-number validation catch obviously invalid data at the API boundary, before it can corrupt your data.",
+              "concept": "@Email & @Positive Validation"
             }
           ],
           "resource": null
@@ -634,27 +854,39 @@
           "tasks": [
             {
               "key": "w4-19",
-              "text": "Add dependency: spring-boot-starter-actuator"
+              "text": "Add dependency: spring-boot-starter-actuator",
+              "description": "Actuator exposes built-in endpoints for monitoring your app's health and metrics.",
+              "concept": "Spring Boot Actuator"
             },
             {
               "key": "w4-20",
-              "text": "Expose: management.endpoints.web.exposure.include=health,info,metrics"
+              "text": "Expose: management.endpoints.web.exposure.include=health,info,metrics",
+              "description": "Explicitly listing exposed endpoints avoids accidentally exposing sensitive operational data.",
+              "concept": "Actuator Endpoints"
             },
             {
               "key": "w4-21",
-              "text": "Visit /actuator/health — confirms DB connection, disk space, and app status"
+              "text": "Visit /actuator/health — confirms DB connection, disk space, and app status",
+              "description": "/actuator/health is the endpoint deployment platforms use to verify your app is running correctly.",
+              "concept": "/actuator/health"
             },
             {
               "key": "w4-22",
-              "text": "Visit /actuator/metrics — explore JVM memory, HTTP request counts, response times"
+              "text": "Visit /actuator/metrics — explore JVM memory, HTTP request counts, response times",
+              "description": "Metrics give you visibility into memory usage and request performance without external tooling.",
+              "concept": "/actuator/metrics"
             },
             {
               "key": "w4-23",
-              "text": "Secure actuator endpoints: only expose health publicly, require ADMIN role for others"
+              "text": "Secure actuator endpoints: only expose health publicly, require ADMIN role for others",
+              "description": "Securing actuator endpoints prevents attackers from using them to gather information about your system.",
+              "concept": "Actuator Security"
             },
             {
               "key": "w4-24",
-              "text": "Configure Railway to use /actuator/health as the health check URL for the service"
+              "text": "Configure Railway to use /actuator/health as the health check URL for the service",
+              "description": "Configuring Railway's health check ensures it can detect and restart a broken deployment automatically.",
+              "concept": "Railway Health Check"
             }
           ],
           "resource": "Production tip: Railway and most PaaS platforms ping a health endpoint to decide if your app is ready to receive traffic. Actuator's /health is perfect for this."
@@ -665,27 +897,39 @@
           "tasks": [
             {
               "key": "w4-25",
-              "text": "Learn: main branch = production only. Never commit directly to main."
+              "text": "Learn: main branch = production only. Never commit directly to main.",
+              "description": "Treating main as production-only prevents half-finished work from accidentally going live.",
+              "concept": "Git Branching Strategy"
             },
             {
               "key": "w4-26",
-              "text": "Learn: develop branch = integration branch where features merge before going to main"
+              "text": "Learn: develop branch = integration branch where features merge before going to main",
+              "description": "A develop branch gives features a place to integrate and be tested together before reaching production.",
+              "concept": "develop Branch"
             },
             {
               "key": "w4-27",
-              "text": "Learn: feature/* branches — create one per feature, merge to develop via PR when done"
+              "text": "Learn: feature/* branches — create one per feature, merge to develop via PR when done",
+              "description": "Feature branches isolate work-in-progress, making code review and rollback easier.",
+              "concept": "Feature Branches"
             },
             {
               "key": "w4-28",
-              "text": "Set up branch protection on GitHub: require PR review before merging to main"
+              "text": "Set up branch protection on GitHub: require PR review before merging to main",
+              "description": "Branch protection enforces code review, catching mistakes before they reach main.",
+              "concept": "Branch Protection"
             },
             {
               "key": "w4-29",
-              "text": "Practice: create feature/add-product-slug branch, add the slug feature, open a PR, merge it"
+              "text": "Practice: create feature/add-product-slug branch, add the slug feature, open a PR, merge it",
+              "description": "Practicing the full feature-branch-to-PR workflow builds the muscle memory you'll use on every real team.",
+              "concept": "Feature Branch Workflow"
             },
             {
               "key": "w4-30",
-              "text": "Learn: git rebase vs merge — use rebase to keep feature branch up to date cleanly"
+              "text": "Learn: git rebase vs merge — use rebase to keep feature branch up to date cleanly",
+              "description": "Understanding rebase vs merge helps you keep a clean, readable git history on your feature branches.",
+              "concept": "git rebase vs merge"
             }
           ],
           "resource": null
@@ -706,27 +950,39 @@
           "tasks": [
             {
               "key": "w5-1",
-              "text": "Install Docker Desktop — confirm docker --version in terminal"
+              "text": "Install Docker Desktop — confirm docker --version in terminal",
+              "description": "Confirming Docker is installed is the prerequisite for everything else this week.",
+              "concept": "Docker Setup"
             },
             {
               "key": "w5-2",
-              "text": "Learn: image vs container — image is the blueprint, container is the running instance"
+              "text": "Learn: image vs container — image is the blueprint, container is the running instance",
+              "description": "Understanding the image/container distinction is the foundational mental model for everything in Docker.",
+              "concept": "Image vs Container"
             },
             {
               "key": "w5-3",
-              "text": "Learn: Dockerfile — FROM, WORKDIR, COPY, RUN, EXPOSE, CMD instructions"
+              "text": "Learn: Dockerfile — FROM, WORKDIR, COPY, RUN, EXPOSE, CMD instructions",
+              "description": "These Dockerfile instructions are the building blocks for packaging any application as a container.",
+              "concept": "Dockerfile"
             },
             {
               "key": "w5-4",
-              "text": "Learn: docker build -t myapp . and docker run -p 8080:8080 myapp"
+              "text": "Learn: docker build -t myapp . and docker run -p 8080:8080 myapp",
+              "description": "Building and running your first image is the hands-on step that makes the concepts concrete.",
+              "concept": "docker build/run"
             },
             {
               "key": "w5-5",
-              "text": "Learn: docker ps, docker logs, docker stop, docker rm"
+              "text": "Learn: docker ps, docker logs, docker stop, docker rm",
+              "description": "These commands are your daily toolkit for managing running containers.",
+              "concept": "Docker CLI"
             },
             {
               "key": "w5-6",
-              "text": "Pull and run: docker run -p 3306:3306 -e MYSQL_ROOT_PASSWORD=root mysql:8 — your own local MySQL in a container"
+              "text": "Pull and run: docker run -p 3306:3306 -e MYSQL_ROOT_PASSWORD=root mysql:8 — your own local MySQL in a container",
+              "description": "Running MySQL in a container avoids installing it directly on your machine and matches how it'll run in production.",
+              "concept": "Dockerized MySQL"
             }
           ],
           "resource": "Resource: docs.docker.com/get-started — the official tutorial is genuinely good and takes about 2 hours to complete."
@@ -737,31 +993,45 @@
           "tasks": [
             {
               "key": "w5-7",
-              "text": "Build the JAR first: mvn clean package -DskipTests"
+              "text": "Build the JAR first: mvn clean package -DskipTests",
+              "description": "Building the JAR first separates the Java build step from the Docker build, useful for debugging either independently.",
+              "concept": "Maven Build"
             },
             {
               "key": "w5-8",
-              "text": "Write a multi-stage Dockerfile: Stage 1 — Maven build. Stage 2 — slim JRE runtime only."
+              "text": "Write a multi-stage Dockerfile: Stage 1 — Maven build. Stage 2 — slim JRE runtime only.",
+              "description": "A multi-stage Dockerfile keeps your final image small by discarding build tools after compiling.",
+              "concept": "Multi-Stage Dockerfile"
             },
             {
               "key": "w5-9",
-              "text": "Use eclipse-temurin:21-jre-alpine as the runtime base — much smaller than full JDK"
+              "text": "Use eclipse-temurin:21-jre-alpine as the runtime base — much smaller than full JDK",
+              "description": "An Alpine JRE image is a fraction of the size of a full JDK image, reducing deploy time and attack surface.",
+              "concept": "JRE Alpine Image"
             },
             {
               "key": "w5-10",
-              "text": "Build and tag: docker build -t shop-backend:latest ."
+              "text": "Build and tag: docker build -t shop-backend:latest .",
+              "description": "Tagging your image gives it a name you can reference when running or pushing it.",
+              "concept": "Docker Build & Tag"
             },
             {
               "key": "w5-11",
-              "text": "Run: docker run -p 8080:8080 --env-file .env shop-backend:latest"
+              "text": "Run: docker run -p 8080:8080 --env-file .env shop-backend:latest",
+              "description": "Running with --env-file mirrors how your app will receive configuration in production.",
+              "concept": "Docker Run with Env File"
             },
             {
               "key": "w5-12",
-              "text": "Test: hit localhost:8080/actuator/health — confirm app inside container is healthy"
+              "text": "Test: hit localhost:8080/actuator/health — confirm app inside container is healthy",
+              "description": "Hitting the health endpoint inside the container confirms the app actually started correctly in its containerized form.",
+              "concept": "Containerized Health Check"
             },
             {
               "key": "w5-31",
-              "text": "Add a .dockerignore file — exclude target/, .env, .git, *.md so the build context stays small and fast"
+              "text": "Add a .dockerignore file — exclude target/, .env, .git, *.md so the build context stays small and fast",
+              "description": ".dockerignore prevents unnecessary files from bloating the build context and slowing down builds.",
+              "concept": ".dockerignore"
             }
           ],
           "resource": "Multi-stage benefit: Build stage can be 500MB+ (Maven + JDK). Runtime stage with just JRE + JAR is typically 150–200MB. Smaller image = faster deploys, less attack surface."
@@ -772,31 +1042,45 @@
           "tasks": [
             {
               "key": "w5-13",
-              "text": "Learn: docker-compose.yml — defines multiple services (backend, db) as one unit"
+              "text": "Learn: docker-compose.yml — defines multiple services (backend, db) as one unit",
+              "description": "Compose lets you define your entire local stack — app and database — as a single reproducible configuration.",
+              "concept": "Docker Compose"
             },
             {
               "key": "w5-14",
-              "text": "Write docker-compose.yml: services for mysql (image: mysql:8) and backend (build: .)"
+              "text": "Write docker-compose.yml: services for mysql (image: mysql:8) and backend (build: .)",
+              "description": "Defining both services in one file is what lets 'docker compose up' start your whole stack with one command.",
+              "concept": "docker-compose.yml"
             },
             {
               "key": "w5-15",
-              "text": "Configure depends_on: backend waits for mysql to be healthy before starting"
+              "text": "Configure depends_on: backend waits for mysql to be healthy before starting",
+              "description": "depends_on ensures the backend doesn't try to connect to a database that isn't ready yet.",
+              "concept": "depends_on"
             },
             {
               "key": "w5-16",
-              "text": "Configure volumes: persist MySQL data so it survives container restarts"
+              "text": "Configure volumes: persist MySQL data so it survives container restarts",
+              "description": "Volumes ensure your database data isn't wiped every time you restart the containers.",
+              "concept": "Docker Volumes"
             },
             {
               "key": "w5-17",
-              "text": "Run: docker compose up — both services start, Flyway runs migrations, app is ready"
+              "text": "Run: docker compose up — both services start, Flyway runs migrations, app is ready",
+              "description": "Running the full stack with one command is the payoff of all the Docker setup this week.",
+              "concept": "Docker Compose Up"
             },
             {
               "key": "w5-18",
-              "text": "Run: docker compose down -v — stop and clean up. Rerun up — confirm clean start from scratch"
+              "text": "Run: docker compose down -v — stop and clean up. Rerun up — confirm clean start from scratch",
+              "description": "Tearing down and rebuilding from scratch verifies your setup is fully reproducible, not dependent on leftover state.",
+              "concept": "Docker Compose Down"
             },
             {
               "key": "w5-32",
-              "text": "Add a healthcheck to the mysql service (test: mysqladmin ping) and set backend's depends_on to condition: service_healthy — backend now waits until MySQL is actually ready"
+              "text": "Add a healthcheck to the mysql service (test: mysqladmin ping) and set backend's depends_on to condition: service_healthy — backend now waits until MySQL is actually ready",
+              "description": "A proper healthcheck ensures the backend only starts after MySQL can actually accept connections, not just after the container process starts.",
+              "concept": "Docker Healthcheck"
             }
           ],
           "resource": null
@@ -807,27 +1091,39 @@
           "tasks": [
             {
               "key": "w5-19",
-              "text": "Learn: GitHub Actions — automated workflows triggered by git events (push, pull_request)"
+              "text": "Learn: GitHub Actions — automated workflows triggered by git events (push, pull_request)",
+              "description": "GitHub Actions automates checks on every push, catching problems before they're merged.",
+              "concept": "GitHub Actions"
             },
             {
               "key": "w5-20",
-              "text": "Create .github/workflows/ci.yml in the backend repo"
+              "text": "Create .github/workflows/ci.yml in the backend repo",
+              "description": "The workflows folder is where GitHub looks for CI configuration — this is where automation begins.",
+              "concept": "CI Workflow File"
             },
             {
               "key": "w5-21",
-              "text": "Write: on push to any branch — run mvn test with Java 21 and an H2 test profile"
+              "text": "Write: on push to any branch — run mvn test with Java 21 and an H2 test profile",
+              "description": "Running tests automatically on every push catches regressions immediately, not days later.",
+              "concept": "CI Test Job"
             },
             {
               "key": "w5-22",
-              "text": "Write: on push to main — also build Docker image and push to Docker Hub or GitHub Container Registry"
+              "text": "Write: on push to main — also build Docker image and push to Docker Hub or GitHub Container Registry",
+              "description": "Building and pushing a Docker image on merge to main automates the first half of your deployment pipeline.",
+              "concept": "CI Docker Build/Push"
             },
             {
               "key": "w5-23",
-              "text": "Add GitHub Secrets: DOCKERHUB_USERNAME, DOCKERHUB_TOKEN (never hardcode credentials in yml)"
+              "text": "Add GitHub Secrets: DOCKERHUB_USERNAME, DOCKERHUB_TOKEN (never hardcode credentials in yml)",
+              "description": "GitHub Secrets keep credentials out of your repo while still letting workflows authenticate with external services.",
+              "concept": "GitHub Secrets"
             },
             {
               "key": "w5-24",
-              "text": "Push a commit — watch the Actions tab in GitHub — green means all tests pass"
+              "text": "Push a commit — watch the Actions tab in GitHub — green means all tests pass",
+              "description": "Watching the Actions tab go green is the confirmation your CI pipeline actually works.",
+              "concept": "CI Pipeline Verification"
             }
           ],
           "resource": null
@@ -838,31 +1134,45 @@
           "tasks": [
             {
               "key": "w5-25",
-              "text": "Create .github/workflows/ci.yml in the React repo"
+              "text": "Create .github/workflows/ci.yml in the React repo",
+              "description": "A separate CI workflow for the frontend repo runs the checks specific to a React/Vite project.",
+              "concept": "Frontend CI Workflow"
             },
             {
               "key": "w5-26",
-              "text": "Write: on pull request — run npm ci, npm test -- --run, npm run build"
+              "text": "Write: on pull request — run npm ci, npm test -- --run, npm run build",
+              "description": "Running tests and a build on every PR catches frontend regressions before they're merged.",
+              "concept": "CI Test & Build"
             },
             {
               "key": "w5-27",
-              "text": "Write: on push to main — run tests, then trigger Vercel deploy via Vercel CLI or webhook"
+              "text": "Write: on push to main — run tests, then trigger Vercel deploy via Vercel CLI or webhook",
+              "description": "Triggering Vercel deploys from CI ties your deployment to passing tests, not just a push.",
+              "concept": "Vercel CD"
             },
             {
               "key": "w5-28",
-              "text": "Backend CD: on push to main (after tests pass) — Railway auto-deploys from GitHub (already configured)"
+              "text": "Backend CD: on push to main (after tests pass) — Railway auto-deploys from GitHub (already configured)",
+              "description": "Railway's existing auto-deploy completes the backend half of your CD pipeline.",
+              "concept": "Railway CD"
             },
             {
               "key": "w5-29",
-              "text": "Test the full pipeline: push a small change → CI runs → tests green → both apps auto-deploy"
+              "text": "Test the full pipeline: push a small change → CI runs → tests green → both apps auto-deploy",
+              "description": "Testing the full pipeline end-to-end confirms a single push can safely reach production for both apps.",
+              "concept": "Full Pipeline Test"
             },
             {
               "key": "w5-30",
-              "text": "Add a README badge: ![CI](https://github.com/yourname/repo/actions/workflows/ci.yml/badge.svg)"
+              "text": "Add a README badge: ![CI](https://github.com/yourname/repo/actions/workflows/ci.yml/badge.svg)",
+              "description": "A CI badge gives visitors instant visibility into your project's build health.",
+              "concept": "CI Badge"
             },
             {
               "key": "w5-33",
-              "text": "Add dependency caching to both CI workflows — actions/cache for ~/.m2 (backend) and ~/.npm (frontend) — compare build times before and after"
+              "text": "Add dependency caching to both CI workflows — actions/cache for ~/.m2 (backend) and ~/.npm (frontend) — compare build times before and after",
+              "description": "Caching dependencies speeds up CI runs significantly, since Maven and npm don't need to redownload everything every time.",
+              "concept": "CI Dependency Caching"
             }
           ],
           "resource": null
@@ -889,67 +1199,99 @@
           "tasks": [
             {
               "key": "cap-1",
-              "text": "All service classes have unit tests — JaCoCo shows 70%+ coverage"
+              "text": "All service classes have unit tests — JaCoCo shows 70%+ coverage",
+              "description": "Solid unit test coverage is the foundation that lets you safely refactor and extend the app later.",
+              "concept": "Unit Test Coverage"
             },
             {
               "key": "cap-2",
-              "text": "At least one integration test covers the full auth + product flow"
+              "text": "At least one integration test covers the full auth + product flow",
+              "description": "An integration test covering the full auth+product flow catches issues that unit tests in isolation can't.",
+              "concept": "Integration Testing"
             },
             {
               "key": "cap-3",
-              "text": "React components have RTL tests — at least ProductCard, LoginPage, CartContext"
+              "text": "React components have RTL tests — at least ProductCard, LoginPage, CartContext",
+              "description": "Frontend tests on key components ensure the UI doesn't silently break as you make changes.",
+              "concept": "RTL Component Tests"
             },
             {
               "key": "cap-4",
-              "text": "N+1 queries eliminated — confirmed by SQL log inspection"
+              "text": "N+1 queries eliminated — confirmed by SQL log inspection",
+              "description": "Eliminating N+1 queries ensures your app stays fast as data grows.",
+              "concept": "N+1 Query Problem"
             },
             {
               "key": "cap-5",
-              "text": "MySQL indexes on category_id, name (or any searchable column)"
+              "text": "MySQL indexes on category_id, name (or any searchable column)",
+              "description": "Indexes on commonly queried columns keep performance acceptable at scale.",
+              "concept": "MySQL Indexes"
             },
             {
               "key": "cap-6",
-              "text": "@Cacheable on category list and individual product reads"
+              "text": "@Cacheable on category list and individual product reads",
+              "description": "Caching frequently-read, rarely-changed data reduces database load.",
+              "concept": "Spring Caching"
             },
             {
               "key": "cap-7",
-              "text": "Flyway migrations replace ddl-auto — schema is fully version-controlled"
+              "text": "Flyway migrations replace ddl-auto — schema is fully version-controlled",
+              "description": "Flyway migrations mean your schema changes are tracked, reviewable, and reproducible across environments.",
+              "concept": "Flyway Migrations"
             },
             {
               "key": "cap-8",
-              "text": "Rate limiting on /auth/** endpoints — 429 returned after threshold"
+              "text": "Rate limiting on /auth/** endpoints — 429 returned after threshold",
+              "description": "Rate limiting protects your auth endpoints from brute-force attacks.",
+              "concept": "Rate Limiting"
             },
             {
               "key": "cap-9",
-              "text": "Structured logging with requestId in every log line"
+              "text": "Structured logging with requestId in every log line",
+              "description": "Request IDs in logs let you trace any request through your entire system for debugging.",
+              "concept": "Structured Logging"
             },
             {
               "key": "cap-10",
-              "text": "Actuator /health configured as Railway health check URL"
+              "text": "Actuator /health configured as Railway health check URL",
+              "description": "A configured health check lets your hosting platform detect and recover from failures automatically.",
+              "concept": "Actuator Health Check"
             },
             {
               "key": "cap-11",
-              "text": "Git branching: main/develop/feature/* — branch protection on main"
+              "text": "Git branching: main/develop/feature/* — branch protection on main",
+              "description": "A proper branching strategy with protection rules is how real teams collaborate without breaking production.",
+              "concept": "Git Branching Strategy"
             },
             {
               "key": "cap-12",
-              "text": "Docker Compose runs full stack locally in one command"
+              "text": "Docker Compose runs full stack locally in one command",
+              "description": "One-command local setup makes it easy for anyone (including future you) to run the project.",
+              "concept": "Docker Compose"
             },
             {
               "key": "cap-13",
-              "text": "GitHub Actions CI runs tests on every push — green badge on README"
+              "text": "GitHub Actions CI runs tests on every push — green badge on README",
+              "description": "An automated CI badge signals to anyone viewing your repo that the project is actively tested and healthy.",
+              "concept": "GitHub Actions CI"
             },
             {
               "key": "cap-14",
-              "text": "Lighthouse 90+ on Performance and Accessibility on live Vercel URL"
+              "text": "Lighthouse 90+ on Performance and Accessibility on live Vercel URL",
+              "description": "High Lighthouse scores demonstrate your app is fast and accessible — both matter to real users and employers.",
+              "concept": "Lighthouse Audit"
             },
             {
               "key": "cap-15",
-              "text": "Both repos have professional READMEs with architecture notes, setup guide, live URL"
+              "text": "Both repos have professional READMEs with architecture notes, setup guide, live URL",
+              "description": "Professional READMEs are often the first thing a recruiter or collaborator sees — they need to make a strong impression.",
+              "concept": "README Documentation"
             },
             {
               "key": "cap-16",
-              "text": "Self-assessment: without notes, explain Flyway migrations, the multi-stage Docker build, how GitHub Actions CI runs your tests, and how you found and fixed an N+1 query"
+              "text": "Self-assessment: without notes, explain Flyway migrations, the multi-stage Docker build, how GitHub Actions CI runs your tests, and how you found and fixed an N+1 query",
+              "description": "This final self-assessment confirms you can explain and defend every production-grade decision you made across Phase 5.",
+              "concept": "Self-Assessment"
             }
           ]
         }

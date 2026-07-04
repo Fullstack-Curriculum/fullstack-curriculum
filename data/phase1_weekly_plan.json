@@ -34,27 +34,39 @@
           "tasks": [
             {
               "key": "1-1",
-              "text": "Install JDK 21 (LTS) from adoptium.net"
+              "text": "Install JDK 21 (LTS) from adoptium.net",
+              "description": "The JDK is the compiler and runtime every Java and Spring Boot project needs — 21 is the current LTS version.",
+              "concept": "JDK Setup"
             },
             {
               "key": "1-2",
-              "text": "Install IntelliJ IDEA Community Edition"
+              "text": "Install IntelliJ IDEA Community Edition",
+              "description": "IntelliJ understands Java deeply — autocomplete, refactoring, and run/debug buttons save hours over a plain text editor.",
+              "concept": "IDE Setup"
             },
             {
               "key": "1-3",
-              "text": "Install MySQL Community Server + MySQL Workbench"
+              "text": "Install MySQL Community Server + MySQL Workbench",
+              "description": "MySQL is the database every phase of this curriculum builds on, and Workbench lets you inspect tables and run queries visually.",
+              "concept": "MySQL Setup"
             },
             {
               "key": "1-4",
-              "text": "Install VS Code with extensions: ESLint, Prettier, Live Server"
+              "text": "Install VS Code with extensions: ESLint, Prettier, Live Server",
+              "description": "VS Code with these extensions is what you'll use for the JavaScript and React work starting in Phase 3.",
+              "concept": "VS Code Setup"
             },
             {
               "key": "1-5",
-              "text": "Install Git and create a GitHub account"
+              "text": "Install Git and create a GitHub account",
+              "description": "Git tracks every change you make, and GitHub is where every project in this curriculum will be hosted.",
+              "concept": "Git Setup"
             },
             {
               "key": "1-6",
-              "text": "Create a GitHub repo called \"phase1-practice\" and clone it"
+              "text": "Create a GitHub repo called \"phase1-practice\" and clone it",
+              "description": "Committing from day one builds the habit — by Phase 5 you'll depend on Git for branching and CI/CD.",
+              "concept": "GitHub"
             }
           ],
           "resource": "Resource: adoptium.net for JDK · jetbrains.com/idea for IntelliJ · dev.mysql.com/downloads for MySQL"
@@ -65,23 +77,33 @@
           "tasks": [
             {
               "key": "1-7",
-              "text": "Learn: int, double, String, boolean data types"
+              "text": "Learn: int, double, String, boolean data types",
+              "description": "These are the basic building blocks every Java program is made of — you'll declare variables of these types in every class you write.",
+              "concept": "Data Types"
             },
             {
               "key": "1-8",
-              "text": "Learn: arithmetic operators (+, -, *, /, %)"
+              "text": "Learn: arithmetic operators (+, -, *, /, %)",
+              "description": "Arithmetic operators are how you'll calculate prices, totals, and averages throughout this curriculum.",
+              "concept": "Operators"
             },
             {
               "key": "1-9",
-              "text": "Learn: String concatenation and System.out.println()"
+              "text": "Learn: String concatenation and System.out.println()",
+              "description": "println() is your first debugging tool — printing values is how you'll check your code is doing what you expect.",
+              "concept": "String Concatenation"
             },
             {
               "key": "1-10",
-              "text": "Practice: write a program that calculates area of a rectangle"
+              "text": "Practice: write a program that calculates area of a rectangle",
+              "description": "A small program combining variables, a formula, and output — your first complete Java program.",
+              "concept": "Practice Exercise"
             },
             {
               "key": "1-11",
-              "text": "Practice: write a simple temperature converter (C to F)"
+              "text": "Practice: write a simple temperature converter (C to F)",
+              "description": "Practicing a formula and conversion reinforces variables and arithmetic operators together.",
+              "concept": "Practice Exercise"
             }
           ],
           "resource": "Resource: W3Schools Java tutorial (free) · Bro Code Java on YouTube — Episode 1–5"
@@ -92,23 +114,33 @@
           "tasks": [
             {
               "key": "1-12",
-              "text": "Learn: if / else if / else statements"
+              "text": "Learn: if / else if / else statements",
+              "description": "Branching logic like this is how your code makes decisions — used in almost every method you'll write from here on.",
+              "concept": "Conditionals"
             },
             {
               "key": "1-13",
-              "text": "Learn: switch statements"
+              "text": "Learn: switch statements",
+              "description": "switch is a cleaner alternative to long if/else chains when checking a fixed set of values.",
+              "concept": "Switch Statement"
             },
             {
               "key": "1-14",
-              "text": "Learn: for loop and while loop"
+              "text": "Learn: for loop and while loop",
+              "description": "Loops let you repeat work — looping over students, products, or database rows is something you'll do constantly.",
+              "concept": "Loops"
             },
             {
               "key": "1-15",
-              "text": "Practice: FizzBuzz (print 1–100, but Fizz for multiples of 3, Buzz for 5)"
+              "text": "Practice: FizzBuzz (print 1–100, but Fizz for multiples of 3, Buzz for 5)",
+              "description": "FizzBuzz is a classic exercise that combines loops and conditionals — a good gut check before moving on.",
+              "concept": "Practice Exercise"
             },
             {
               "key": "1-16",
-              "text": "Practice: Simple number guessing game using Scanner for user input"
+              "text": "Practice: Simple number guessing game using Scanner for user input",
+              "description": "Using Scanner for input is your first interactive program — the same pattern your Phase 1 CLI project will use.",
+              "concept": "Scanner Input"
             }
           ],
           "resource": "Resource: Bro Code Java — Episode 6–12 · Try exercises on exercism.org (Java track)"
@@ -119,23 +151,33 @@
           "tasks": [
             {
               "key": "1-17",
-              "text": "Learn: defining and calling methods with parameters and return types"
+              "text": "Learn: defining and calling methods with parameters and return types",
+              "description": "Methods let you organize code into reusable, named pieces — the foundation of every Java class you'll build.",
+              "concept": "Methods"
             },
             {
               "key": "1-18",
-              "text": "Learn: method overloading"
+              "text": "Learn: method overloading",
+              "description": "Overloading shows how Java picks the right method based on the arguments passed — useful for flexible APIs.",
+              "concept": "Method Overloading"
             },
             {
               "key": "1-19",
-              "text": "Learn: arrays — declaring, initializing, iterating"
+              "text": "Learn: arrays — declaring, initializing, iterating",
+              "description": "Arrays are the simplest way to store a collection of values — a stepping stone to ArrayList and database query results.",
+              "concept": "Arrays"
             },
             {
               "key": "1-20",
-              "text": "Practice: write a method that finds the max value in an array"
+              "text": "Practice: write a method that finds the max value in an array",
+              "description": "Combining a loop with comparison logic inside a method is a pattern you'll reuse constantly in service code.",
+              "concept": "Practice Exercise"
             },
             {
               "key": "1-21",
-              "text": "Practice: write a method that reverses a String"
+              "text": "Practice: write a method that reverses a String",
+              "description": "String manipulation practice — useful for formatting output and validating input later on.",
+              "concept": "Practice Exercise"
             }
           ],
           "resource": null
@@ -146,23 +188,33 @@
           "tasks": [
             {
               "key": "1-22",
-              "text": "Learn Git: git add, git commit -m, git push, git pull"
+              "text": "Learn Git: git add, git commit -m, git push, git pull",
+              "description": "These four commands are your daily Git routine — you'll type them dozens of times across this curriculum.",
+              "concept": "Git Basics"
             },
             {
               "key": "1-23",
-              "text": "Learn Git: git status, git log, creating branches"
+              "text": "Learn Git: git status, git log, creating branches",
+              "description": "Branches let you work on a feature without breaking your main code — essential from Phase 4 onward.",
+              "concept": "Git Branches"
             },
             {
               "key": "1-24",
-              "text": "Push all this week's practice files to GitHub"
+              "text": "Push all this week's practice files to GitHub",
+              "description": "Pushing your work means it's backed up and visible — start building your GitHub history now.",
+              "concept": "Git Push"
             },
             {
               "key": "1-25",
-              "text": "Review: re-read any code you wrote that felt confusing"
+              "text": "Review: re-read any code you wrote that felt confusing",
+              "description": "Revisiting confusing code while it's still fresh helps it stick — don't skip this step.",
+              "concept": "Self-Review"
             },
             {
               "key": "1-26",
-              "text": "Challenge: build a simple BMI calculator using methods"
+              "text": "Challenge: build a simple BMI calculator using methods",
+              "description": "A self-contained challenge that combines variables, arithmetic, and methods from this week into one small program.",
+              "concept": "Practice Exercise"
             }
           ],
           "resource": "Resource: learngitbranching.js.org — interactive Git tutorial (free, browser-based)"
@@ -183,23 +235,33 @@
           "tasks": [
             {
               "key": "2-1",
-              "text": "Learn: what a class is vs what an object is"
+              "text": "Learn: what a class is vs what an object is",
+              "description": "Classes are blueprints and objects are instances of them — this distinction underlies every entity you'll build in Spring Boot.",
+              "concept": "Classes & Objects"
             },
             {
               "key": "2-2",
-              "text": "Learn: fields (instance variables), constructors"
+              "text": "Learn: fields (instance variables), constructors",
+              "description": "Fields store an object's data, and constructors set that data up when the object is first created.",
+              "concept": "Constructors"
             },
             {
               "key": "2-3",
-              "text": "Learn: getters and setters (encapsulation)"
+              "text": "Learn: getters and setters (encapsulation)",
+              "description": "Getters and setters control access to fields — a pattern Spring Boot relies on for entities and DTOs.",
+              "concept": "Encapsulation"
             },
             {
               "key": "2-4",
-              "text": "Practice: create a Student class with name, age, grade fields"
+              "text": "Practice: create a Student class with name, age, grade fields",
+              "description": "A first hands-on class with multiple fields — practice modeling a real-world thing in code.",
+              "concept": "Practice Exercise"
             },
             {
               "key": "2-5",
-              "text": "Practice: create multiple Student objects and print their data"
+              "text": "Practice: create multiple Student objects and print their data",
+              "description": "Creating multiple objects from one class shows how the same blueprint produces independent instances.",
+              "concept": "Practice Exercise"
             }
           ],
           "resource": "Why it matters: In Spring Boot, every entity (Product, User, Order) is a Java class. This is the foundation."
@@ -210,23 +272,33 @@
           "tasks": [
             {
               "key": "2-6",
-              "text": "Learn: extends keyword — child class inherits parent"
+              "text": "Learn: extends keyword — child class inherits parent",
+              "description": "Inheritance lets one class reuse and extend another's behavior — reduces duplication across related classes.",
+              "concept": "Inheritance"
             },
             {
               "key": "2-7",
-              "text": "Learn: @Override and polymorphism"
+              "text": "Learn: @Override and polymorphism",
+              "description": "@Override and polymorphism let different subclasses respond differently to the same method call.",
+              "concept": "Polymorphism"
             },
             {
               "key": "2-8",
-              "text": "Learn: interface — defining a contract a class must follow"
+              "text": "Learn: interface — defining a contract a class must follow",
+              "description": "An interface defines what a class must do without saying how — the basis for Spring's repository pattern.",
+              "concept": "Interfaces"
             },
             {
               "key": "2-9",
-              "text": "Practice: create Animal → Dog → Cat hierarchy with a speak() method"
+              "text": "Practice: create Animal → Dog → Cat hierarchy with a speak() method",
+              "description": "A classic hierarchy exercise that makes inheritance and polymorphism concrete and easy to visualize.",
+              "concept": "Practice Exercise"
             },
             {
               "key": "2-10",
-              "text": "Practice: create a Printable interface, implement it in two classes"
+              "text": "Practice: create a Printable interface, implement it in two classes",
+              "description": "Implementing the same interface in two classes shows how a shared contract enables flexible, swappable code.",
+              "concept": "Practice Exercise"
             }
           ],
           "resource": "Why it matters: Spring Boot uses interfaces extensively — JpaRepository is an interface. You extend it, Spring implements it for you."
@@ -237,27 +309,39 @@
           "tasks": [
             {
               "key": "2-11",
-              "text": "Learn: ArrayList — add, remove, get, iterate with for-each"
+              "text": "Learn: ArrayList — add, remove, get, iterate with for-each",
+              "description": "ArrayList is a resizable list — you'll use it constantly to hold collections of objects like students or products.",
+              "concept": "ArrayList"
             },
             {
               "key": "2-12",
-              "text": "Learn: HashMap — put, get, containsKey, iterate entrySet"
+              "text": "Learn: HashMap — put, get, containsKey, iterate entrySet",
+              "description": "HashMap gives you fast lookups by key — useful for things like looking up a product by ID.",
+              "concept": "HashMap"
             },
             {
               "key": "2-13",
-              "text": "Learn: try-catch-finally for handling exceptions"
+              "text": "Learn: try-catch-finally for handling exceptions",
+              "description": "Exception handling lets your program recover from errors instead of crashing — critical for any real application.",
+              "concept": "Exception Handling"
             },
             {
               "key": "2-14",
-              "text": "Practice: student registry using ArrayList of Student objects"
+              "text": "Practice: student registry using ArrayList of Student objects",
+              "description": "Combining a custom class with a collection mirrors the shape of most service-layer code in Spring Boot.",
+              "concept": "Practice Exercise"
             },
             {
               "key": "2-15",
-              "text": "Practice: phone book using HashMap (name → phone number)"
+              "text": "Practice: phone book using HashMap (name → phone number)",
+              "description": "A simple key-value lookup exercise that mirrors how maps and caches are used later in the curriculum.",
+              "concept": "Practice Exercise"
             },
             {
               "key": "2-26",
-              "text": "Practice: add validation to your Student class — throw new IllegalArgumentException(\"message\") if age < 0, catch it in main() and print the message without crashing"
+              "text": "Practice: add validation to your Student class — throw new IllegalArgumentException(\"message\") if age < 0, catch it in main() and print the message without crashing",
+              "description": "Throwing and catching a custom validation exception is exactly the pattern Spring Boot uses to reject bad input.",
+              "concept": "Custom Exceptions"
             }
           ],
           "resource": null
@@ -268,23 +352,33 @@
           "tasks": [
             {
               "key": "2-16",
-              "text": "Open MySQL Workbench, connect to local MySQL server"
+              "text": "Open MySQL Workbench, connect to local MySQL server",
+              "description": "Connecting to your database is the first step before you can store or retrieve any data.",
+              "concept": "MySQL Workbench"
             },
             {
               "key": "2-17",
-              "text": "Learn: CREATE DATABASE, USE, CREATE TABLE with column types"
+              "text": "Learn: CREATE DATABASE, USE, CREATE TABLE with column types",
+              "description": "These commands create the database and table structures that will hold your application's data.",
+              "concept": "DDL — CREATE TABLE"
             },
             {
               "key": "2-18",
-              "text": "Learn: INSERT INTO, SELECT * FROM, WHERE clause"
+              "text": "Learn: INSERT INTO, SELECT * FROM, WHERE clause",
+              "description": "INSERT and SELECT with WHERE are the two most common operations you'll perform on any table.",
+              "concept": "SQL — INSERT/SELECT"
             },
             {
               "key": "2-19",
-              "text": "Learn: UPDATE and DELETE with WHERE (never without!)"
+              "text": "Learn: UPDATE and DELETE with WHERE (never without!)",
+              "description": "UPDATE and DELETE change existing data — always test the WHERE clause with a SELECT first to avoid mistakes.",
+              "concept": "SQL — UPDATE/DELETE"
             },
             {
               "key": "2-20",
-              "text": "Practice: create a students table, insert 5 rows, query them"
+              "text": "Practice: create a students table, insert 5 rows, query them",
+              "description": "A hands-on exercise that exercises CREATE, INSERT, and SELECT together on real data.",
+              "concept": "Practice Exercise"
             }
           ],
           "resource": "Resource: sqlbolt.com — interactive SQL lessons in browser, completely free"
@@ -295,23 +389,33 @@
           "tasks": [
             {
               "key": "2-21",
-              "text": "Learn: PRIMARY KEY, FOREIGN KEY — what they do and why"
+              "text": "Learn: PRIMARY KEY, FOREIGN KEY — what they do and why",
+              "description": "Primary and foreign keys are how relational databases link related rows together — the foundation of schema design.",
+              "concept": "Primary/Foreign Keys"
             },
             {
               "key": "2-22",
-              "text": "Learn: INNER JOIN — combine rows from two related tables"
+              "text": "Learn: INNER JOIN — combine rows from two related tables",
+              "description": "INNER JOIN combines matching rows from two tables — essential for queries that span related entities.",
+              "concept": "INNER JOIN"
             },
             {
               "key": "2-23",
-              "text": "Learn: LEFT JOIN — include rows even if no match on right"
+              "text": "Learn: LEFT JOIN — include rows even if no match on right",
+              "description": "LEFT JOIN includes unmatched rows too — useful when related data might not exist yet.",
+              "concept": "LEFT JOIN"
             },
             {
               "key": "2-24",
-              "text": "Learn: ORDER BY, LIMIT, GROUP BY, COUNT()"
+              "text": "Learn: ORDER BY, LIMIT, GROUP BY, COUNT()",
+              "description": "These clauses sort, limit, and summarize results — used in almost every reporting query you'll write.",
+              "concept": "ORDER BY / GROUP BY"
             },
             {
               "key": "2-25",
-              "text": "Practice: create a courses table, link to students via enrollment table, write JOIN query"
+              "text": "Practice: create a courses table, link to students via enrollment table, write JOIN query",
+              "description": "Modeling a many-to-many relationship with an enrollment table mirrors real schema design from Phase 2 onward.",
+              "concept": "Practice Exercise"
             }
           ],
           "resource": "Resource: Complete sqlbolt.com lessons 1–12 · Try sqlfiddle.com to experiment"
@@ -332,23 +436,33 @@
           "tasks": [
             {
               "key": "3-1",
-              "text": "Learn: var vs let vs const — always use const/let"
+              "text": "Learn: var vs let vs const — always use const/let",
+              "description": "let and const avoid the bugs that var's function-scoping can cause — the modern standard for declaring variables.",
+              "concept": "let/const"
             },
             {
               "key": "3-2",
-              "text": "Learn: function declarations vs arrow functions (=>)"
+              "text": "Learn: function declarations vs arrow functions (=>)",
+              "description": "Arrow functions are everywhere in React — getting comfortable with the syntax now pays off later.",
+              "concept": "Arrow Functions"
             },
             {
               "key": "3-3",
-              "text": "Learn: scope — what variables are accessible where"
+              "text": "Learn: scope — what variables are accessible where",
+              "description": "Understanding scope prevents confusing bugs where a variable isn't accessible where you expect it to be.",
+              "concept": "Scope"
             },
             {
               "key": "3-4",
-              "text": "Learn: template literals — `Hello ${name}!`"
+              "text": "Learn: template literals — `Hello ${name}!`",
+              "description": "Template literals make building strings with variables much cleaner than concatenation with +.",
+              "concept": "Template Literals"
             },
             {
               "key": "3-5",
-              "text": "Practice: rewrite your Java temperature converter in JavaScript"
+              "text": "Practice: rewrite your Java temperature converter in JavaScript",
+              "description": "Reimplementing a familiar program in JS highlights the syntax differences from Java while reusing logic you already know.",
+              "concept": "Practice Exercise"
             }
           ],
           "resource": "Resource: javascript.info — the best free JS reference. Start at \"JavaScript Fundamentals\"."
@@ -359,23 +473,33 @@
           "tasks": [
             {
               "key": "3-6",
-              "text": "Learn: array methods — map(), filter(), find(), forEach()"
+              "text": "Learn: array methods — map(), filter(), find(), forEach()",
+              "description": "map(), filter(), and find() are how you'll transform and search data fetched from your API in React.",
+              "concept": "Array Methods"
             },
             {
               "key": "3-7",
-              "text": "Learn: objects — key-value pairs, dot notation, destructuring"
+              "text": "Learn: objects — key-value pairs, dot notation, destructuring",
+              "description": "Objects and destructuring are how API responses are shaped and consumed throughout React.",
+              "concept": "Objects & Destructuring"
             },
             {
               "key": "3-8",
-              "text": "Learn: spread operator (...) for arrays and objects"
+              "text": "Learn: spread operator (...) for arrays and objects",
+              "description": "The spread operator is the standard way to copy and update arrays/objects immutably — critical for React state updates.",
+              "concept": "Spread Operator"
             },
             {
               "key": "3-9",
-              "text": "Practice: array of product objects, filter by price, map to display names"
+              "text": "Practice: array of product objects, filter by price, map to display names",
+              "description": "Filtering and mapping over objects mirrors exactly how you'll render a product list from an API response.",
+              "concept": "Practice Exercise"
             },
             {
               "key": "3-10",
-              "text": "Practice: use destructuring to extract fields from an object"
+              "text": "Practice: use destructuring to extract fields from an object",
+              "description": "Destructuring makes pulling fields out of API responses concise and readable.",
+              "concept": "Destructuring"
             }
           ],
           "resource": "Why it matters: In React, you will use map() to render lists and filter() constantly. This is not optional knowledge."
@@ -386,23 +510,33 @@
           "tasks": [
             {
               "key": "3-11",
-              "text": "Learn: document.getElementById(), querySelector()"
+              "text": "Learn: document.getElementById(), querySelector()",
+              "description": "Selecting elements is how vanilla JS finds things to update — React replaces this, but understanding it helps you appreciate why.",
+              "concept": "DOM Selection"
             },
             {
               "key": "3-12",
-              "text": "Learn: changing text with .textContent and HTML with .innerHTML"
+              "text": "Learn: changing text with .textContent and HTML with .innerHTML",
+              "description": "Updating text and HTML directly shows what React's virtual DOM abstracts away for you.",
+              "concept": "DOM Manipulation"
             },
             {
               "key": "3-13",
-              "text": "Learn: addEventListener() for click and input events"
+              "text": "Learn: addEventListener() for click and input events",
+              "description": "Event listeners are how the browser responds to user actions — React wraps this in handlers like onClick.",
+              "concept": "Event Listeners"
             },
             {
               "key": "3-14",
-              "text": "Practice: build a simple to-do list — add items, mark done, delete"
+              "text": "Practice: build a simple to-do list — add items, mark done, delete",
+              "description": "A to-do list touches state, rendering, and events all together — a precursor to thinking in React components.",
+              "concept": "Practice Exercise"
             },
             {
               "key": "3-15",
-              "text": "Practice: build a live character counter for a text input"
+              "text": "Practice: build a live character counter for a text input",
+              "description": "A live counter is a small reactive UI — good practice before React makes this kind of update automatic.",
+              "concept": "Practice Exercise"
             }
           ],
           "resource": null
@@ -413,23 +547,33 @@
           "tasks": [
             {
               "key": "3-16",
-              "text": "Learn: what a Promise is — pending, fulfilled, rejected"
+              "text": "Learn: what a Promise is — pending, fulfilled, rejected",
+              "description": "Promises represent a value that isn't ready yet — the foundation of every API call you'll make in JS.",
+              "concept": "Promises"
             },
             {
               "key": "3-17",
-              "text": "Learn: .then().catch() chaining"
+              "text": "Learn: .then().catch() chaining",
+              "description": "Chaining .then()/.catch() is the original way to handle async results and errors.",
+              "concept": "Promise Chaining"
             },
             {
               "key": "3-18",
-              "text": "Learn: async function and await keyword"
+              "text": "Learn: async function and await keyword",
+              "description": "async/await is the modern, readable syntax for working with Promises — used throughout TanStack Query in Phase 3.",
+              "concept": "Async/Await"
             },
             {
               "key": "3-19",
-              "text": "Learn: try-catch inside async functions"
+              "text": "Learn: try-catch inside async functions",
+              "description": "try-catch around await is how you'll handle failed API calls in React.",
+              "concept": "Error Handling"
             },
             {
               "key": "3-20",
-              "text": "Practice: fetch data from a public API (jsonplaceholder.typicode.com) and display it"
+              "text": "Practice: fetch data from a public API (jsonplaceholder.typicode.com) and display it",
+              "description": "Fetching real data from an API is the exact pattern you'll use to talk to your Spring Boot backend later.",
+              "concept": "Fetch API"
             }
           ],
           "resource": "Resource: javascript.info — \"Promises, async/await\" chapter. This is the most important JS concept for API work."
@@ -440,23 +584,33 @@
           "tasks": [
             {
               "key": "3-21",
-              "text": "Learn: ES modules — export and import between files"
+              "text": "Learn: ES modules — export and import between files",
+              "description": "ES modules let you split code across files — exactly how every React project is organized.",
+              "concept": "ES Modules"
             },
             {
               "key": "3-22",
-              "text": "Learn: npm basics — what it is, npm init, installing packages"
+              "text": "Learn: npm basics — what it is, npm init, installing packages",
+              "description": "npm is how every JS/React dependency gets installed — you'll use it constantly from Phase 3 onward.",
+              "concept": "npm Basics"
             },
             {
               "key": "3-23",
-              "text": "Practice: refactor to-do list into multiple files using modules"
+              "text": "Practice: refactor to-do list into multiple files using modules",
+              "description": "Splitting a working program into modules practices the file organization you'll use in React.",
+              "concept": "Practice Exercise"
             },
             {
               "key": "3-24",
-              "text": "Push all JS work to GitHub"
+              "text": "Push all JS work to GitHub",
+              "description": "Pushing your JS work keeps your portfolio growing and reinforces the Git habit from Week 1.",
+              "concept": "Git Push"
             },
             {
               "key": "3-25",
-              "text": "Review: what felt confusing this week? Write down 3 questions."
+              "text": "Review: what felt confusing this week? Write down 3 questions.",
+              "description": "Naming what felt confusing turns vague unease into specific things you can revisit and resolve.",
+              "concept": "Self-Review"
             }
           ],
           "resource": null
@@ -477,19 +631,27 @@
           "tasks": [
             {
               "key": "4-1",
-              "text": "Learn: what generics are — List<String> vs raw List"
+              "text": "Learn: what generics are — List<String> vs raw List",
+              "description": "Generics let collections be type-safe — List<String> won't let you accidentally add something that isn't a String.",
+              "concept": "Generics"
             },
             {
               "key": "4-2",
-              "text": "Learn: Optional<T> — avoid NullPointerException"
+              "text": "Learn: Optional<T> — avoid NullPointerException",
+              "description": "Optional forces you to explicitly handle the 'no value' case — Spring Data repositories return it constantly.",
+              "concept": "Optional"
             },
             {
               "key": "4-3",
-              "text": "Learn: Java Streams — filter(), map(), collect() on collections"
+              "text": "Learn: Java Streams — filter(), map(), collect() on collections",
+              "description": "Streams let you transform collections in a declarative pipeline — a common pattern in Spring Boot service methods.",
+              "concept": "Java Streams"
             },
             {
               "key": "4-4",
-              "text": "Practice: rewrite your student registry using Stream operations"
+              "text": "Practice: rewrite your student registry using Stream operations",
+              "description": "Rewriting earlier code with Streams shows how the same logic can be expressed more concisely.",
+              "concept": "Practice Exercise"
             }
           ],
           "resource": "Why it matters: Spring Boot's JpaRepository returns Optional — you'll see this every day."
@@ -500,23 +662,33 @@
           "tasks": [
             {
               "key": "4-5",
-              "text": "Learn: enum type — fixed set of named constants"
+              "text": "Learn: enum type — fixed set of named constants",
+              "description": "Enums model a fixed set of valid values — perfect for things like order status or pass/fail grades.",
+              "concept": "Enums"
             },
             {
               "key": "4-6",
-              "text": "Learn: what annotations are (e.g. @Override) — metadata on code"
+              "text": "Learn: what annotations are (e.g. @Override) — metadata on code",
+              "description": "Annotations are metadata that frameworks like Spring read to configure behavior — you'll see dozens of them.",
+              "concept": "Annotations"
             },
             {
               "key": "4-7",
-              "text": "Learn: static keyword and when to use it"
+              "text": "Learn: static keyword and when to use it",
+              "description": "static members belong to the class itself, not an instance — useful for constants and utility methods.",
+              "concept": "Static Keyword"
             },
             {
               "key": "4-8",
-              "text": "Practice: create an OrderStatus enum (PENDING, PROCESSING, SHIPPED, DELIVERED)"
+              "text": "Practice: create an OrderStatus enum (PENDING, PROCESSING, SHIPPED, DELIVERED)",
+              "description": "A status enum like this is the exact pattern used for order and request state machines in Spring Boot apps.",
+              "concept": "Enums"
             },
             {
               "key": "4-23",
-              "text": "Practice: create a GradeStatus enum (PASS for score >= 50, FAIL for score < 50) for use in your Phase 1 project"
+              "text": "Practice: create a GradeStatus enum (PASS for score >= 50, FAIL for score < 50) for use in your Phase 1 project",
+              "description": "Building this enum now sets up the PASS/FAIL logic your Phase 1 project's grade report needs.",
+              "concept": "Enums"
             }
           ],
           "resource": null
@@ -527,23 +699,33 @@
           "tasks": [
             {
               "key": "4-9",
-              "text": "Learn: aggregate functions — COUNT(), SUM(), AVG(), MAX(), MIN()"
+              "text": "Learn: aggregate functions — COUNT(), SUM(), AVG(), MAX(), MIN()",
+              "description": "Aggregate functions summarize data across rows — essential for reports like averages and totals.",
+              "concept": "Aggregate Functions"
             },
             {
               "key": "4-10",
-              "text": "Learn: GROUP BY with HAVING clause"
+              "text": "Learn: GROUP BY with HAVING clause",
+              "description": "GROUP BY with HAVING filters aggregated groups — e.g. students whose average is below 50.",
+              "concept": "GROUP BY / HAVING"
             },
             {
               "key": "4-11",
-              "text": "Learn: subqueries (SELECT inside SELECT)"
+              "text": "Learn: subqueries (SELECT inside SELECT)",
+              "description": "Subqueries let one query feed into another — useful for 'find the max, then find rows matching it' logic.",
+              "concept": "Subqueries"
             },
             {
               "key": "4-12",
-              "text": "Learn: indexes — why they speed up queries, how to create one"
+              "text": "Learn: indexes — why they speed up queries, how to create one",
+              "description": "Indexes are how databases stay fast as tables grow — you'll revisit this in depth during Phase 5's performance work.",
+              "concept": "Indexes"
             },
             {
               "key": "4-13",
-              "text": "Practice: write 10 queries on your students/courses schema from Week 2"
+              "text": "Practice: write 10 queries on your students/courses schema from Week 2",
+              "description": "Writing a batch of queries against your own schema builds fluency faster than reading examples.",
+              "concept": "Practice Exercise"
             }
           ],
           "resource": "Resource: Complete sqlbolt.com lessons 13–18 (aggregation and subqueries)"
@@ -554,23 +736,33 @@
           "tasks": [
             {
               "key": "4-14",
-              "text": "Add MySQL JDBC driver dependency to a Maven project"
+              "text": "Add MySQL JDBC driver dependency to a Maven project",
+              "description": "The JDBC driver is the library that lets Java talk to MySQL — required for any database access from Java.",
+              "concept": "JDBC Setup"
             },
             {
               "key": "4-15",
-              "text": "Learn: DriverManager.getConnection() with URL, user, password"
+              "text": "Learn: DriverManager.getConnection() with URL, user, password",
+              "description": "DriverManager.getConnection() is the starting point of every JDBC program — it opens the connection to your database.",
+              "concept": "JDBC Connection"
             },
             {
               "key": "4-16",
-              "text": "Learn: PreparedStatement for INSERT and SELECT (avoid SQL injection)"
+              "text": "Learn: PreparedStatement for INSERT and SELECT (avoid SQL injection)",
+              "description": "PreparedStatement safely inserts user input into SQL — string concatenation is vulnerable to SQL injection.",
+              "concept": "PreparedStatement"
             },
             {
               "key": "4-17",
-              "text": "Learn: ResultSet — loop through query results in Java"
+              "text": "Learn: ResultSet — loop through query results in Java",
+              "description": "ResultSet is how you read rows back from a query — you'll loop through it to build Java objects from database rows.",
+              "concept": "ResultSet"
             },
             {
               "key": "4-18",
-              "text": "Practice: Java program that reads students from MySQL and prints them"
+              "text": "Practice: Java program that reads students from MySQL and prints them",
+              "description": "This program ties the whole chain together — connect, query, read results, print — the core of the Phase 1 project.",
+              "concept": "Practice Exercise"
             }
           ],
           "resource": null
@@ -581,23 +773,33 @@
           "tasks": [
             {
               "key": "4-19",
-              "text": "Design your Phase 1 project schema on paper (tables, columns, relationships)"
+              "text": "Design your Phase 1 project schema on paper (tables, columns, relationships)",
+              "description": "Designing the schema on paper first avoids costly restructuring once you start writing code.",
+              "concept": "Schema Design"
             },
             {
               "key": "4-20",
-              "text": "Create the MySQL database and tables for the project"
+              "text": "Create the MySQL database and tables for the project",
+              "description": "Creating the real tables turns your design into something your Java code can connect to and query.",
+              "concept": "DDL — CREATE TABLE"
             },
             {
               "key": "4-21",
-              "text": "Plan the Java classes you'll need (Student, Course, etc.)"
+              "text": "Plan the Java classes you'll need (Student, Course, etc.)",
+              "description": "Planning your classes before coding helps you see how Student, Course, and Grade relate to each other.",
+              "concept": "Class Planning"
             },
             {
               "key": "4-22",
-              "text": "Review your biggest weak spot from Weeks 1–3 and re-practice it"
+              "text": "Review your biggest weak spot from Weeks 1–3 and re-practice it",
+              "description": "Revisiting your weakest topic now means you start the project on solid footing instead of stumbling mid-build.",
+              "concept": "Self-Review"
             },
             {
               "key": "4-24",
-              "text": "Self-assessment: without looking at notes, write a Java class with inheritance and an interface, a SQL query with a JOIN and GROUP BY, and a JS async function that fetches data and handles errors"
+              "text": "Self-assessment: without looking at notes, write a Java class with inheritance and an interface, a SQL query with a JOIN and GROUP BY, and a JS async function that fetches data and handles errors",
+              "description": "This self-assessment combines Java, SQL, and JS — exactly the cross-stack thinking Phase 2 builds on.",
+              "concept": "Self-Assessment"
             }
           ],
           "resource": null
@@ -624,35 +826,51 @@
           "tasks": [
             {
               "key": "p-1",
-              "text": "Add a new student (name, age, email)"
+              "text": "Add a new student (name, age, email)",
+              "description": "The first CRUD operation — every other feature builds on being able to create a student record.",
+              "concept": "CRUD — Create"
             },
             {
               "key": "p-2",
-              "text": "Add a subject (Math, Science, English)"
+              "text": "Add a subject (Math, Science, English)",
+              "description": "Subjects are the other side of the grade relationship — needed before you can record any grades.",
+              "concept": "CRUD — Create"
             },
             {
               "key": "p-3",
-              "text": "Record a grade for a student in a subject (0–100)"
+              "text": "Record a grade for a student in a subject (0–100)",
+              "description": "This is the core write operation of the app — connects students, subjects, and scores together.",
+              "concept": "CRUD — Create"
             },
             {
               "key": "p-4",
-              "text": "View all students"
+              "text": "View all students",
+              "description": "A basic SELECT * query — your first read feature and a quick way to verify data was saved correctly.",
+              "concept": "CRUD — Read"
             },
             {
               "key": "p-5",
-              "text": "View one student's grades with average calculated and PASS/FAIL status per subject (using a GradeStatus enum)"
+              "text": "View one student's grades with average calculated and PASS/FAIL status per subject (using a GradeStatus enum)",
+              "description": "Combines a JOIN, an aggregate (AVG), and your GradeStatus enum — the most complex feature in the project.",
+              "concept": "JOIN & Aggregate"
             },
             {
               "key": "p-6",
-              "text": "Find highest and lowest scorer per subject using SQL"
+              "text": "Find highest and lowest scorer per subject using SQL",
+              "description": "Practices MAX/MIN with GROUP BY — a real reporting query like you'd write for an admin dashboard.",
+              "concept": "Aggregate Functions"
             },
             {
               "key": "p-7",
-              "text": "Handle invalid input gracefully (try-catch)"
+              "text": "Handle invalid input gracefully (try-catch)",
+              "description": "Wrapping input parsing in try-catch keeps the CLI from crashing on bad input — a basic but important UX detail.",
+              "concept": "Exception Handling"
             },
             {
               "key": "p-8",
-              "text": "Push finished project to GitHub with a README explaining it"
+              "text": "Push finished project to GitHub with a README explaining it",
+              "description": "A README turns this from 'code on your computer' into a portfolio piece a reviewer can understand.",
+              "concept": "GitHub"
             }
           ]
         },

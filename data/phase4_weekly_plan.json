@@ -34,27 +34,39 @@
           "tasks": [
             {
               "key": "w1-1",
-              "text": "Learn: what CORS is — browser blocks cross-origin requests unless server explicitly permits them"
+              "text": "Learn: what CORS is — browser blocks cross-origin requests unless server explicitly permits them",
+              "description": "Understanding CORS explains why your React app's API calls might fail with no obvious error — it's a browser security feature, not a bug in your code.",
+              "concept": "CORS"
             },
             {
               "key": "w1-2",
-              "text": "In SecurityFilterChain: configure CorsConfigurationSource bean"
+              "text": "In SecurityFilterChain: configure CorsConfigurationSource bean",
+              "description": "A CorsConfigurationSource bean is how Spring Security applies CORS rules before its filters block cross-origin requests.",
+              "concept": "CORS Configuration"
             },
             {
               "key": "w1-3",
-              "text": "Set allowedOrigins to your Vercel URL (and http://localhost:5173 for dev)"
+              "text": "Set allowedOrigins to your Vercel URL (and http://localhost:5173 for dev)",
+              "description": "Allowing your Vercel and localhost origins is what permits your frontend to actually call this API.",
+              "concept": "CORS Configuration"
             },
             {
               "key": "w1-4",
-              "text": "Set allowedMethods: GET, POST, PUT, PATCH, DELETE, OPTIONS"
+              "text": "Set allowedMethods: GET, POST, PUT, PATCH, DELETE, OPTIONS",
+              "description": "Listing allowed methods ensures all the HTTP verbs your frontend uses (including PUT/PATCH/DELETE) aren't blocked.",
+              "concept": "CORS Configuration"
             },
             {
               "key": "w1-5",
-              "text": "Set allowedHeaders: * and allowCredentials: true"
+              "text": "Set allowedHeaders: * and allowCredentials: true",
+              "description": "Allowing all headers and credentials is required for sending the Authorization header and cookies cross-origin.",
+              "concept": "CORS Configuration"
             },
             {
               "key": "w1-6",
-              "text": "Test: open browser DevTools → Network tab → confirm no CORS error on OPTIONS preflight"
+              "text": "Test: open browser DevTools → Network tab → confirm no CORS error on OPTIONS preflight",
+              "description": "Confirming no CORS error in DevTools is the definitive proof your configuration is correct — error messages alone can be misleading.",
+              "concept": "CORS Testing"
             }
           ],
           "resource": "Common mistake: Adding @CrossOrigin on the controller is not enough when using Spring Security — you must configure CORS inside SecurityFilterChain or it gets blocked by the security filter before reaching the controller."
@@ -65,27 +77,39 @@
           "tasks": [
             {
               "key": "w1-7",
-              "text": "In React: create src/api/axiosInstance.js with baseURL from import.meta.env.VITE_API_URL"
+              "text": "In React: create src/api/axiosInstance.js with baseURL from import.meta.env.VITE_API_URL",
+              "description": "A shared Axios instance ensures every API call in your app uses the same base URL and config.",
+              "concept": "Axios Instance"
             },
             {
               "key": "w1-8",
-              "text": "Set .env.local: VITE_API_URL=http://localhost:8080/api/v1"
+              "text": "Set .env.local: VITE_API_URL=http://localhost:8080/api/v1",
+              "description": "Pointing VITE_API_URL at your local backend lets you develop and test against real data.",
+              "concept": "Environment Variables"
             },
             {
               "key": "w1-9",
-              "text": "Add request interceptor: read token from AuthContext (or memory store), attach as Authorization: Bearer {token}"
+              "text": "Add request interceptor: read token from AuthContext (or memory store), attach as Authorization: Bearer {token}",
+              "description": "This interceptor is what actually authenticates every outgoing request without repeating code.",
+              "concept": "Axios Interceptors"
             },
             {
               "key": "w1-10",
-              "text": "Add response interceptor: on 401 response, call logout() and redirect to /login"
+              "text": "Add response interceptor: on 401 response, call logout() and redirect to /login",
+              "description": "Auto-handling 401s in one place means session expiry is handled consistently everywhere.",
+              "concept": "Axios Interceptors"
             },
             {
               "key": "w1-11",
-              "text": "Update all src/api/*.js files to use axiosInstance instead of fetch"
+              "text": "Update all src/api/*.js files to use axiosInstance instead of fetch",
+              "description": "Switching from fetch to axiosInstance ensures every request gets the auth header and error handling automatically.",
+              "concept": "Axios Instance"
             },
             {
               "key": "w1-12",
-              "text": "Test: call GET /api/v1/products from React — confirm real data from MySQL appears"
+              "text": "Test: call GET /api/v1/products from React — confirm real data from MySQL appears",
+              "description": "Seeing real MySQL data in React confirms your full stack — frontend, backend, and database — is connected end-to-end.",
+              "concept": "API Integration"
             }
           ],
           "resource": "Token access tip: Axios interceptors run outside React components, so you can't call useContext() inside them. Store the token in a plain JS module variable (a \"token store\") that AuthContext writes to on login — the interceptor reads from there."
@@ -96,31 +120,45 @@
           "tasks": [
             {
               "key": "w1-13",
-              "text": "Update useProducts() hook: queryFn calls real GET /api/v1/products?page=&size="
+              "text": "Update useProducts() hook: queryFn calls real GET /api/v1/products?page=&size=",
+              "description": "Swapping mock data for the real endpoint is the moment your frontend becomes a true full-stack app.",
+              "concept": "useProducts Integration"
             },
             {
               "key": "w1-14",
-              "text": "Update useProduct(id) hook: queryFn calls real GET /api/v1/products/{id}"
+              "text": "Update useProduct(id) hook: queryFn calls real GET /api/v1/products/{id}",
+              "description": "The product detail page now reflects real database records instead of placeholder data.",
+              "concept": "useProduct Integration"
             },
             {
               "key": "w1-15",
-              "text": "Pass page and size as query params — driven by pagination state in ProductsPage"
+              "text": "Pass page and size as query params — driven by pagination state in ProductsPage",
+              "description": "Driving query params from pagination state keeps the URL, UI, and API request in sync.",
+              "concept": "Pagination"
             },
             {
               "key": "w1-16",
-              "text": "Map Spring Boot's Page response object (content, totalPages, totalElements) to the UI"
+              "text": "Map Spring Boot's Page response object (content, totalPages, totalElements) to the UI",
+              "description": "Spring's Page object has a different shape than a plain array — mapping it correctly is required for pagination to work.",
+              "concept": "Page Response Mapping"
             },
             {
               "key": "w1-17",
-              "text": "Test: browse products on the React app — paginate, click through to detail page"
+              "text": "Test: browse products on the React app — paginate, click through to detail page",
+              "description": "End-to-end browsing and pagination testing confirms the real API integration works for users.",
+              "concept": "API Integration Testing"
             },
             {
               "key": "w1-18",
-              "text": "Wire search: GET /api/v1/products/search?name= — update useProducts to accept a search param"
+              "text": "Wire search: GET /api/v1/products/search?name= — update useProducts to accept a search param",
+              "description": "Wiring search to the real backend completes the products feature with live data.",
+              "concept": "Search Integration"
             },
             {
               "key": "w1-29",
-              "text": "Add placeholderData: keepPreviousData to useProducts — switching pages no longer flashes a blank/loading state"
+              "text": "Add placeholderData: keepPreviousData to useProducts — switching pages no longer flashes a blank/loading state",
+              "description": "keepPreviousData prevents jarring loading flickers when users page through real, network-backed results.",
+              "concept": "keepPreviousData"
             }
           ],
           "resource": null
@@ -131,23 +169,33 @@
           "tasks": [
             {
               "key": "w1-19",
-              "text": "Build useCategories() hook — fetches GET /api/v1/categories"
+              "text": "Build useCategories() hook — fetches GET /api/v1/categories",
+              "description": "A categories hook follows the same pattern as products — consistency makes the codebase predictable.",
+              "concept": "useCategories Hook"
             },
             {
               "key": "w1-20",
-              "text": "Add category filter to ProductsPage — dropdown populated from real categories API"
+              "text": "Add category filter to ProductsPage — dropdown populated from real categories API",
+              "description": "A real category dropdown lets users filter the catalog using actual database categories.",
+              "concept": "Category Filter"
             },
             {
               "key": "w1-21",
-              "text": "On category select: add categoryId param to products query"
+              "text": "On category select: add categoryId param to products query",
+              "description": "Adding categoryId to the query connects the filter UI to the backend's filtering capability.",
+              "concept": "Category Filter"
             },
             {
               "key": "w1-22",
-              "text": "Add categoryId to queryKey array — ensures cache is separate per category"
+              "text": "Add categoryId to queryKey array — ensures cache is separate per category",
+              "description": "Including categoryId in the queryKey ensures each category's product list is cached separately.",
+              "concept": "Query Keys"
             },
             {
               "key": "w1-23",
-              "text": "Test: filter by category — confirm only matching products appear"
+              "text": "Test: filter by category — confirm only matching products appear",
+              "description": "Testing the filter confirms the frontend and backend agree on how categories are queried.",
+              "concept": "Category Filter Testing"
             }
           ],
           "resource": null
@@ -158,23 +206,33 @@
           "tasks": [
             {
               "key": "w1-24",
-              "text": "Handle API errors gracefully — catch Axios errors, extract error.response.data.message"
+              "text": "Handle API errors gracefully — catch Axios errors, extract error.response.data.message",
+              "description": "Extracting the backend's error message gives users meaningful feedback instead of a generic failure.",
+              "concept": "API Error Handling"
             },
             {
               "key": "w1-25",
-              "text": "Show user-friendly error messages (not raw JSON) when API calls fail"
+              "text": "Show user-friendly error messages (not raw JSON) when API calls fail",
+              "description": "Friendly error messages are part of a professional user experience — raw JSON looks broken to users.",
+              "concept": "Error UI"
             },
             {
               "key": "w1-26",
-              "text": "Confirm skeleton loaders still show correctly while real API fetches"
+              "text": "Confirm skeleton loaders still show correctly while real API fetches",
+              "description": "Confirming skeletons still work with real (slower, variable) network calls validates your loading UI under real conditions.",
+              "concept": "Skeleton Loading"
             },
             {
               "key": "w1-27",
-              "text": "Test with Railway backend offline — confirm error UI shows, not a blank screen"
+              "text": "Test with Railway backend offline — confirm error UI shows, not a blank screen",
+              "description": "Testing with the backend offline simulates real-world outages — your app should degrade gracefully, not crash.",
+              "concept": "Offline Error Handling"
             },
             {
               "key": "w1-28",
-              "text": "Add retry logic: useQuery retries 2 times on failure (TanStack Query default is 3 — reduce to 2)"
+              "text": "Add retry logic: useQuery retries 2 times on failure (TanStack Query default is 3 — reduce to 2)",
+              "description": "Tuning retry behavior balances resilience against slow failure feedback for users.",
+              "concept": "Query Retry Config"
             }
           ],
           "resource": null
@@ -195,23 +253,33 @@
           "tasks": [
             {
               "key": "w2-1",
-              "text": "Update useRegister() mutation: POST /api/v1/auth/register with {name, email, password}"
+              "text": "Update useRegister() mutation: POST /api/v1/auth/register with {name, email, password}",
+              "description": "Connecting registration to the real endpoint completes the first step of your live auth system.",
+              "concept": "Register Integration"
             },
             {
               "key": "w2-2",
-              "text": "On success: show success toast, navigate to /login automatically"
+              "text": "On success: show success toast, navigate to /login automatically",
+              "description": "A success toast and auto-navigation give users clear confirmation and a smooth path to logging in.",
+              "concept": "Register Flow"
             },
             {
               "key": "w2-3",
-              "text": "On error: catch 409 Conflict (email already exists) — show \"Email already registered\" message"
+              "text": "On error: catch 409 Conflict (email already exists) — show \"Email already registered\" message",
+              "description": "Handling duplicate email errors specifically gives users a clear reason their registration failed.",
+              "concept": "Register Error Handling"
             },
             {
               "key": "w2-4",
-              "text": "On error: catch 400 validation errors from Spring — display field-level messages"
+              "text": "On error: catch 400 validation errors from Spring — display field-level messages",
+              "description": "Displaying field-level validation errors from Spring mirrors the inline feedback users expect from forms.",
+              "concept": "Validation Error Display"
             },
             {
               "key": "w2-5",
-              "text": "Test full flow: register in React → check MySQL Workbench → confirm user row with hashed password"
+              "text": "Test full flow: register in React → check MySQL Workbench → confirm user row with hashed password",
+              "description": "Verifying the hashed password in MySQL confirms registration is secure and working end-to-end.",
+              "concept": "Register Testing"
             }
           ],
           "resource": null
@@ -222,27 +290,39 @@
           "tasks": [
             {
               "key": "w2-6",
-              "text": "Update useLogin() mutation: POST /api/v1/auth/login with {email, password}"
+              "text": "Update useLogin() mutation: POST /api/v1/auth/login with {email, password}",
+              "description": "Connecting login to the real endpoint is what actually authenticates users against your database.",
+              "concept": "Login Integration"
             },
             {
               "key": "w2-7",
-              "text": "On success: extract token and user from response body"
+              "text": "On success: extract token and user from response body",
+              "description": "Extracting the token and user from the response is the data your app needs to establish a session.",
+              "concept": "Login Response Handling"
             },
             {
               "key": "w2-8",
-              "text": "Call AuthContext login() — store token in memory, write user info to localStorage"
+              "text": "Call AuthContext login() — store token in memory, write user info to localStorage",
+              "description": "Storing the token in memory and user info in localStorage balances security with persistence across reloads.",
+              "concept": "AuthContext login()"
             },
             {
               "key": "w2-9",
-              "text": "Write token to the token store module (so Axios interceptor can read it)"
+              "text": "Write token to the token store module (so Axios interceptor can read it)",
+              "description": "Writing to the token store lets the Axios interceptor (which can't use React context) access the current token.",
+              "concept": "Token Store"
             },
             {
               "key": "w2-10",
-              "text": "Navigate to / (or the page they were trying to reach before being redirected)"
+              "text": "Navigate to / (or the page they were trying to reach before being redirected)",
+              "description": "Redirecting to the originally intended page after login avoids dropping users back at the homepage unnecessarily.",
+              "concept": "Post-Login Redirect"
             },
             {
               "key": "w2-11",
-              "text": "On error: show \"Invalid email or password\" — do not reveal which one is wrong"
+              "text": "On error: show \"Invalid email or password\" — do not reveal which one is wrong",
+              "description": "A generic 'invalid credentials' message prevents attackers from learning which emails are registered.",
+              "concept": "Login Error Handling"
             }
           ],
           "resource": "Security rule: Never say \"email not found\" or \"wrong password\" separately — that lets attackers enumerate valid accounts. Always say \"Invalid credentials\" for both cases."
@@ -253,35 +333,51 @@
           "tasks": [
             {
               "key": "w2-12",
-              "text": "Problem: on page refresh, React state is lost — user appears logged out even with valid session"
+              "text": "Problem: on page refresh, React state is lost — user appears logged out even with valid session",
+              "description": "Recognizing this problem explains why session persistence logic is necessary — without it, every refresh logs users out.",
+              "concept": "Session Persistence"
             },
             {
               "key": "w2-13",
-              "text": "In AuthContext: on mount (useEffect []), read user from localStorage"
+              "text": "In AuthContext: on mount (useEffect []), read user from localStorage",
+              "description": "Reading from localStorage on mount is the first step to restoring a user's session after a refresh.",
+              "concept": "Session Restoration"
             },
             {
               "key": "w2-14",
-              "text": "Call GET /api/v1/auth/me with stored token — verify it's still valid on the server"
+              "text": "Call GET /api/v1/auth/me with stored token — verify it's still valid on the server",
+              "description": "Verifying the token server-side ensures a stale or revoked token doesn't silently restore an invalid session.",
+              "concept": "/auth/me Verification"
             },
             {
               "key": "w2-15",
-              "text": "If valid: restore user to state and token to token store — silent re-login"
+              "text": "If valid: restore user to state and token to token store — silent re-login",
+              "description": "Restoring user state and the token store on success completes the silent re-login.",
+              "concept": "Session Restoration"
             },
             {
               "key": "w2-16",
-              "text": "If invalid/expired: clear localStorage, stay logged out"
+              "text": "If invalid/expired: clear localStorage, stay logged out",
+              "description": "Clearing storage on an invalid token prevents the app from getting stuck in a broken half-logged-in state.",
+              "concept": "Session Invalidation"
             },
             {
               "key": "w2-17",
-              "text": "Add a GET /api/v1/auth/me endpoint in Spring Boot (returns current user from JWT)"
+              "text": "Add a GET /api/v1/auth/me endpoint in Spring Boot (returns current user from JWT)",
+              "description": "/auth/me is the endpoint your frontend depends on to verify sessions — it must exist on the backend.",
+              "concept": "/auth/me Endpoint"
             },
             {
               "key": "w2-18",
-              "text": "Test: login, refresh page — confirm user stays logged in"
+              "text": "Test: login, refresh page — confirm user stays logged in",
+              "description": "Testing refresh-and-stay-logged-in is the key user experience this whole feature is built for.",
+              "concept": "Session Persistence Testing"
             },
             {
               "key": "w2-30",
-              "text": "Add isAuthLoading state to AuthContext — true while /auth/me is in flight; ProtectedRoute shows a spinner instead of redirecting during this time (prevents a redirect-to-login flash on refresh)"
+              "text": "Add isAuthLoading state to AuthContext — true while /auth/me is in flight; ProtectedRoute shows a spinner instead of redirecting during this time (prevents a redirect-to-login flash on refresh)",
+              "description": "An isAuthLoading flag avoids briefly redirecting logged-in users to /login while their session is still being verified.",
+              "concept": "isAuthLoading State"
             }
           ],
           "resource": "Add to Spring Boot: @GetMapping(\"/me\") with @AuthenticationPrincipal UserDetails user — returns user details extracted from the JWT by your filter."
@@ -292,31 +388,45 @@
           "tasks": [
             {
               "key": "w2-19",
-              "text": "Confirm ProtectedRoute redirects to /login for unauthenticated users"
+              "text": "Confirm ProtectedRoute redirects to /login for unauthenticated users",
+              "description": "Confirming ProtectedRoute still works with real auth data validates your earlier routing work against live data.",
+              "concept": "ProtectedRoute"
             },
             {
               "key": "w2-20",
-              "text": "Store the originally requested URL: redirect to it after successful login"
+              "text": "Store the originally requested URL: redirect to it after successful login",
+              "description": "Remembering the originally requested URL improves UX by returning users to where they wanted to go.",
+              "concept": "Redirect After Login"
             },
             {
               "key": "w2-21",
-              "text": "Build AdminRoute: extends ProtectedRoute — also checks user.role === 'ADMIN'"
+              "text": "Build AdminRoute: extends ProtectedRoute — also checks user.role === 'ADMIN'",
+              "description": "AdminRoute extends the same pattern with a role check — reusing ProtectedRoute avoids duplicating auth logic.",
+              "concept": "AdminRoute"
             },
             {
               "key": "w2-22",
-              "text": "Show \"Access denied\" page if logged in but not an admin (403 scenario)"
+              "text": "Show \"Access denied\" page if logged in but not an admin (403 scenario)",
+              "description": "An access-denied page handles the case where a logged-in user lacks permission, distinct from not being logged in at all.",
+              "concept": "Access Denied Page"
             },
             {
               "key": "w2-23",
-              "text": "In Navbar: show \"Admin\" link only if user.role === 'ADMIN'"
+              "text": "In Navbar: show \"Admin\" link only if user.role === 'ADMIN'",
+              "description": "Conditionally showing the Admin link avoids confusing regular users with links they can't use.",
+              "concept": "Role-Based UI"
             },
             {
               "key": "w2-24",
-              "text": "Test: login as USER — confirm /admin redirects. Login as ADMIN — confirm access granted"
+              "text": "Test: login as USER — confirm /admin redirects. Login as ADMIN — confirm access granted",
+              "description": "Testing both roles confirms your role-based access control works correctly in both directions.",
+              "concept": "Role-Based Access Testing"
             },
             {
               "key": "w2-31",
-              "text": "Update ProductCard / ProductDetailPage: show \"Login to add to cart\" when AuthContext.user is null, \"Add to Cart\" when logged in"
+              "text": "Update ProductCard / ProductDetailPage: show \"Login to add to cart\" when AuthContext.user is null, \"Add to Cart\" when logged in",
+              "description": "Prompting logged-out users to log in before adding to cart sets up the checkout flow that requires authentication.",
+              "concept": "Auth-Aware Add to Cart"
             }
           ],
           "resource": null
@@ -327,23 +437,33 @@
           "tasks": [
             {
               "key": "w2-25",
-              "text": "Logout button: call AuthContext logout() — clear state, localStorage, token store"
+              "text": "Logout button: call AuthContext logout() — clear state, localStorage, token store",
+              "description": "A complete logout must clear every place the session is stored — context, localStorage, and the token store.",
+              "concept": "Logout Flow"
             },
             {
               "key": "w2-26",
-              "text": "After logout: navigate to /login, invalidate all TanStack Query caches (queryClient.clear())"
+              "text": "After logout: navigate to /login, invalidate all TanStack Query caches (queryClient.clear())",
+              "description": "Clearing the query cache on logout prevents the next user from seeing the previous user's cached data.",
+              "concept": "Query Cache Clear"
             },
             {
               "key": "w2-27",
-              "text": "Token expiry: response interceptor catches 401 → auto-logout + redirect to /login"
+              "text": "Token expiry: response interceptor catches 401 → auto-logout + redirect to /login",
+              "description": "Auto-logout on 401 ensures expired sessions are handled the same way everywhere in the app, not just on manual logout.",
+              "concept": "Token Expiry Handling"
             },
             {
               "key": "w2-28",
-              "text": "Show \"Your session expired, please log in again\" toast on auto-logout"
+              "text": "Show \"Your session expired, please log in again\" toast on auto-logout",
+              "description": "A session-expired toast explains to users why they were suddenly logged out, instead of leaving them confused.",
+              "concept": "Session Expired Toast"
             },
             {
               "key": "w2-29",
-              "text": "Test: manually expire JWT (shorten expiry in Spring Boot to 10s), wait, make API call — confirm auto-logout"
+              "text": "Test: manually expire JWT (shorten expiry in Spring Boot to 10s), wait, make API call — confirm auto-logout",
+              "description": "Testing with a short-lived token is the only practical way to verify expiry handling without waiting hours.",
+              "concept": "Token Expiry Testing"
             }
           ],
           "resource": null
@@ -364,27 +484,39 @@
           "tasks": [
             {
               "key": "w3-1",
-              "text": "Wire useCreateProduct(): POST /api/v1/products with JWT — admin only"
+              "text": "Wire useCreateProduct(): POST /api/v1/products with JWT — admin only",
+              "description": "Wiring create to the real API is the first admin feature that actually persists data to your database.",
+              "concept": "useCreateProduct Integration"
             },
             {
               "key": "w3-2",
-              "text": "Wire useUpdateProduct(id): PUT /api/v1/products/{id} with JWT"
+              "text": "Wire useUpdateProduct(id): PUT /api/v1/products/{id} with JWT",
+              "description": "Update lets admins fix mistakes or change product details without deleting and recreating.",
+              "concept": "useUpdateProduct Integration"
             },
             {
               "key": "w3-3",
-              "text": "Wire useDeleteProduct(id): DELETE /api/v1/products/{id} with JWT"
+              "text": "Wire useDeleteProduct(id): DELETE /api/v1/products/{id} with JWT",
+              "description": "Delete completes the CRUD set — admins can now fully manage the product catalog.",
+              "concept": "useDeleteProduct Integration"
             },
             {
               "key": "w3-4",
-              "text": "After create/update/delete: invalidate ['products'] queries so list refreshes"
+              "text": "After create/update/delete: invalidate ['products'] queries so list refreshes",
+              "description": "Invalidating the products query after any change ensures the list always reflects the latest data.",
+              "concept": "Query Invalidation"
             },
             {
               "key": "w3-5",
-              "text": "Build admin product table: list all products with Edit and Delete buttons per row"
+              "text": "Build admin product table: list all products with Edit and Delete buttons per row",
+              "description": "An admin table with edit/delete actions is the standard interface for managing a collection of records.",
+              "concept": "Admin Product Table"
             },
             {
               "key": "w3-6",
-              "text": "Test: create a product as admin in React → verify it appears in MySQL and on product list"
+              "text": "Test: create a product as admin in React → verify it appears in MySQL and on product list",
+              "description": "Verifying in MySQL and the UI together confirms the full admin CRUD pipeline works correctly.",
+              "concept": "Admin CRUD Testing"
             }
           ],
           "resource": null
@@ -395,27 +527,39 @@
           "tasks": [
             {
               "key": "w3-7",
-              "text": "Build image upload input in the admin product form — file input, accept=\"image/*\""
+              "text": "Build image upload input in the admin product form — file input, accept=\"image/*\"",
+              "description": "A file input is the entry point for the image upload feature you built on the backend in Phase 2.",
+              "concept": "File Input"
             },
             {
               "key": "w3-8",
-              "text": "On file select: show a local preview using URL.createObjectURL(file)"
+              "text": "On file select: show a local preview using URL.createObjectURL(file)",
+              "description": "A local preview gives admins immediate visual feedback before the upload completes.",
+              "concept": "Image Preview"
             },
             {
               "key": "w3-9",
-              "text": "On form submit: construct FormData, append image file and product fields"
+              "text": "On form submit: construct FormData, append image file and product fields",
+              "description": "FormData is the format multipart endpoints expect — combining the image and product fields into one request.",
+              "concept": "FormData"
             },
             {
               "key": "w3-10",
-              "text": "POST FormData to /api/v1/products/{id}/image with Content-Type: multipart/form-data"
+              "text": "POST FormData to /api/v1/products/{id}/image with Content-Type: multipart/form-data",
+              "description": "Posting as multipart/form-data is required for the Spring Boot endpoint to correctly receive the file.",
+              "concept": "Image Upload Integration"
             },
             {
               "key": "w3-11",
-              "text": "Display returned imageUrl on the ProductCard and ProductDetailPage"
+              "text": "Display returned imageUrl on the ProductCard and ProductDetailPage",
+              "description": "Displaying the returned URL closes the loop — uploaded images now appear wherever products are shown.",
+              "concept": "Image Display"
             },
             {
               "key": "w3-12",
-              "text": "Test: upload a product image — confirm file saved on server, URL returned, image shows in UI"
+              "text": "Test: upload a product image — confirm file saved on server, URL returned, image shows in UI",
+              "description": "An end-to-end upload test confirms the file storage, URL generation, and display all work together.",
+              "concept": "Image Upload Testing"
             }
           ],
           "resource": "Axios tip: When sending FormData, do NOT manually set Content-Type header — let Axios set it automatically with the correct boundary string. Setting it manually breaks multipart parsing."
@@ -426,27 +570,39 @@
           "tasks": [
             {
               "key": "w3-13",
-              "text": "Build Order entity in Spring Boot: id, user (FK), status, totalAmount, createdAt"
+              "text": "Build Order entity in Spring Boot: id, user (FK), status, totalAmount, createdAt",
+              "description": "The Order entity is the core record of a purchase — everything else this week builds on it.",
+              "concept": "Order Entity"
             },
             {
               "key": "w3-14",
-              "text": "Build OrderItem entity: id, order (FK), product (FK), quantity, price"
+              "text": "Build OrderItem entity: id, order (FK), product (FK), quantity, price",
+              "description": "OrderItem captures what was bought, how many, and at what price — needed for order history and totals.",
+              "concept": "OrderItem Entity"
             },
             {
               "key": "w3-15",
-              "text": "Build POST /api/v1/orders — creates order from cart items (authenticated)"
+              "text": "Build POST /api/v1/orders — creates order from cart items (authenticated)",
+              "description": "Creating an order from cart items is the checkout action that turns a cart into a permanent record.",
+              "concept": "Create Order Endpoint"
             },
             {
               "key": "w3-16",
-              "text": "Build GET /api/v1/orders/my — returns orders for the currently logged-in user only"
+              "text": "Build GET /api/v1/orders/my — returns orders for the currently logged-in user only",
+              "description": "Scoping orders to the logged-in user ensures customers can only see their own purchase history.",
+              "concept": "Order History Endpoint"
             },
             {
               "key": "w3-17",
-              "text": "React: build OrderHistoryPage — calls useMyOrders() hook, lists orders with status"
+              "text": "React: build OrderHistoryPage — calls useMyOrders() hook, lists orders with status",
+              "description": "OrderHistoryPage gives users visibility into their past orders — a standard e-commerce feature.",
+              "concept": "OrderHistoryPage"
             },
             {
               "key": "w3-18",
-              "text": "React: build \"Place Order\" button on CartPage — posts cart as an order, clears cart on success"
+              "text": "React: build \"Place Order\" button on CartPage — posts cart as an order, clears cart on success",
+              "description": "A 'Place Order' button is the final step of the cart-to-order flow your backend now supports.",
+              "concept": "Place Order Flow"
             }
           ],
           "resource": null
@@ -457,23 +613,33 @@
           "tasks": [
             {
               "key": "w3-19",
-              "text": "Spring Boot: GET /api/v1/orders — all orders, admin only, paginated"
+              "text": "Spring Boot: GET /api/v1/orders — all orders, admin only, paginated",
+              "description": "An admin orders endpoint lets staff see every order across all customers.",
+              "concept": "Admin Orders Endpoint"
             },
             {
               "key": "w3-20",
-              "text": "Spring Boot: PATCH /api/v1/orders/{id}/status — update order status, admin only"
+              "text": "Spring Boot: PATCH /api/v1/orders/{id}/status — update order status, admin only",
+              "description": "Updating order status is how admins communicate fulfillment progress (e.g. shipped, delivered) to customers.",
+              "concept": "Order Status Update"
             },
             {
               "key": "w3-21",
-              "text": "React: build AdminOrdersPage — table of all orders with status dropdown per row"
+              "text": "React: build AdminOrdersPage — table of all orders with status dropdown per row",
+              "description": "AdminOrdersPage gives admins a working interface to manage order fulfillment.",
+              "concept": "AdminOrdersPage"
             },
             {
               "key": "w3-22",
-              "text": "On status change: PATCH endpoint, invalidate ['orders'] query on success"
+              "text": "On status change: PATCH endpoint, invalidate ['orders'] query on success",
+              "description": "Invalidating the orders query after a status change keeps the admin view in sync with the database.",
+              "concept": "Order Status Mutation"
             },
             {
               "key": "w3-23",
-              "text": "Test full order flow: add to cart → place order → admin changes status → user sees update"
+              "text": "Test full order flow: add to cart → place order → admin changes status → user sees update",
+              "description": "An end-to-end order test verifies the full purchase-to-fulfillment flow works for both users and admins.",
+              "concept": "Order Flow Testing"
             }
           ],
           "resource": null
@@ -484,23 +650,33 @@
           "tasks": [
             {
               "key": "w3-24",
-              "text": "Learn: optimistic update — update UI immediately before server confirms, roll back on error"
+              "text": "Learn: optimistic update — update UI immediately before server confirms, roll back on error",
+              "description": "Optimistic updates make the UI feel instant by updating before the server responds, rolling back only if it fails.",
+              "concept": "Optimistic Updates"
             },
             {
               "key": "w3-25",
-              "text": "Apply to delete product: remove from UI instantly, restore if DELETE fails"
+              "text": "Apply to delete product: remove from UI instantly, restore if DELETE fails",
+              "description": "Instant deletion feedback makes the admin table feel responsive even on slower connections.",
+              "concept": "Optimistic Delete"
             },
             {
               "key": "w3-26",
-              "text": "Apply to order status change: show new status immediately in admin table"
+              "text": "Apply to order status change: show new status immediately in admin table",
+              "description": "Instant status updates in the admin table avoid waiting for a round-trip before seeing the change.",
+              "concept": "Optimistic Status Update"
             },
             {
               "key": "w3-27",
-              "text": "Learn: onMutate, onError, onSettled callbacks in useMutation for optimistic pattern"
+              "text": "Learn: onMutate, onError, onSettled callbacks in useMutation for optimistic pattern",
+              "description": "These callbacks are the building blocks TanStack Query provides specifically for the optimistic update pattern.",
+              "concept": "useMutation Callbacks"
             },
             {
               "key": "w3-28",
-              "text": "Review all mutations — ensure every one invalidates the right query keys on success"
+              "text": "Review all mutations — ensure every one invalidates the right query keys on success",
+              "description": "A final review of invalidation ensures no part of your app shows stale data after a mutation.",
+              "concept": "Query Invalidation Review"
             }
           ],
           "resource": "Resource: tanstack.com/query/latest/docs/framework/react/guides/optimistic-updates — official guide with complete code example"
@@ -521,31 +697,45 @@
           "tasks": [
             {
               "key": "w4-1",
-              "text": "Move all secrets to Railway environment variables: DB_URL, DB_USER, DB_PASS, JWT_SECRET, JWT_EXPIRY"
+              "text": "Move all secrets to Railway environment variables: DB_URL, DB_USER, DB_PASS, JWT_SECRET, JWT_EXPIRY",
+              "description": "Moving secrets to environment variables is the final step in keeping credentials out of your codebase for production.",
+              "concept": "Environment Variables"
             },
             {
               "key": "w4-2",
-              "text": "Set spring.jpa.hibernate.ddl-auto=validate (not update) in production profile"
+              "text": "Set spring.jpa.hibernate.ddl-auto=validate (not update) in production profile",
+              "description": "validate (instead of update) prevents Hibernate from silently altering your production schema.",
+              "concept": "ddl-auto Production Setting"
             },
             {
               "key": "w4-3",
-              "text": "Set CORS allowedOrigins to exact Vercel production URL only (no wildcard *)"
+              "text": "Set CORS allowedOrigins to exact Vercel production URL only (no wildcard *)",
+              "description": "Restricting CORS to your exact production URL closes a security gap that a wildcard origin would leave open.",
+              "concept": "CORS Production Config"
             },
             {
               "key": "w4-4",
-              "text": "Disable Swagger UI in production: springdoc.swagger-ui.enabled=false"
+              "text": "Disable Swagger UI in production: springdoc.swagger-ui.enabled=false",
+              "description": "Disabling Swagger in production avoids exposing your full API surface to the public.",
+              "concept": "Swagger Production Config"
             },
             {
               "key": "w4-5",
-              "text": "Set logging.level.root=WARN in production — reduce log noise"
+              "text": "Set logging.level.root=WARN in production — reduce log noise",
+              "description": "Reducing log verbosity in production avoids noisy, costly logs and potential information leakage.",
+              "concept": "Logging Levels"
             },
             {
               "key": "w4-6",
-              "text": "Push to main branch — confirm Railway auto-deploys and app starts cleanly"
+              "text": "Push to main branch — confirm Railway auto-deploys and app starts cleanly",
+              "description": "A clean production deploy confirms your hardening changes didn't break anything.",
+              "concept": "Railway Deployment"
             },
             {
               "key": "w4-30",
-              "text": "Add Spring Boot Actuator (spring-boot-starter-actuator) and expose /actuator/health — set it as Railway's health check URL"
+              "text": "Add Spring Boot Actuator (spring-boot-starter-actuator) and expose /actuator/health — set it as Railway's health check URL",
+              "description": "A health check endpoint lets Railway automatically detect and restart your app if it becomes unresponsive.",
+              "concept": "Spring Boot Actuator"
             }
           ],
           "resource": "Spring profiles: Create application-prod.properties with production overrides. Set SPRING_PROFILES_ACTIVE=prod in Railway environment variables to activate it."
@@ -556,27 +746,39 @@
           "tasks": [
             {
               "key": "w4-7",
-              "text": "In Vercel dashboard: set VITE_API_URL to your Railway production backend URL"
+              "text": "In Vercel dashboard: set VITE_API_URL to your Railway production backend URL",
+              "description": "Pointing the production frontend at the production backend completes the live connection between both deployments.",
+              "concept": "Vercel Env Vars"
             },
             {
               "key": "w4-8",
-              "text": "Confirm vercel.json has the SPA rewrite rule — all paths route to index.html"
+              "text": "Confirm vercel.json has the SPA rewrite rule — all paths route to index.html",
+              "description": "The SPA rewrite rule ensures users can refresh or directly visit any route without getting a 404.",
+              "concept": "SPA Routing Fix"
             },
             {
               "key": "w4-9",
-              "text": "Set up a Vercel preview environment: VITE_API_URL pointing to a dev Railway service"
+              "text": "Set up a Vercel preview environment: VITE_API_URL pointing to a dev Railway service",
+              "description": "A preview environment lets you test changes against a separate backend before they reach production.",
+              "concept": "Vercel Preview Environment"
             },
             {
               "key": "w4-10",
-              "text": "Push a change — confirm Vercel builds and deploys automatically from main"
+              "text": "Push a change — confirm Vercel builds and deploys automatically from main",
+              "description": "Confirming auto-deploy from main verifies your CI/CD pipeline works for ongoing changes.",
+              "concept": "Vercel Auto-Deploy"
             },
             {
               "key": "w4-11",
-              "text": "Run Lighthouse audit on the live Vercel URL — note Performance, Accessibility scores"
+              "text": "Run Lighthouse audit on the live Vercel URL — note Performance, Accessibility scores",
+              "description": "A Lighthouse audit on the live (not local) site reflects what real users actually experience.",
+              "concept": "Lighthouse Audit"
             },
             {
               "key": "w4-12",
-              "text": "Test on a real mobile device — not just DevTools emulation"
+              "text": "Test on a real mobile device — not just DevTools emulation",
+              "description": "Real device testing catches issues (touch targets, viewport quirks) that emulators can miss.",
+              "concept": "Mobile Device Testing"
             }
           ],
           "resource": null
@@ -587,23 +789,33 @@
           "tasks": [
             {
               "key": "w4-13",
-              "text": "Test USER flow: register → verify email (if implemented) → login → browse products → add to cart → place order → view order history"
+              "text": "Test USER flow: register → verify email (if implemented) → login → browse products → add to cart → place order → view order history",
+              "description": "Testing the full user journey end-to-end is the best way to catch integration bugs that unit tests miss.",
+              "concept": "End-to-End Testing"
             },
             {
               "key": "w4-14",
-              "text": "Test ADMIN flow: login as admin → create product with image → edit product → change order status"
+              "text": "Test ADMIN flow: login as admin → create product with image → edit product → change order status",
+              "description": "Testing the admin journey ensures the management features work correctly in production, not just locally.",
+              "concept": "Admin Flow Testing"
             },
             {
               "key": "w4-15",
-              "text": "Test session: login → close tab → reopen → confirm still logged in"
+              "text": "Test session: login → close tab → reopen → confirm still logged in",
+              "description": "Testing session persistence across tab closes verifies your auth restoration logic handles real usage patterns.",
+              "concept": "Session Persistence Testing"
             },
             {
               "key": "w4-16",
-              "text": "Test edge cases: checkout with empty cart, access /admin as USER, register with existing email"
+              "text": "Test edge cases: checkout with empty cart, access /admin as USER, register with existing email",
+              "description": "Edge cases reveal bugs that the happy path won't — testing them now is far cheaper than a user finding them.",
+              "concept": "Edge Case Testing"
             },
             {
               "key": "w4-17",
-              "text": "Test on multiple browsers: Chrome, Firefox, Safari (mobile) — fix any inconsistencies"
+              "text": "Test on multiple browsers: Chrome, Firefox, Safari (mobile) — fix any inconsistencies",
+              "description": "Cross-browser testing catches inconsistencies that only appear outside your primary development browser.",
+              "concept": "Cross-Browser Testing"
             }
           ],
           "resource": null
@@ -614,35 +826,51 @@
           "tasks": [
             {
               "key": "w4-18",
-              "text": "Open DevTools → Network tab — look for unnecessary repeated API calls"
+              "text": "Open DevTools → Network tab — look for unnecessary repeated API calls",
+              "description": "Spotting redundant API calls in the Network tab is the fastest way to find easy performance wins.",
+              "concept": "Network Audit"
             },
             {
               "key": "w4-19",
-              "text": "Check TanStack Query devtools — are staleTime values set on frequently-read queries?"
+              "text": "Check TanStack Query devtools — are staleTime values set on frequently-read queries?",
+              "description": "Reviewing staleTime settings ensures frequently-read data isn't being refetched more than necessary.",
+              "concept": "staleTime Review"
             },
             {
               "key": "w4-20",
-              "text": "Check image sizes — compress product images, use correct srcset if large"
+              "text": "Check image sizes — compress product images, use correct srcset if large",
+              "description": "Large uncompressed images are one of the most common causes of slow page loads.",
+              "concept": "Image Optimization"
             },
             {
               "key": "w4-21",
-              "text": "Verify Spring Boot response times in Railway logs — any slow queries?"
+              "text": "Verify Spring Boot response times in Railway logs — any slow queries?",
+              "description": "Checking response times in production logs reveals backend bottlenecks that don't show up locally.",
+              "concept": "Backend Performance Monitoring"
             },
             {
               "key": "w4-22",
-              "text": "Add MySQL index on commonly filtered columns (e.g. products.category_id, products.name)"
+              "text": "Add MySQL index on commonly filtered columns (e.g. products.category_id, products.name)",
+              "description": "Indexes on filtered columns can dramatically speed up queries as your data grows.",
+              "concept": "MySQL Indexes"
             },
             {
               "key": "w4-23",
-              "text": "Run npm run build locally — confirm bundle size is reasonable (aim under 500kb gzipped)"
+              "text": "Run npm run build locally — confirm bundle size is reasonable (aim under 500kb gzipped)",
+              "description": "Checking your bundle size after lazy-loading confirms the code-splitting from Phase 3 is paying off.",
+              "concept": "Bundle Size Check"
             },
             {
               "key": "w4-31",
-              "text": "Enable show-sql=true locally, call GET /api/v1/products — if you see N+1 queries (one per product), fix with JOIN FETCH or @EntityGraph in the repository"
+              "text": "Enable show-sql=true locally, call GET /api/v1/products — if you see N+1 queries (one per product), fix with JOIN FETCH or @EntityGraph in the repository",
+              "description": "The N+1 problem is one of the most common real-world JPA performance bugs — finding and fixing it here prevents it from surfacing under load.",
+              "concept": "N+1 Query Problem"
             },
             {
               "key": "w4-32",
-              "text": "Add @Cacheable to getAllCategories() in the service — categories rarely change; add @CacheEvict on category create/update/delete"
+              "text": "Add @Cacheable to getAllCategories() in the service — categories rarely change; add @CacheEvict on category create/update/delete",
+              "description": "Caching categories avoids repeatedly querying data that almost never changes.",
+              "concept": "Spring Caching"
             }
           ],
           "resource": null
@@ -653,35 +881,51 @@
           "tasks": [
             {
               "key": "w4-24",
-              "text": "Backend README: architecture diagram, API endpoint table, env vars, local setup steps"
+              "text": "Backend README: architecture diagram, API endpoint table, env vars, local setup steps",
+              "description": "A thorough backend README helps reviewers (and future you) understand and run the project quickly.",
+              "concept": "Backend README"
             },
             {
               "key": "w4-25",
-              "text": "Frontend README: tech stack, features list, screenshots, live URL, local setup steps"
+              "text": "Frontend README: tech stack, features list, screenshots, live URL, local setup steps",
+              "description": "A thorough frontend README does the same for the UI side, including how to see it live.",
+              "concept": "Frontend README"
             },
             {
               "key": "w4-26",
-              "text": "Take 4-5 screenshots of the live app — product listing, product detail, cart, admin panel"
+              "text": "Take 4-5 screenshots of the live app — product listing, product detail, cart, admin panel",
+              "description": "Screenshots give visitors an instant sense of the project without having to run it themselves.",
+              "concept": "Screenshots"
             },
             {
               "key": "w4-27",
-              "text": "Add screenshots to both READMEs — makes GitHub repos look professional"
+              "text": "Add screenshots to both READMEs — makes GitHub repos look professional",
+              "description": "Embedding screenshots in the README turns a wall of text into an inviting, professional presentation.",
+              "concept": "README Documentation"
             },
             {
               "key": "w4-28",
-              "text": "Pin both repos on your GitHub profile"
+              "text": "Pin both repos on your GitHub profile",
+              "description": "Pinning your repos makes your best work the first thing visitors to your GitHub profile see.",
+              "concept": "GitHub Profile"
             },
             {
               "key": "w4-29",
-              "text": "Write a short LinkedIn post describing what you built — name the tech stack and link the live app"
+              "text": "Write a short LinkedIn post describing what you built — name the tech stack and link the live app",
+              "description": "A LinkedIn post shares your work with your network and can lead to opportunities or feedback.",
+              "concept": "LinkedIn Post"
             },
             {
               "key": "w4-33",
-              "text": "Export your Postman collection and commit it to the backend repo's /postman folder"
+              "text": "Export your Postman collection and commit it to the backend repo's /postman folder",
+              "description": "A committed Postman collection lets anyone test your live API without writing requests from scratch.",
+              "concept": "Postman Collections"
             },
             {
               "key": "w4-34",
-              "text": "Self-assessment: without notes, explain how a request flows from a React button click to MySQL and back, what happens when a JWT expires, and where CORS is configured"
+              "text": "Self-assessment: without notes, explain how a request flows from a React button click to MySQL and back, what happens when a JWT expires, and where CORS is configured",
+              "description": "This self-assessment confirms you understand the full request lifecycle across the stack — the core outcome of Phase 4.",
+              "concept": "Self-Assessment"
             }
           ],
           "resource": null
@@ -713,55 +957,81 @@
           "tasks": [
             {
               "key": "pj-1",
-              "text": "Register and login work end-to-end with real Spring Boot JWT"
+              "text": "Register and login work end-to-end with real Spring Boot JWT",
+              "description": "End-to-end auth proves your frontend and backend security integration works correctly together.",
+              "concept": "JWT Auth Integration"
             },
             {
               "key": "pj-2",
-              "text": "Session persists across page refresh via /auth/me verification"
+              "text": "Session persists across page refresh via /auth/me verification",
+              "description": "Session persistence is what makes the app feel reliable — users shouldn't be logged out by an accidental refresh.",
+              "concept": "Session Persistence"
             },
             {
               "key": "pj-3",
-              "text": "Expired token auto-logs user out with toast notification"
+              "text": "Expired token auto-logs user out with toast notification",
+              "description": "Automatic handling of expired tokens prevents users from hitting confusing failed requests.",
+              "concept": "Token Expiry Handling"
             },
             {
               "key": "pj-4",
-              "text": "Products load from MySQL with real pagination and search"
+              "text": "Products load from MySQL with real pagination and search",
+              "description": "Real pagination and search prove the product browsing experience works against live data at scale.",
+              "concept": "Pagination & Search"
             },
             {
               "key": "pj-5",
-              "text": "Admin can create/edit/delete products with image upload"
+              "text": "Admin can create/edit/delete products with image upload",
+              "description": "Full admin product management with images is the core content-management capability of the app.",
+              "concept": "Admin Product Management"
             },
             {
               "key": "pj-6",
-              "text": "Cart persists in React context, checkout creates real order in DB"
+              "text": "Cart persists in React context, checkout creates real order in DB",
+              "description": "A working cart-to-order flow is the critical path of any e-commerce app — it's how the business makes money.",
+              "concept": "Cart & Checkout Flow"
             },
             {
               "key": "pj-7",
-              "text": "User can view their own order history"
+              "text": "User can view their own order history",
+              "description": "Order history gives users confidence and transparency about their past purchases.",
+              "concept": "Order History"
             },
             {
               "key": "pj-8",
-              "text": "Admin can view all orders and update statuses"
+              "text": "Admin can view all orders and update statuses",
+              "description": "Order management gives admins the tools to actually fulfill what customers order.",
+              "concept": "Admin Order Management"
             },
             {
               "key": "pj-9",
-              "text": "CORS locked to Vercel origin only in production"
+              "text": "CORS locked to Vercel origin only in production",
+              "description": "Locked-down CORS is a basic but essential production security measure.",
+              "concept": "CORS Production Config"
             },
             {
               "key": "pj-10",
-              "text": "No secrets in Git — all credentials in environment variables"
+              "text": "No secrets in Git — all credentials in environment variables",
+              "description": "No secrets in Git is a non-negotiable security baseline for any deployed project.",
+              "concept": "Secrets Management"
             },
             {
               "key": "pj-11",
-              "text": "Both repos have screenshots and setup docs in README"
+              "text": "Both repos have screenshots and setup docs in README",
+              "description": "Documentation and screenshots are what make this project usable as a portfolio piece.",
+              "concept": "README Documentation"
             },
             {
               "key": "pj-12",
-              "text": "Live URL tested on mobile, Chrome, Firefox, Safari"
+              "text": "Live URL tested on mobile, Chrome, Firefox, Safari",
+              "description": "Cross-browser and mobile testing confirms the app works for real users on real devices.",
+              "concept": "Cross-Browser Testing"
             },
             {
               "key": "pj-13",
-              "text": "/actuator/health wired as Railway health check, Postman collection committed to repo"
+              "text": "/actuator/health wired as Railway health check, Postman collection committed to repo",
+              "description": "Health checks and a Postman collection round out the project as a professional, operable system.",
+              "concept": "Health Check & Postman"
             }
           ]
         }
